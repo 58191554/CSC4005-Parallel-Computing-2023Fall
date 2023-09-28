@@ -7,7 +7,11 @@
 #SBATCH --gres=gpu:1
 
 # Compile the programs before execution
-srun hostname
+# srun hostname
+mpic++ mpi_vector_addition.cpp -o mpi_vector_addition
+g++ -o openmp_vector_addition openmp_vector_addition.cpp -fopenmp
+g++ pthread_vector_addition.cpp -o pthread_vector_addition -lpthread
+nvcc -o  cuda_vector_addition cuda_vector_addition.cu 
 # Four different processes for MPI (Multi-Process Program)
 srun -n 4 --mpi=pmi2 ./mpi_vector_addition
 # One task, four threads (Multi-Thread Program)
