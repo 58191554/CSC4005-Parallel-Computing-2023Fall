@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/nfsmnt/120090694/CSC4005-2023Fall/project1/src/utils.cpp
+utils.hpp
+/nfsmnt/120090694/CSC4005-2023Fall/project1/src/utils.hpp
+
+/nfsmnt/120090694/CSC4005-2023Fall/project1/src/utils.hpp
+iostream
+-
+cstdio
+-
+cstdlib
+-
+jpeglib.h
+-
+

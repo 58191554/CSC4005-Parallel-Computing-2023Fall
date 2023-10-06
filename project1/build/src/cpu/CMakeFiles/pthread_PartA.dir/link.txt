@@ -1,0 +1,1 @@
+/opt/rh/devtoolset-7/root/usr/bin/c++     CMakeFiles/pthread_PartA.dir/pthread_PartA.cpp.o CMakeFiles/pthread_PartA.dir/__/utils.cpp.o  -o pthread_PartA -ljpeg -lpthread 

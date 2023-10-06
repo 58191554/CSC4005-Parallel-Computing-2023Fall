@@ -1,0 +1,1 @@
+/opt/rh/devtoolset-7/root/usr/bin/c++     CMakeFiles/simd_PartA.dir/simd_PartA.cpp.o CMakeFiles/simd_PartA.dir/__/utils.cpp.o  -o simd_PartA -ljpeg 

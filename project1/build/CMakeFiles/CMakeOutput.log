@@ -1,0 +1,1241 @@
+The system is: Linux - 3.10.0-862.el7.x86_64 - x86_64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /opt/rh/devtoolset-7/root/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/3.14.1/CompilerIdCXX/a.out"
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_1d2ca/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_1d2ca.dir/build.make CMakeFiles/cmTC_1d2ca.dir/build
+gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1d2ca.dir/testCXXCompiler.cxx.o
+/opt/rh/devtoolset-7/root/usr/bin/c++     -o CMakeFiles/cmTC_1d2ca.dir/testCXXCompiler.cxx.o -c /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_1d2ca
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d2ca.dir/link.txt --verbose=1
+/opt/rh/devtoolset-7/root/usr/bin/c++       CMakeFiles/cmTC_1d2ca.dir/testCXXCompiler.cxx.o  -o cmTC_1d2ca 
+gmake[1]: Leaving directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_475e0/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_475e0.dir/build.make CMakeFiles/cmTC_475e0.dir/build
+gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o
+/opt/rh/devtoolset-7/root/usr/bin/c++    -v -o CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/c++
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1plus -quiet -v -D_GNU_SOURCE /usr/local/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccHxZyg2.s
+GNU C++14 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)
+	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"
+ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include
+ /usr/local/include
+ /opt/rh/devtoolset-7/root/usr/include
+ /usr/include
+End of search list.
+GNU C++14 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)
+	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 2f06f4cd9d92155a269283acf1f10eb6
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/as -v --64 -o CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccHxZyg2.s
+GNU assembler version 2.28 (x86_64-redhat-linux) using BFD version version 2.28-11.el7
+COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+Linking CXX executable cmTC_475e0
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_475e0.dir/link.txt --verbose=1
+/opt/rh/devtoolset-7/root/usr/bin/c++      -v CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_475e0 
+Using built-in specs.
+COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/c++
+COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) 
+COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_475e0' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvGcD2Z.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_475e0 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_475e0' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+gmake[1]: Leaving directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7]
+    add: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux]
+    add: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward]
+    add: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+    add: [/usr/local/include]
+    add: [/opt/rh/devtoolset-7/root/usr/include]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7] ==> [/opt/rh/devtoolset-7/root/usr/include/c++/7]
+  collapse include dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux] ==> [/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux]
+  collapse include dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward] ==> [/opt/rh/devtoolset-7/root/usr/include/c++/7/backward]
+  collapse include dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include] ==> [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/opt/rh/devtoolset-7/root/usr/include] ==> [/opt/rh/devtoolset-7/root/usr/include]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/opt/rh/devtoolset-7/root/usr/include/c++/7;/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux;/opt/rh/devtoolset-7/root/usr/include/c++/7/backward;/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include;/usr/local/include;/opt/rh/devtoolset-7/root/usr/include;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_475e0/fast ]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_475e0.dir/build.make CMakeFiles/cmTC_475e0.dir/build]
+  ignore line: [gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/opt/rh/devtoolset-7/root/usr/bin/c++    -v -o CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/c++]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1plus -quiet -v -D_GNU_SOURCE /usr/local/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccHxZyg2.s]
+  ignore line: [GNU C++14 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)]
+  ignore line: [	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)]
+  ignore line: [	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 2f06f4cd9d92155a269283acf1f10eb6]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/as -v --64 -o CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccHxZyg2.s]
+  ignore line: [GNU assembler version 2.28 (x86_64-redhat-linux) using BFD version version 2.28-11.el7]
+  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CXX executable cmTC_475e0]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_475e0.dir/link.txt --verbose=1]
+  ignore line: [/opt/rh/devtoolset-7/root/usr/bin/c++      -v CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_475e0 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_475e0' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvGcD2Z.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_475e0 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o]
+    arg [/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccvGcD2Z.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_475e0] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o] ==> ignore
+    arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7]
+    arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..]
+    arg [CMakeFiles/cmTC_475e0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7] ==> [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7]
+  collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64] ==> [/opt/rh/devtoolset-7/root/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> [/opt/rh/devtoolset-7/root/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7;/opt/rh/devtoolset-7/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-7/root/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++1z] compiler features compiled with the following output:
+Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_f38b8/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_f38b8.dir/build.make CMakeFiles/cmTC_f38b8.dir/build
+gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f38b8.dir/feature_tests.cxx.o
+/opt/rh/devtoolset-7/root/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_f38b8.dir/feature_tests.cxx.o -c /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_f38b8
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f38b8.dir/link.txt --verbose=1
+/opt/rh/devtoolset-7/root/usr/bin/c++       CMakeFiles/cmTC_f38b8.dir/feature_tests.cxx.o  -o cmTC_f38b8 
+gmake[1]: Leaving directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_346af/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_346af.dir/build.make CMakeFiles/cmTC_346af.dir/build
+gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_346af.dir/feature_tests.cxx.o
+/opt/rh/devtoolset-7/root/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_346af.dir/feature_tests.cxx.o -c /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_346af
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_346af.dir/link.txt --verbose=1
+/opt/rh/devtoolset-7/root/usr/bin/c++       CMakeFiles/cmTC_346af.dir/feature_tests.cxx.o  -o cmTC_346af 
+gmake[1]: Leaving directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_3303a/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_3303a.dir/build.make CMakeFiles/cmTC_3303a.dir/build
+gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3303a.dir/feature_tests.cxx.o
+/opt/rh/devtoolset-7/root/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_3303a.dir/feature_tests.cxx.o -c /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_3303a
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3303a.dir/link.txt --verbose=1
+/opt/rh/devtoolset-7/root/usr/bin/c++       CMakeFiles/cmTC_3303a.dir/feature_tests.cxx.o  -o cmTC_3303a 
+gmake[1]: Leaving directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_7c311/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_7c311.dir/build.make CMakeFiles/cmTC_7c311.dir/build
+gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7c311.dir/feature_tests.cxx.o
+/opt/rh/devtoolset-7/root/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_7c311.dir/feature_tests.cxx.o -c /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_7c311
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c311.dir/link.txt --verbose=1
+/opt/rh/devtoolset-7/root/usr/bin/c++       CMakeFiles/cmTC_7c311.dir/feature_tests.cxx.o  -o cmTC_7c311 
+gmake[1]: Leaving directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_9809e/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_9809e.dir/build.make CMakeFiles/cmTC_9809e.dir/build
+gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9809e.dir/CheckIncludeFile.cxx.o
+/opt/rh/devtoolset-7/root/usr/bin/c++    -std=gnu++11 -o CMakeFiles/cmTC_9809e.dir/CheckIncludeFile.cxx.o -c /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_9809e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9809e.dir/link.txt --verbose=1
+/opt/rh/devtoolset-7/root/usr/bin/c++       CMakeFiles/cmTC_9809e.dir/CheckIncludeFile.cxx.o  -o cmTC_9809e 
+gmake[1]: Leaving directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_610b5/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_610b5.dir/build.make CMakeFiles/cmTC_610b5.dir/build
+gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_610b5.dir/CheckFunctionExists.cxx.o
+/opt/rh/devtoolset-7/root/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -std=gnu++11 -o CMakeFiles/cmTC_610b5.dir/CheckFunctionExists.cxx.o -c /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_610b5
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_610b5.dir/link.txt --verbose=1
+/opt/rh/devtoolset-7/root/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_610b5.dir/CheckFunctionExists.cxx.o  -o cmTC_610b5 -lpthread 
+gmake[1]: Leaving directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX OpenMP compiler ABI info compiled with the following output:
+Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_2b4dd/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_2b4dd.dir/build.make CMakeFiles/cmTC_2b4dd.dir/build
+gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o
+/opt/rh/devtoolset-7/root/usr/bin/c++    -fopenmp -v   -std=gnu++11 -o CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o -c /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Using built-in specs.
+COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/c++
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) 
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++11' '-o' 'CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1plus -quiet -v -D_GNU_SOURCE -D_REENTRANT /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpbase OpenMPTryFlag.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o -std=gnu++11 -version -fopenmp -o /tmp/ccVuZSvn.s
+GNU C++11 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)
+	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"
+ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include
+ /usr/local/include
+ /opt/rh/devtoolset-7/root/usr/include
+ /usr/include
+End of search list.
+GNU C++11 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)
+	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 2f06f4cd9d92155a269283acf1f10eb6
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++11' '-o' 'CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/as -v --64 -o CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o /tmp/ccVuZSvn.s
+GNU assembler version 2.28 (x86_64-redhat-linux) using BFD version version 2.28-11.el7
+COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++11' '-o' 'CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+Linking CXX executable cmTC_2b4dd
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b4dd.dir/link.txt --verbose=1
+/opt/rh/devtoolset-7/root/usr/bin/c++   -fopenmp -v    CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o  -o cmTC_2b4dd -v 
+Using built-in specs.
+COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/c++
+COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) 
+COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
+Reading specs from /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/libgomp.spec
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_2b4dd' '-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGSSO7s.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_2b4dd /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_2b4dd' '-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+gmake[1]: Leaving directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX OpenMP implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_2b4dd/fast ]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_2b4dd.dir/build.make CMakeFiles/cmTC_2b4dd.dir/build]
+  ignore line: [gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o]
+  ignore line: [/opt/rh/devtoolset-7/root/usr/bin/c++    -fopenmp -v   -std=gnu++11 -o CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o -c /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/c++]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++11' '-o' 'CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1plus -quiet -v -D_GNU_SOURCE -D_REENTRANT /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpbase OpenMPTryFlag.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o -std=gnu++11 -version -fopenmp -o /tmp/ccVuZSvn.s]
+  ignore line: [GNU C++11 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)]
+  ignore line: [	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++11 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)]
+  ignore line: [	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 2f06f4cd9d92155a269283acf1f10eb6]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++11' '-o' 'CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/as -v --64 -o CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o /tmp/ccVuZSvn.s]
+  ignore line: [GNU assembler version 2.28 (x86_64-redhat-linux) using BFD version version 2.28-11.el7]
+  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++11' '-o' 'CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [Linking CXX executable cmTC_2b4dd]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b4dd.dir/link.txt --verbose=1]
+  ignore line: [/opt/rh/devtoolset-7/root/usr/bin/c++   -fopenmp -v    CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o  -o cmTC_2b4dd -v ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
+  ignore line: [Reading specs from /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/libgomp.spec]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_2b4dd' '-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+  link line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGSSO7s.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_2b4dd /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o]
+    arg [/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccGSSO7s.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_2b4dd] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o] ==> ignore
+    arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7]
+    arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..]
+    arg [CMakeFiles/cmTC_2b4dd.dir/OpenMPTryFlag.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgomp] ==> lib [gomp]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7] ==> [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7]
+  collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64] ==> [/opt/rh/devtoolset-7/root/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> [/opt/rh/devtoolset-7/root/usr/lib]
+  implicit libs: [stdc++;m;gomp;gcc_s;gcc;pthread;c;gcc_s;gcc]
+  implicit dirs: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7;/opt/rh/devtoolset-7/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-7/root/usr/lib]
+  implicit fwks: []
+
+
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
+Compiler: /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/compilers/bin/nvcc 
+Build flags: 
+Id flags:  -v;--keep;--keep-dir;tmp
+
+The output was:
+0
+#$ _NVVM_BRANCH_=nvvm
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin
+#$ _THERE_=/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_DIR_=targets/x86_64-linux
+#$ TOP=/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/..
+#$ NVVMIR_LIBRARY_DIR=/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../nvvm/libdevice
+#$ LD_LIBRARY_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../lib:/opt/rh/devtoolset-7/root/usr/lib64:/opt/rh/devtoolset-7/root/usr/lib:/opt/rh/devtoolset-7/root/usr/lib64/dyninst:/opt/rh/devtoolset-7/root/usr/lib/dyninst:/opt/rh/devtoolset-7/root/usr/lib64:/opt/rh/devtoolset-7/root/usr/lib:/usr/local/cuda/lib64:/usr/lib64/mpich-3.2/lib
+#$ PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../nvvm/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin:/opt/rh/devtoolset-7/root/usr/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/compilers/bin:/opt/rh/devtoolset-7/root/usr/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/compilers/bin:/nfsmnt/120090694/.vscode-server/bin/abd2f3db4bdb28f9e95536dfa84d8479f1eb312d/bin/remote-cli:/opt/rh/devtoolset-7/root/usr/bin:/usr/local/cuda/bin:/usr/lib64/mpich-3.2/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/nfsmnt/120090694/.local/bin:/nfsmnt/120090694/bin
+#$ INCLUDES="-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"  
+#$ LIBRARIES=  "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs" "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ rm tmp/a_dlink.reg.c
+#$ gcc -D__CUDA_ARCH__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include" "-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=4 -D__CUDACC_VER_BUILD__=48 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=4 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" 
+#$ cicc --c++14 --gnu_version=70301 --orig_src_file_name "CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"
+#$ ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" 
+#$ fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" 
+#$ gcc -E -x c++ -D__CUDACC__ -D__NVCC__  -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include" "-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=4 -D__CUDACC_VER_BUILD__=48 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=4 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" 
+#$ cudafe++ --c++14 --gnu_version=70301 --orig_src_file_name "CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" 
+#$ gcc -D__CUDA_ARCH__=520 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include" "-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" 
+#$ nvlink --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"  -m64 -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib"   "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs" "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin"
+#$ fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" 
+#$ gcc -c -x c++ -DFATBINFILE="\"tmp/a_dlink.fatbin.c\"" -DREGISTERLINKBINARYFILE="\"tmp/a_dlink.reg.c\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include" "-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=4 -D__CUDACC_VER_BUILD__=48 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=4 -m64 "/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/crt/link.stub" -o "tmp/a_dlink.o" 
+#$ g++ -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o" -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib"   "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs" "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" 
+
+
+Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.out"
+
+The CUDA compiler identification is NVIDIA, found in "/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/3.14.1/CompilerIdCUDA/a.out"
+
+Parsed CUDA nvcc implicit link information from above output:
+  found 'PATH=' string: [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../nvvm/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin:/opt/rh/devtoolset-7/root/usr/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/compilers/bin:/opt/rh/devtoolset-7/root/usr/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/compilers/bin:/nfsmnt/120090694/.vscode-server/bin/abd2f3db4bdb28f9e95536dfa84d8479f1eb312d/bin/remote-cli:/opt/rh/devtoolset-7/root/usr/bin:/usr/local/cuda/bin:/usr/lib64/mpich-3.2/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/nfsmnt/120090694/.local/bin:/nfsmnt/120090694/bin]
+  found 'LIBRARIES=' string: ["-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs" "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib"]
+  considering line: [#$ rm tmp/a_dlink.reg.c]
+  considering line: [gcc -D__CUDA_ARCH__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include" "-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=4 -D__CUDACC_VER_BUILD__=48 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=4 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+  considering line: [cicc --c++14 --gnu_version=70301 --orig_src_file_name "CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+  considering line: [ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+  considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+  considering line: [gcc -E -x c++ -D__CUDACC__ -D__NVCC__  -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include" "-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=4 -D__CUDACC_VER_BUILD__=48 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=4 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [cudafe++ --c++14 --gnu_version=70301 --orig_src_file_name "CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [gcc -D__CUDA_ARCH__=520 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include" "-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" ]
+  considering line: [nvlink --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"  -m64 -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib"   "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs" "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin"]
+    ignoring nvlink line
+  considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+  considering line: [gcc -c -x c++ -DFATBINFILE="\"tmp/a_dlink.fatbin.c\"" -DREGISTERLINKBINARYFILE="\"tmp/a_dlink.reg.c\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include" "-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=4 -D__CUDACC_VER_BUILD__=48 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=4 -m64 "/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/crt/link.stub" -o "tmp/a_dlink.o" ]
+  considering line: [g++ -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o" -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib"   "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs" "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+    extracted link line: [g++ -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o" -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib"   "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs" "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+  considering line: []
+  extracted link launcher name: [g++]
+  found link launcher absolute path: [/opt/rh/devtoolset-7/root/usr/bin/g++]
+
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  link line: [cuda-fake-ld g++ -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o" -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib"   "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs" "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+    arg [cuda-fake-ld] ==> ignore
+    arg [g++] ==> ignore
+    arg [-m64] ==> ignore
+    arg [-Wl,--start-group] ==> ignore
+    arg [tmp/a_dlink.o] ==> ignore
+    arg [tmp/CMakeCUDACompilerId.o] ==> ignore
+    arg [-Xlinker] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [-Xlinker] ==> ignore
+    arg [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64] ==> ignore
+    arg [-Xlinker] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [-Xlinker] ==> ignore
+    arg [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64] ==> ignore
+    arg [-Xlinker] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [-Xlinker] ==> ignore
+    arg [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib] ==> ignore
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib]
+    arg [-lcudadevrt] ==> lib [cudadevrt]
+    arg [-lcudart_static] ==> lib [cudart_static]
+    arg [-lrt] ==> lib [rt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ldl] ==> lib [dl]
+    arg [-Wl,--end-group] ==> ignore
+    arg [-o] ==> ignore
+    arg [a.out] ==> ignore
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib]
+  implicit libs: [cudadevrt;cudart_static;rt;pthread;dl]
+  implicit dirs: [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib]
+  implicit fwks: []
+
+
+Parsed CUDA nvcc include information from above output:
+  found 'PATH=' string: [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../nvvm/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin:/opt/rh/devtoolset-7/root/usr/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/compilers/bin:/opt/rh/devtoolset-7/root/usr/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/compilers/bin:/nfsmnt/120090694/.vscode-server/bin/abd2f3db4bdb28f9e95536dfa84d8479f1eb312d/bin/remote-cli:/opt/rh/devtoolset-7/root/usr/bin:/usr/local/cuda/bin:/usr/lib64/mpich-3.2/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/nfsmnt/120090694/.local/bin:/nfsmnt/120090694/bin]
+  found 'LIBRARIES=' string: ["-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs" "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib"]
+  considering line: [#$ rm tmp/a_dlink.reg.c]
+  considering line: [gcc -D__CUDA_ARCH__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include" "-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=4 -D__CUDACC_VER_BUILD__=48 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=4 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+  considering line: [cicc --c++14 --gnu_version=70301 --orig_src_file_name "CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+  considering line: [ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+  considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+  considering line: [gcc -E -x c++ -D__CUDACC__ -D__NVCC__  -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include" "-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=4 -D__CUDACC_VER_BUILD__=48 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=4 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [cudafe++ --c++14 --gnu_version=70301 --orig_src_file_name "CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [gcc -D__CUDA_ARCH__=520 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include" "-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" ]
+  considering line: [nvlink --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"  -m64 -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib"   "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs" "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin"]
+    ignoring nvlink line
+  considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+  considering line: [gcc -c -x c++ -DFATBINFILE="\"tmp/a_dlink.fatbin.c\"" -DREGISTERLINKBINARYFILE="\"tmp/a_dlink.reg.c\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include" -I"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include" "-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=11 -D__CUDACC_VER_MINOR__=4 -D__CUDACC_VER_BUILD__=48 -D__CUDA_API_VER_MAJOR__=11 -D__CUDA_API_VER_MINOR__=4 -m64 "/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/crt/link.stub" -o "tmp/a_dlink.o" ]
+  considering line: [g++ -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o" -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib"   "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs" "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+    extracted link line: [g++ -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o" -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib"   "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs" "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+  considering line: []
+  extracted link launcher name: [g++]
+  found link launcher absolute path: [/opt/rh/devtoolset-7/root/usr/bin/g++]
+  found 'INCLUDES=' string: ["-I/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"  ]
+
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  link line: [cuda-fake-ld g++ -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o" -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64 -Xlinker -rpath -Xlinker /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib"   "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs" "-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+    arg [cuda-fake-ld] ==> ignore
+    arg [g++] ==> ignore
+    arg [-m64] ==> ignore
+    arg [-Wl,--start-group] ==> ignore
+    arg [tmp/a_dlink.o] ==> ignore
+    arg [tmp/CMakeCUDACompilerId.o] ==> ignore
+    arg [-Xlinker] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [-Xlinker] ==> ignore
+    arg [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64] ==> ignore
+    arg [-Xlinker] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [-Xlinker] ==> ignore
+    arg [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64] ==> ignore
+    arg [-Xlinker] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [-Xlinker] ==> ignore
+    arg [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib] ==> ignore
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib]
+    arg [-lcudadevrt] ==> lib [cudadevrt]
+    arg [-lcudart_static] ==> lib [cudart_static]
+    arg [-lrt] ==> lib [rt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ldl] ==> lib [dl]
+    arg [-Wl,--end-group] ==> ignore
+    arg [-o] ==> ignore
+    arg [a.out] ==> ignore
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib/stubs] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/lib] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib]
+  implicit libs: [cudadevrt;cudart_static;rt;pthread;dl]
+  implicit dirs: [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib]
+  implicit fwks: []
+
+
+Determining if the CUDA compiler works passed with the following output:
+Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_a4a2d/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_a4a2d.dir/build.make CMakeFiles/cmTC_a4a2d.dir/build
+gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+Building CUDA object CMakeFiles/cmTC_a4a2d.dir/main.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/compilers/bin/nvcc     -x cu -c /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp/main.cu -o CMakeFiles/cmTC_a4a2d.dir/main.cu.o
+Linking CUDA device code CMakeFiles/cmTC_a4a2d.dir/cmake_device_link.o
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4a2d.dir/dlink.txt --verbose=1
+/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/compilers/bin/nvcc    -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/cmTC_a4a2d.dir/main.cu.o -o CMakeFiles/cmTC_a4a2d.dir/cmake_device_link.o 
+Linking CUDA executable cmTC_a4a2d
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4a2d.dir/link.txt --verbose=1
+/opt/rh/devtoolset-7/root/usr/bin/g++   CMakeFiles/cmTC_a4a2d.dir/main.cu.o CMakeFiles/cmTC_a4a2d.dir/cmake_device_link.o -o cmTC_a4a2d  -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib" -lcudadevrt -lcudart_static -lrt -lpthread -ldl
+gmake[1]: Leaving directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CUDA compiler ABI info compiled with the following output:
+Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_549d7/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_549d7.dir/build.make CMakeFiles/cmTC_549d7.dir/build
+gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+Building CUDA object CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o
+/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/compilers/bin/nvcc    -Xcompiler=-v -x cu -c /usr/local/share/cmake-3.14/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o
+Using built-in specs.
+COLLECT_GCC=gcc
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) 
+COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=11' '-D' '__CUDACC_VER_MINOR__=4' '-D' '__CUDACC_VER_BUILD__=48' '-D' '__CUDA_API_VER_MAJOR__=11' '-D' '__CUDA_API_VER_MINOR__=4' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0001b3ab_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64'
+ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1plus -E -quiet -v -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=11 -D __CUDACC_VER_MINOR__=4 -D __CUDACC_VER_BUILD__=48 -D __CUDA_API_VER_MAJOR__=11 -D __CUDA_API_VER_MINOR__=4 -include cuda_runtime.h /usr/local/share/cmake-3.14/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_0001b3ab_00000000-7_CMakeCUDACompilerABI.cpp1.ii -m64 -mtune=generic -march=x86-64
+ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"
+ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"
+ignoring duplicate directory "/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include
+ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include
+ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include
+ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include
+ /usr/local/include
+ /opt/rh/devtoolset-7/root/usr/include
+ /usr/include
+End of search list.
+COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=11' '-D' '__CUDACC_VER_MINOR__=4' '-D' '__CUDACC_VER_BUILD__=48' '-D' '__CUDA_API_VER_MAJOR__=11' '-D' '__CUDA_API_VER_MINOR__=4' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0001b3ab_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64'
+Using built-in specs.
+COLLECT_GCC=gcc
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) 
+COLLECT_GCC_OPTIONS='-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=11' '-D' '__CUDACC_VER_MINOR__=4' '-D' '__CUDACC_VER_BUILD__=48' '-D' '__CUDA_API_VER_MAJOR__=11' '-D' '__CUDA_API_VER_MINOR__=4' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0001b3ab_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64'
+ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1plus -E -quiet -v -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=11 -D __CUDACC_VER_MINOR__=4 -D __CUDACC_VER_BUILD__=48 -D __CUDA_API_VER_MAJOR__=11 -D __CUDA_API_VER_MINOR__=4 -include cuda_runtime.h /usr/local/share/cmake-3.14/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_0001b3ab_00000000-5_CMakeCUDACompilerABI.cpp4.ii -m64 -mtune=generic -march=x86-64
+ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"
+ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"
+ignoring duplicate directory "/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include
+ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include
+ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include
+ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include
+ /usr/local/include
+ /opt/rh/devtoolset-7/root/usr/include
+ /usr/include
+End of search list.
+COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=11' '-D' '__CUDACC_VER_MINOR__=4' '-D' '__CUDACC_VER_BUILD__=48' '-D' '__CUDA_API_VER_MAJOR__=11' '-D' '__CUDA_API_VER_MINOR__=4' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0001b3ab_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64'
+Using built-in specs.
+COLLECT_GCC=gcc
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) 
+COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64'
+ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1plus -quiet -v -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS /tmp/tmpxft_0001b3ab_00000000-6_CMakeCUDACompilerABI.cudafe1.cpp -quiet -dumpbase tmpxft_0001b3ab_00000000-6_CMakeCUDACompilerABI.cudafe1.cpp -m64 -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o -version -o /tmp/cc047dxH.s
+GNU C++14 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)
+	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"
+ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"
+ignoring duplicate directory "/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include
+ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include
+ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include
+ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward
+ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include
+ /usr/local/include
+ /opt/rh/devtoolset-7/root/usr/include
+ /usr/include
+End of search list.
+GNU C++14 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)
+	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 2f06f4cd9d92155a269283acf1f10eb6
+COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64'
+ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/as -v -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include --64 -o CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o /tmp/cc047dxH.s
+GNU assembler version 2.28 (x86_64-redhat-linux) using BFD version version 2.28-11.el7
+COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64'
+Linking CUDA device code CMakeFiles/cmTC_549d7.dir/cmake_device_link.o
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_549d7.dir/dlink.txt --verbose=1
+/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/compilers/bin/nvcc    -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o -o CMakeFiles/cmTC_549d7.dir/cmake_device_link.o 
+Linking CUDA executable cmTC_549d7
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_549d7.dir/link.txt --verbose=1
+/opt/rh/devtoolset-7/root/usr/bin/g++  -v CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_549d7.dir/cmake_device_link.o -o cmTC_549d7  -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib" -lcudadevrt -lcudart_static -lrt -lpthread -ldl
+Using built-in specs.
+COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/g++
+COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) 
+COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_549d7' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5CvTHM.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_549d7 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64 -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64 -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_549d7.dir/cmake_device_link.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_549d7' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+gmake[1]: Leaving directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CUDA implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include]
+    add: [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include]
+    add: [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include]
+    add: [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include]
+    add: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7]
+    add: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux]
+    add: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward]
+    add: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+    add: [/usr/local/include]
+    add: [/opt/rh/devtoolset-7/root/usr/include]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include]
+  collapse include dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include]
+  collapse include dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include]
+  collapse include dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include]
+  collapse include dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7] ==> [/opt/rh/devtoolset-7/root/usr/include/c++/7]
+  collapse include dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux] ==> [/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux]
+  collapse include dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward] ==> [/opt/rh/devtoolset-7/root/usr/include/c++/7/backward]
+  collapse include dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include] ==> [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/opt/rh/devtoolset-7/root/usr/include] ==> [/opt/rh/devtoolset-7/root/usr/include]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include;/opt/rh/devtoolset-7/root/usr/include/c++/7;/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux;/opt/rh/devtoolset-7/root/usr/include/c++/7/backward;/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include;/usr/local/include;/opt/rh/devtoolset-7/root/usr/include;/usr/include]
+
+
+Parsed CUDA implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_549d7/fast ]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_549d7.dir/build.make CMakeFiles/cmTC_549d7.dir/build]
+  ignore line: [gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CUDA object CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o]
+  ignore line: [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/compilers/bin/nvcc    -Xcompiler=-v -x cu -c /usr/local/share/cmake-3.14/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=gcc]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=11' '-D' '__CUDACC_VER_MINOR__=4' '-D' '__CUDACC_VER_BUILD__=48' '-D' '__CUDA_API_VER_MAJOR__=11' '-D' '__CUDA_API_VER_MINOR__=4' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0001b3ab_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1plus -E -quiet -v -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=11 -D __CUDACC_VER_MINOR__=4 -D __CUDACC_VER_BUILD__=48 -D __CUDA_API_VER_MAJOR__=11 -D __CUDA_API_VER_MINOR__=4 -include cuda_runtime.h /usr/local/share/cmake-3.14/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_0001b3ab_00000000-7_CMakeCUDACompilerABI.cpp1.ii -m64 -mtune=generic -march=x86-64]
+  ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"]
+  ignore line: [ignoring duplicate directory "/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include]
+  ignore line: [ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include]
+  ignore line: [ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include]
+  ignore line: [ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=11' '-D' '__CUDACC_VER_MINOR__=4' '-D' '__CUDACC_VER_BUILD__=48' '-D' '__CUDA_API_VER_MAJOR__=11' '-D' '__CUDA_API_VER_MINOR__=4' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0001b3ab_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64']
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=gcc]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=11' '-D' '__CUDACC_VER_MINOR__=4' '-D' '__CUDACC_VER_BUILD__=48' '-D' '__CUDA_API_VER_MAJOR__=11' '-D' '__CUDA_API_VER_MINOR__=4' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0001b3ab_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1plus -E -quiet -v -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=11 -D __CUDACC_VER_MINOR__=4 -D __CUDACC_VER_BUILD__=48 -D __CUDA_API_VER_MAJOR__=11 -D __CUDA_API_VER_MINOR__=4 -include cuda_runtime.h /usr/local/share/cmake-3.14/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_0001b3ab_00000000-5_CMakeCUDACompilerABI.cpp4.ii -m64 -mtune=generic -march=x86-64]
+  ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"]
+  ignore line: [ignoring duplicate directory "/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include]
+  ignore line: [ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include]
+  ignore line: [ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include]
+  ignore line: [ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=11' '-D' '__CUDACC_VER_MINOR__=4' '-D' '__CUDACC_VER_BUILD__=48' '-D' '__CUDA_API_VER_MAJOR__=11' '-D' '__CUDA_API_VER_MINOR__=4' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0001b3ab_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64']
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=gcc]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1plus -quiet -v -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS /tmp/tmpxft_0001b3ab_00000000-6_CMakeCUDACompilerABI.cudafe1.cpp -quiet -dumpbase tmpxft_0001b3ab_00000000-6_CMakeCUDACompilerABI.cudafe1.cpp -m64 -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o -version -o /tmp/cc047dxH.s]
+  ignore line: [GNU C++14 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)]
+  ignore line: [	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"]
+  ignore line: [ignoring duplicate directory "/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include]
+  ignore line: [ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include]
+  ignore line: [ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include]
+  ignore line: [ /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)]
+  ignore line: [	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 2f06f4cd9d92155a269283acf1f10eb6]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/as -v -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include -I /opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include --64 -o CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o /tmp/cc047dxH.s]
+  ignore line: [GNU assembler version 2.28 (x86_64-redhat-linux) using BFD version version 2.28-11.el7]
+  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/include' '-I' '/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CUDA device code CMakeFiles/cmTC_549d7.dir/cmake_device_link.o]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_549d7.dir/dlink.txt --verbose=1]
+  ignore line: [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/compilers/bin/nvcc    -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o -o CMakeFiles/cmTC_549d7.dir/cmake_device_link.o ]
+  ignore line: [Linking CUDA executable cmTC_549d7]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_549d7.dir/link.txt --verbose=1]
+  ignore line: [/opt/rh/devtoolset-7/root/usr/bin/g++  -v CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_549d7.dir/cmake_device_link.o -o cmTC_549d7  -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs" -L"/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib" -lcudadevrt -lcudart_static -lrt -lpthread -ldl]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_549d7' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs' '-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5CvTHM.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_549d7 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64 -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64 -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_549d7.dir/cmake_device_link.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o]
+    arg [/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc5CvTHM.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_549d7] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o] ==> ignore
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs]
+    arg [-L/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib] ==> dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib]
+    arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7]
+    arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..]
+    arg [CMakeFiles/cmTC_549d7.dir/CMakeCUDACompilerABI.cu.o] ==> ignore
+    arg [CMakeFiles/cmTC_549d7.dir/cmake_device_link.o] ==> ignore
+    arg [-lcudadevrt] ==> lib [cudadevrt]
+    arg [-lcudart_static] ==> lib [cudart_static]
+    arg [-lrt] ==> lib [rt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ldl] ==> lib [dl]
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs]
+  collapse library dir [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib] ==> [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib]
+  collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7] ==> [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7]
+  collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64] ==> [/opt/rh/devtoolset-7/root/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> [/opt/rh/devtoolset-7/root/usr/lib]
+  implicit libs: [cudadevrt;cudart_static;rt;pthread;dl;stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/lib64;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/math_libs/11.4/lib64;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nccl/lib;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/comm_libs/11.4/nvshmem/lib;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib/stubs;/opt/nvidia/hpc_sdk/Linux_x86_64/21.7/cuda/11.4/targets/x86_64-linux/lib;/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7;/opt/rh/devtoolset-7/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-7/root/usr/lib]
+  implicit fwks: []
+
+

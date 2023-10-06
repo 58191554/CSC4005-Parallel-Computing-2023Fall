@@ -1,0 +1,38 @@
+Current directory: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts
+Pthread PartA (Optimized with -O2)
+Number of cores: 1
+Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/grey-pthread/20K-Gray-1.jpg
+Transformation Complete!
+Execution Time: 714 milliseconds
+
+Number of cores: 2
+Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/grey-pthread/20K-Gray-2.jpg
+Transformation Complete!
+Execution Time: 643 milliseconds
+
+Number of cores: 4
+Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/grey-pthread/20K-Gray-4.jpg
+Transformation Complete!
+Execution Time: 346 milliseconds
+
+Number of cores: 8
+Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/grey-pthread/20K-Gray-8.jpg
+Transformation Complete!
+Execution Time: 179 milliseconds
+
+Number of cores: 16
+Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/grey-pthread/20K-Gray-16.jpg
+Transformation Complete!
+Execution Time: 100 milliseconds
+
+Number of cores: 32
+Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/grey-pthread/20K-Gray-32.jpg
+Transformation Complete!
+Execution Time: 69 milliseconds
+

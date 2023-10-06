@@ -1,0 +1,1 @@
+/opt/rh/devtoolset-7/root/usr/bin/c++     CMakeFiles/mpi_PartA.dir/mpi_PartA.cpp.o CMakeFiles/mpi_PartA.dir/__/utils.cpp.o  -o mpi_PartA -Wl,-rpath,/usr/lib64/mpich-3.2/lib -ljpeg /usr/lib64/mpich-3.2/lib/libmpicxx.so /usr/lib64/mpich-3.2/lib/libmpi.so 

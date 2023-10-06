@@ -1,0 +1,1 @@
+pgc++   -acc -acc -acc   CMakeFiles/openacc_PartB.dir/openacc_PartB.cpp.o CMakeFiles/openacc_PartB.dir/__/utils.cpp.o  -o openacc_PartB -ljpeg 

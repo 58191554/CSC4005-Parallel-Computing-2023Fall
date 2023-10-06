@@ -1,0 +1,1 @@
+/opt/rh/devtoolset-7/root/usr/bin/c++     CMakeFiles/sequential_PartB.dir/sequential_PartB.cpp.o CMakeFiles/sequential_PartB.dir/__/utils.cpp.o  -o sequential_PartB -ljpeg 

@@ -1,0 +1,1 @@
+/opt/rh/devtoolset-7/root/usr/bin/c++     CMakeFiles/openmp_PartB.dir/openmp_PartB.cpp.o CMakeFiles/openmp_PartB.dir/__/utils.cpp.o  -o openmp_PartB -ljpeg -lgomp -lpthread 

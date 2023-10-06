@@ -1,0 +1,69 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_ac98c/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_ac98c.dir/build.make CMakeFiles/cmTC_ac98c.dir/build
+gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ac98c.dir/CheckSymbolExists.cxx.o
+/opt/rh/devtoolset-7/root/usr/bin/c++    -std=gnu++11 -o CMakeFiles/cmTC_ac98c.dir/CheckSymbolExists.cxx.o -c /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_ac98c
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac98c.dir/link.txt --verbose=1
+/opt/rh/devtoolset-7/root/usr/bin/c++       CMakeFiles/cmTC_ac98c.dir/CheckSymbolExists.cxx.o  -o cmTC_ac98c 
+CMakeFiles/cmTC_ac98c.dir/CheckSymbolExists.cxx.o: In function `main':
+CheckSymbolExists.cxx:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_ac98c] Error 1
+gmake[1]: Leaving directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_ac98c/fast] Error 2
+
+File /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_35bdb/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_35bdb.dir/build.make CMakeFiles/cmTC_35bdb.dir/build
+gmake[1]: Entering directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_35bdb.dir/CheckFunctionExists.cxx.o
+/opt/rh/devtoolset-7/root/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -std=gnu++11 -o CMakeFiles/cmTC_35bdb.dir/CheckFunctionExists.cxx.o -c /nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_35bdb
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35bdb.dir/link.txt --verbose=1
+/opt/rh/devtoolset-7/root/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_35bdb.dir/CheckFunctionExists.cxx.o  -o cmTC_35bdb -lpthreads 
+/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_35bdb] Error 1
+gmake[1]: Leaving directory `/nfsmnt/120090694/CSC4005-2023Fall/project1/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_35bdb/fast] Error 2
+
+
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" failed.
+Compiler: CMAKE_CUDA_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  -v;--keep;--keep-dir;tmp
+
+The output was:
+No such file or directory
+
+
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" failed.
+Compiler: CMAKE_CUDA_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  -v;--keep;--keep-dir;tmp
+
+The output was:
+No such file or directory
+
+
