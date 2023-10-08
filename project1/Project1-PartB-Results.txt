@@ -3,20 +3,22 @@ Sequential PartB (Optimized with -O2)
 Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-Smooth-sequential.jpg
 Transformation Complete!
-Execution Time: 6191 milliseconds
+Execution Time: 6185 milliseconds
 
 SIMD(AVX2) PartB (Optimized with -O2)
+mkdir: cannot create directory ‘images/smooth-SIMD’: File exists
 Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-SIMD/20K-Smooth-SIMD.jpg
 Transformation Complete!
-Execution Time: 2398 milliseconds
+Execution Time: 2385 milliseconds
 
+mkdir: cannot create directory ‘images/smooth-MPI’: File exists
 MPI PartB (Optimized with -O2)
 Number of processes: 1
 Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-MPI/20K-Smooth-MPI-1.jpg
 Transformation Complete!
-Execution Time: 5934 milliseconds
+Execution Time: 5932 milliseconds
 
 MPI PartB (Optimized with -O2)
 Number of processes: 2
@@ -25,7 +27,7 @@ Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../i
 Child Process 1 Recieve Time: 0 milliseconds
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-MPI/20K-Smooth-MPI-2.jpg
 Transformation Complete!
-Execution Time: 5597 milliseconds
+Execution Time: 5761 milliseconds
 
 MPI PartB (Optimized with -O2)
 Number of processes: 4
@@ -38,7 +40,7 @@ Child Process 2 Recieve Time: 0 milliseconds
 Child Process 3 Recieve Time: 0 milliseconds
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-MPI/20K-Smooth-MPI-4.jpg
 Transformation Complete!
-Execution Time: 3097 milliseconds
+Execution Time: 3009 milliseconds
 
 MPI PartB (Optimized with -O2)
 Number of processes: 8
@@ -59,7 +61,7 @@ Child Process 6 Recieve Time: 0 milliseconds
 Child Process 7 Recieve Time: 0 milliseconds
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-MPI/20K-Smooth-MPI-8.jpg
 Transformation Complete!
-Execution Time: 1688 milliseconds
+Execution Time: 1736 milliseconds
 
 MPI PartB (Optimized with -O2)
 Number of processes: 16
@@ -96,7 +98,7 @@ Child Process 14 Recieve Time: 0 milliseconds
 Child Process 15 Recieve Time: 0 milliseconds
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-MPI/20K-Smooth-MPI-16.jpg
 Transformation Complete!
-Execution Time: 1030 milliseconds
+Execution Time: 1024 milliseconds
 
 MPI PartB (Optimized with -O2)
 Number of processes: 32
@@ -165,57 +167,59 @@ Child Process 30 Recieve Time: 0 milliseconds
 Child Process 31 Recieve Time: 0 milliseconds
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-MPI/20K-Smooth-MPI-32.jpg
 Transformation Complete!
-Execution Time: 720 milliseconds
+Execution Time: 772 milliseconds
 
+mkdir: cannot create directory ‘images/smooth-pthread’: File exists
 Pthread PartB (Optimized with -O2)
 Number of cores: 1
 Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-pthread/20K-Smooth-1.jpg
 Transformation Complete!
-Execution Time: 6286 milliseconds
+Execution Time: 6282 milliseconds
 
 Pthread PartB (Optimized with -O2)
 Number of cores: 2
 Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-pthread/20K-Smooth-2.jpg
 Transformation Complete!
-Execution Time: 5628 milliseconds
+Execution Time: 5629 milliseconds
 
 Pthread PartB (Optimized with -O2)
 Number of cores: 4
 Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-pthread/20K-Smooth-4.jpg
 Transformation Complete!
-Execution Time: 2858 milliseconds
+Execution Time: 2925 milliseconds
 
 Pthread PartB (Optimized with -O2)
 Number of cores: 8
 Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-pthread/20K-Smooth-8.jpg
 Transformation Complete!
-Execution Time: 1518 milliseconds
+Execution Time: 1586 milliseconds
 
 Pthread PartB (Optimized with -O2)
 Number of cores: 16
 Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-pthread/20K-Smooth-16.jpg
 Transformation Complete!
-Execution Time: 724 milliseconds
+Execution Time: 749 milliseconds
 
 Pthread PartB (Optimized with -O2)
 Number of cores: 32
 Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-pthread/20K-Smooth-32.jpg
 Transformation Complete!
-Execution Time: 492 milliseconds
+Execution Time: 482 milliseconds
 
+mkdir: cannot create directory ‘images/smooth-OpenMP’: File exists
 OpenMP PartB (Optimized with -O2)
 Number of cores: 1
 Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
 Thread number check:1
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-OpenMP/20K-Smooth-1.jpg
 Transformation Complete!
-Execution Time: 8320 milliseconds
+Execution Time: 8284 milliseconds
 
 OpenMP PartB (Optimized with -O2)
 Number of cores: 2
@@ -223,7 +227,7 @@ Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../i
 Thread number check:2
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-OpenMP/20K-Smooth-2.jpg
 Transformation Complete!
-Execution Time: 6470 milliseconds
+Execution Time: 6468 milliseconds
 
 OpenMP PartB (Optimized with -O2)
 Number of cores: 4
@@ -231,7 +235,7 @@ Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../i
 Thread number check:4
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-OpenMP/20K-Smooth-4.jpg
 Transformation Complete!
-Execution Time: 3301 milliseconds
+Execution Time: 3294 milliseconds
 
 OpenMP PartB (Optimized with -O2)
 Number of cores: 8
@@ -239,7 +243,7 @@ Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../i
 Thread number check:8
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-OpenMP/20K-Smooth-8.jpg
 Transformation Complete!
-Execution Time: 1659 milliseconds
+Execution Time: 1654 milliseconds
 
 OpenMP PartB (Optimized with -O2)
 Number of cores: 16
@@ -247,7 +251,7 @@ Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../i
 Thread number check:16
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-OpenMP/20K-Smooth-16.jpg
 Transformation Complete!
-Execution Time: 868 milliseconds
+Execution Time: 903 milliseconds
 
 OpenMP PartB (Optimized with -O2)
 Number of cores: 32
@@ -255,14 +259,18 @@ Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../i
 Thread number check:32
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-OpenMP/20K-Smooth-32.jpg
 Transformation Complete!
-Execution Time: 572 milliseconds
+Execution Time: 466 milliseconds
 
+mkdir: cannot create directory ‘images/smooth-CUDA’: File exists
 CUDA PartB
+Max block size for device 0: 1024
 Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-CUDA/20K-Smooth.jpg
 Transformation Complete!
-GPU Execution Time: 39.6523 milliseconds
+GPU Execution Time: 19.1873 milliseconds
 
+/var/spool/slurmd/job102518/slurm_script: line 60: OpenACC: command not found
+mkdir: cannot create directory ‘images/smooth-openacc’: File exists
 OpenACC PartB
 Input file from: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/20K-RGB.jpg
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project1/src/scripts/../../images/smooth-openacc/20K-Smooth.jpg

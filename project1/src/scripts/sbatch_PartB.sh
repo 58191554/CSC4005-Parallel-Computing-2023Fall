@@ -17,10 +17,12 @@ echo ""
 
 # SIMD PartB
 echo "SIMD(AVX2) PartB (Optimized with -O2)"
+mkdir images/smooth-SIMD
 srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../../build/src/cpu/simd_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/smooth-SIMD/20K-Smooth-SIMD.jpg
 echo ""
 
 # MPI PartB
+mkdir images/smooth-MPI
 for num_processes in 1 2 4 8 16 32
 do
   echo "MPI PartB (Optimized with -O2)"
@@ -29,7 +31,8 @@ do
   echo ""
 done
 
-# # Pthread PartB
+# Pthread PartB
+mkdir images/smooth-pthread
 for num_cores in 1 2 4 8 16 32
 do
   echo "Pthread PartB (Optimized with -O2)"
@@ -38,7 +41,8 @@ do
   echo ""
 done
 
-# # OpenMP PartB
+# OpenMP PartB
+mkdir images/smooth-OpenMP
 for num_cores in 1 2 4 8 16 32
 do
   echo "OpenMP PartB (Optimized with -O2)"
@@ -47,12 +51,14 @@ do
   echo ""
 done
 
-# # CUDA PartB
+# CUDA PartB
+mkdir images/smooth-CUDA
 echo "CUDA PartB"
 srun -n 1 --gpus 1 ${CURRENT_DIR}/../../build/src/gpu/cuda_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/smooth-CUDA/20K-Smooth.jpg
 echo ""
 
-# OpenACC PartB
+OpenACC PartB
+mkdir images/smooth-openacc
 echo "OpenACC PartB"
 srun -n 1 --gpus 1 ${CURRENT_DIR}/../../build/src/gpu/openacc_PartB ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/smooth-openacc/20K-Smooth.jpg
 echo ""

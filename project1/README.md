@@ -1,381 +1,163 @@
-# Project 1: Embarrassingly Parallel Programming
+# [Project 1 ](https://github.com/tonyyxliu/CSC4005-2023Fall)
 
-## This project weights 12.5% for your final grade (4 Projects for 50%)
+> Author: Zhen TONG 120090694
 
-#### Release Date:
-September 22nd, 2023 (Beijing Time, UTC+8)
+**Before everything**
 
-#### Deadline (Submit on BlackBoard):
-11:59 P.M., October 10th, 2023 (Beijing Time, UTC+8)
+This the first project for CSC4005, using different kinds of parallel programming skills to accelarate the smooth kernel in digital programming.
 
-## Prologue
+## Sequential
 
-As the first programming project, students are required to solve embarrassingly parallel problem with six different parallel programming languages to get an intuitive understanding and hands-on experience on how the simplest parallel programming works. A very popular and representative application of embarrassingly parallel problem is image processing since the computation of each pixel is completely or nearly independent with each other.
+First, let's explore how we can optimize sequential programming to achieve its maximum potential. Instead of using a single array to store the data for all three color channels consecutively, I've opted for a more efficient approach by utilizing three separate arrays allocated in the heap to store this data. Due to Data Locality, storing each color channel in a separate array improves performance. This means that the pixels of each channel are stored contiguously in memory, reducing cache misses and improving memory access times. When processing an image sequentially, the CPU can fetch data more efficiently from contiguous memory locations, leading to faster image processing.
 
-This programming project consists of two parts:
+The next step involves breaking down the computation of a smooth kernel loop into explicit indices and performing convolution operations explicitly for each pixel within the kernel. This approach allows us to circumvent the overhead of setting up and executing additional redundant loops. This optimization is significant because the time taken by the compiler to construct a loop, the overhead of storing all data values in registers into memory, and retrieving them after the loop's completion are all time-consuming processes. Furthermore, in addition to the registers used to store data relevant to image processing, there are mechanisms in place for saving and restoring the program counter's state to memory positions before and after the loop, all of which contribute to unnecessary delays. Avoiding these operations is crucial to achieving a speed boost.
 
-## Part-A: RGB to Grayscale
+## SIMD(AVX2)
 
-#### Note: You do not need to modify the codes in this part. Just compile and execute them on the cluster to get the experiment results, and include that in your report.
+In the SIMD method, I employed AVX2 (ILP: Instruction-Level Parallelism) instructions to load data into registers and transform the sequential computing process into vectorized operations. Specifically, I utilized `_m128i` as an 8-byte register, allowing me to load 8 consecutive pixels within a channel simultaneously. Subsequently, I executed a for loop iteratively for each channel, repeating the convolution operation on sets of 8 pixels. This approach effectively enabled the vectorization of the convolution computation.
 
-In this part, students are provided with ready-to-use source programs in a properly configured CMake project. Students need to download the source programs, compile them, and execute them on the cluster to get the experiment results. During the process, they need to have a brief understanding about how each parallel programming model is designed and implemented to do computation in parallel (for example, do computations on multiple data with one instruction, multiple processes with message passing in between, or multiple threads with shared memory).
+![](./images/report/SIMD-conv.jpg)
 
-### Problem Description
+As depicted in the figure, we load eight `unsigned char` values into a single register for a single channel. By utilizing nine registers, we can carry out eight computations simultaneously, significantly enhancing processing efficiency.
 
-#### What is RGB Image?
+The advantages of organizing data into a three-channel array become evident when considering AVX instructions. These instructions enable simultaneous execution of the same operation on multiple data elements. The storage structure aligns seamlessly with SIMD operations because it allows us to process all corresponding pixel values in parallel for each channel.
 
-RGB image can be viewed as three different images(a red scale image, a green scale image and a blue scale image) stacked on top of each other, and when fed into the red, green and blue inputs of a color monitor, it produces a color image on the screen.
+In detail, the code does the following things:
 
-**Reference:** https://www.geeksforgeeks.org/matlab-rgb-image-representation/
+First, we create a SIMD register `__m256` called `one_ninth` to hold the reciprocal of 9, which will be used for the convolution calculation.
 
-#### What is Grayscale Image?
+Next, we define a mask `__m128i` called `shuffle` that will be used for shuffling 32-bit integers to rearrange them in a specific order for storing results in a more efficient manner.
 
-A grayscale (or graylevel) image is simply one in which the only colors are shades of gray. The reason for differentiating such images from any other sort of color image is that less information needs to be provided for each pixel. In fact a `gray' color is one in which the red, green and blue components all have equal intensity in RGB space, and so it is only necessary to specify a single intensity value for each pixel, as opposed to the three intensities needed to specify each pixel in a full color image.
+We then enter a loop that iterates through the image data. Within this loop, we load 3x8x(3x3) data, representing a 3x3 convolution kernel applied to 8 consecutive pixels. We organize the data for computation and loop through the three color channels: Red, Green, and Blue.
 
-**Reference:** https://homepages.inf.ed.ac.uk/rbf/HIPR2/gryimage.htm (Glossary of University of Edinburgh)
+For each color channel, we load 8 bytes of pixel data at a time, convert them to 32-bit integers, and then to 32-bit floating-point values. We perform the convolution operation, multiplying each pixel value by `one_ninth` and accumulating the results in a SIMD register `color_convs_floats_8`.
 
-#### RGB to Grayscale as a Point Operation
+After completing the convolution for all 9 pixels, we convert the results back to 32-bit integers. We then split the 256-bit SIMD register into two 128-bit registers, `low` and `high`, and use the `shuffle` mask to rearrange the integer values in the desired order.
 
-Transferring an image from RGB to grayscale belongs to point operation, which means a function is applied to every pixel in an image or in a selection. The key point is that the function operates only on the pixel’s current value, which makes it completely embarrassingly parallel.
+Finally, we store the transformed results back into memory, and the process continues for the next set of pixels.
 
-In this project, we use NTSC formula to be the function applied to the RGB image.
+## MPI
 
-```math
-Gray = 0.299 * Red + 0.587 * Green + 0.114 * Blue
+MPI is  a multi process strategy (**Data-Level Parallelism (DLP)**). Because process has its own memory space, we need to assign a master process, and son process with their work field to work.AFter they finished thier work, we collect their work by send and recieve function in MPI. 
+
+There is no need to give extra space for all son process to store all the image data, because they will not have chance to use them. In this task they only work on their on bunsiness field, and don't care for other thing. 
+
+There is one strange thing in MPI. Because every process need to be assign a space of image to do the convoluion, they are allocated with a begining index of pixel in the image , and a end pixel in the image. Therefore we can simply use one for loop to do the convolution for each pixel in the for loop iteration, and output the answer. However, the performance is not good enough. A better way to do that is build a double for loop for rows and columns to iterativly compute the convolution. But why is that, why making one more for loop is better in this case. It is saving $O(MN)$ computation because in one for loop we still need to compute the location for a pixel in row-column representation. And for each pixel it is $O(1)$, for all the pixel, it is $O(MN)$, M, N is column number and row number. Using 2 for loop , we only need to compute the start row and end row for a sub- process, then all the thing is doing the 2 for loop from the start row to the end row. Another good thing is because we allocate the son process row by row, the first for loop actually takes a rather long time to be reconstruct in the stack , which means it can do a lot of things(doing convulution) in one row in the fisrt loop, the recourse wasting is not that bad.   
+
+![](./images/report/MPI.jpg)
+
+The program begins by initializing MPI, determining the number of processes, the rank of each process, and the hostname of the node it's running on. It then reads an input JPEG image, divides the image into smaller tasks, and allocates portions of the image to each process. This ensures that each process operates on its designated segment of the image.
+
+The actual image processing happens in two parts. The master process (rank 0) performs the convolution for its assigned segment and also receives results from other processes. Slave processes perform convolution on their segments and send their results back to the master process. To efficiently manage data, each process calculates its start and end rows for convolution, optimizing performance. After convolution, the slave processes send their results to the master process using MPI communication.
+
+Finally, the master process saves the filtered image and releases allocated memory. The code demonstrates how MPI can be used to parallelize image processing tasks effectively, distributing the workload among multiple processes to enhance performance on distributed systems.
+
+## Pthread
+
+Before we delve into OpenMP, let's first examine pthreads (POSIX Threads, **Thread-Level Parallelism (TLP)**). Pthreads utilize threads for parallelism, with the advantage of being lighter weight compared to processes. The approach is somewhat similar. We also favor employing row and column loops to iterate through all the pixels within each thread's task. 
+
+<img src="./images/report/pthread.jpg" style="zoom:70%;" />
+
+In the pthread strategy, we need to create the thread data structure and the thread function. The thread data structure typically looks like this:
+
+```cpp
+// Structure to pass data to each thread
+struct ThreadData {
+    unsigned char* rChannels;
+    unsigned char* gChannels;
+    unsigned char* bChannels;
+    unsigned char* output_buffer;
+    int start;
+    int end;
+    int width;
+    int height;
+    int num_channels;
+};
 ```
 
-**Reference:** https://support.ptc.com/help/mathcad/r9.0/en/index.html#page/PTC_Mathcad_Help/example_grayscale_and_color_in_images.html
+We use pointers for the three channel data because the threads share the heap data with other threads and the main process. Each thread is assigned a unique start and end pointer to specify the portion of data it should process. After all the threads finish their jobs, we use `pthread_join` to recollect their data.
 
-### Example
+##  OpenMP
 
-<div>
-    <img src="images/Lena-RGB.jpg" width="45%" alt="Lena RGB"/>
-    <img src="images/Lena-Gray.jpg" width="45%" align="right" alt="Lena Gray"/>
-</div>
-<p style="font-size: medium;" align="center">
-    <strong>Convert Lena JPEG image (256x256) from RGB to Grayscale</strong>
-</p>
+OpenMP is a high-level programming paradigm for C++ (**Thread-Level Parallelism (TLP)**). It's essentially a pthread structure. In OpenMP, parallel tasks are simplified into instruction constructs, resembling hints to the compiler on how to utilize the hardware efficiently. However, compilers may not always be adept at allocating threads for optimal performance, such as determining the appropriate workload size for each thread. Therefore, it's essential to have a grasp of pthread strategies, which can guide us in designing efficient parallel programs using OpenMP.
 
-<div>
-    <img src="images/4k-RGB.jpg" alt="4K Picture RGB"/>
-    <br />
-    <img src="images/4k-Gray.jpg" alt="4K Picture Grayscale"/>
-</div>
-<p style="font-size: medium;" align="center">
-    <strong>Convert 4K JPEG image (3840x2599) from RGB to Grayscale</strong>
-</p>
+The heuristic for workload allocation is to provide each thread with a sufficient amount of work, allowing them to operate efficiently without unnecessary time spent on communication. Utilizing OpenMP without careful consideration, such as implementing a straightforward thread-per-pixel or thread-per-row loop, can be suboptimal. The most efficient approach is to allocate threads with a chunk of data, ensuring that each thread performs its work in a way that minimizes redundant computations.
 
-## Part-B: Image Filtering (Soften with Equal Weight Filter)
+<img src="./images/report/openmp.jpg" style="zoom:120%;" />
 
-In part B, students are asked to implement parallel programs by themselves do embarrassingly parallel image filtering, which is slightly harder than PartA. This time, they need to take the information of the pixel's neighbors into consideration instead of doing computation on the pixel itself. Although two pixels may share the same neighbors, the read-only property still makes the computation embarrassingly parallel.
+From this image, we can observe that as the individual thread's work time increases, the overall execution time of the parallel program decreases. Hence, it's crucial to determine the number of available cores and allocate the workload accordingly, similar to the pthread approach.
 
-### Problem Description
+## CUDA
 
-Image Filtering involves applying a function to every pixel in an image or selection but where the function utilizes not only the pixels current value but the value of neighboring pixels. Some of the filtering functions are listed below, and the famous convolutional kernel computation is also a kind of image filtering
+When employing CUDA(**Thread-Level Parallelism (TLP)**) for 2D image convolution, it's essential to leverage the inherent "single instruction multiple data" (SIMD) nature of CUDA. A CUDA kernel function, marked as `__global__`, can be invoked by the host and executed on the device. Within a grid, there are numerous 3D dimensional blocks, although we are employing only two dimensions here. In each block, we have multiple threads in a 3D dimensional arrangement. In the kernel function, we focus on the convolution centered around a single pixel. Therefore, there are `height * width` threads in total. Due to the limitations of block size (typically up to 1024 threads on many GPUs), we can only approach a (32, 32) block. To cover the entire image, we require a grid shape of approximately $(\lceil height/32\rceil, \lceil width/32\rceil)$. We opt for a 2D grid and block configuration because we aim to exploit data locality within the 2D image.
 
-- blur
-- sharpen
-- soften
-- distort
+I attempted to employ a more fine-grained strategy, dividing each pixel thread into three separate threads for the RGB channels. However, this approach didn't yield significant benefits. Despite each thread performing less work, more time was consumed in communication, and there was a lack of data locality among the RGB channels.
 
-Two images below demostrate in detail how the image filtering is done. Basically, we have a filter matrix of given size (3 for example), and we slide that filter matrix across the image to compute the filtered value by element-wise multipling and summation. 
+An interesting observation is that when using (16, 16) block and (32, 32) block configurations, the performance difference is minimal, even though the latter is fully utilized.
 
-<div>
-  <img src="../docs/images/what-is-image-filtering.png" alt="What is Image Filtering"/>
-  <p style="font-size: medium;" align="center">
-    <strong>How to do image filtering with filter matrix</strong>
-  </p>
-</div>
+I try to explain that larger block sizes may lead to more thread divergence. Thread divergence occurs when threads within a block follow different execution paths. If the threads within a block don't perform similar operations, it can lead to inefficiency, even if there are more threads.
 
-<div>
-  <img src="../docs/images/image-filtering-example.png" alt="image filtering example"/>
-  <p style="font-size: medium;" align="center">
-    <strong>An example of image filtering of size 3</strong>
-  </p>
-</div>
+<img src="./images/report/cuda.jpg" style="zoom:120%;" />
 
-In this project, students are required to apply the simplest size-3 low-pass filter with equal weights to smooth the input JPEG image, which is shown below. Note that your program should also work for other filter matrices of size 3 with different weights, that means you should not do specific optimization on the 1 / 9 weight, like replacing multiplication with addition.
+## OpenACC
 
-<table>
-<tr>
-    <td align="center">1 / 9</td>
-    <td align="center">1 / 9</td>
-    <td align="center">1 / 9</td>
-</tr>
-<tr>
-    <td align="center">1 / 9</td>
-    <td align="center">1 / 9</td>
-    <td align="center">1 / 9</td>
-</tr>
-<tr>
-    <td align="center">1 / 9</td>
-    <td align="center">1 / 9</td>
-    <td align="center">1 / 9</td>
-</tr>
-</table>
+OpenACC(**Thread-Level Parallelism (TLP)**) is a high-level GPU paradigm that provides hints to the NVCC compiler to generate hardware code for GPU devices. Some crucial lines of code are positioned between the execution of the convolutional loop:
 
-**Reference:** Lecture-04 slides of course CSC3185: Introduction to Multimedia Systems, CUHKSZ
+1. `#pragma acc enter data copyin(...)`: This directive is employed to allocate memory on the GPU and transfer data from the host (CPU) to the GPU. In this case, it's transferring the `filterImage` and `buffer` arrays from the host to the GPU. The `copyin` clause specifies that data should be copied from the host to the device, ensuring that the GPU has access to the necessary data.
+2. `#pragma acc update device(...)`: This directive is used to update data on the GPU. It copies the same data as in the `enter data` directive but in the reverse direction, ensuring that the GPU has the most up-to-date data.
+3. `#pragma acc parallel present(...)`: This directive defines a parallel region that will be executed on the GPU. It specifies the data that must be present on the device during the execution of this region. In this case, it lists the `filterImage` and `buffer` arrays as being present on the device.
+4. `#pragma acc loop independent`: This directive is employed to signify that the iterations of the loop that follows are independent and can be executed in parallel. It enables the compiler to effectively parallelize the loop.
+5. `#pragma acc exit data copyout(...)`: This directive is used to copy data from the GPU back to the host after the execution of the parallel region. It ensures that the modified `filterImage` array on the GPU is copied back to the host.
 
-### Reminders of Implementation
-1. The pixels on the boundary of the image do not have all 8 neighbor pixels. For these pixels, you can either use padding (set value as 0 for those missed neighbors) or simply ignore them, which means you can handle the (width - 2) * (height - 2) inner image only. In this way, all the pixels should have all 8 neighbors.
-2. Check the correctness of your program with the Lena RGB image. The 4K image has high resolution and the effect of smooth operation is hardly to tell.
 
-### Examples
 
-<div style="display:flex;justify-content:space-around; align-items:center;">
-  <img src="images/Lena-RGB.jpg" width="45%" alt="Lena RGB"/>
-  <img src="images/Lena-Smooth.jpg" width="45%" align="right" alt="Lena Smooth"/>
-</div>
-<p style="font-size: medium;" align="center">
-    <strong>Lena RGB Original and Smooth from left to right</strong>
-</p>
 
-### Benchmark Image
 
-The image used for performance evaluation is a 20K JPEG image with around 250 million pixels (19200 x 12995) retrieved by doing upper sampling on the 4K image, and the image has been uploaded to BlackBoard. Please download that image to your docker container or on the cluster. Do not use Lena or the 4K image to do the performance evaluation on your report, because the problem size is too small to get the parallel speedup.
+## Performance
 
-### Requirements
+| Number of Processes / Cores | Sequential                      | SIMD (AVX2)                     | MPI                             | Pthread | OpenMP                          | CUDA    | OpenACC                       |
+| --------------------------- | ------------------------------- | ------------------------------- | ------------------------------- | ------- | ------------------------------- | ------- | ----------------------------- |
+| 1                           | <font color = green>6661</font> | <font color = green>2878</font> | <font color = green>6156</font> | 6282    | <font color = black>8284</font> | 19.6351 | <font color = green>20</font> |
+| 2                           | N/A                             | N/A                             | <font color = green>5922</font> | 5629    | <font color = green>6468</font> | N/A     | N/A                           |
+| 4                           | N/A                             | N/A                             | <font color = black>3349</font> | 2925    | <font color = green>3294</font> | N/A     | N/A                           |
+| 8                           | N/A                             | N/A                             | <font color = green>1689</font> | 1586    | <font color = green>1654</font> | N/A     | N/A                           |
+| 16                          | N/A                             | N/A                             | <font color = black>1102</font> | 749     | <font color = green>903</font>  | N/A     | N/A                           |
+| 32                          | N/A                             | N/A                             | <font color = black>716</font>  | 482     | <font color = green>466</font>  | N/A     | N/A                           |
 
-- **Six parallel programming implementations for PartB (60%)**
-  - SIMD (10%)
-  - MPI (10%)
-  - Pthread (10%)
-  - OpenMP (10%)
-  - CUDA (10%)
-  - OpenACC (10%)
+<img src="./images/report/time.jpg" style="zoom:50%;" /><img src="./images/report/eff.jpg" style="zoom:70%;" />
 
-  As long as your programs can compile and execute to get the expected output image by the command you give in the report, you can get full mark.
 
-- **Performance of Your Program (30%)**
-  Try your best to do optimization on your parallel programs for higher speedup.If your programs shows similar performance to the sample solutions provided by the teaching stuff, then you can get full mark. Points will be deduted if your parallel programs perform poor while no justification can be found in the report. (Target Peformance will be released soon).
-  Some hints to optimize your program are listed below:
-  - Try to avoid nested for loop, which often leads to bad parallelism.
-  - Change the way that image data or filter matrix are storred for more efficient memory access.
-  - Try to avoid expensive arithmetic operations (for example, double-precision floating point division is very expensive, and takes a few dozens of cycles to finish).
-  - Partition your data for computation in a proper way for balanced workload when doing parallelism.
 
-- **One Report in PDF (10%, No Page Limit)**\
-  The report does not have to be very long and beautiful to help you get good grade, but you need to include what you have done and what you have learned in this project.
-  The following components should be included in the report:
-  - How to compile and execute your program to get the expected output on the cluster.
-  - Briefly explain how does each parallel programming model do computation in parallel? What are the similarities and differences between them. Explain these with what you have learned from the lectures (like different types of parallelism, ILP, DLP, TLP, etc).
-  - What kinds of optimizations have you tried to speed up your parallel program for PartB, and how does them work?
-  - Show the experiment results you get for **both PartA and PartB**, and do some numerical analysis, such as calculating the speedup and efficiency, demonstrated with tables and figures.
-  - What have you found from the experiment results? Is there any difference between the experiment resutls of PartA and PartB? If so, what may cause the differences.
+## How to Run
 
-- **Extra Credits (10%)**\
-  If you can use any other methods to achieve a higher speedup than the sample solutions provided by the TA (Baseline peformance to be released).\
-  Some possible ways are listed below:
-  - A combination of multiple parallel programming models, like combining MPI and OpenMP together.
-  - Try to bind program to a specific CPU core for better performance. Refer to: https://slurm.schedmd.com/mc_support.html
-  - For SIMD, maybe you can have a try with different ISA (Instruction Set Architecture) to do ILP (Instruction-Level-Parallelism).
+**build, run, store in one instruction**
 
-### The Extra Credit Policy
-According to the professor, the extra credits in project 1 cannot be added to other projects to make them full mark. The credits are the honor you received from the professor and the teaching stuff, and the professor may help raise you to a higher grade level if you are at the boundary of two grade levels and he think you deserve a better grade with your extra credits. For example, if you are the top students with B+ grade, and get enough extra credits, the professor may raise you to A- grade.
+I have packed all the things in `./run.sh`, first give permission, then run
 
-## How to execute the sample programs in PartA?
-
-### Dependency Installation
-
-#### Libjpeg (In docker container only)
-
-Libjpeg is a tool that we use to manipulate JPEG images. You need to install its packages with yum in your docker container instead of your host OS (Windows or MacOS). This package has been installed on the cluster, so feel free to use it there.
-
-```bash
-# Check the ligjpeg packages that are going to be installed
-yum list libjpeg*
-
-# Install libjpeg-turbo-devel.x86_64 with yum
-yum install libjpeg-turbo-devel.x86_64 -y
-
-# Check that you have installed libjpeg packages correctly
-yum list libjpeg*
+```
+chmod +x ./run.sh
+./run.sh
 ```
 
-The terminal output for `yum list libjpeg*` after the installation should be as follows:
+All the running results will be stored the image files with each parallel strategy on file directory. The tiime cose log will be stored in the `Project1-PartB-Results.txt`
 
-```bash
-[root@cf49d1025aff bin]# yum list libjpeg*
-Loaded plugins: fastestmirror, ovl
-Loading mirror speeds from cached hostfile
- * base: mirrors.aliyun.com
- * epel: ftp.riken.jp
- * extras: mirrors.aliyun.com
- * updates: mirrors.aliyun.com
-Installed Packages
-libjpeg-turbo.x86_64                                                                   1.2.90-8.el7                                                            @base
-libjpeg-turbo-devel.x86_64                                                             1.2.90-8.el7                                                            @base
-Available Packages
-libjpeg-turbo.i686                                                                     1.2.90-8.el7                                                            base 
-libjpeg-turbo-devel.i686                                                               1.2.90-8.el7                                                            base 
-libjpeg-turbo-static.i686                                                              1.2.90-8.el7                                                            base 
-libjpeg-turbo-static.x86_64                                                            1.2.90-8.el7                                                            base 
-libjpeg-turbo-utils.x86_64                                                             1.2.90-8.el7                                                            base
+You can also separately fun compile and run
+
 ```
+# Change directory to 'build/'
+cd build/
 
-#### Upgrade to CMake3 and GCC-7 (In docker container only)
-
-The programs need `cmake3` and `gcc-7` for compilation and execution. These upgrades have been done on the cluster, which means you can compile and execute the programs directly on the cluster with no problem. If you need to develop programs on your docker container, like for PartB implementation, you need to upgrade your `cmake` and `gcc` by yourself.
-
-```bash
-# Install cmake3 with yum
-yum install cmake3 -y
-cmake3 --version # output should be 3.17.5
-# Note: use cmake3 to build the cmake project in your docker container
-
-# Install gcc/g++-7 with yum
-yum install -y centos-release-scl*
-yum install -y devtoolset-7-gcc*
-scl -l
-echo "export PATH=/opt/rh/devtoolset-7/root/usr/bin:$PATH" >> ~/.bashrc
-source ~/.bashrc
-gcc -v # output should be 7.3.1
-```
-
-### How to compile the programs?
-
-```bash
-cd /path/to/project1
-mkdir build && cd build
-# Change to -DCMAKE_BUILD_TYPE=Debug for debug build error message logging
-# Here, use cmake on the cluster and cmake3 in your docker container
-cmake ..
+# Run 'make' with 4 parallel jobs
 make -j4
+
+# Change back to the parent directory
+cd ..
+
+# Submit the job to SLURM using 'sbatch'
+sbatch src/scripts/sbatch_PartB.sh
 ```
 
-Compilation with `cmake` may fail in docker container, if so, please compile with `gcc`, `mpic++`, `nvcc` and `pgc++` in the terminal with the correct optimization options.
+The output image should be in the `images` folder
 
-### How to execute the programs?
 
-#### In Your Docker Container
 
-```bash
-cd /path/to/project1/build
-# Sequential
-./src/cpu/sequential_PartA /path/to/input.jpg /path/to/output.jpg
-# MPI
-mpirun -np {Num of Processes} ./src/cpu/mpi_PartA /path/to/input.jpg /path/to/output.jpg
-# Pthread
-./src/cpu/pthread_PartA /path/to/input.jpg /path/to/output.jpg {Num of Threads}
-# OpenMP
-./src/cpu/openmp_PartA /path/to/input.jpg /path/to/output.jpg
-# CUDA
-./src/gpu/cuda_PartA /path/to/input.jpg /path/to/output.jpg
-# OpenACC
-./src/gpu/openacc_PartA /path/to/input.jpg /path/to/output.jpg
-```
-
-#### On the Cluster
-
-**Important**: Change the directory of output file in sbatch.sh first
-
-```bash
-# Use sbatch
-cd /path/to/project1
-sbatch ./src/scripts/sbatch_PartA.sh
-```
-
-## Performance Evaluation
-
-### PartA: RGB to Grayscale
-
-**Experiment Setup**
-
-- On the cluster, allocated with 32 cores
-- Experiment on a 20K JPEG image (19200 x 12995 = 250 million pixels)
-- [sbatch file for PartA](src/scripts/sbatch_PartA.sh)
-- Performance measured as execution time in milliseconds
-
-| Number of Processes / Cores | Sequential | SIMD (AVX2) | MPI | Pthread | OpenMP | CUDA | OpenACC |
-|-----------------------------|------------|-------------|-----|---------|--------|------|---------|
-| 1                           | 632        | 416         | 665 | 704     | 475    | 27   | 28      |
-| 2                           | N/A        | N/A         | 767 | 638     | 471    | N/A  | N/A     |
-| 4                           | N/A        | N/A         | 490 | 358     | 448    | N/A  | N/A     |
-| 8                           | N/A        | N/A         | 361 | 178     | 288    | N/A  | N/A     |
-| 16                          | N/A        | N/A         | 288 | 116     | 158    | N/A  | N/A     |
-| 32                          | N/A        | N/A         | 257 | 62      | 126    | N/A  | N/A     |
-
-<div>
-    <img src="images/performance-evaluation-PartA.png" align="center" alt="Performance Evaluation PartA"/>
-</div>
-<p style="font-size: medium;" align="center">
-    <strong>Performance Evaluation of PartA (numbers refer to execution time in milliseconds)</strong>
-</p>
-
-### PartB (Baseline Performance)
-
-If your program can achieve similar performance to the baseline shown below, you can get full mark for your performance part, which weights for 30%.
-
-If your program can achieve better performance (should be obvious, not 1-2%) with reasonable justification in your report, you can get extra credits.
-
-If your program behaves poor performance to the baseline, points will be deducted in performance part.
-
-**Experiment Setup**
-
-- On the cluster
-- JPEG image (19200 x 12995 = 250 million pixels)
-- [sbatch file here](src/scripts/sbatch_PartB.sh)
-- Performance measured as execution time in milliseconds
-
-| Number of Processes / Cores | Sequential | SIMD (AVX2) | MPI  | Pthread | OpenMP | CUDA | OpenACC |
-|-----------------------------|------------|-------------|------|---------|--------|------|---------|
-| 1                           | 7247       | 4335        | 7324 | 8066    | 8542   | 32   | 23      |
-| 2                           | N/A        | N/A         | 7134 | 7229    | 7299   | N/A  | N/A     |
-| 4                           | N/A        | N/A         | 3764 | 3836    | 3886   | N/A  | N/A     |
-| 8                           | N/A        | N/A         | 2093 | 1835    | 1862   | N/A  | N/A     |
-| 16                          | N/A        | N/A         | 1083 | 924     | 1089   | N/A  | N/A     |
-| 32                          | N/A        | N/A         | 694  | 535     | 605    | N/A  | N/A     |
-
-<div style="display:flex;justify-content:space-around; align-items:center;">
-    <img src="images/performance-evaluation-PartB.png" alt="Performance Evaluation PartB"/>
-</div>
-<p style="font-size: medium;" align="center">
-    <strong>Performance Evaluation of PartB (numbers refer to execution time in milliseconds)</strong>
-</p>
-
-## Appendix
-
-### Appendix A: GCC Optimization Options
-
-You can list all the supported optimization options for gcc either by terminal or through online documentations
-
-```bash
-# Execute on your docker container or on the cluster
-gcc --help=optimizers
-```
-
-Online
-documentation: [Options That Control Optimization for gcc-7.3](https://gcc.gnu.org/onlinedocs/gcc-7.3.0/gcc/Optimize-Options.html#Optimize-Options)
-
-You can find a lot of useful options to let gcc compiler to do optimization for your program, like doing tree
-vectorization.
-
-- **-ftree-vectorize**\
-  Perform vectorization on trees. This flag enables -ftree-loop-vectorize and -ftree-slp-vectorize if not explicitly
-  specified.
-
-- **-ftree-loop-vectorize**\
-  Perform loop vectorization on trees. This flag is enabled by default at -O3 and when -ftree-vectorize is enabled.
-
-- **-ftree-slp-vectorize**\
-  Perform basic block vectorization on trees. This flag is enabled by default at -O3 and when -ftree-vectorize is
-  enabled.
-
-### Appendix B: Tutorials of the Six Parallel Programing Languages
-
-- **SIMD**
-  - https://users.ece.cmu.edu/~franzf/teaching/slides-18-645-simd.pdf
-- **MPI**
-  - https://mpitutorial.com/tutorials/
-- **OpenMP**
-  - https://www.openmp.org/resources/tutorials-articles/
-  - https://engineering.purdue.edu/~smidkiff/ece563/files/ECE563OpenMPTutorial.pdf
-- **Pthread**
-  - https://www.cs.cmu.edu/afs/cs/academic/class/15492-f07/www/pthreads.html
-  - https://hpc-tutorials.llnl.gov/posix/
-- **CUDA**
-  - https://newfrontiers.illinois.edu/news-and-events/introduction-to-parallel-programming-with-cuda/
-  - https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html
-- **OpenACC**
-  - https://ulhpc-tutorials.readthedocs.io/en/latest/gpu/openacc/basics/
-  - https://www.openacc.org/sites/default/files/inline-files/OpenACC_Programming_Guide_0_0.pdf
