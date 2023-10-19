@@ -1,0 +1,14 @@
+Naive Matrix Multiplication (Optimized with -O2)
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive12.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive34.txt
+Multiplication Complete!
+Execution Time: 12 milliseconds
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive56.txt
+Multiplication Complete!
+Execution Time: 8470 milliseconds
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive78.txt
+Multiplication Complete!
+Execution Time: 87595 milliseconds
+
