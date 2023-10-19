@@ -42,3 +42,7 @@
 
 *.Plo
 *.Plo.0.0.0
+
+# Project 1 img and test
+project1/images
+project1_test

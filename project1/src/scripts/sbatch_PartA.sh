@@ -11,6 +11,7 @@ CURRENT_DIR=$(pwd)/src/scripts
 echo "Current directory: ${CURRENT_DIR}"
 
 # Sequential PartA
+mkdir ${CURRENT_DIR}/../../images
 echo "Sequential PartA (Optimized with -O2)"
 srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../../build/src/cpu/sequential_PartA ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/20K-Gray.jpg
 echo ""
@@ -34,7 +35,7 @@ echo "Pthread PartA (Optimized with -O2)"
 for num_cores in 1 2 4 8 16 32
 do
   echo "Number of cores: $num_cores"
-  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../../build/src/cpu/pthread_PartA ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/20K-Gray.jpg ${num_cores}
+  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../../build/src/cpu/pthread_PartA ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/20K-Gray.jpg ${num_cores} 
   echo ""
 done
 
@@ -51,7 +52,6 @@ done
 echo "CUDA PartA"
 srun -n 1 --gpus 1 ${CURRENT_DIR}/../../build/src/gpu/cuda_PartA ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/20K-Gray.jpg
 echo ""
-
 # OpenACC PartA
 echo "OpenACC PartA"
 srun -n 1 --gpus 1 ${CURRENT_DIR}/../../build/src/gpu/openacc_PartA ${CURRENT_DIR}/../../images/20K-RGB.jpg ${CURRENT_DIR}/../../images/20K-Gray.jpg
