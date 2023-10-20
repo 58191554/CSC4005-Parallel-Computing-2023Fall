@@ -10,18 +10,6 @@
 #include "matrix.hpp"
 #include <cstdlib>
 
-Matrix tile_multiply(Matrix& tile_M1, Matrix& tile_M2, int tile_size){
-    Matrix tile_result(tile_size, tile_size);
-    for (size_t i = 0; i < tile_size; ++i) {
-        for (size_t j = 0; j < tile_size; ++j) {
-            for (size_t k = 0; k < tile_size; ++k) {
-                tile_result[i][j] += tile_M1[i][k] * tile_M2[k][j];
-            }
-        }
-    }
-    return tile_result;
-}
-
 size_t gcd(size_t a, size_t b) {
     while (b != 0) {
         size_t temp = b;
@@ -41,7 +29,6 @@ Matrix matrix_multiply_locality(const Matrix& matrix1, const Matrix& matrix2) {
     Matrix result(M, N);
     auto ** memM1 = (int**)malloc(M * sizeof(int*));
     auto ** memM2 = (int**)malloc(K * sizeof(int*));
-    std::cout << "FUCK ME" << std::endl;
 
     for(size_t i = 0; i < M; i++){
         // std::cout << i << std::endl;
@@ -67,9 +54,9 @@ Matrix matrix_multiply_locality(const Matrix& matrix1, const Matrix& matrix2) {
 
     // get the max gcd as the tile size
     // size_t tile_size = gcd(M, gcd(K, N));
-    size_t tile_sizeM = 16;
-    size_t tile_sizeN = 16;
-    size_t tile_sizeK = 16;
+    size_t tile_sizeM = 32;
+    size_t tile_sizeN = 32;
+    size_t tile_sizeK = 32;
     if(tile_sizeM > M){
         tile_sizeM = M;
     }
@@ -79,37 +66,53 @@ Matrix matrix_multiply_locality(const Matrix& matrix1, const Matrix& matrix2) {
     if(tile_sizeK > K){
         tile_sizeK = K;
     }
-
     std::cout << "M = " << M << ", N = "<<N << ", K = "<<K << std::endl;
     std::cout << "tile_sizeM = " << tile_sizeM 
     << "tile_sizeN = " << tile_sizeN
     << "tile_sizeK = " << tile_sizeK  << std::endl;
     
-    size_t tile_num_M = M/tile_sizeM;
-    size_t tile_num_N = N/tile_sizeN;
-    size_t tile_num_K = K/tile_sizeK;
+    size_t numtile_M = M/tile_sizeM+1;
+    size_t numtile_N = N/tile_sizeN+1;
+    size_t numtile_K = K/tile_sizeK+1;
+    // store arrays of tile sizes
+    int* tile_sizes_M = (int*)malloc(numtile_M*sizeof(int));
+    int* tile_sizes_N = (int*)malloc(numtile_N*sizeof(int));
+    int* tile_sizes_K = (int*)malloc(numtile_K*sizeof(int));
+
+    for(int i = 0; i < numtile_M; i++){
+        if(i < numtile_M-1) tile_sizes_M[i] = tile_sizeM;
+        else tile_sizes_M[i] = M-i*tile_sizeM;
+    }
+    std::cout << "FUCK ME" << std::endl;
+
+    for(int i = 0; i < numtile_N; i++){
+        if(i<numtile_N-1)tile_sizes_N[i] = tile_sizeN;
+        else tile_sizes_N[i] = N-i*tile_sizeN;
+    }
+    for(int i = 0; i < numtile_K; i++){
+        if(i < numtile_K-1) tile_sizes_K[i] = tile_sizeK;
+        else tile_sizes_K[i] = K-i*tile_sizeK;
+    }
+
+
     // 1. Change the order of the tripple nested loop
     // 2. Apply Tiled Matrix Multiplication
 
     // tiled
-    for(size_t ti = 0; ti < tile_num_M; ++ti){
-        for(size_t tj = 0; tj < tile_num_N; ++tj){
-            for(size_t tk = 0; tk < tile_num_K; ++tk){
+    for(size_t ti = 0; ti < numtile_M; ++ti){
+        for(size_t tj = 0; tj < numtile_N; ++tj){
+            for(size_t tk = 0; tk < numtile_K; ++tk){
                 // do the tile matrix multiply for tile_num_K x tile_num_K times
-                // for each tile matrix multiplication
+
                 size_t row_offset = ti * tile_sizeM;
                 size_t col_offset = tj * tile_sizeN;
                 size_t mid_offset = tk * tile_sizeK;
-                for(size_t i = 0; i < tile_sizeM; ++i){
-                    for(size_t j = 0; j < tile_sizeN; ++j){
-                        for(size_t k = 0; k < tile_sizeK; k++){
-                            // std::cout <<"i = "<<i<<" j = "<<j<<" k = "<<k<<std::endl;
-                            // std::cout << "memM1:" << memM1[(row_offset + i)*M + (mid_offset + k)]<< " * memM2:"
-                            // << memM2[(mid_offset + k)*K + (col_offset + j)];
+                for(size_t i = 0; i < tile_sizes_M[ti]; ++i){
+                    for(size_t j = 0; j < tile_sizes_N[tj]; ++j){
+                        for(size_t k = 0; k < tile_sizes_K[tk]; k++){
                             memresult[row_offset+i][col_offset+j]+=
                             memM1[row_offset+i][mid_offset+k]*
                             memM2[mid_offset+k][col_offset+j];
-                            // std::cout << " reuslt:" <<memresult[(row_offset + i)*M+(col_offset+j)] <<std::endl;
                         }
                     }
                 }
@@ -131,6 +134,9 @@ Matrix matrix_multiply_locality(const Matrix& matrix1, const Matrix& matrix2) {
     for(size_t i = 0; i < M; i++){
         free(memresult[i]);
     }
+    delete[] tile_sizes_M;
+    delete[] tile_sizes_N;
+    delete[] tile_sizes_K;
     return result;
 }
 
@@ -170,7 +176,7 @@ int main(int argc, char** argv) {
     std::cout << "Execution Time: " << elapsed_time.count() << " milliseconds"
               << std::endl;
 
-    if (debug_flag == 1){
+    if (debug_flag == 0){
         std::cout << "Debug Mode" << std::endl;
         // DEBUG THE ANSWER CORRECTNESS
         std::string ans_mat_path;

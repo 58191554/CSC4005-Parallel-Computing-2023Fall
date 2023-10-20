@@ -1,41 +1,29 @@
 Memory Locality Matrix Multiplication (Optimized with -O2)
-FUCK ME
 M = 4, N = 4, K = 4
 tile_sizeM = 4tile_sizeN = 4tile_sizeK = 4
+FUCK ME
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m12.txt
 Multiplication Complete!
 Execution Time: 0 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m12.txt
-Answer Correct!
 
-FUCK ME
 M = 128, N = 128, K = 128
-tile_sizeM = 16tile_sizeN = 16tile_sizeK = 16
+tile_sizeM = 32tile_sizeN = 32tile_sizeK = 32
+FUCK ME
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m34.txt
 Multiplication Complete!
 Execution Time: 3 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m34.txt
-Answer Correct!
 
-FUCK ME
 M = 1024, N = 1024, K = 1024
-tile_sizeM = 16tile_sizeN = 16tile_sizeK = 16
+tile_sizeM = 32tile_sizeN = 32tile_sizeK = 32
+FUCK ME
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m56.txt
 Multiplication Complete!
-Execution Time: 849 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m56.txt
-Answer Correct!
+Execution Time: 803 milliseconds
 
-FUCK ME
 M = 2048, N = 2048, K = 2048
-tile_sizeM = 16tile_sizeN = 16tile_sizeK = 16
+tile_sizeM = 32tile_sizeN = 32tile_sizeK = 32
+FUCK ME
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m78.txt
 Multiplication Complete!
-Execution Time: 7311 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m78.txt
-Answer Correct!
+Execution Time: 6554 milliseconds
 
