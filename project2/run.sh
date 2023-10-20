@@ -7,6 +7,11 @@ if [ ! -d "results" ]; then
     echo "[Build Directory for results]"
 fi
 
+if [ ! -d "results/answers" ]; then
+    mkdir -p results/answers
+    echo "[Build Directory for answers]"
+fi
+
 if [ ! -d "results/naives" ]; then
     mkdir -p results/naives
     echo "[Build Directory for naives]"

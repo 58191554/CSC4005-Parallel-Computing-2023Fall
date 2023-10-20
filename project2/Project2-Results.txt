@@ -1,14 +1,26 @@
 Naive Matrix Multiplication (Optimized with -O2)
+M = 4, N = 4, K = 4
+tile_size = 4
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive12.txt
 Multiplication Complete!
 Execution Time: 0 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+M = 128, N = 128, K = 128
+tile_size = 4
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive34.txt
 Multiplication Complete!
-Execution Time: 12 milliseconds
+Execution Time: 19 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+M = 1024, N = 1024, K = 1024
+tile_size = 4
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive56.txt
 Multiplication Complete!
-Execution Time: 8470 milliseconds
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive78.txt
-Multiplication Complete!
-Execution Time: 87595 milliseconds
+Execution Time: 6475 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
 

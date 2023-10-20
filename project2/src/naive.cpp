@@ -8,6 +8,7 @@
 #include <stdexcept>
 #include <chrono>
 #include "matrix.hpp"
+#include <cstdlib>
 
 Matrix tile_multiply(Matrix& tile_M1, Matrix& tile_M2, int tile_size){
     Matrix tile_result(tile_size, tile_size);
@@ -40,10 +41,25 @@ Matrix matrix_multiply(const Matrix& matrix1, const Matrix& matrix2) {
 
     Matrix result(M, N);
     // get the max gcd as the tile size
-    size_t tile_size = gcd(M, gcd(K, N));
+    // size_t tile_size = gcd(M, gcd(K, N));
+    size_t tile_size = 4;
+    std::cout << "M = " << M << ", N = "<<N << ", K = "<<K << std::endl;
+    std::cout << "tile_size = " << tile_size << std::endl;
+    
     size_t tile_num_M = M/tile_size;
     size_t tile_num_N = N/tile_size;
     size_t tile_num_K = K/tile_size;
+
+    // naive
+    // for (size_t i = 0; i < M; ++i) {
+    //     for (size_t j = 0; j < N; ++j) {
+    //         for (size_t k = 0; k < K; ++k) {
+    //             result[i][j] += matrix1[i][k] * matrix2[k][j];
+    //         }
+    //     }
+    // }
+
+    // tiled
     for(size_t ti = 0; ti < tile_num_M; ++ti){
         for(size_t tj = 0; tj < tile_num_N; ++tj){
             for(size_t tk = 0; tk < tile_num_K; ++tk){
@@ -71,7 +87,7 @@ Matrix matrix_multiply(const Matrix& matrix1, const Matrix& matrix2) {
 
 int main(int argc, char** argv) {
     // Verify input argument format
-    if (argc != 4) {
+    if (argc != 5) {
         throw std::invalid_argument(
             "Invalid argument, should be: ./executable "
             "/path/to/matrix1 /path/to/matrix2 /path/to/multiply_result\n");
@@ -82,6 +98,8 @@ int main(int argc, char** argv) {
     const std::string matrix2_path = argv[2];
 
     const std::string result_path = argv[3];
+
+    const int debug_flag = atoi(argv[4]);
 
     Matrix matrix1 = Matrix::loadFromFile(matrix1_path);
 
@@ -103,5 +121,35 @@ int main(int argc, char** argv) {
     std::cout << "Execution Time: " << elapsed_time.count() << " milliseconds"
               << std::endl;
 
+    if (debug_flag == 1){
+        std::cout << "Debug Mode" << std::endl;
+        // DEBUG THE ANSWER CORRECTNESS
+        std::string ans_mat_path;
+        if(result.getRows() == 4) ans_mat_path = "results/answers/m12.txt";
+        if(result.getRows() == 128) ans_mat_path = "results/answers/m34.txt";
+        if(result.getRows() == 1024) ans_mat_path = "results/answers/m56.txt";
+        if(result.getRows() == 2048) ans_mat_path = "results/answers/m78.txt";
+        std::cout << "ans_mat_path = " << ans_mat_path << std::endl;
+        Matrix matrix_ans = Matrix::loadFromFile(ans_mat_path);
+
+        // DEBUG THE ANSWER CORRECTNESS
+        bool correct = true;
+        for(size_t i = 0; i < result.getRows(); ++i){
+            if (correct){
+                for(size_t j = 0; j < result.getCols(); ++j){ 
+                    if(result[i][j] != matrix_ans[i][j]){
+                        std::cout << "wrong index i = "<<i<<" j = "<<j<<std::endl;
+                        std::cout << result[i][j] << " != " << matrix_ans[i][j]<<std::endl;
+                        correct = false;
+                        break;
+                    }
+                }
+            }
+        }
+        if(correct){
+            std::cout << "Answer Correct!" << std::endl;
+        }
+        // DEBUG THE ANSWER CORRECTNESS ENDS
+    }
     return 0;
 }
