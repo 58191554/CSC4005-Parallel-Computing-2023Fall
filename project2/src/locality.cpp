@@ -39,32 +39,37 @@ Matrix matrix_multiply_locality(const Matrix& matrix1, const Matrix& matrix2) {
 
     size_t M = matrix1.getRows(), K = matrix1.getCols(), N = matrix2.getCols();
     Matrix result(M, N);
-    auto * memM1 = (int*)malloc(M*K*sizeof(int));
-    auto * memM2 = (int*)malloc(K*N*sizeof(int));
+    auto ** memM1 = (int**)malloc(M * sizeof(int*));
+    auto ** memM2 = (int**)malloc(K * sizeof(int*));
+    std::cout << "FUCK ME" << std::endl;
 
     for(size_t i = 0; i < M; i++){
+        // std::cout << i << std::endl;
+        memM1[i] = (int*) malloc(K*sizeof(int));
         for(size_t j = 0; j < K; j++){
-            memM1[i*M+j] = matrix1[i][j];            
+            // std::cout << j << std::endl;
+            memM1[i][j] = matrix1[i][j];            
         }
     }
     for(size_t i = 0; i < K; i++){
+        memM2[i] = (int*)malloc(N*sizeof(int));
         for(size_t j = 0; j < N; j++){
-            memM2[i*K + j] = matrix2[i][j];
+            memM2[i][j] = matrix2[i][j];
         }
     }
-    auto * memresult = (int*)malloc(M*N*sizeof(int));
+    auto ** memresult = (int**)malloc(M*sizeof(int*));
     for(size_t i = 0; i < M; i++){
+        memresult[i] = (int*)malloc(N*sizeof(int));
         for(size_t j = 0; j < N; j++){
-            memresult[i*M+j] = 0;
+            memresult[i][j] = 0;
         }
     }
-    std::cout << "FUCK ME" << std::endl;
 
     // get the max gcd as the tile size
     // size_t tile_size = gcd(M, gcd(K, N));
-    size_t tile_sizeM = 32;
-    size_t tile_sizeN = 32;
-    size_t tile_sizeK = 32;
+    size_t tile_sizeM = 16;
+    size_t tile_sizeN = 16;
+    size_t tile_sizeK = 16;
     if(tile_sizeM > M){
         tile_sizeM = M;
     }
@@ -101,9 +106,9 @@ Matrix matrix_multiply_locality(const Matrix& matrix1, const Matrix& matrix2) {
                             // std::cout <<"i = "<<i<<" j = "<<j<<" k = "<<k<<std::endl;
                             // std::cout << "memM1:" << memM1[(row_offset + i)*M + (mid_offset + k)]<< " * memM2:"
                             // << memM2[(mid_offset + k)*K + (col_offset + j)];
-                            memresult[(row_offset + i)*M+(col_offset+j)] += 
-                            memM1[(row_offset + i)*M + (mid_offset + k)] *
-                            memM2[(mid_offset + k)*K + (col_offset + j)];
+                            memresult[row_offset+i][col_offset+j]+=
+                            memM1[row_offset+i][mid_offset+k]*
+                            memM2[mid_offset+k][col_offset+j];
                             // std::cout << " reuslt:" <<memresult[(row_offset + i)*M+(col_offset+j)] <<std::endl;
                         }
                     }
@@ -114,10 +119,18 @@ Matrix matrix_multiply_locality(const Matrix& matrix1, const Matrix& matrix2) {
 
     for(size_t i = 0; i < M; i++){
         for(size_t j = 0; j < N; j++){
-            result[i][j] = memresult[i*M+j];
+            result[i][j] = memresult[i][j];
         }
     }
-
+    for(size_t i = 0; i < M; i++){
+        free(memM1[i]);
+    }
+    for(size_t i = 0; i < K; i++){
+        free(memM2[i]);
+    }
+    for(size_t i = 0; i < M; i++){
+        free(memresult[i]);
+    }
     return result;
 }
 
