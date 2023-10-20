@@ -17,6 +17,11 @@ if [ ! -d "results/naives" ]; then
     echo "[Build Directory for naives]"
 fi
 
+if [ ! -d "results/mem_local" ]; then
+    mkdir -p results/mem_local
+    echo "[Build Directory for Memory Locality mem_local]"
+fi
+
 if [ ! -d "results/openMP" ]; then
     mkdir -p results/openMP
     echo "[Build Directory for openMP]"

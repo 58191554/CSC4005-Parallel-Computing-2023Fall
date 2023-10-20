@@ -1,26 +1,41 @@
-Naive Matrix Multiplication (Optimized with -O2)
+Memory Locality Matrix Multiplication (Optimized with -O2)
+FUCK ME
 M = 4, N = 4, K = 4
-tile_size = 4
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive12.txt
+tile_sizeM = 4tile_sizeN = 4tile_sizeK = 4
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m12.txt
 Multiplication Complete!
 Execution Time: 0 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m12.txt
 Answer Correct!
+
+FUCK ME
 M = 128, N = 128, K = 128
-tile_size = 4
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive34.txt
+tile_sizeM = 32tile_sizeN = 32tile_sizeK = 32
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m34.txt
 Multiplication Complete!
-Execution Time: 19 milliseconds
+Execution Time: 6 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m34.txt
 Answer Correct!
+
+FUCK ME
 M = 1024, N = 1024, K = 1024
-tile_size = 4
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive56.txt
+tile_sizeM = 32tile_sizeN = 32tile_sizeK = 32
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m56.txt
 Multiplication Complete!
-Execution Time: 6475 milliseconds
+Execution Time: 1275 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+FUCK ME
+M = 2048, N = 2048, K = 2048
+tile_sizeM = 32tile_sizeN = 32tile_sizeK = 32
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m78.txt
+Multiplication Complete!
+Execution Time: 10187 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
 Answer Correct!
 
