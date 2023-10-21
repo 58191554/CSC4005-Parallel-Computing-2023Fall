@@ -1,139 +1,55 @@
 SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
 M = 4, N = 4, K = 4
 tile_sizeM = 4tile_sizeN = 4tile_sizeK = 4
-1 16 2 12 3 8 4 4 
-row, col = 0 0
-FUCK ME
-16 0 24 0 0 0 0 0 
-1 15 2 11 3 7 4 3 
-row, col = 0 1
-FUCK ME
-15 0 21 0 0 0 0 0 
-1 14 2 10 3 6 4 2 
-row, col = 0 2
-FUCK ME
-14 0 18 0 0 0 0 0 
-1 13 2 9 3 5 4 1 
-row, col = 0 3
-FUCK ME
-13 0 15 0 0 0 0 0 
-5 16 6 12 7 8 8 4 
-row, col = 1 0
-FUCK ME
-80 0 56 0 0 0 0 0 
-5 15 6 11 7 7 8 3 
-row, col = 1 1
-FUCK ME
-75 0 49 0 0 0 0 0 
-5 14 6 10 7 6 8 2 
-row, col = 1 2
-FUCK ME
-70 0 42 0 0 0 0 0 
-5 13 6 9 7 5 8 1 
-row, col = 1 3
-FUCK ME
-65 0 35 0 0 0 0 0 
-9 16 10 12 11 8 12 4 
-row, col = 2 0
-FUCK ME
-144 0 88 0 0 0 0 0 
-9 15 10 11 11 7 12 3 
-row, col = 2 1
-FUCK ME
-135 0 77 0 0 0 0 0 
-9 14 10 10 11 6 12 2 
-row, col = 2 2
-FUCK ME
-126 0 66 0 0 0 0 0 
-9 13 10 9 11 5 12 1 
-row, col = 2 3
-FUCK ME
-117 0 55 0 0 0 0 0 
-13 16 14 12 15 8 16 4 
-row, col = 3 0
-FUCK ME
-208 0 120 0 0 0 0 0 
-13 15 14 11 15 7 16 3 
-row, col = 3 1
-FUCK ME
-195 0 105 0 0 0 0 0 
-13 14 14 10 15 6 16 2 
-row, col = 3 2
-FUCK ME
-182 0 90 0 0 0 0 0 
-13 13 14 9 15 5 16 1 
-row, col = 3 3
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 0 0
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 0 1
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 0 2
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 0 3
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 1 0
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 1 1
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 1 2
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 1 3
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 2 0
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 2 1
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 2 2
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 2 3
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 3 0
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 3 1
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 3 2
-FUCK ME
-169 0 75 0 0 0 0 0 
-
-row, col = 3 3
-FUCK ME
-169 0 75 0 0 0 0 0 
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m12.txt
 Multiplication Complete!
 Execution Time: 0 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m12.txt
-wrong index i = 0 j = 0
-0 != 80
+Answer Correct!
+
+SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
+M = 128, N = 128, K = 128
+tile_sizeM = 8tile_sizeN = 8tile_sizeK = 8
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m34.txt
+Multiplication Complete!
+Execution Time: 2 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+
+SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
+M = 1024, N = 1024, K = 1024
+tile_sizeM = 8tile_sizeN = 8tile_sizeK = 8
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m56.txt
+Multiplication Complete!
+Execution Time: 262 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
+M = 2048, N = 2048, K = 2048
+tile_sizeM = 8tile_sizeN = 8tile_sizeK = 8
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m78.txt
+Multiplication Complete!
+Execution Time: 3296 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
+M = 127, N = 125, K = 126
+tile_sizeM = 8tile_sizeN = 8tile_sizeK = 8
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m910.txt
+Multiplication Complete!
+Execution Time: 1 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m910.txt
+Answer Correct!
+
+SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
+M = 1818, N = 2424, K = 1717
+tile_sizeM = 8tile_sizeN = 8tile_sizeK = 8
+srun: error: node32: task 0: Segmentation fault (core dumped)
 
