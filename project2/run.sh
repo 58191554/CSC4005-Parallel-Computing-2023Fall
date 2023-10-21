@@ -22,6 +22,12 @@ if [ ! -d "results/mem_local" ]; then
     echo "[Build Directory for Memory Locality mem_local]"
 fi
 
+if [ ! -d "results/simd" ]; then
+    mkdir -p results/simd
+    echo "[Build Directory for Memory Locality simd]"
+fi
+
+
 if [ ! -d "results/openMP" ]; then
     mkdir -p results/openMP
     echo "[Build Directory for openMP]"

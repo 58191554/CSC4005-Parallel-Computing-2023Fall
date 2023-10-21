@@ -176,7 +176,7 @@ int main(int argc, char** argv) {
     std::cout << "Execution Time: " << elapsed_time.count() << " milliseconds"
               << std::endl;
 
-    if (debug_flag == 0){
+    if (debug_flag == 1){
         std::cout << "Debug Mode" << std::endl;
         // DEBUG THE ANSWER CORRECTNESS
         std::string ans_mat_path;
@@ -184,6 +184,9 @@ int main(int argc, char** argv) {
         if(result.getRows() == 128) ans_mat_path = "results/answers/m34.txt";
         if(result.getRows() == 1024) ans_mat_path = "results/answers/m56.txt";
         if(result.getRows() == 2048) ans_mat_path = "results/answers/m78.txt";
+        if(result.getRows() == 127) ans_mat_path = "results/answers/m910.txt";
+        if(result.getRows() == 1818) ans_mat_path = "results/answers/m1112.txt";
+        
         std::cout << "ans_mat_path = " << ans_mat_path << std::endl;
         Matrix matrix_ans = Matrix::loadFromFile(ans_mat_path);
 
