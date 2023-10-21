@@ -1,6 +1,6 @@
 SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
 M = 4, N = 4, K = 4
-tile_sizeM = 4tile_sizeN = 4tile_sizeK = 4
+ tile_sizeM = 4 tile_sizeN = 4 tile_sizeK = 4
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m12.txt
 Multiplication Complete!
 Execution Time: 0 milliseconds
@@ -8,39 +8,35 @@ Debug Mode
 ans_mat_path = results/answers/m12.txt
 Answer Correct!
 
-SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
 M = 128, N = 128, K = 128
-tile_sizeM = 8tile_sizeN = 8tile_sizeK = 8
+ tile_sizeM = 8 tile_sizeN = 8 tile_sizeK = 8
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m34.txt
 Multiplication Complete!
-Execution Time: 2 milliseconds
+Execution Time: 1 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m34.txt
 Answer Correct!
 
-SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
 M = 1024, N = 1024, K = 1024
-tile_sizeM = 8tile_sizeN = 8tile_sizeK = 8
+ tile_sizeM = 8 tile_sizeN = 8 tile_sizeK = 8
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m56.txt
 Multiplication Complete!
-Execution Time: 262 milliseconds
+Execution Time: 264 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m56.txt
 Answer Correct!
 
-SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
 M = 2048, N = 2048, K = 2048
-tile_sizeM = 8tile_sizeN = 8tile_sizeK = 8
+ tile_sizeM = 8 tile_sizeN = 8 tile_sizeK = 8
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m78.txt
 Multiplication Complete!
-Execution Time: 3296 milliseconds
+Execution Time: 3206 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m78.txt
 Answer Correct!
 
-SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
 M = 127, N = 125, K = 126
-tile_sizeM = 8tile_sizeN = 8tile_sizeK = 8
+ tile_sizeM = 8 tile_sizeN = 8 tile_sizeK = 8
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m910.txt
 Multiplication Complete!
 Execution Time: 1 milliseconds
@@ -48,8 +44,12 @@ Debug Mode
 ans_mat_path = results/answers/m910.txt
 Answer Correct!
 
-SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
 M = 1818, N = 2424, K = 1717
-tile_sizeM = 8tile_sizeN = 8tile_sizeK = 8
-srun: error: node32: task 0: Segmentation fault (core dumped)
+ tile_sizeM = 8 tile_sizeN = 8 tile_sizeK = 8
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m1112.txt
+Multiplication Complete!
+Execution Time: 2747 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m1112.txt
+Answer Correct!
 

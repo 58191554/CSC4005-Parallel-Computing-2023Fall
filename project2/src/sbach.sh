@@ -42,19 +42,14 @@ CURRENT_DIR=$(pwd)/src
 echo "SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)"
 srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix1.txt ${CURRENT_DIR}/../matrices/matrix2.txt ${CURRENT_DIR}/../results/simd/m12.txt 1
 echo ""
-echo "SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)"
 srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix3.txt ${CURRENT_DIR}/../matrices/matrix4.txt ${CURRENT_DIR}/../results/simd/m34.txt 1
 echo ""
-echo "SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)"
 srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix5.txt ${CURRENT_DIR}/../matrices/matrix6.txt ${CURRENT_DIR}/../results/simd/m56.txt 1
 echo ""
-echo "SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)"
 srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix7.txt ${CURRENT_DIR}/../matrices/matrix8.txt ${CURRENT_DIR}/../results/simd/m78.txt 1
 echo ""
-echo "SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)"
 srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix9.txt ${CURRENT_DIR}/../matrices/matrix10.txt ${CURRENT_DIR}/../results/simd/m910.txt 1
 echo ""
-echo "SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)"
 srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix11.txt ${CURRENT_DIR}/../matrices/matrix12.txt ${CURRENT_DIR}/../results/simd/m1112.txt 1
 echo ""
 

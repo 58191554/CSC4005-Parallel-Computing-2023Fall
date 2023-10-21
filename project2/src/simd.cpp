@@ -29,55 +29,38 @@ Matrix matrix_multiply_simd(const Matrix& matrix1, const Matrix& matrix2) {
     size_t M = matrix1.getRows(), K = matrix1.getCols(), N = matrix2.getCols();
 
     Matrix result(M, N);
-    auto ** memM1 = (float**)malloc((M+16) * sizeof(float*));
-    auto ** memM2 = (float**)malloc((K+16) * sizeof(float*));
+    auto ** memM1 = (float**)malloc((M+8) * sizeof(float*));
+    auto ** memM2 = (float**)malloc((K+8) * sizeof(float*));
 
-    for(size_t i = 0; i < M+16; i++){
+    for(size_t i = 0; i < M+8; i++){
         // std::cout << i << std::endl;
-        memM1[i] = (float*) malloc((K+16)*sizeof(float));
+        memM1[i] = (float*) malloc((K+8)*sizeof(float));
         if(i < M){
-            for(size_t j = 0; j < K+16; j++){
+            for(size_t j = 0; j < K+8; j++){
                 // std::cout << j << std::endl;
                 if(j < K){
                     memM1[i][j] = static_cast< float >(matrix1[i][j]);   
                 }         
-                else{
-                    memM1[i][j] = 0.0f;   
-                }
-            }
-        }
-        else{
-            for(size_t j = 0; j < K+16; j++){
-                memM1[i][j] = 0.0f;
             }
         }
     }
-    for(size_t i = 0; i < K+16; i++){
-        memM2[i] = (float*)malloc((N+16)*sizeof(float));
+    for(size_t i = 0; i < K+8; i++){
+        memM2[i] = (float*)malloc((N+8)*sizeof(float));
         if(i<K){
-            for(size_t j = 0; j < N+16; j++){
+            for(size_t j = 0; j < N+8; j++){
                 if(j < N){
                     memM2[i][j] = static_cast< float >(matrix2[i][j]);
                 }
-                else{
-                    memM2[i][j] = 0.0f;
-                }
-            }
-        }
-        else{
-            for(size_t j = 0; j < N+16; j++){
-                memM2[i][j] = 0.0f;
             }
         }
     }
-    auto ** memresult = (float**)malloc((M+32)*sizeof(float*));
-    for(size_t i = 0; i < M+32; i++){
-        memresult[i] = (float*)malloc((N+32)*sizeof(float));
-        for(size_t j = 0; j < N+32; j++){
+    auto ** memresult = (float**)malloc((M+8)*sizeof(float*));
+    for(size_t i = 0; i < M+8; i++){
+        memresult[i] = (float*)malloc((N+8)*sizeof(float));
+        for(size_t j = 0; j < N; j++){
             memresult[i][j] = 0.0f;
         }
     }
-
     // get the max gcd as the tile size
     // size_t tile_size = gcd(M, gcd(K, N));
     size_t tile_sizeM = 8;
@@ -93,9 +76,9 @@ Matrix matrix_multiply_simd(const Matrix& matrix1, const Matrix& matrix2) {
         tile_sizeK = K;
     }
     std::cout << "M = " << M << ", N = "<<N << ", K = "<<K << std::endl;
-    std::cout << "tile_sizeM = " << tile_sizeM 
-    << "tile_sizeN = " << tile_sizeN
-    << "tile_sizeK = " << tile_sizeK  << std::endl;
+    std::cout << " tile_sizeM = " << tile_sizeM 
+    << " tile_sizeN = " << tile_sizeN
+    << " tile_sizeK = " << tile_sizeK  << std::endl;
     
     size_t numtile_M = M/tile_sizeM+1;
     size_t numtile_N = N/tile_sizeN+1;
@@ -122,7 +105,9 @@ Matrix matrix_multiply_simd(const Matrix& matrix1, const Matrix& matrix2) {
     // 2. Apply Tiled Matrix Multiplication
     // tiled
     for(size_t ti = 0; ti < numtile_M; ++ti){
+
         for(size_t tj = 0; tj < numtile_N; ++tj){
+
             for(size_t tk = 0; tk < numtile_K; ++tk){
                 // do the tile matrix multiply for tile_num_K x tile_num_K times
                 size_t row_offset = ti * tile_sizeM;
@@ -130,9 +115,8 @@ Matrix matrix_multiply_simd(const Matrix& matrix1, const Matrix& matrix2) {
                 size_t mid_offset = tk * tile_sizeK;
 
                 size_t lenM = tile_sizes_M[ti];
-                size_t lenN = tile_sizes_N[tj];
-                size_t lenK = tile_sizes_K[tk];
-                for(size_t i = 0; i < 8; i++){
+
+                for(size_t i = 0; i < lenM; i++){
                     // declear the registors
                     __m256 row = _mm256_setzero_ps();
                     __m256 k0, k1 ,k2, k3, k4, k5, k6, k7;
@@ -152,38 +136,33 @@ Matrix matrix_multiply_simd(const Matrix& matrix1, const Matrix& matrix2) {
                     row += memM1[row_offset+i][mid_offset+5] * k5;
                     row += memM1[row_offset+i][mid_offset+6] * k6;
                     row += memM1[row_offset+i][mid_offset+7] * k7;
-                    float sb[10];
-                    
+                    float sb[8];
                     // Load into a buffer and increase by the tile matrix value
                     _mm256_store_ps(sb, row);
+                    
                     for(size_t y = 0; y < 8; y++){
                         memresult[row_offset+i][col_offset+y] += sb[y];
                     }
-                }                
+
+                }       
+            }
+            for(size_t i = ti*tile_sizeM; i < ti*tile_sizeM+tile_sizes_M[ti]; i++){
+                for(size_t j = tj*tile_sizeN; j < tj*tile_sizeN+tile_sizes_N[tj]; j++){
+                    result[i][j] = static_cast<int>(memresult[i][j]);
+                }
             }
         }
     }
-    // for(int i = 0; i < M; ++i){
-    //     for(int j = 0; j < N; ++j){
-    //         std::cout << memresult[i][j] << " ";
-    //     }
-    //     std::cout << std::endl;
-    // }
 
 
-    for(size_t i = 0; i < M; i++){
-        for(size_t j = 0; j < N; j++){
-            result[i][j] = static_cast<int>(memresult[i][j]);
-        }
-    }
-    for(size_t i = 0; i < M; i++){
+    for(size_t i = 0; i < M+8; i++){
         free(memM1[i]);
     }
     // transpose M2
-    for(size_t i = 0; i < N; i++){
+    for(size_t i = 0; i < K+8; i++){
         free(memM2[i]);
     }
-    for(size_t i = 0; i < M; i++){
+    for(size_t i = 0; i < M+8; i++){
         free(memresult[i]);
     }
     delete[] tile_sizes_M;
