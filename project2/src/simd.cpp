@@ -66,15 +66,6 @@ Matrix matrix_multiply_simd(const Matrix& matrix1, const Matrix& matrix2) {
     size_t tile_sizeM = 8;
     size_t tile_sizeN = 8;
     size_t tile_sizeK = 8;
-    if(tile_sizeM > M){
-        tile_sizeM = M;
-    }
-    if(tile_sizeN > N){
-        tile_sizeN = N;
-    }
-    if(tile_sizeK > K){
-        tile_sizeK = K;
-    }
     std::cout << "M = " << M << ", N = "<<N << ", K = "<<K << std::endl;
     std::cout << " tile_sizeM = " << tile_sizeM 
     << " tile_sizeN = " << tile_sizeN
