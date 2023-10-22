@@ -56,48 +56,48 @@ CURRENT_DIR=$(pwd)/src
 # # OpenMP + SIMD + Reordering
 echo "OpenMP + SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)"
 
-for num_cores in 1 2 4 8 16 32
-do
-  echo "Number of cores: $num_cores"
-  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix1.txt ${CURRENT_DIR}/../matrices/matrix2.txt ${CURRENT_DIR}/../results/openMP/m12.txt 1
-  echo ""
-done
+# for num_cores in 1 2 4 8 16 32
+# do
+#   echo "Number of cores: $num_cores"
+#   srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix1.txt ${CURRENT_DIR}/../matrices/matrix2.txt ${CURRENT_DIR}/../results/openMP/m12.txt 1
+#   echo ""
+# done
 
-for num_cores in 1 2 4 8 16 32
-do
-  echo "Number of cores: $num_cores"
-  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix3.txt ${CURRENT_DIR}/../matrices/matrix4.txt ${CURRENT_DIR}/../results/openMP/m34.txt 1
-  echo ""
-done
+# for num_cores in 1 2 4 8 16 32
+# do
+#   echo "Number of cores: $num_cores"
+#   srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix3.txt ${CURRENT_DIR}/../matrices/matrix4.txt ${CURRENT_DIR}/../results/openMP/m34.txt 1
+#   echo ""
+# done
 
 
-for num_cores in 1 2 4 8 16 32
+for num_cores in  32
 do
   echo "Number of cores: $num_cores"
   srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix5.txt ${CURRENT_DIR}/../matrices/matrix6.txt ${CURRENT_DIR}/../results/openMP/m56.txt 1
   echo ""
 done
 
-for num_cores in 1 2 4 8 16 32
+for num_cores in  32
 do
   echo "Number of cores: $num_cores"
   srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix7.txt ${CURRENT_DIR}/../matrices/matrix8.txt ${CURRENT_DIR}/../results/openMP/m78.txt 1
   echo ""
 done
 
-for num_cores in 1 2 4 8 16 32
-do
-  echo "Number of cores: $num_cores"
-  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix9.txt ${CURRENT_DIR}/../matrices/matrix10.txt ${CURRENT_DIR}/../results/openMP/m910.txt 1
-  echo ""
-done
+# for num_cores in 1 2 4 8 16 32
+# do
+#   echo "Number of cores: $num_cores"
+#   srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix9.txt ${CURRENT_DIR}/../matrices/matrix10.txt ${CURRENT_DIR}/../results/openMP/m910.txt 1
+#   echo ""
+# done
 
-for num_cores in 1 2 4 8 16 32
-do
-  echo "Number of cores: $num_cores"
-  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix11.txt ${CURRENT_DIR}/../matrices/matrix12.txt ${CURRENT_DIR}/../results/openMP/m1112.txt 1
-  echo ""
-done
+# for num_cores in 1 2 4 8 16 32
+# do
+#   echo "Number of cores: $num_cores"
+#   srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix11.txt ${CURRENT_DIR}/../matrices/matrix12.txt ${CURRENT_DIR}/../results/openMP/m1112.txt 1
+#   echo ""
+# done
 
 
 # # MPI + OpenMP + SIMD + Reordering

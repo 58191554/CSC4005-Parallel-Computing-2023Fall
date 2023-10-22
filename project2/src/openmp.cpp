@@ -97,6 +97,7 @@ Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, int 
 
     std::vector<int> cuts(num_threads + 1, 0);
     int divided_left_tile_num = 0;
+    int actual_num_thread = 0;
 
     for (int i = 0; i < num_threads; ++i) {
         if (divided_left_tile_num < left_tile_num) {
@@ -105,18 +106,28 @@ Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, int 
         } else cuts[i+1] = cuts[i] + tile_num_per_task;
         // std::cout << "cuts[i] = " << cuts[i] << " cuts[i+1] = "<<
         // cuts[i+1] << std::endl;
+        // compute actual num_thead
+        if(cuts[i]!=cuts[i+1]){
+            actual_num_thread++;
+        }
     }
-    
+    num_threads = actual_num_thread;
+    std::cout << "actural threads number = " << num_threads << std::endl;
+    omp_set_num_threads(num_threads);
 
-    // #pragma omp parallel default(none) shared(memM1, memM2, memresult, cuts, num_threads, numtile_M, numtile_N, numtile_K)
-
-    // for each task, parse the linear task array to 2d tile index
+    #pragma omp parallel  shared(memM1, memM2, memresult, cuts, \
+    num_threads, numtile_N, numtile_K, tile_size, tile_sizes_M, tile_sizes_N, \
+    tile_sizes_K, result)
+    #pragma omp for
     for(int task_id = 0; task_id < num_threads; task_id++){
+        // for each task, parse the linear task array to 2d tile index
+        // std::cout << "taskid = " << task_id  <<std::endl;
+
         for(int tile_id = cuts[task_id]; tile_id < cuts[task_id+1];tile_id++){
             int ti = tile_id/numtile_N;
             int tj = tile_id-ti*numtile_N;
-
-            size_t row_offset = ti * tile_size;
+            // std::cout << "round info tile_id, ti, tj" << tile_id <<", "<<ti << ", " << tj << std::endl;
+            size_t row_offset = ti * tile_size; 
             size_t col_offset = tj * tile_size;
 
             size_t lenM = tile_sizes_M[ti];
@@ -168,17 +179,17 @@ Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, int 
                     }
                 }
             }
-            // load the answer of a tile to the result
-            for(int row = ti*tile_size; row < ti*tile_size+lenM; row++){
-                for(int col = tj*tile_size; col < tj*tile_size+lenN; col++){
-                    result[row][col] = memresult[row][col];
-                }
-            }
-
         }
     }
 
-
+    // load data
+    for(int i = 0; i < M; ++i){
+        for(int j = 0; j < N; ++j){
+            result[i][j] = memresult[i][j];
+            // std::cout << result[i][j] << " " ; 
+        }
+        // std::cout <<std::endl;
+    }
 
     for(size_t i = 0; i < M+tile_size; i++){
         free(memM1[i]);
@@ -205,7 +216,6 @@ int main(int argc, char** argv) {
     }
 
     int num_threads = atoi(argv[1]);
-    omp_set_num_threads(num_threads);
 
     const std::string matrix1_path = argv[2];
 
