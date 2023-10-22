@@ -63,33 +63,32 @@ Matrix matrix_multiply_simd(const Matrix& matrix1, const Matrix& matrix2) {
     }
     // get the max gcd as the tile size
     // size_t tile_size = gcd(M, gcd(K, N));
-    size_t tile_sizeM = 8;
-    size_t tile_sizeN = 8;
-    size_t tile_sizeK = 8;
+    size_t tile_size = 8;
     std::cout << "M = " << M << ", N = "<<N << ", K = "<<K << std::endl;
-    std::cout << " tile_sizeM = " << tile_sizeM 
-    << " tile_sizeN = " << tile_sizeN
-    << " tile_sizeK = " << tile_sizeK  << std::endl;
+    std::cout << "tile_sizeM = " << tile_size 
+    << " tile_sizeN = " << tile_size
+    << " tile_sizeK = " << tile_size  << std::endl;
     
-    size_t numtile_M = M/tile_sizeM+1;
-    size_t numtile_N = N/tile_sizeN+1;
-    size_t numtile_K = K/tile_sizeK+1;
+    size_t numtile_M = M/tile_size+1;
+    size_t numtile_N = N/tile_size+1;
+    size_t numtile_K = K/tile_size+1;
     // store arrays of tile sizes
     int* tile_sizes_M = (int*)malloc(numtile_M*sizeof(int));
     int* tile_sizes_N = (int*)malloc(numtile_N*sizeof(int));
     int* tile_sizes_K = (int*)malloc(numtile_K*sizeof(int));
 
+    // get length for each valid tile
     for(int i = 0; i < numtile_M; i++){
-        if(i < numtile_M-1) tile_sizes_M[i] = tile_sizeM;
-        else tile_sizes_M[i] = M-i*tile_sizeM;
+        if(i < numtile_M-1) tile_sizes_M[i] = tile_size;
+        else tile_sizes_M[i] = M-i*tile_size;
     }
     for(int i = 0; i < numtile_N; i++){
-        if(i<numtile_N-1)tile_sizes_N[i] = tile_sizeN;
-        else tile_sizes_N[i] = N-i*tile_sizeN;
+        if(i<numtile_N-1)tile_sizes_N[i] = tile_size;
+        else tile_sizes_N[i] = N-i*tile_size;
     }
     for(int i = 0; i < numtile_K; i++){
-        if(i < numtile_K-1) tile_sizes_K[i] = tile_sizeK;
-        else tile_sizes_K[i] = K-i*tile_sizeK;
+        if(i < numtile_K-1) tile_sizes_K[i] = tile_size;
+        else tile_sizes_K[i] = K-i*tile_size;
     }
 
     // 1. Change the order of the tripple nested loop
@@ -101,9 +100,9 @@ Matrix matrix_multiply_simd(const Matrix& matrix1, const Matrix& matrix2) {
 
             for(size_t tk = 0; tk < numtile_K; ++tk){
                 // do the tile matrix multiply for tile_num_K x tile_num_K times
-                size_t row_offset = ti * tile_sizeM;
-                size_t col_offset = tj * tile_sizeN;
-                size_t mid_offset = tk * tile_sizeK;
+                size_t row_offset = ti * tile_size;
+                size_t col_offset = tj * tile_size;
+                size_t mid_offset = tk * tile_size;
 
                 size_t lenM = tile_sizes_M[ti];
 
@@ -137,8 +136,8 @@ Matrix matrix_multiply_simd(const Matrix& matrix1, const Matrix& matrix2) {
 
                 }       
             }
-            for(size_t i = ti*tile_sizeM; i < ti*tile_sizeM+tile_sizes_M[ti]; i++){
-                for(size_t j = tj*tile_sizeN; j < tj*tile_sizeN+tile_sizes_N[tj]; j++){
+            for(size_t i = ti*tile_size; i < ti*tile_size+tile_sizes_M[ti]; i++){
+                for(size_t j = tj*tile_size; j < tj*tile_size+tile_sizes_N[tj]; j++){
                     result[i][j] = static_cast<int>(memresult[i][j]);
                 }
             }
