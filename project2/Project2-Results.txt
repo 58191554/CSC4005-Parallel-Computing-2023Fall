@@ -1,54 +1,396 @@
-SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
+OpenMP + SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
+Number of cores: 1
 M = 4, N = 4, K = 4
 tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m12.txt
+total tile number = 1
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
 Multiplication Complete!
 Execution Time: 0 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m12.txt
 Answer Correct!
 
+Number of cores: 2
+M = 4, N = 4, K = 4
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 1
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+
+Number of cores: 4
+M = 4, N = 4, K = 4
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 1
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+
+Number of cores: 8
+M = 4, N = 4, K = 4
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 1
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+
+Number of cores: 16
+M = 4, N = 4, K = 4
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 1
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+
+Number of cores: 32
+M = 4, N = 4, K = 4
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 1
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+
+Number of cores: 1
 M = 128, N = 128, K = 128
 tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m34.txt
+total tile number = 25
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt
+Multiplication Complete!
+Execution Time: 2 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+
+Number of cores: 2
+M = 128, N = 128, K = 128
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 25
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt
 Multiplication Complete!
 Execution Time: 1 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m34.txt
 Answer Correct!
 
+Number of cores: 4
+M = 128, N = 128, K = 128
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 25
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt
+Multiplication Complete!
+Execution Time: 1 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+
+Number of cores: 8
+M = 128, N = 128, K = 128
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 25
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt
+Multiplication Complete!
+Execution Time: 2 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+
+Number of cores: 16
+M = 128, N = 128, K = 128
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 25
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt
+Multiplication Complete!
+Execution Time: 2 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+
+Number of cores: 32
+M = 128, N = 128, K = 128
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 25
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt
+Multiplication Complete!
+Execution Time: 2 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+
+Number of cores: 1
 M = 1024, N = 1024, K = 1024
 tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m56.txt
+total tile number = 1089
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
 Multiplication Complete!
-Execution Time: 300 milliseconds
+Execution Time: 296 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m56.txt
 Answer Correct!
 
+Number of cores: 2
+M = 1024, N = 1024, K = 1024
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 1089
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
+Multiplication Complete!
+Execution Time: 296 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+Number of cores: 4
+M = 1024, N = 1024, K = 1024
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 1089
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
+Multiplication Complete!
+Execution Time: 296 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+Number of cores: 8
+M = 1024, N = 1024, K = 1024
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 1089
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
+Multiplication Complete!
+Execution Time: 297 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+Number of cores: 16
+M = 1024, N = 1024, K = 1024
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 1089
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
+Multiplication Complete!
+Execution Time: 295 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+Number of cores: 32
+M = 1024, N = 1024, K = 1024
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 1089
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
+Multiplication Complete!
+Execution Time: 298 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+Number of cores: 1
 M = 2048, N = 2048, K = 2048
 tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m78.txt
+total tile number = 4225
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
 Multiplication Complete!
-Execution Time: 2571 milliseconds
+Execution Time: 2548 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m78.txt
 Answer Correct!
 
+Number of cores: 2
+M = 2048, N = 2048, K = 2048
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 4225
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
+Multiplication Complete!
+Execution Time: 2551 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+Number of cores: 4
+M = 2048, N = 2048, K = 2048
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 4225
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
+Multiplication Complete!
+Execution Time: 2549 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+Number of cores: 8
+M = 2048, N = 2048, K = 2048
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 4225
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
+Multiplication Complete!
+Execution Time: 2549 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+Number of cores: 16
+M = 2048, N = 2048, K = 2048
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 4225
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
+Multiplication Complete!
+Execution Time: 2550 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+Number of cores: 32
+M = 2048, N = 2048, K = 2048
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 4225
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
+Multiplication Complete!
+Execution Time: 2549 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+Number of cores: 1
 M = 127, N = 125, K = 126
 tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m910.txt
+total tile number = 16
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m910.txt
+Multiplication Complete!
+Execution Time: 2 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m910.txt
+Answer Correct!
+
+Number of cores: 2
+M = 127, N = 125, K = 126
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 16
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m910.txt
+Multiplication Complete!
+Execution Time: 2 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m910.txt
+Answer Correct!
+
+Number of cores: 4
+M = 127, N = 125, K = 126
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 16
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m910.txt
 Multiplication Complete!
 Execution Time: 1 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m910.txt
 Answer Correct!
 
+Number of cores: 8
+M = 127, N = 125, K = 126
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 16
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m910.txt
+Multiplication Complete!
+Execution Time: 2 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m910.txt
+Answer Correct!
+
+Number of cores: 16
+M = 127, N = 125, K = 126
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 16
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m910.txt
+Multiplication Complete!
+Execution Time: 2 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m910.txt
+Answer Correct!
+
+Number of cores: 32
+M = 127, N = 125, K = 126
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 16
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m910.txt
+Multiplication Complete!
+Execution Time: 2 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m910.txt
+Answer Correct!
+
+Number of cores: 1
 M = 1818, N = 2424, K = 1717
 tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m1112.txt
+total tile number = 4332
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m1112.txt
 Multiplication Complete!
-Execution Time: 2179 milliseconds
+Execution Time: 2164 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m1112.txt
+Answer Correct!
+
+Number of cores: 2
+M = 1818, N = 2424, K = 1717
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 4332
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m1112.txt
+Multiplication Complete!
+Execution Time: 2166 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m1112.txt
+Answer Correct!
+
+Number of cores: 4
+M = 1818, N = 2424, K = 1717
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 4332
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m1112.txt
+Multiplication Complete!
+Execution Time: 2169 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m1112.txt
+Answer Correct!
+
+Number of cores: 8
+M = 1818, N = 2424, K = 1717
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 4332
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m1112.txt
+Multiplication Complete!
+Execution Time: 2164 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m1112.txt
+Answer Correct!
+
+Number of cores: 16
+M = 1818, N = 2424, K = 1717
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 4332
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m1112.txt
+Multiplication Complete!
+Execution Time: 2166 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m1112.txt
+Answer Correct!
+
+Number of cores: 32
+M = 1818, N = 2424, K = 1717
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
+total tile number = 4332
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m1112.txt
+Multiplication Complete!
+Execution Time: 2173 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m1112.txt
 Answer Correct!
