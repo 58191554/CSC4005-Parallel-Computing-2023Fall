@@ -28,13 +28,21 @@ Matrix matrix_multiply_simd(const Matrix& matrix1, const Matrix& matrix2) {
 
     size_t M = matrix1.getRows(), K = matrix1.getCols(), N = matrix2.getCols();
 
-    Matrix result(M, N);
-    auto ** memM1 = (float**)malloc((M+8) * sizeof(float*));
-    auto ** memM2 = (float**)malloc((K+8) * sizeof(float*));
+    // set tile size
+    size_t tile_size = 32;
+    std::cout << "M = " << M << ", N = "<<N << ", K = "<<K << std::endl;
+    std::cout << "tile_sizeM = " << tile_size 
+    << " tile_sizeN = " << tile_size
+    << " tile_sizeK = " << tile_size  << std::endl;
 
-    for(size_t i = 0; i < M+8; i++){
+
+    Matrix result(M, N);
+    auto ** memM1 = (float**)malloc((M+tile_size) * sizeof(float*));
+    auto ** memM2 = (float**)malloc((K+tile_size) * sizeof(float*));
+
+    for(size_t i = 0; i < M+tile_size; i++){
         // std::cout << i << std::endl;
-        memM1[i] = (float*) malloc((K+8)*sizeof(float));
+        memM1[i] = (float*) malloc((K+tile_size)*sizeof(float));
         if(i < M){
             for(size_t j = 0; j < K+8; j++){
                 // std::cout << j << std::endl;
@@ -44,30 +52,23 @@ Matrix matrix_multiply_simd(const Matrix& matrix1, const Matrix& matrix2) {
             }
         }
     }
-    for(size_t i = 0; i < K+8; i++){
+    for(size_t i = 0; i < K+tile_size; i++){
         memM2[i] = (float*)malloc((N+8)*sizeof(float));
         if(i<K){
-            for(size_t j = 0; j < N+8; j++){
+            for(size_t j = 0; j < N+tile_size; j++){
                 if(j < N){
                     memM2[i][j] = static_cast< float >(matrix2[i][j]);
                 }
             }
         }
     }
-    auto ** memresult = (float**)malloc((M+8)*sizeof(float*));
+    auto ** memresult = (float**)malloc((M+tile_size)*sizeof(float*));
     for(size_t i = 0; i < M+8; i++){
-        memresult[i] = (float*)malloc((N+8)*sizeof(float));
+        memresult[i] = (float*)malloc((N+tile_size)*sizeof(float));
         for(size_t j = 0; j < N; j++){
             memresult[i][j] = 0.0f;
         }
     }
-    // get the max gcd as the tile size
-    // size_t tile_size = gcd(M, gcd(K, N));
-    size_t tile_size = 8;
-    std::cout << "M = " << M << ", N = "<<N << ", K = "<<K << std::endl;
-    std::cout << "tile_sizeM = " << tile_size 
-    << " tile_sizeN = " << tile_size
-    << " tile_sizeK = " << tile_size  << std::endl;
     
     size_t numtile_M = M/tile_size+1;
     size_t numtile_N = N/tile_size+1;
@@ -105,36 +106,48 @@ Matrix matrix_multiply_simd(const Matrix& matrix1, const Matrix& matrix2) {
                 size_t mid_offset = tk * tile_size;
 
                 size_t lenM = tile_sizes_M[ti];
+                size_t lenN = tile_sizes_N[tj];
+                size_t lenK = tile_sizes_K[tk];
+                // std::cout << "tile info: ti, tj, tk = "<<ti << " " << tj << " "<< tk << std::endl;
+                // In each tile multiply compute divide into 2x2 vectorized compute
+                for(size_t x = 0; x < lenM; x+=8){
+                    for(size_t y = 0; y < lenN; y+=8){
+                        for(size_t i = 0; i < 8; i++){
+                            // take a 1x8 row and do vectorization and add vector to get a 1x8 result
+                            // take the next 1x8 row horizontaly and do the vector compute again
+                            for(size_t z = 0; z < lenK;z += 8){
+                                // std::cout << "x, y, z, i = " <<x<< ", "<<y<<", "<<z <<", "<<i << std::endl;
+                                // declear the registors
+                                __m256 row = _mm256_setzero_ps();
+                                __m256 k0, k1 ,k2, k3, k4, k5, k6, k7;
+                                k0 = _mm256_loadu_ps(&memM2[mid_offset+z+0][col_offset+y]);
+                                k1 = _mm256_loadu_ps(&memM2[mid_offset+z+1][col_offset+y]);
+                                k2 = _mm256_loadu_ps(&memM2[mid_offset+z+2][col_offset+y]);
+                                k3 = _mm256_loadu_ps(&memM2[mid_offset+z+3][col_offset+y]);
+                                k4 = _mm256_loadu_ps(&memM2[mid_offset+z+4][col_offset+y]);
+                                k5 = _mm256_loadu_ps(&memM2[mid_offset+z+5][col_offset+y]);
+                                k6 = _mm256_loadu_ps(&memM2[mid_offset+z+6][col_offset+y]);
+                                k7 = _mm256_loadu_ps(&memM2[mid_offset+z+7][col_offset+y]);
+                                row += memM1[row_offset+x+i][mid_offset+z+0] * k0;
+                                row += memM1[row_offset+x+i][mid_offset+z+1] * k1;
+                                row += memM1[row_offset+x+i][mid_offset+z+2] * k2;
+                                row += memM1[row_offset+x+i][mid_offset+z+3] * k3;
+                                row += memM1[row_offset+x+i][mid_offset+z+4] * k4;
+                                row += memM1[row_offset+x+i][mid_offset+z+5] * k5;
+                                row += memM1[row_offset+x+i][mid_offset+z+6] * k6;
+                                row += memM1[row_offset+x+i][mid_offset+z+7] * k7;
+                                // load the 1x8 result into sb
+                                float sb[8];
+                                // Load into a buffer and increase by the tile matrix value
+                                _mm256_store_ps(sb, row);
 
-                for(size_t i = 0; i < lenM; i++){
-                    // declear the registors
-                    __m256 row = _mm256_setzero_ps();
-                    __m256 k0, k1 ,k2, k3, k4, k5, k6, k7;
-                    k0 = _mm256_loadu_ps(&memM2[mid_offset+0][col_offset]);
-                    k1 = _mm256_loadu_ps(&memM2[mid_offset+1][col_offset]);
-                    k2 = _mm256_loadu_ps(&memM2[mid_offset+2][col_offset]);
-                    k3 = _mm256_loadu_ps(&memM2[mid_offset+3][col_offset]);
-                    k4 = _mm256_loadu_ps(&memM2[mid_offset+4][col_offset]);
-                    k5 = _mm256_loadu_ps(&memM2[mid_offset+5][col_offset]);
-                    k6 = _mm256_loadu_ps(&memM2[mid_offset+6][col_offset]);
-                    k7 = _mm256_loadu_ps(&memM2[mid_offset+7][col_offset]);
-                    row += memM1[row_offset+i][mid_offset+0] * k0;
-                    row += memM1[row_offset+i][mid_offset+1] * k1;
-                    row += memM1[row_offset+i][mid_offset+2] * k2;
-                    row += memM1[row_offset+i][mid_offset+3] * k3;
-                    row += memM1[row_offset+i][mid_offset+4] * k4;
-                    row += memM1[row_offset+i][mid_offset+5] * k5;
-                    row += memM1[row_offset+i][mid_offset+6] * k6;
-                    row += memM1[row_offset+i][mid_offset+7] * k7;
-                    float sb[8];
-                    // Load into a buffer and increase by the tile matrix value
-                    _mm256_store_ps(sb, row);
-                    
-                    for(size_t y = 0; y < 8; y++){
-                        memresult[row_offset+i][col_offset+y] += sb[y];
+                                for(size_t e = 0; e < 8; e++){
+                                    memresult[row_offset+x+i][col_offset+y+e] += sb[e];
+                                }
+                            }
+                        }       
                     }
-
-                }       
+                }
             }
             for(size_t i = ti*tile_size; i < ti*tile_size+tile_sizes_M[ti]; i++){
                 for(size_t j = tj*tile_size; j < tj*tile_size+tile_sizes_N[tj]; j++){

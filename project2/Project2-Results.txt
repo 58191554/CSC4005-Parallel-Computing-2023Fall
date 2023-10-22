@@ -1,6 +1,6 @@
 SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
 M = 4, N = 4, K = 4
-tile_sizeM = 8 tile_sizeN = 8 tile_sizeK = 8
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m12.txt
 Multiplication Complete!
 Execution Time: 0 milliseconds
@@ -9,34 +9,34 @@ ans_mat_path = results/answers/m12.txt
 Answer Correct!
 
 M = 128, N = 128, K = 128
-tile_sizeM = 8 tile_sizeN = 8 tile_sizeK = 8
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m34.txt
 Multiplication Complete!
-Execution Time: 2 milliseconds
+Execution Time: 1 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m34.txt
 Answer Correct!
 
 M = 1024, N = 1024, K = 1024
-tile_sizeM = 8 tile_sizeN = 8 tile_sizeK = 8
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m56.txt
 Multiplication Complete!
-Execution Time: 266 milliseconds
+Execution Time: 300 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m56.txt
 Answer Correct!
 
 M = 2048, N = 2048, K = 2048
-tile_sizeM = 8 tile_sizeN = 8 tile_sizeK = 8
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m78.txt
 Multiplication Complete!
-Execution Time: 3206 milliseconds
+Execution Time: 2571 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m78.txt
 Answer Correct!
 
 M = 127, N = 125, K = 126
-tile_sizeM = 8 tile_sizeN = 8 tile_sizeK = 8
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m910.txt
 Multiplication Complete!
 Execution Time: 1 milliseconds
@@ -45,10 +45,10 @@ ans_mat_path = results/answers/m910.txt
 Answer Correct!
 
 M = 1818, N = 2424, K = 1717
-tile_sizeM = 8 tile_sizeN = 8 tile_sizeK = 8
+tile_sizeM = 32 tile_sizeN = 32 tile_sizeK = 32
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m1112.txt
 Multiplication Complete!
-Execution Time: 2755 milliseconds
+Execution Time: 2179 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m1112.txt
 Answer Correct!
