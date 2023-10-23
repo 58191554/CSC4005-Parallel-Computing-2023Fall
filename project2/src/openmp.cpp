@@ -48,114 +48,51 @@ Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, int 
             memresult[i][j] = 0.0f;
         }
     }
-    
-    // divide task
-    int M_pad = (M%8 == 0) ? M : (M/8) * 8 + 8;
-    int N_pad = (N%8 == 0) ? N : (N/8) * 8 + 8;
-    std::cout << "M_pad, N_pad = " << M_pad << ", " << N_pad << std::endl;
-    int total_task_num = M_pad*N_pad / 64;
-    int block_rows_num = M_pad/8;
-    int block_cols_num = N_pad/8;
 
-    int block_per_task = total_task_num/num_threads;
-    int left_block_num = total_task_num%num_threads;
-
-    std::vector <int> cuts(num_threads+1, 0);
-    int divided_left_block_num = 0;
-    int actual_num_thread = 0;
-
-    for (int i = 0; i < num_threads; ++i) {
-        if (divided_left_block_num < left_block_num) {
-            cuts[i+1] = cuts[i] + block_per_task + 1;
-            divided_left_block_num++;
-        } else cuts[i+1] = cuts[i] + block_per_task;
-        if(cuts[i]!=cuts[i+1]){
-            actual_num_thread++;
+#pragma omp parallel for
+    for(size_t i = 0; i < M; i++){
+        // load the row pointer of M1 from 1 to 8 into an array
+        auto mat1_row_ptr = memM1[i];
+        auto mem_result_row_ptr = memresult[i];
+        __m256 row_vec_i[N/8+1];
+        for(int x = 0; x < N/8+1; x++){
+            row_vec_i[x] = _mm256_setzero_ps();
         }
-    }
-    num_threads = actual_num_thread;
-    std::cout << "actural threads number = " << num_threads << std::endl;
-    omp_set_num_threads(num_threads);
-    auto start_time = std::chrono::high_resolution_clock::now();
+        for(size_t k = 0; k < K; k++){
+            // auto mat1_ik = mat1_row_ptr[k];
+            auto mat1_ik = mat1_row_ptr[k];
+            auto mat2_row_ptr = memM2[k];
+            for(size_t j = 0; j < N; j+=8){
+                __m256 mat2_kj = _mm256_load_ps(&mat2_row_ptr[j]);
+                row_vec_i[j/8] += mat1_ik * mat2_kj;
+            }
+        }
+        // load out the row vector into the result
+        int cnt_m = 0;
+        for(int y = 0; y < N/8+1; y++){
+            float sb[8];
+            _mm256_store_ps(sb, row_vec_i[y]);
+            for(int z = 0; z < 8; z++){
 
-    #pragma omp parallel  shared(memM1, memM2, memresult, cuts, M_pad, N_pad,\
-    num_threads, result, block_rows_num, block_cols_num)
-    #pragma omp for
-    for(int task_id = 0; task_id < num_threads; task_id++){
-        // for each task, parse the linear task array to 2d tile index
-        // std::cout << "taskid = " << task_id  <<std::endl;
-        // parse the block_id to 2d array
-        int block_num = cuts[task_id+1]-cuts[task_id];
-
-        for(int block_id = cuts[task_id]; block_id < cuts[task_id+1]; block_id++){
-            size_t block_row = (block_id/block_cols_num)*8;
-            size_t block_col = (block_id-block_row*block_cols_num/8)*8;
-            // std::cout << "block_id, block_row, block_col = " << block_id << ", "
-            //  << block_row << ", " << block_col << std::endl;
-
-            for(int x = 0; x < 8; x++){
-                // laod the row pointer of the mat1
-                auto mat1_row_ptr = memM1[block_row + x];
-                auto mem_result_row_ptr = memresult[block_row+x];
-
-                // load the row pointer of M2 from k+0 to k+7 (k incrs by 8)
-                for(size_t k = 0; k < K; k += 8){
-                    auto mat2_ptr_k0 = memM2[k+0];
-                    auto mat2_ptr_k1 = memM2[k+1];
-                    auto mat2_ptr_k2 = memM2[k+2];
-                    auto mat2_ptr_k3 = memM2[k+3];
-                    auto mat2_ptr_k4 = memM2[k+4];
-                    auto mat2_ptr_k5 = memM2[k+5];
-                    auto mat2_ptr_k6 = memM2[k+6];
-                    auto mat2_ptr_k7 = memM2[k+7];
-
-                    __m256 row = _mm256_setzero_ps();
-                    __m256 kv0, kv1 ,kv2, kv3, kv4, kv5, kv6, kv7;
-                    kv0 = _mm256_loadu_ps(&mat2_ptr_k0[block_col]);
-                    kv1 = _mm256_loadu_ps(&mat2_ptr_k1[block_col]);
-                    kv2 = _mm256_loadu_ps(&mat2_ptr_k2[block_col]);
-                    kv3 = _mm256_loadu_ps(&mat2_ptr_k3[block_col]);
-                    kv4 = _mm256_loadu_ps(&mat2_ptr_k4[block_col]);
-                    kv5 = _mm256_loadu_ps(&mat2_ptr_k5[block_col]);
-                    kv6 = _mm256_loadu_ps(&mat2_ptr_k6[block_col]);
-                    kv7 = _mm256_loadu_ps(&mat2_ptr_k7[block_col]);   
-
-
-                    row += mat1_row_ptr[k+0] * kv0;
-                    row += mat1_row_ptr[k+1] * kv1;
-                    row += mat1_row_ptr[k+2] * kv2;
-                    row += mat1_row_ptr[k+3] * kv3;
-                    row += mat1_row_ptr[k+4] * kv4;
-                    row += mat1_row_ptr[k+5] * kv5;
-                    row += mat1_row_ptr[k+6] * kv6;
-                    row += mat1_row_ptr[k+7] * kv7;
-
-                    // load the 1x8 result into sb
-                    float sb[8];
-
-                    // Load into a buffer and increase by the tile matrix value
-                    _mm256_store_ps(sb, row);
-                    for(size_t e = 0; e < 8; e++){
-                        mem_result_row_ptr[block_col+e] += sb[e];
-                    }            
-                    
+                // std::cout << sb[z] << "  ";
+                if(cnt_m < M){
+                    mem_result_row_ptr[cnt_m] = sb[cnt_m%8];
+                    cnt_m++;
                 }
             }
         }
     }
-        
-    auto end_time = std::chrono::high_resolution_clock::now();
-    auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(
-        end_time - start_time);
-    std::cout << "MultiThread Time: " << elapsed_time.count() << " milliseconds"
-              << std::endl;
 
     std::cout <<"FUCK ME" << std::endl;
+    // #pragma parallel for
     for(int i = 0; i < M; i++){
         auto mem_result_ptr_i = memresult[i];
         for(int j = 0; j < N; j++){
             result[i][j] = mem_result_ptr_i[j];
+            // std::cout << result[i][j] << " ";
         }
+        // std::cout << std::endl;
+
     }
 
     for(size_t i = 0; i < M+16; i++){

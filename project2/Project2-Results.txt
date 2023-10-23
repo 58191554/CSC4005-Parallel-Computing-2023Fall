@@ -1,23 +1,17 @@
 Number of cores: 32
-M_pad, N_pad = 1024, 1024
-actural threads number = 32
-MultiThread Time: 76 milliseconds
 FUCK ME
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
 Multiplication Complete!
-Execution Time: 95 milliseconds
+Execution Time: 54 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m56.txt
 Answer Correct!
 
 Number of cores: 32
-M_pad, N_pad = 2048, 2048
-actural threads number = 32
-MultiThread Time: 475 milliseconds
 FUCK ME
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
 Multiplication Complete!
-Execution Time: 553 milliseconds
+Execution Time: 256 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m78.txt
 Answer Correct!

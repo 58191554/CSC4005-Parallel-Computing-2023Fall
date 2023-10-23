@@ -56,7 +56,7 @@ CURRENT_DIR=$(pwd)/src
 # # OpenMP + SIMD + Reordering
 # echo "OpenMP + SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)"
 
-# for num_cores in 1 2 4 8 16 32
+# for num_cores in 1 
 # do
 #   echo "Number of cores: $num_cores"
 #   srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix1.txt ${CURRENT_DIR}/../matrices/matrix2.txt ${CURRENT_DIR}/../results/openMP/m12.txt 1
