@@ -10,6 +10,7 @@
 #include <stdexcept>
 #include <chrono>
 #include "matrix.hpp"
+#include <cstdlib>
 
 Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, int num_threads) {
     if (matrix1.getCols() != matrix2.getRows()) {
@@ -41,19 +42,18 @@ Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, int 
             }
         }
     }
-    auto ** memresult = (float**)malloc((M+16)*sizeof(float*));
+    auto ** mem_result = (float**)malloc((M+16)*sizeof(float*));
     for(size_t i = 0; i < M+16; i++){
-        memresult[i] = (float*)malloc((N+16)*sizeof(float));
+        mem_result[i] = (float*)malloc((N/8+1)*8*sizeof(float));
         for(size_t j = 0; j < N; j++){
-            memresult[i][j] = 0.0f;
+            mem_result[i][j] = 0.0f;
         }
     }
 
-#pragma omp parallel for
+    #pragma omp parallel for
     for(size_t i = 0; i < M; i++){
         // load the row pointer of M1 from 1 to 8 into an array
         auto mat1_row_ptr = memM1[i];
-        auto mem_result_row_ptr = memresult[i];
         __m256 row_vec_i[N/8+1];
         for(int x = 0; x < N/8+1; x++){
             row_vec_i[x] = _mm256_setzero_ps();
@@ -69,12 +69,17 @@ Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, int 
         }
         // load out the row vector into the result
         int cnt_m = 0;
+        mem_result[i] = (float*)malloc((N/8+1)*8*sizeof(float));
+        for(size_t x = 0; x < N; x++){
+            mem_result[i][x] = 0.0f;
+        }
+
+        float * mem_result_row_ptr = mem_result[i];
         for(int y = 0; y < N/8+1; y++){
+
             float sb[8];
             _mm256_store_ps(sb, row_vec_i[y]);
             for(int z = 0; z < 8; z++){
-
-                // std::cout << sb[z] << "  ";
                 if(cnt_m < M){
                     mem_result_row_ptr[cnt_m] = sb[cnt_m%8];
                     cnt_m++;
@@ -83,16 +88,12 @@ Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, int 
         }
     }
 
-    std::cout <<"FUCK ME" << std::endl;
-    // #pragma parallel for
+    #pragma parallel for
     for(int i = 0; i < M; i++){
-        auto mem_result_ptr_i = memresult[i];
+        auto mem_result_ptr_i = mem_result[i];
         for(int j = 0; j < N; j++){
             result[i][j] = mem_result_ptr_i[j];
-            // std::cout << result[i][j] << " ";
         }
-        // std::cout << std::endl;
-
     }
 
     for(size_t i = 0; i < M+16; i++){
@@ -103,7 +104,7 @@ Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, int 
         free(memM2[i]);
     }
     for(size_t i = 0; i < M+16; i++){
-        free(memresult[i]);
+        free(mem_result[i]);
     }
     return result;
 }
