@@ -1,55 +1,24 @@
-SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
-M = 4, N = 4, K = 4
+Number of cores: 32
+M_pad, N_pad = 1024, 1024
+actural threads number = 32
+MultiThread Time: 76 milliseconds
 FUCK ME
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m12.txt
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
 Multiplication Complete!
-Execution Time: 0 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m12.txt
-Answer Correct!
-
-M = 128, N = 128, K = 128
-FUCK ME
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m34.txt
-Multiplication Complete!
-Execution Time: 2 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m34.txt
-Answer Correct!
-
-M = 1024, N = 1024, K = 1024
-FUCK ME
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m56.txt
-Multiplication Complete!
-Execution Time: 232 milliseconds
+Execution Time: 95 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m56.txt
 Answer Correct!
 
-M = 2048, N = 2048, K = 2048
+Number of cores: 32
+M_pad, N_pad = 2048, 2048
+actural threads number = 32
+MultiThread Time: 475 milliseconds
 FUCK ME
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m78.txt
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
 Multiplication Complete!
-Execution Time: 1839 milliseconds
+Execution Time: 553 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m78.txt
-Answer Correct!
-
-M = 127, N = 125, K = 126
-FUCK ME
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m910.txt
-Multiplication Complete!
-Execution Time: 1 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m910.txt
-Answer Correct!
-
-M = 1818, N = 2424, K = 1717
-FUCK ME
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m1112.txt
-Multiplication Complete!
-Execution Time: 1614 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m1112.txt
 Answer Correct!
 
