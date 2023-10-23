@@ -26,117 +26,73 @@ Matrix matrix_multiply_locality(const Matrix& matrix1, const Matrix& matrix2) {
     }
 
     size_t M = matrix1.getRows(), K = matrix1.getCols(), N = matrix2.getCols();
+
+    std::cout << "M = " << M << ", N = "<<N << ", K = "<<K << std::endl;
+
     Matrix result(M, N);
-    auto ** memM1 = (int**)malloc(M * sizeof(int*));
-    auto ** memM2 = (int**)malloc(K * sizeof(int*));
+    auto ** memM1 = (float**)malloc((M) * sizeof(float*));
+    auto ** memM2 = (float**)malloc((K) * sizeof(float*));
 
     for(size_t i = 0; i < M; i++){
         // std::cout << i << std::endl;
-        memM1[i] = (int*) malloc(K*sizeof(int));
-        for(size_t j = 0; j < K; j++){
-            // std::cout << j << std::endl;
-            memM1[i][j] = matrix1[i][j];            
+        memM1[i] = (float*) malloc((K)*sizeof(float));
+        if(i < M){
+            for(size_t j = 0; j < K; j++){
+                // std::cout << j << std::endl;
+                if(j < K){
+                    memM1[i][j] = static_cast< float >(matrix1[i][j]);   
+                }         
+            }
         }
     }
     for(size_t i = 0; i < K; i++){
-        memM2[i] = (int*)malloc(N*sizeof(int));
-        for(size_t j = 0; j < N; j++){
-            memM2[i][j] = matrix2[i][j];
-        }
-    }
-    auto ** memresult = (int**)malloc(M*sizeof(int*));
-    for(size_t i = 0; i < M; i++){
-        memresult[i] = (int*)malloc(N*sizeof(int));
-        for(size_t j = 0; j < N; j++){
-            memresult[i][j] = 0;
-        }
-    }
-
-    // get the max gcd as the tile size
-    // size_t tile_size = gcd(M, gcd(K, N));
-    size_t tile_sizeM = 32;
-    size_t tile_sizeN = 32;
-    size_t tile_sizeK = 32;
-    if(tile_sizeM > M){
-        tile_sizeM = M;
-    }
-    if(tile_sizeN > N){
-        tile_sizeN = N;
-    }
-    if(tile_sizeK > K){
-        tile_sizeK = K;
-    }
-    std::cout << "M = " << M << ", N = "<<N << ", K = "<<K << std::endl;
-    std::cout << "tile_sizeM = " << tile_sizeM 
-    << "tile_sizeN = " << tile_sizeN
-    << "tile_sizeK = " << tile_sizeK  << std::endl;
-    
-    size_t numtile_M = M/tile_sizeM+1;
-    size_t numtile_N = N/tile_sizeN+1;
-    size_t numtile_K = K/tile_sizeK+1;
-    // store arrays of tile sizes
-    int* tile_sizes_M = (int*)malloc(numtile_M*sizeof(int));
-    int* tile_sizes_N = (int*)malloc(numtile_N*sizeof(int));
-    int* tile_sizes_K = (int*)malloc(numtile_K*sizeof(int));
-
-    for(int i = 0; i < numtile_M; i++){
-        if(i < numtile_M-1) tile_sizes_M[i] = tile_sizeM;
-        else tile_sizes_M[i] = M-i*tile_sizeM;
-    }
-    std::cout << "FUCK ME" << std::endl;
-
-    for(int i = 0; i < numtile_N; i++){
-        if(i<numtile_N-1)tile_sizes_N[i] = tile_sizeN;
-        else tile_sizes_N[i] = N-i*tile_sizeN;
-    }
-    for(int i = 0; i < numtile_K; i++){
-        if(i < numtile_K-1) tile_sizes_K[i] = tile_sizeK;
-        else tile_sizes_K[i] = K-i*tile_sizeK;
-    }
-
-
-    // 1. Change the order of the tripple nested loop
-    // 2. Apply Tiled Matrix Multiplication
-
-    // tiled
-    for(size_t ti = 0; ti < numtile_M; ++ti){
-        for(size_t tj = 0; tj < numtile_N; ++tj){
-            for(size_t tk = 0; tk < numtile_K; ++tk){
-                // do the tile matrix multiply for tile_num_K x tile_num_K times
-
-                size_t row_offset = ti * tile_sizeM;
-                size_t col_offset = tj * tile_sizeN;
-                size_t mid_offset = tk * tile_sizeK;
-                for(size_t i = 0; i < tile_sizes_M[ti]; ++i){
-                    for(size_t j = 0; j < tile_sizes_N[tj]; ++j){
-                        for(size_t k = 0; k < tile_sizes_K[tk]; k++){
-                            memresult[row_offset+i][col_offset+j]+=
-                            memM1[row_offset+i][mid_offset+k]*
-                            memM2[mid_offset+k][col_offset+j];
-                        }
-                    }
+        memM2[i] = (float*)malloc((N)*sizeof(float));
+        if(i<K){
+            for(size_t j = 0; j < N; j++){
+                if(j < N){
+                    memM2[i][j] = static_cast< float >(matrix2[i][j]);
                 }
             }
         }
     }
-
+    auto ** memresult = (float**)malloc((M)*sizeof(float*));
     for(size_t i = 0; i < M; i++){
+        memresult[i] = (float*)malloc((N)*sizeof(float));
         for(size_t j = 0; j < N; j++){
-            result[i][j] = memresult[i][j];
+            memresult[i][j] = 0.0f;
         }
     }
+    
+    for(size_t i = 0; i < M; ++i){
+        auto mat1_ptr_i = memM1[i];
+        auto mem_result_ptr_i = memresult[i];
+        for(size_t k = 0; k < K; ++k){
+            auto mat2_ptr_k = memM2[k];
+            auto mat1_ik = mat1_ptr_i[k];
+            for(size_t j = 0; j < N; ++j){
+                mem_result_ptr_i[j] += mat1_ik*mat2_ptr_k[j];
+            }
+        }
+
+    }
+
+    for(int i = 0; i < M; i++){
+        auto mem_result_ptr_i = memresult[i];
+        for(int j = 0; j < N; j++){
+            result[i][j] = mem_result_ptr_i[j];
+        }
+    }
+
     for(size_t i = 0; i < M; i++){
         free(memM1[i]);
     }
+    // transpose M2
     for(size_t i = 0; i < K; i++){
         free(memM2[i]);
     }
     for(size_t i = 0; i < M; i++){
         free(memresult[i]);
     }
-    delete[] tile_sizes_M;
-    delete[] tile_sizes_N;
-    delete[] tile_sizes_K;
     return result;
 }
 

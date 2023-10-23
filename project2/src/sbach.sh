@@ -38,23 +38,23 @@ CURRENT_DIR=$(pwd)/src
 # srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/locality ${CURRENT_DIR}/../matrices/matrix11.txt ${CURRENT_DIR}/../matrices/matrix12.txt ${CURRENT_DIR}/../results/answers/m1112.txt 1
 # echo ""
 
-# # SIMD + Reordering
-# echo "SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)"
-# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix1.txt ${CURRENT_DIR}/../matrices/matrix2.txt ${CURRENT_DIR}/../results/simd/m12.txt 1
-# echo ""
-# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix3.txt ${CURRENT_DIR}/../matrices/matrix4.txt ${CURRENT_DIR}/../results/simd/m34.txt 1
-# echo ""
-# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix5.txt ${CURRENT_DIR}/../matrices/matrix6.txt ${CURRENT_DIR}/../results/simd/m56.txt 1
-# echo ""
-# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix7.txt ${CURRENT_DIR}/../matrices/matrix8.txt ${CURRENT_DIR}/../results/simd/m78.txt 1
-# echo ""
-# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix9.txt ${CURRENT_DIR}/../matrices/matrix10.txt ${CURRENT_DIR}/../results/simd/m910.txt 1
-# echo ""
-# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix11.txt ${CURRENT_DIR}/../matrices/matrix12.txt ${CURRENT_DIR}/../results/simd/m1112.txt 1
-# echo ""
+# SIMD + Reordering
+echo "SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)"
+srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix1.txt ${CURRENT_DIR}/../matrices/matrix2.txt ${CURRENT_DIR}/../results/simd/m12.txt 1
+echo ""
+srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix3.txt ${CURRENT_DIR}/../matrices/matrix4.txt ${CURRENT_DIR}/../results/simd/m34.txt 1
+echo ""
+srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix5.txt ${CURRENT_DIR}/../matrices/matrix6.txt ${CURRENT_DIR}/../results/simd/m56.txt 1
+echo ""
+srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix7.txt ${CURRENT_DIR}/../matrices/matrix8.txt ${CURRENT_DIR}/../results/simd/m78.txt 1
+echo ""
+srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix9.txt ${CURRENT_DIR}/../matrices/matrix10.txt ${CURRENT_DIR}/../results/simd/m910.txt 1
+echo ""
+srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/simd ${CURRENT_DIR}/../matrices/matrix11.txt ${CURRENT_DIR}/../matrices/matrix12.txt ${CURRENT_DIR}/../results/simd/m1112.txt 1
+echo ""
 
 # # OpenMP + SIMD + Reordering
-echo "OpenMP + SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)"
+# echo "OpenMP + SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)"
 
 # for num_cores in 1 2 4 8 16 32
 # do
@@ -71,19 +71,19 @@ echo "OpenMP + SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
 # done
 
 
-for num_cores in  32
-do
-  echo "Number of cores: $num_cores"
-  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix5.txt ${CURRENT_DIR}/../matrices/matrix6.txt ${CURRENT_DIR}/../results/openMP/m56.txt 1
-  echo ""
-done
+# for num_cores in  32
+# do
+#   echo "Number of cores: $num_cores"
+#   srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix5.txt ${CURRENT_DIR}/../matrices/matrix6.txt ${CURRENT_DIR}/../results/openMP/m56.txt 1
+#   echo ""
+# done
 
-for num_cores in  32
-do
-  echo "Number of cores: $num_cores"
-  srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix7.txt ${CURRENT_DIR}/../matrices/matrix8.txt ${CURRENT_DIR}/../results/openMP/m78.txt 1
-  echo ""
-done
+# for num_cores in  32
+# do
+#   echo "Number of cores: $num_cores"
+#   srun -n 1 --cpus-per-task $num_cores ${CURRENT_DIR}/../build/src/openmp $num_cores ${CURRENT_DIR}/../matrices/matrix7.txt ${CURRENT_DIR}/../matrices/matrix8.txt ${CURRENT_DIR}/../results/openMP/m78.txt 1
+#   echo ""
+# done
 
 # for num_cores in 1 2 4 8 16 32
 # do
