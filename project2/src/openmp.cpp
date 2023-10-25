@@ -21,90 +21,73 @@ Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, int 
     size_t M = matrix1.getRows(), K = matrix1.getCols(), N = matrix2.getCols();
 
     Matrix result(M, N);
-    auto ** memM1 = (float**)malloc((M+16) * sizeof(float*));
-    auto ** memM2 = (float**)malloc((K+16) * sizeof(float*));
-
-    for(size_t i = 0; i < M+16; i++){
-        // std::cout << i << std::endl;
-        memM1[i] = (float*) malloc((K+16)*sizeof(float));
-        if(i < M){
-            for(size_t j = 0; j < K; j++){
-                // std::cout << j << std::endl;
-                memM1[i][j] = static_cast< float >(matrix1[i][j]);            
-            }
-        }
-    }
-    for(size_t i = 0; i < K+16; i++){
-        memM2[i] = (float*)malloc((N+16)*sizeof(float));
-        if(i<K){
-            for(size_t j = 0; j < N; j++){
-                memM2[i][j] = static_cast< float >(matrix2[i][j]);
-            }
-        }
-    }
-    auto ** mem_result = (float**)malloc((M+16)*sizeof(float*));
-    for(size_t i = 0; i < M+16; i++){
-        mem_result[i] = (float*)malloc((N/8+1)*8*sizeof(float));
-        for(size_t j = 0; j < N; j++){
-            mem_result[i][j] = 0.0f;
-        }
-    }
+    int zero_array[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 
     #pragma omp parallel for
     for(size_t i = 0; i < M; i++){
         // load the row pointer of M1 from 1 to 8 into an array
-        auto mat1_row_ptr = memM1[i];
-        __m256 row_vec_i[N/8+1];
+        auto mat1_row_ptr = matrix1[i];
+        int * result_row_ptr = result[i];
+
+        __m256i row_vec_i[N/8+1];
+        int *heap_ = (int *)malloc(8*sizeof(int));
         for(int x = 0; x < N/8+1; x++){
-            row_vec_i[x] = _mm256_setzero_ps();
+            row_vec_i[x] = _mm256_loadu_si256((__m256i*)zero_array);
         }
+
         for(size_t k = 0; k < K; k++){
             // auto mat1_ik = mat1_row_ptr[k];
-            auto mat1_ik = mat1_row_ptr[k];
-            auto mat2_row_ptr = memM2[k];
-            for(size_t j = 0; j < N; j+=8){
-                __m256 mat2_kj = _mm256_load_ps(&mat2_row_ptr[j]);
+            auto mat1_ik = (mat1_row_ptr[k]);
+            auto mat2_row_ptr = matrix2[k];
+            
+            size_t j = 0;
+
+            for(; j < N; j+=8){
+                __m256i  mat2_kj;
+                int array[8];
+                for(int a = 0; a < 8; a++){
+                    if(j+a<N)array[a] = mat2_row_ptr[j+a];
+                    else array[a] = 0;
+                }
+                mat2_kj = _mm256_setr_epi32(
+                    array[0],
+                    array[1],
+                    array[2],
+                    array[3],
+                    array[4],
+                    array[5],
+                    array[6],
+                    array[7]
+                );
                 row_vec_i[j/8] += mat1_ik * mat2_kj;
+                // std::cout << "a * bk= " << mat1_ik << " * ";
+                // int fuck_arr[8];
+                // _mm256_storeu_si256((__m256i*)fuck_arr, mat2_kj);
+                // for(int fuck =0; fuck<8;fuck++){
+                    // std::cout << fuck_arr[fuck] << ", ";
+                // }
+                // std::cout << std::endl;
             }
         }
         // load out the row vector into the result
-        int cnt_m = 0;
-        mem_result[i] = (float*)malloc((N/8+1)*8*sizeof(float));
-        for(size_t x = 0; x < N; x++){
-            mem_result[i][x] = 0.0f;
-        }
-
-        float * mem_result_row_ptr = mem_result[i];
-        for(int y = 0; y < N/8+1; y++){
-
-            float sb[8];
-            _mm256_store_ps(sb, row_vec_i[y]);
-            for(int z = 0; z < 8; z++){
-                if(cnt_m < M){
-                    mem_result_row_ptr[cnt_m] = sb[cnt_m%8];
-                    cnt_m++;
-                }
+        // std::cout << "FUCK ME" <<std::endl;
+        int * tmp_row = (int*)_mm_malloc(8*sizeof(int), 32);    
+        for(size_t j = 0; j < N; j+=8){
+            _mm256_storeu_si256((__m256i*)tmp_row, row_vec_i[j/8]);
+            for(size_t jj = 0; jj < 8 && j+jj<N; jj++){
+                result_row_ptr[j+jj] = tmp_row[jj];
+                // std::cout << tmp_row[jj] << ", ";
             }
+            // std::cout << std::endl;
         }
+        _mm_free(tmp_row);
     }
 
-    #pragma parallel for
-    for(int i = 0; i < M; i++){
-        auto mem_result_ptr_i = mem_result[i];
+    for(int i = 0; i < M;++i){
         for(int j = 0; j < N; j++){
-            result[i][j] = mem_result_ptr_i[j];
+            // std::cout << result[i][j] << ", ";
         }
-    }
-
-    for(size_t i = 0; i < M+16; i++){
-        free(memM1[i]);
-    }
-    // transpose M2
-    for(size_t i = 0; i < K+16; i++){
-        free(memM2[i]);
-    }
-    for(size_t i = 0; i < M+16; i++){
-        free(mem_result[i]);
+        // std::cout << std::endl;
     }
     return result;
 }
