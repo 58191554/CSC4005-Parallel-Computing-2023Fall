@@ -13,7 +13,7 @@
 #include <cstdlib>
 
 Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, \
-                                int num_threads) {
+                                int num_threads, float ** memM1, float ** memM2) {
     if (matrix1.getCols() != matrix2.getRows()) {
         throw std::invalid_argument(
             "Matrix dimensions are not compatible for multiplication.");
@@ -22,30 +22,52 @@ Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, \
     size_t M = matrix1.getRows(), K = matrix1.getCols(), N = matrix2.getCols();
 
     Matrix result(M, N);
+
+    auto ** mem_result = (float**)malloc((M+16)*sizeof(float*));
+    for(size_t i = 0; i < M+16; i++){
+        mem_result[i] = (float*)_mm_malloc((N/8+1)*8*sizeof(float), 32);
+        for(size_t j = 0; j < N; j++){
+            mem_result[i][j] = 0.0f;
+        }
+    }
+
+
     #pragma omp parallel for schedule(static)
     for(size_t i = 0; i < M; i++){
         // load the row pointer of M1 from 1 to 8 into an array
-        auto mat1_row_ptr = matrix1[i];
-        __m256i  row_vec_i[N/8+1];
+        auto mat1_row_ptr = memM1[i];
+        __m256 row_vec_i[N/8+1];
         for(int x = 0; x < N/8+1; x++){
-            row_vec_i[x] = _mm256_setzero_si256();
+            row_vec_i[x] = _mm256_setzero_ps();
         }
         for(size_t k = 0; k < K; k++){
             // auto mat1_ik = mat1_row_ptr[k];
             auto mat1_ik = mat1_row_ptr[k];
-            auto mat2_row_ptr = matrix2[k];
-            __m256i mat1_i_vec = _mm256_set1_epi32(mat1_ik);
+            auto mat2_row_ptr = memM2[k];
+            __m256 mat1_i_vec = _mm256_set1_ps(mat1_ik);
             for(size_t j = 0; j < N; j+=8){
-                __m256i  mat2_kj = _mm256_loadu_si256((__m256i*)&mat2_row_ptr[j]);
-                row_vec_i[j/8] = _mm256_add_epi32(_mm256_mullo_epi32(mat1_i_vec, mat2_kj), row_vec_i[j/8]);
+                __m256 mat2_kj = _mm256_load_ps(&mat2_row_ptr[j]);
+                row_vec_i[j/8] = _mm256_add_ps(_mm256_mul_ps(mat1_i_vec, mat2_kj), row_vec_i[j/8]);
             }
         }
         // load out the row vector into the result
 
-        int * mem_result_row_ptr = result[i];
+        float * mem_result_row_ptr = mem_result[i];
         for(int y = 0; y < N/8+1; y++){
-            _mm256_storeu_si256((__m256i*)&mem_result_row_ptr[y*8], row_vec_i[y]);
+            _mm256_store_ps(&mem_result_row_ptr[y*8], row_vec_i[y]);
         }
+    }
+
+    #pragma parallel for
+    for(int i = 0; i < M; i++){
+        auto mem_result_ptr_i = mem_result[i];
+        for(int j = 0; j < N; j++){
+            result[i][j] = mem_result_ptr_i[j];
+        }
+    }
+    
+    for(size_t i = 0; i < M+16; i++){
+        free(mem_result[i]);
     }
 
     return result;
@@ -75,9 +97,31 @@ int main(int argc, char** argv) {
 
     int M = matrix1.getRows(); int N = matrix2.getCols(); int K = matrix1.getCols();
 
+    auto ** memM1 = (float**)malloc((M+16) * sizeof(float*));
+    auto ** memM2 = (float**)malloc((K+16) * sizeof(float*));
+
+    for(size_t i = 0; i < M+16; i++){
+        // std::cout << i << std::endl;
+        memM1[i] = (float*) malloc((K+16)*sizeof(float));
+        if(i < M){
+            for(size_t j = 0; j < K; j++){
+                // std::cout << j << std::endl;
+                memM1[i][j] = static_cast< float >(matrix1[i][j]);            
+            }
+        }
+    }
+    for(size_t i = 0; i < K+16; i++){
+        memM2[i] = (float*)malloc((N+16)*sizeof(float));
+        if(i<K){
+            for(size_t j = 0; j < N; j++){
+                memM2[i][j] = static_cast< float >(matrix2[i][j]);
+            }
+        }
+    }
+
     auto start_time = std::chrono::high_resolution_clock::now();
 
-    Matrix result = matrix_multiply_openmp(matrix1, matrix2, num_threads);
+    Matrix result = matrix_multiply_openmp(matrix1, matrix2, num_threads, memM1, memM2);
 
     auto end_time = std::chrono::high_resolution_clock::now();
     auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(
@@ -91,6 +135,13 @@ int main(int argc, char** argv) {
     std::cout << "Execution Time: " << elapsed_time.count() << " milliseconds"
               << std::endl;
 
+    for(size_t i = 0; i < M+16; i++){
+        free(memM1[i]);
+    }
+    // transpose M2
+    for(size_t i = 0; i < K+16; i++){
+        free(memM2[i]);
+    }
 
     if (debug == 1){
         std::cout << "Debug Mode" << std::endl;
