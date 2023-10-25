@@ -1,29 +1,55 @@
-Number of cores: 1
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
+MPI + OpenMP + SIMD + Reordering 4x4
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
 Multiplication Complete!
-Execution Time: 0 milliseconds
+Execution Time: 23 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m12.txt
 Answer Correct!
-
-Number of cores: 32
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
+MPI + OpenMP + SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
+Number of Processes: 1, Number of Threads: 32
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
 Multiplication Complete!
-Execution Time: 44 milliseconds
+Execution Time: 49 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m56.txt
 Answer Correct!
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 32 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt 1':
+Number of Processes: 2, Number of Threads: 16
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 31 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
 
-     3,144,983,126      cpu-cycles:u                                                
-           459,500      cache-misses:u                                              
-             4,734      page-faults:u                                               
+Number of Processes: 4, Number of Threads: 8
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 37 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
 
-       0.501125550 seconds time elapsed
+Number of Processes: 8, Number of Threads: 4
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 34 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
 
-       1.593574000 seconds user
-       0.040809000 seconds sys
+Number of Processes: 16, Number of Threads: 2
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 34 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
 
-
-
+Number of Processes: 32, Number of Threads: 1
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 65 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct
