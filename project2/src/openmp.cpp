@@ -32,7 +32,7 @@ Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, \
     }
 
 
-    #pragma omp parallel for
+    #pragma omp parallel for schedule(static)
     for(size_t i = 0; i < M; i++){
         // load the row pointer of M1 from 1 to 8 into an array
         auto mat1_row_ptr = memM1[i];

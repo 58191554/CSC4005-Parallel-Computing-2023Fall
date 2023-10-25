@@ -34,7 +34,7 @@ float ** matrix_multiply_mpi(const Matrix& matrix1, const Matrix& matrix2, \
         }
     }
 
-    // #pragma omp parallel for
+    #pragma omp parallel for schedule(static)
     for(size_t i = cuts[taskid]; i < cuts[taskid+1]; i++){
         // load the row pointer of M1 from 1 to 8 into an array
         auto mat1_row_ptr = memM1[i];
@@ -57,15 +57,6 @@ float ** matrix_multiply_mpi(const Matrix& matrix1, const Matrix& matrix2, \
             _mm256_store_ps(&mem_result_row_ptr[y*8], row_vec_i[y]);
         }
     }
-    // if(taskid == 1){
-    //     printf("slave return:");
-    //     for(int d = 0; d<row_length; d++){
-    //         for(int l = 0; l < N; l++){
-    //             std::cout << mem_result[d][l];
-    //         }
-    //         std::cout << std::endl;
-    //     }
-    // }
     return mem_result;
 }
 
@@ -142,7 +133,6 @@ int main(int argc, char** argv) {
             cuts[i+1] = cuts[i] + row_num_per_task + 1;
             divided_left_row_num++;
         } else cuts[i+1] = cuts[i] + row_num_per_task;
-        if (taskid == MASTER)printf("cuts[%d] = %d", i, cuts[i]);
     }
 
 
