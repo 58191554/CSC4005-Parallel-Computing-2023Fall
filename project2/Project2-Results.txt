@@ -1,16 +1,10 @@
-Number of cores: 32
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
-Multiplication Complete!
-Execution Time: 59 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m56.txt
-Answer Correct!
-
-Number of cores: 32
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
-Multiplication Complete!
-Execution Time: 221 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m78.txt
-Answer Correct!
+Number of Processes: 2, Number of Threads: 16
+80, 70, 60, 50, 
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+240, 214, 188, 162, 
+Fatal error in MPI_Recv: Message truncated, error stack:
+MPI_Recv(200).....................: MPI_Recv(buf=0xf14ef0, count=8, MPI_INT, src=1, tag=0, MPI_COMM_WORLD, status=0x7ffda5a0fcc0) failed
+MPIDI_CH3U_Receive_data_found(131): Message from rank 1 and tag 0 truncated; 160 bytes received but buffer size is 32
+slurmstepd: error: *** STEP 137801.0 ON node36 CANCELLED AT 2023-10-25T05:19:27 ***
+srun: error: node36: tasks 0-1: Killed
 
