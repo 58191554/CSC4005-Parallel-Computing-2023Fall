@@ -12,13 +12,14 @@
 #include <random>
 #include <memory.h>
 #include "matrix.hpp"
+#include <immintrin.h>
 
 Matrix::Matrix(size_t rows, size_t cols) : rows(rows), cols(cols) {
     // Allocate memory for the matrix
-    data = new int*[rows];
+    data = (int**)malloc((rows)*sizeof(int*));
     for (size_t i = 0; i < rows; ++i) {
         // +8 for SIMD convenience
-        data[i] = new int[cols + 8];
+        data[i] = (int*)_mm_malloc((cols/8+1)*8*sizeof(int), 32);
         memset(data[i], 0, cols * sizeof(int));
     }
 }
@@ -26,9 +27,9 @@ Matrix::Matrix(size_t rows, size_t cols) : rows(rows), cols(cols) {
 Matrix::~Matrix() {
     // Destructor to free memory
     for (size_t i = 0; i < rows; ++i) {
-        delete[] data[i];
+        free(data[i]);
     }
-    delete[] data;
+    free(data);
 }
 
 int* Matrix::operator[](size_t rowIndex) {
