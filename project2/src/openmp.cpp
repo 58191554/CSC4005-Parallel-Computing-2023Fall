@@ -62,9 +62,10 @@ Matrix matrix_multiply_openmp(const Matrix& matrix1, const Matrix& matrix2, int 
             // auto mat1_ik = mat1_row_ptr[k];
             auto mat1_ik = mat1_row_ptr[k];
             auto mat2_row_ptr = memM2[k];
+            __m256 mat1_i_vec = _mm256_set1_ps(mat1_ik);
             for(size_t j = 0; j < N; j+=8){
                 __m256 mat2_kj = _mm256_load_ps(&mat2_row_ptr[j]);
-                row_vec_i[j/8] += mat1_ik * mat2_kj;
+                row_vec_i[j/8] = _mm256_add_ps(_mm256_mul_ps(mat1_i_vec, mat2_kj), row_vec_i[j/8]);
             }
         }
         // load out the row vector into the result

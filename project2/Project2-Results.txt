@@ -1,7 +1,7 @@
 Number of cores: 32
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
 Multiplication Complete!
-Execution Time: 58 milliseconds
+Execution Time: 59 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m56.txt
 Answer Correct!
@@ -9,7 +9,7 @@ Answer Correct!
 Number of cores: 32
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
 Multiplication Complete!
-Execution Time: 233 milliseconds
+Execution Time: 221 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m78.txt
 Answer Correct!
