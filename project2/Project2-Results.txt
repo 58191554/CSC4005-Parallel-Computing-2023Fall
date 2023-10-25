@@ -1,7 +1,7 @@
 Number of cores: 1
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
 Multiplication Complete!
-Execution Time: 1 milliseconds
+Execution Time: 0 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m12.txt
 Answer Correct!
@@ -9,21 +9,21 @@ Answer Correct!
 Number of cores: 32
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
 Multiplication Complete!
-Execution Time: 100 milliseconds
+Execution Time: 44 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m56.txt
 Answer Correct!
 
  Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 32 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt 1':
 
-     8,754,899,794      cpu-cycles:u                                                
-           409,827      cache-misses:u                                              
-             4,781      page-faults:u                                               
+     3,144,983,126      cpu-cycles:u                                                
+           459,500      cache-misses:u                                              
+             4,734      page-faults:u                                               
 
-       0.554731215 seconds time elapsed
+       0.501125550 seconds time elapsed
 
-       3.466979000 seconds user
-       0.040208000 seconds sys
+       1.593574000 seconds user
+       0.040809000 seconds sys
 
 
 
