@@ -25,6 +25,7 @@ float ** matrix_multiply_mpi(const Matrix& matrix1, const Matrix& matrix2, \
     }
     int K = matrix1.getCols(), N = matrix2.getCols();
     int row_length = cuts[taskid+1]-cuts[taskid];
+
     auto ** mem_result = (float**)malloc(row_length*sizeof(float*));
     for(size_t i = 0; i < row_length; i++){
         mem_result[i] = (float*)_mm_malloc((N/8+1)*8*sizeof(float), 32);
@@ -34,7 +35,7 @@ float ** matrix_multiply_mpi(const Matrix& matrix1, const Matrix& matrix2, \
     }
 
     // #pragma omp parallel for
-    for(size_t i = 0; i < row_length; i++){
+    for(size_t i = cuts[taskid]; i < cuts[taskid+1]; i++){
         // load the row pointer of M1 from 1 to 8 into an array
         auto mat1_row_ptr = memM1[i];
         __m256 row_vec_i[N/8+1];
@@ -49,21 +50,22 @@ float ** matrix_multiply_mpi(const Matrix& matrix1, const Matrix& matrix2, \
                 __m256 mat2_kj = _mm256_load_ps(&mat2_row_ptr[j]);
                 row_vec_i[j/8] = _mm256_add_ps(_mm256_mul_ps(mat1_i_vec, mat2_kj), row_vec_i[j/8]);
             }
-
         }
         // load out the row vector into the result
-        float * mem_result_row_ptr = mem_result[i];
+        float * mem_result_row_ptr = mem_result[i-cuts[taskid]];
         for(int y = 0; y < N/8+1; y++){
             _mm256_store_ps(&mem_result_row_ptr[y*8], row_vec_i[y]);
         }
     }
-        for(int d = 0; d<row_length; d++){
-            for(int l = 0; l < N; l++){
-                // std::cout << mem_result[d][l];
-            }
-            // std::cout << std::endl;
-        }
-
+    // if(taskid == 1){
+    //     printf("slave return:");
+    //     for(int d = 0; d<row_length; d++){
+    //         for(int l = 0; l < N; l++){
+    //             std::cout << mem_result[d][l];
+    //         }
+    //         std::cout << std::endl;
+    //     }
+    // }
     return mem_result;
 }
 
@@ -140,35 +142,39 @@ int main(int argc, char** argv) {
             cuts[i+1] = cuts[i] + row_num_per_task + 1;
             divided_left_row_num++;
         } else cuts[i+1] = cuts[i] + row_num_per_task;
+        if (taskid == MASTER)printf("cuts[%d] = %d", i, cuts[i]);
     }
+
 
     auto start_time = std::chrono::high_resolution_clock::now();
     if (taskid == MASTER) {
+
+        Matrix result(M, N);
 
         float ** mem_result = matrix_multiply_mpi(matrix1, matrix2, thread_num, memM1, memM2, cuts, taskid);
         int * buffer = new int[M*N];
         for(int i = cuts[MASTER]; i < cuts[MASTER+1]; i++){
             for(int j = 0; j < N; j++){
-                buffer[i*N+j] = static_cast<int>(mem_result[i][j]);
-                std::cout << mem_result[i][j] << ", ";
+                result[i][j] = static_cast<int>(mem_result[i][j]);
+                // std::cout << mem_result[i][j] << ", ";
             }
-            std::cout << std::endl;
+            // std::cout << std::endl;
         }
-        for (int i = MASTER + 1; i < numtasks; ++i) {
+        for (int tid = MASTER + 1; tid < numtasks; ++tid) {
             auto received_elapsed_time = std::chrono::milliseconds(0);
-            int * write_in_pos = buffer+cuts[taskid];
-            int length = (cuts[i+1] - cuts[i]) * N;
-            MPI_Recv(write_in_pos, length, MPI_INT, i, TAG_GATHER, MPI_COMM_WORLD, &status);
-            std::cout << "Child Process " << i << " Recieve Time: " << received_elapsed_time.count() << " milliseconds\n";
+            int * write_in_pos = buffer+cuts[tid]*N;
+            int length = (cuts[tid+1] - cuts[tid]) * N;
+            MPI_Recv(write_in_pos, length, MPI_INT, tid, TAG_GATHER, MPI_COMM_WORLD, &status);
+            // std::cout << "Child Process " << tid << " Recieve Time: " << received_elapsed_time.count() << " milliseconds\n";
         }
 
-        Matrix result(M, N);
-        for(int i = 0; i < M; i++){
+        // std::cout << "Write to the matirx result = "<< std::endl;
+        for(int i = cuts[MASTER+1]; i < M; i++){
             for(int j = 0; j < N; j++){
                 result[i][j] = buffer[i*N+j];
-                std::cout << result[i][j] << ", ";
+                // std::cout << result[i][j] << ", ";
             }
-            std::cout << std::endl;
+            // std::cout << std::endl;
         }
 
         auto end_time = std::chrono::high_resolution_clock::now();
@@ -219,13 +225,16 @@ int main(int argc, char** argv) {
         int row_length = cuts[taskid+1]-cuts[taskid];
         int * buffer = new int[row_length*N];
         float ** mem_result = matrix_multiply_mpi(matrix1, matrix2, thread_num, memM1, memM2, cuts, taskid);
-        for(int i = cuts[taskid]; i < cuts[taskid+1]; i++){
+        // std::cout <<"before MPI sla?ve is :"<<std::endl;
+        for(int i = 0; i < row_length; i++){
             for(int j = 0; j < N; j++){
-                buffer[(i-cuts[taskid])*N+j] = static_cast<int>(mem_result[i-cuts[taskid]][j]);
+                buffer[i*N+j] = static_cast<int>(mem_result[i][j]);
+                // std::cout << buffer[i*N+j] << ", ";
             }
+            // std::cout << std::endl;
         }
         
-        MPI_Send(buffer, row_length*(N+16), MPI_FLOAT, MASTER, TAG_GATHER, MPI_COMM_WORLD);
+        MPI_Send(buffer, row_length*N, MPI_INT, MASTER, TAG_GATHER, MPI_COMM_WORLD);
     }
 
     MPI_Finalize();

@@ -1,10 +1,99 @@
+MPI + OpenMP + SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
+Matrix 32x32
+Number of Processes: 1, Number of Threads: 32
+cuts[0] = 0Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 224 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
 Number of Processes: 2, Number of Threads: 16
-80, 70, 60, 50, 
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-240, 214, 188, 162, 
-Fatal error in MPI_Recv: Message truncated, error stack:
-MPI_Recv(200).....................: MPI_Recv(buf=0xf14ef0, count=8, MPI_INT, src=1, tag=0, MPI_COMM_WORLD, status=0x7ffda5a0fcc0) failed
-MPIDI_CH3U_Receive_data_found(131): Message from rank 1 and tag 0 truncated; 160 bytes received but buffer size is 32
-slurmstepd: error: *** STEP 137801.0 ON node36 CANCELLED AT 2023-10-25T05:19:27 ***
-srun: error: node36: tasks 0-1: Killed
+cuts[0] = 0cuts[1] = 512Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 122 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+Number of Processes: 4, Number of Threads: 8
+cuts[0] = 0cuts[1] = 256cuts[2] = 512cuts[3] = 768Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 73 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+Number of Processes: 8, Number of Threads: 4
+cuts[0] = 0cuts[1] = 128cuts[2] = 256cuts[3] = 384cuts[4] = 512cuts[5] = 640cuts[6] = 768cuts[7] = 896Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 52 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+Number of Processes: 16, Number of Threads: 2
+cuts[0] = 0cuts[1] = 64cuts[2] = 128cuts[3] = 192cuts[4] = 256cuts[5] = 320cuts[6] = 384cuts[7] = 448cuts[8] = 512cuts[9] = 576cuts[10] = 640cuts[11] = 704cuts[12] = 768cuts[13] = 832cuts[14] = 896cuts[15] = 960Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 51 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+Number of Processes: 32, Number of Threads: 1
+cuts[0] = 0cuts[1] = 32cuts[2] = 64cuts[3] = 96cuts[4] = 128cuts[5] = 160cuts[6] = 192cuts[7] = 224cuts[8] = 256cuts[9] = 288cuts[10] = 320cuts[11] = 352cuts[12] = 384cuts[13] = 416cuts[14] = 448cuts[15] = 480cuts[16] = 512cuts[17] = 544cuts[18] = 576cuts[19] = 608cuts[20] = 640cuts[21] = 672cuts[22] = 704cuts[23] = 736cuts[24] = 768cuts[25] = 800cuts[26] = 832cuts[27] = 864cuts[28] = 896cuts[29] = 928cuts[30] = 960cuts[31] = 992Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 62 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+Matrix 64x64
+Number of Processes: 1, Number of Threads: 32
+cuts[0] = 0Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 2261 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+Number of Processes: 2, Number of Threads: 16
+cuts[0] = 0cuts[1] = 1024Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 1197 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+Number of Processes: 4, Number of Threads: 8
+cuts[0] = 0cuts[1] = 512cuts[2] = 1024cuts[3] = 1536Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 723 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+Number of Processes: 8, Number of Threads: 4
+cuts[0] = 0cuts[1] = 256cuts[2] = 512cuts[3] = 768cuts[4] = 1024cuts[5] = 1280cuts[6] = 1536cuts[7] = 1792Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 467 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+Number of Processes: 16, Number of Threads: 2
+cuts[0] = 0cuts[1] = 128cuts[2] = 256cuts[3] = 384cuts[4] = 512cuts[5] = 640cuts[6] = 768cuts[7] = 896cuts[8] = 1024cuts[9] = 1152cuts[10] = 1280cuts[11] = 1408cuts[12] = 1536cuts[13] = 1664cuts[14] = 1792cuts[15] = 1920Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 434 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+Number of Processes: 32, Number of Threads: 1
+cuts[0] = 0cuts[1] = 64cuts[2] = 128cuts[3] = 192cuts[4] = 256cuts[5] = 320cuts[6] = 384cuts[7] = 448cuts[8] = 512cuts[9] = 576cuts[10] = 640cuts[11] = 704cuts[12] = 768cuts[13] = 832cuts[14] = 896cuts[15] = 960cuts[16] = 1024cuts[17] = 1088cuts[18] = 1152cuts[19] = 1216cuts[20] = 1280cuts[21] = 1344cuts[22] = 1408cuts[23] = 1472cuts[24] = 1536cuts[25] = 1600cuts[26] = 1664cuts[27] = 1728cuts[28] = 1792cuts[29] = 1856cuts[30] = 1920cuts[31] = 1984Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/result.txt
+Multiplication Complete!
+Execution Time: 465 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
 
