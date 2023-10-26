@@ -4,7 +4,7 @@ Debug Mode
 ans_mat_path = results/answers/m12.txt
 Answer Correct!
 Matrix Multiply Complete!
-GPU Execution Time: 0.081888 milliseconds
+GPU Execution Time: 0.036608 milliseconds
 
 CUDA 128x128x128 Matrix Mulitiplication
 Max block size for device 0: 1024
@@ -12,7 +12,7 @@ Debug Mode
 ans_mat_path = results/answers/m34.txt
 Answer Correct!
 Matrix Multiply Complete!
-GPU Execution Time: 0.148672 milliseconds
+GPU Execution Time: 0.14272 milliseconds
 
 CUDA 1024x1024 Matrix Mulitiplication
 Max block size for device 0: 1024
@@ -20,7 +20,7 @@ Debug Mode
 ans_mat_path = results/answers/m56.txt
 Answer Correct!
 Matrix Multiply Complete!
-GPU Execution Time: 31.6907 milliseconds
+GPU Execution Time: 31.6887 milliseconds
 
 CUDA 2048x2048 Matrix Mulitiplication
 Max block size for device 0: 1024
@@ -28,5 +28,37 @@ Debug Mode
 ans_mat_path = results/answers/m78.txt
 Answer Correct!
 Matrix Multiply Complete!
-GPU Execution Time: 252.698 milliseconds
+GPU Execution Time: 206.409 milliseconds
+
+OpenACC 4x4x4 Matrix Mulitiplication
+Max block size for device 0: 1024
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+Matrix Multiply Complete!
+GPU Execution Time: 0.076192 milliseconds
+
+OpenACC 128x128x128 Matrix Mulitiplication
+Max block size for device 0: 1024
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+Matrix Multiply Complete!
+GPU Execution Time: 0.145376 milliseconds
+
+OpenACC 1024x1024 Matrix Mulitiplication
+Max block size for device 0: 1024
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+Matrix Multiply Complete!
+GPU Execution Time: 31.6861 milliseconds
+
+OpenACC 2048x2048 Matrix Mulitiplication
+Max block size for device 0: 1024
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+Matrix Multiply Complete!
+GPU Execution Time: 207.895 milliseconds
 

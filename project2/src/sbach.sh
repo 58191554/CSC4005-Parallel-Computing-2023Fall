@@ -167,3 +167,19 @@ echo ""
 echo "CUDA 2048x2048 Matrix Mulitiplication"
 srun -n 1 --gpus 1 ${CURRENT_DIR}/../build/src/gpu/cudaMul ${CURRENT_DIR}/../matrices/matrix7.txt ${CURRENT_DIR}/../matrices/matrix8.txt ${CURRENT_DIR}/../results/cuda/m12.txt $debug
 echo ""
+
+echo "OpenACC 4x4x4 Matrix Mulitiplication"
+srun -n 1 --gpus 1 ${CURRENT_DIR}/../build/src/gpu/cudaMul ${CURRENT_DIR}/../matrices/matrix1.txt ${CURRENT_DIR}/../matrices/matrix2.txt ${CURRENT_DIR}/../results/cuda/m12.txt $debug
+echo ""
+
+echo "OpenACC 128x128x128 Matrix Mulitiplication"
+srun -n 1 --gpus 1 ${CURRENT_DIR}/../build/src/gpu/cudaMul ${CURRENT_DIR}/../matrices/matrix3.txt ${CURRENT_DIR}/../matrices/matrix4.txt ${CURRENT_DIR}/../results/cuda/m12.txt $debug
+echo ""
+
+echo "OpenACC 1024x1024 Matrix Mulitiplication"
+srun -n 1 --gpus 1 ${CURRENT_DIR}/../build/src/gpu/cudaMul ${CURRENT_DIR}/../matrices/matrix5.txt ${CURRENT_DIR}/../matrices/matrix6.txt ${CURRENT_DIR}/../results/cuda/m12.txt $debug
+echo ""
+
+echo "OpenACC 2048x2048 Matrix Mulitiplication"
+srun -n 1 --gpus 1 ${CURRENT_DIR}/../build/src/gpu/cudaMul ${CURRENT_DIR}/../matrices/matrix7.txt ${CURRENT_DIR}/../matrices/matrix8.txt ${CURRENT_DIR}/../results/cuda/m12.txt $debug
+echo ""

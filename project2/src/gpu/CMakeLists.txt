@@ -15,3 +15,16 @@ cuda_add_executable(cudaMul
         cudaMul.cu
         ../matrix.cpp ../matrix.hpp)
 target_link_libraries(cudaMul cudart)
+
+## OpenACC
+find_package(OpenACC REQUIRED)
+if (OpenACC_CXX_FOUND)
+    message("OpenACC FOUND, Version: " ${OpenACC_CXX_VERSION})
+endif ()
+
+## OpenACC
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -acc")
+add_executable(openaccMul
+        openaccMul.cpp
+        ../matrix.cpp ../matrix.hpp)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -acc")
