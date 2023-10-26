@@ -44,3 +44,5 @@ add_executable(mpi
 target_compile_options(mpi PRIVATE -O2 -fopenmp -mavx2)
 target_include_directories(mpi PRIVATE ${MPI_CXX_INCLUDE_DIRS} ${OpenMP_CXX_INCLUDE_DIRS})
 target_link_libraries(mpi ${MPI_LIBRARIES} ${OpenMP_CXX_LIBRARIES})
+
+add_subdirectory(gpu)

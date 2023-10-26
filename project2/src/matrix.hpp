@@ -13,16 +13,18 @@
 
 class Matrix {
    private:
-    int** data;
     size_t rows;
     size_t cols;
 
    public:
+    int** data;
     // Constructor
     Matrix(size_t rows, size_t cols);
 
     // Destructor
     ~Matrix();
+
+    int**get_data();
 
     // Overload the [] operator for convenient element access
     int* operator[](size_t rowIndex);

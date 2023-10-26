@@ -31,6 +31,11 @@ Matrix::~Matrix() {
     delete[] data;
 }
 
+int **Matrix::get_data()
+{
+    return data;
+}
+
 int* Matrix::operator[](size_t rowIndex) {
     if (rowIndex < rows) {
         return data[rowIndex];
