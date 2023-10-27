@@ -122,7 +122,6 @@ Matrix matrix_multiply_simd(const Matrix& matrix1, const Matrix& matrix2) {
             }
         }
     }
-    std::cout <<"FUCK ME" << std::endl;
     for(int i = 0; i < M; i++){
         auto mem_result_ptr_i = memresult[i];
         for(int j = 0; j < N; j++){

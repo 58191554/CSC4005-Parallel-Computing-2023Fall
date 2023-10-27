@@ -3,505 +3,490 @@ Matrix Multiply 1024x1024
 Number of Processes: 1, Number of Threads: 32
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt
 Multiplication Complete!
-Execution Time: 51 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m56.txt
-Answer Correct!
+Execution Time: 48 milliseconds
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 32 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 32 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-        48,199,920      cache-references:u                                          
-           582,298      cache-misses:u            #    1.208 % of all cache refs    
-             7,066      page-faults:u                                               
-     3,017,096,663      cycles:u                                                    
-     4,041,765,175      instructions:u            #    1.34  insn per cycle         
+        43,093,775      cache-references:u                                          
+           478,058      cache-misses:u            #    1.109 % of all cache refs    
+             6,057      page-faults:u                                               
+     2,795,331,621      cycles:u                                                    
+     3,252,169,758      instructions:u            #    1.16  insn per cycle         
 
-       0.503543105 seconds time elapsed
+       0.396920931 seconds time elapsed
 
-       1.553970000 seconds user
-       0.037287000 seconds sys
+       1.367364000 seconds user
+       0.064831000 seconds sys
 
 
 
 Number of Processes: 2, Number of Threads: 16
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt
 Multiplication Complete!
-Execution Time: 43 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m56.txt
-Answer Correct!
+Execution Time: 41 milliseconds
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 16 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 16 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-        21,411,022      cache-references:u                                          
-           490,816      cache-misses:u            #    2.292 % of all cache refs    
+        27,632,624      cache-references:u                                          
+           366,408      cache-misses:u            #    1.326 % of all cache refs    
              5,045      page-faults:u                                               
-     2,151,983,392      cycles:u                                                    
-     4,042,312,799      instructions:u            #    1.88  insn per cycle         
+     1,870,372,779      cycles:u                                                    
+     3,139,410,383      instructions:u            #    1.68  insn per cycle         
 
-       0.518621450 seconds time elapsed
+       0.489283251 seconds time elapsed
 
-       0.979493000 seconds user
-       0.033878000 seconds sys
+       0.830746000 seconds user
+       0.050199000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 16 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 16 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-        18,067,796      cache-references:u                                          
-           423,148      cache-misses:u            #    2.342 % of all cache refs    
-             6,630      page-faults:u                                               
-     1,648,934,306      cycles:u                                                    
-     3,266,399,053      instructions:u            #    1.98  insn per cycle         
+        17,843,042      cache-references:u                                          
+           394,203      cache-misses:u            #    2.209 % of all cache refs    
+             6,098      page-faults:u                                               
+     1,345,450,653      cycles:u                                                    
+     2,408,416,198      instructions:u            #    1.79  insn per cycle         
 
-       0.765399502 seconds time elapsed
+       0.405950533 seconds time elapsed
 
-       0.823372000 seconds user
-       0.042224000 seconds sys
+       0.754385000 seconds user
+       0.031314000 seconds sys
 
 
 
 Number of Processes: 4, Number of Threads: 8
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt
 Multiplication Complete!
-Execution Time: 34 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m56.txt
-Answer Correct!
+Execution Time: 54 milliseconds
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-        10,452,815      cache-references:u                                          
-           170,946      cache-misses:u            #    1.635 % of all cache refs    
-             4,510      page-faults:u                                               
-     1,523,107,510      cycles:u                                                    
-     3,567,983,538      instructions:u            #    2.34  insn per cycle         
+         8,961,197      cache-references:u                                          
+           311,750      cache-misses:u            #    3.479 % of all cache refs    
+             4,509      page-faults:u                                               
+     1,279,788,234      cycles:u                                                    
+     2,876,012,914      instructions:u            #    2.25  insn per cycle         
 
-       0.515142435 seconds time elapsed
+       0.415039096 seconds time elapsed
 
-       0.666391000 seconds user
-       0.038789000 seconds sys
+       0.569396000 seconds user
+       0.037893000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         9,710,033      cache-references:u                                          
+        11,025,383      cache-references:u                                          
+           219,376      cache-misses:u            #    2.259 % of all cache refs    
+             4,508      page-faults:u                                               
+           233,075      cache-misses:u            #    2.114 % of all cache refs    
+             4,509      page-faults:u                                               
+     1,356,450,847      cycles:u                                                    
+     1,272,266,550      cycles:u                                                    
+     2,841,235,389      instructions:u            #    2.23  insn per cycle         
+
+       0.834299229 seconds time elapsed
+
+     2,714,004,600      instructions:u            #    2.00  insn per cycle         
+
+       0.800251362 seconds time elapsed
+
+       0.560982000 seconds user
+       0.033057000 seconds sys
 
 
-         8,969,466      cache-references:u                                          
-           639,477      cache-misses:u            #    7.129 % of all cache refs    
-             4,510      page-faults:u                                               
-     1,540,290,453      cycles:u                                                    
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         9,004,637      cache-references:u                                          
-     3,606,012,141      instructions:u            #    2.34  insn per cycle         
-
-       0.909218055 seconds time elapsed
-
-       0.677378000 seconds user
-       0.031970000 seconds sys
-
-
-         1,047,807      cache-misses:u            #   11.636 % of all cache refs    
-             3,998      page-faults:u                                               
-     1,618,960,605      cycles:u                                                    
-     3,693,154,544      instructions:u            #    2.28  insn per cycle         
-
-       0.517380127 seconds time elapsed
-
-       0.684272000 seconds user
-       0.038676000 seconds sys
+       0.586182000 seconds user
+       0.021931000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-         9,482,947      cache-references:u                                          
-           896,458      cache-misses:u            #    9.453 % of all cache refs    
-             6,735      page-faults:u                                               
-     1,254,932,269      cycles:u                                                    
-     2,784,459,815      instructions:u            #    2.22  insn per cycle         
+         9,150,330      cache-references:u                                          
+           498,519      cache-misses:u            #    5.448 % of all cache refs    
+             6,207      page-faults:u                                               
+     1,032,110,682      cycles:u                                                    
+     2,191,317,409      instructions:u            #    2.12  insn per cycle         
 
-       0.914102930 seconds time elapsed
+       0.430893398 seconds time elapsed
 
-       0.578546000 seconds user
-       0.045884000 seconds sys
+       0.476071000 seconds user
+       0.040006000 seconds sys
 
 
 
 Number of Processes: 8, Number of Threads: 4
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt
 Multiplication Complete!
-Execution Time: 36 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m56.txt
-Answer Correct!
+Execution Time: 34 milliseconds
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         4,621,268      cache-references:u                                          
-           538,025      cache-misses:u            #   11.642 % of all cache refs    
-             3,736      page-faults:u                                               
-     1,355,862,046      cycles:u                                                    
-     3,455,117,918      instructions:u            #    2.55  insn per cycle         
-
-       0.514566150 seconds time elapsed
-
-       0.545604000 seconds user
-       0.035038000 seconds sys
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
 
+         4,580,596      cache-references:u                                          
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+         4,562,561      cache-references:u                                          
+           488,452      cache-misses:u            #   10.706 % of all cache refs    
+             4,247      page-faults:u                                               
+         1,626,345      cache-misses:u            #   35.505 % of all cache refs    
+             4,249      page-faults:u                                               
+     1,077,401,145      cycles:u                                                    
+     2,566,974,232      instructions:u            #    2.38  insn per cycle         
+
+     1,046,464,782      cycles:u                                                    
+     2,537,088,143      instructions:u            #    2.42  insn per cycle         
+
+       1.117868418 seconds time elapsed
+
+       0.435282000 seconds user
+       0.031947000 seconds sys
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+       0.415706256 seconds time elapsed
 
-         4,599,027      cache-references:u                                          
-         4,580,916      cache-references:u                                          
-           491,779      cache-misses:u            #   10.735 % of all cache refs    
-           603,256      cache-misses:u            #   13.117 % of all cache refs    
-             4,250      page-faults:u                                               
-     1,357,811,614      cycles:u                                                    
+       0.442739000 seconds user
+       0.034666000 seconds sys
+
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         4,590,652      cache-references:u                                          
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         4,571,785      cache-references:u                                          
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         4,561,092      cache-references:u                                          
+         1,870,491      cache-misses:u            #   41.010 % of all cache refs    
              4,248      page-faults:u                                               
-     1,355,424,190      cycles:u                                                    
-     3,458,094,291      instructions:u            #    2.55  insn per cycle         
+     1,081,505,461      cycles:u                                                    
+     2,432,085,608      instructions:u            #    2.25  insn per cycle         
+         1,631,979      cache-misses:u            #   35.550 % of all cache refs    
+             4,248      page-faults:u                                               
+     1,082,269,824      cycles:u                                                    
+     2,423,350,187      instructions:u            #    2.24  insn per cycle         
 
-     3,463,998,123      instructions:u            #    2.55  insn per cycle         
+       0.408077826 seconds time elapsed
 
-       0.526717421 seconds time elapsed
-
-       0.548368000 seconds user
-       0.032962000 seconds sys
+       0.450809000 seconds user
+       0.026928000 seconds sys
 
 
-       0.521191214 seconds time elapsed
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-       0.546870000 seconds user
+         4,556,327      cache-references:u                                          
+           514,415      cache-misses:u            #   11.290 % of all cache refs    
+             4,249      page-faults:u                                               
+         1,413,154      cache-misses:u            #   30.910 % of all cache refs    
+             4,247      page-faults:u                                               
+     1,076,252,036      cycles:u                                                    
+     2,563,939,003      instructions:u            #    2.38  insn per cycle         
+
+       0.439950438 seconds time elapsed
+
+       0.443275000 seconds user
        0.033868000 seconds sys
 
 
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         5,468,173      cache-references:u                                          
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         4,595,088      cache-references:u                                          
-         4,593,770      cache-references:u                                          
-         1,651,401      cache-misses:u            #   35.949 % of all cache refs    
+         4,559,211      cache-references:u                                          
+           502,309      cache-misses:u            #   11.017 % of all cache refs    
              4,249      page-faults:u                                               
-     1,369,864,340      cycles:u                                                    
-     3,433,853,860      instructions:u            #    2.51  insn per cycle         
+     1,047,334,594      cycles:u                                                    
+     2,547,627,376      instructions:u            #    2.43  insn per cycle         
 
-       1.188335026 seconds time elapsed
+       1.140470663 seconds time elapsed
 
-       0.554029000 seconds user
-       0.036868000 seconds sys
-
-
-         4,582,838      cache-references:u                                          
-         1,574,848      cache-misses:u            #   34.364 % of all cache refs    
-             4,249      page-faults:u                                               
-     1,372,566,949      cycles:u                                                    
-     3,343,051,109      instructions:u            #    2.44  insn per cycle         
-
-       0.937217601 seconds time elapsed
-
-       0.547098000 seconds user
-         1,160,881      cache-misses:u            #   21.230 % of all cache refs    
-             4,248      page-faults:u                                               
-     1,364,488,774      cycles:u                                                    
-     3,213,344,243      instructions:u            #    2.35  insn per cycle         
-
-       1.048926854 seconds time elapsed
-
-       0.542682000 seconds user
-       0.041898000 seconds sys
-
-
-         1,747,339      cache-misses:u            #   38.026 % of all cache refs    
-             4,248      page-faults:u                                               
-     1,375,459,694      cycles:u                                                    
-     3,223,280,186      instructions:u            #    2.34  insn per cycle         
-
-       0.933943586 seconds time elapsed
-
-       0.551786000 seconds user
-       0.037916000 seconds sys
-
-
-       0.042851000 seconds sys
+       0.440833000 seconds user
+       0.031129000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+       0.402525596 seconds time elapsed
 
-         5,157,270      cache-references:u                                          
-         1,816,377      cache-misses:u            #   35.220 % of all cache refs    
-             6,999      page-faults:u                                               
-     1,087,044,934      cycles:u                                                    
-     2,589,773,042      instructions:u            #    2.38  insn per cycle         
+       0.450770000 seconds user
+       0.026867000 seconds sys
 
-       0.925472653 seconds time elapsed
 
-       0.460754000 seconds user
-       0.048183000 seconds sys
+     1,045,392,158      cycles:u                                                    
+     2,543,404,378      instructions:u            #    2.43  insn per cycle         
+
+       1.034262198 seconds time elapsed
+
+       0.437138000 seconds user
+       0.034088000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         5,267,092      cache-references:u                                          
+         1,259,349      cache-misses:u            #   23.910 % of all cache refs    
+             6,470      page-faults:u                                               
+       803,947,987      cycles:u                                                    
+     1,798,737,616      instructions:u            #    2.24  insn per cycle         
+
+       0.474538848 seconds time elapsed
+
+       0.350154000 seconds user
+       0.043266000 seconds sys
 
 
 
 Number of Processes: 16, Number of Threads: 2
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt
 Multiplication Complete!
-Execution Time: 32 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m56.txt
-Answer Correct!
+Execution Time: 33 milliseconds
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-         2,435,669      cache-references:u                                          
-         1,064,962      cache-misses:u            #   43.724 % of all cache refs    
-             3,622      page-faults:u                                               
-     1,261,689,664      cycles:u                                                    
-     3,203,641,683      instructions:u            #    2.54  insn per cycle         
-
-       0.502436984 seconds time elapsed
-
-       0.468931000 seconds user
-       0.020996000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,433,018      cache-references:u                                          
-         1,114,899      cache-misses:u            #   45.824 % of all cache refs    
-             3,621      page-faults:u                                               
-     1,258,489,785      cycles:u                                                    
-     3,310,470,905      instructions:u            #    2.63  insn per cycle         
-
-       0.509046863 seconds time elapsed
-
-       0.459554000 seconds user
-       0.030969000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,380,912      cache-references:u                                          
-           674,832      cache-misses:u            #   28.343 % of all cache refs    
-             4,132      page-faults:u                                               
-     1,272,377,111      cycles:u                                                    
-     3,361,842,782      instructions:u            #    2.64  insn per cycle         
-
-       0.488020294 seconds time elapsed
-
-       0.455130000 seconds user
-       0.034780000 seconds sys
-
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,409,520      cache-references:u                                          
-         2,403,086      cache-references:u                                          
-         1,070,977      cache-misses:u            #   44.567 % of all cache refs    
-             4,133      page-faults:u                                               
-     1,260,823,498      cycles:u                                                    
-         2,394,939      cache-references:u                                          
-           712,947      cache-misses:u            #   29.769 % of all cache refs    
-             4,132      page-faults:u                                               
-     1,276,923,822      cycles:u                                                    
-     3,188,749,546      instructions:u            #    2.50  insn per cycle         
-
-           628,445      cache-misses:u            #   26.082 % of all cache refs    
-             4,132      page-faults:u                                               
-     1,272,483,133      cycles:u                                                    
-     3,363,915,588      instructions:u            #    2.64  insn per cycle         
-
-       0.486769592 seconds time elapsed
-
-       0.466887000 seconds user
-       0.022945000 seconds sys
-
-
-     3,202,105,824      instructions:u            #    2.54  insn per cycle         
-
-       0.502217156 seconds time elapsed
-
-       0.460092000 seconds user
-       0.029940000 seconds sys
-
-
-       0.487243569 seconds time elapsed
-
-       0.459146000 seconds user
-       0.030875000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,439,030      cache-references:u                                          
-         1,634,948      cache-misses:u            #   67.033 % of all cache refs    
-             3,620      page-faults:u                                               
-     1,261,347,195      cycles:u                                                    
-     3,238,893,711      instructions:u            #    2.57  insn per cycle         
-
-       1.337278389 seconds time elapsed
-
-       0.460306000 seconds user
-       0.036023000 seconds sys
-
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,451,007      cache-references:u                                          
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,419,575      cache-references:u                                          
-         1,687,154      cache-misses:u            #   68.835 % of all cache refs    
-             3,620      page-faults:u                                               
-     1,263,190,981      cycles:u                                                    
-     3,212,975,162      instructions:u            #    2.54  insn per cycle         
-
-       1.012613457 seconds time elapsed
-
-       0.459681000 seconds user
-       0.036974000 seconds sys
-
-
-         1,488,217      cache-misses:u            #   61.507 % of all cache refs    
-             4,133      page-faults:u                                               
-     1,264,879,209      cycles:u                                                    
-     3,125,583,389      instructions:u            #    2.47  insn per cycle         
-
-       0.988065167 seconds time elapsed
-
-       0.470023000 seconds user
-       0.026001000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,447,055      cache-references:u                                          
-         1,671,736      cache-misses:u            #   68.316 % of all cache refs    
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-             3,622      page-faults:u                                               
-     1,262,866,486      cycles:u                                                    
-     3,143,082,935      instructions:u            #    2.49  insn per cycle         
-
-       1.421863181 seconds time elapsed
-
-       0.464807000 seconds user
-       0.031986000 seconds sys
-
-
-         2,417,349      cache-references:u                                          
-         1,698,185      cache-misses:u            #   70.250 % of all cache refs    
-             4,133      page-faults:u                                               
-     1,260,950,200      cycles:u                                                    
-     3,203,789,377      instructions:u            #    2.54  insn per cycle         
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,415,054      cache-references:u                                          
-         1,642,158      cache-misses:u            #   67.997 % of all cache refs    
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-       0.973718381 seconds time elapsed
-
-       0.461667000 seconds user
-       0.034974000 seconds sys
-
-
-             4,133      page-faults:u                                               
-     1,258,987,035      cycles:u                                                    
-     3,237,451,235      instructions:u            #    2.57  insn per cycle         
-
-       1.073771300 seconds time elapsed
-
-       0.465099000 seconds user
-       0.030940000 seconds sys
-
-
-         2,421,303      cache-references:u                                          
-         1,651,309      cache-misses:u            #   68.199 % of all cache refs    
+         2,408,452      cache-references:u                                          
+         1,653,335      cache-misses:u            #   68.647 % of all cache refs    
              4,134      page-faults:u                                               
-     1,259,317,894      cycles:u                                                    
+     1,021,338,666      cycles:u                                                    
+     2,582,169,161      instructions:u            #    2.53  insn per cycle         
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+       0.463691808 seconds time elapsed
 
-         2,412,900      cache-references:u                                          
-         1,714,582      cache-misses:u            #   71.059 % of all cache refs    
-             4,135      page-faults:u                                               
+       0.375577000 seconds user
+       0.031964000 seconds sys
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
 
-         2,422,096      cache-references:u                                          
-         1,662,522      cache-misses:u            #   68.640 % of all cache refs    
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,374,429      cache-references:u                                          
+         1,001,360      cache-misses:u            #   42.173 % of all cache refs    
              4,131      page-faults:u                                               
-     1,260,794,130      cycles:u                                                    
-     3,239,279,615      instructions:u            #    2.57  insn per cycle         
+     1,008,636,254      cycles:u                                                    
+     2,585,349,576      instructions:u            #    2.56  insn per cycle         
 
-       1.279090398 seconds time elapsed
+       1.221559258 seconds time elapsed
 
-       0.457729000 seconds user
-       0.038976000 seconds sys
-
-
-     3,238,802,730      instructions:u            #    2.57  insn per cycle         
-
-       0.960871909 seconds time elapsed
-
-       0.465392000 seconds user
-       0.030959000 seconds sys
-
-
-     1,259,222,153      cycles:u                                                    
-     3,242,315,213      instructions:u            #    2.57  insn per cycle         
-
-       0.941840594 seconds time elapsed
-
-       0.463433000 seconds user
-       0.032888000 seconds sys
+       0.383330000 seconds user
+       0.019913000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-         3,038,475      cache-references:u                                          
-         1,710,252      cache-misses:u            #   56.287 % of all cache refs    
-             7,278      page-faults:u                                               
-       972,043,409      cycles:u                                                    
-     2,496,419,574      instructions:u            #    2.57  insn per cycle         
+         2,377,109      cache-references:u                                          
+         1,102,108      cache-misses:u            #   46.363 % of all cache refs    
+             4,131      page-faults:u                                               
+     1,009,475,737      cycles:u                                                    
+     2,598,092,713      instructions:u            #    2.57  insn per cycle         
 
-       0.891293941 seconds time elapsed
+       1.293244928 seconds time elapsed
 
-       0.373459000 seconds user
-       0.040940000 seconds sys
+       0.381775000 seconds user
+       0.022807000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,921,102      cache-references:u                                          
+         1,457,466      cache-misses:u            #   49.894 % of all cache refs    
+             4,132      page-faults:u                                               
+     1,024,599,470      cycles:u                                                    
+     2,572,880,734      instructions:u            #    2.51  insn per cycle         
+
+       0.441622213 seconds time elapsed
+
+       0.377581000 seconds user
+       0.029966000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,373,058      cache-references:u                                          
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,370,796      cache-references:u                                          
+         1,056,820      cache-misses:u            #   44.577 % of all cache refs    
+             4,132      page-faults:u                                               
+     1,010,172,762      cycles:u                                                    
+     2,514,158,831      instructions:u            #    2.49  insn per cycle         
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,373,952      cache-references:u                                          
+         1,291,239      cache-misses:u            #   54.392 % of all cache refs    
+             4,131      page-faults:u                                               
+     1,012,229,650      cycles:u                                                    
+     2,502,621,933      instructions:u            #    2.47  insn per cycle         
+
+       1.125620717 seconds time elapsed
+
+       0.373940000 seconds user
+       0.030830000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,410,546      cache-references:u                                          
+         1,602,457      cache-misses:u            #   66.477 % of all cache refs    
+         2,370,835      cache-references:u                                          
+         1,099,413      cache-misses:u            #   46.372 % of all cache refs    
+             4,132      page-faults:u                                               
+     1,008,749,295      cycles:u                                                    
+     2,598,354,017      instructions:u            #    2.58  insn per cycle         
+
+       1.247332278 seconds time elapsed
+
+       0.376761000 seconds user
+       0.027834000 seconds sys
+
+
+         1,062,244      cache-misses:u            #   44.763 % of all cache refs    
+             4,133      page-faults:u                                               
+     1,011,555,824      cycles:u                                                    
+     2,516,202,327      instructions:u            #    2.49  insn per cycle         
+
+       1.382868065 seconds time elapsed
+
+       0.374464000 seconds user
+       0.030873000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,402,225      cache-references:u                                          
+         1,595,123      cache-misses:u            #   66.402 % of all cache refs    
+             4,133      page-faults:u                                               
+     1,025,373,940      cycles:u                                                    
+     2,498,643,192      instructions:u            #    2.44  insn per cycle         
+
+       0.408016193 seconds time elapsed
+
+       0.383981000 seconds user
+       0.023936000 seconds sys
+
+
+       1.192637883 seconds time elapsed
+
+       0.372247000 seconds user
+       0.031850000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,406,350      cache-references:u                                          
+         1,085,686      cache-misses:u            #   45.118 % of all cache refs    
+             4,134      page-faults:u                                               
+     1,037,959,608      cycles:u                                                    
+     2,550,998,378      instructions:u            #    2.46  insn per cycle         
+
+       0.399657722 seconds time elapsed
+
+       0.370864000 seconds user
+       0.035890000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,388,250      cache-references:u                                          
+         1,650,953      cache-misses:u            #   69.128 % of all cache refs    
+             4,133      page-faults:u                                               
+     1,021,803,739      cycles:u                                                    
+     2,575,072,787      instructions:u            #    2.52  insn per cycle         
+
+       0.480185909 seconds time elapsed
+
+       0.377537000 seconds user
+       0.030880000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,495,494      cache-references:u                                          
+         1,071,679      cache-misses:u            #   42.945 % of all cache refs    
+             4,131      page-faults:u                                               
+     1,036,829,184      cycles:u                                                    
+     2,615,852,982      instructions:u            #    2.52  insn per cycle         
+
+       0.399378466 seconds time elapsed
+
+       0.377160000 seconds user
+       0.028935000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,411,654      cache-references:u                                          
+         1,653,445      cache-misses:u            #   68.561 % of all cache refs    
+             4,131      page-faults:u                                               
+     1,023,283,371      cycles:u                                                    
+     2,567,500,264      instructions:u            #    2.51  insn per cycle         
+
+       0.412204861 seconds time elapsed
+
+       0.376429000 seconds user
+       0.031867000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,409,724      cache-references:u                                          
+         1,375,860      cache-misses:u            #   57.096 % of all cache refs    
+             4,132      page-faults:u                                               
+     1,033,863,265      cycles:u                                                    
+     2,602,263,209      instructions:u            #    2.52  insn per cycle         
+
+       0.402539629 seconds time elapsed
+
+       0.384418000 seconds user
+       0.022965000 seconds sys
+
+
+             4,133      page-faults:u                                               
+     1,020,784,776      cycles:u                                                    
+     2,580,335,834      instructions:u            #    2.53  insn per cycle         
+
+       0.476077391 seconds time elapsed
+
+       0.380559000 seconds user
+       0.027894000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,684,638      cache-references:u                                          
+         1,703,573      cache-misses:u            #   63.456 % of all cache refs    
+             7,246      page-faults:u                                               
+       697,358,047      cycles:u                                                    
+     1,708,808,606      instructions:u            #    2.45  insn per cycle         
+
+       0.433880802 seconds time elapsed
+
+       0.265648000 seconds user
+       0.039947000 seconds sys
 
 
 
@@ -509,487 +494,484 @@ Number of Processes: 32, Number of Threads: 1
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt
 Multiplication Complete!
 Execution Time: 63 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m56.txt
-Answer Correct!
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-         2,424,924      cache-references:u                                          
-         1,866,862      cache-misses:u            #   76.986 % of all cache refs    
+         2,406,757      cache-references:u                                          
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,400,779      cache-references:u                                          
+         1,591,847      cache-misses:u            #   66.305 % of all cache refs    
              4,074      page-faults:u                                               
-     2,046,677,073      cycles:u                                                    
-     3,003,824,009      instructions:u            #    1.47  insn per cycle         
-
-       0.803002778 seconds time elapsed
-
-       0.727024000 seconds user
-       0.040888000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,462,837      cache-references:u                                          
-           535,314      cache-misses:u            #   21.736 % of all cache refs    
-             3,563      page-faults:u                                               
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,425,129      cache-references:u                                          
-         1,880,417      cache-misses:u            #   77.539 % of all cache refs    
+     1,478,585,583      cycles:u                                                    
+         1,598,767      cache-misses:u            #   66.428 % of all cache refs    
              4,074      page-faults:u                                               
-     2,054,091,158      cycles:u                                                    
-     3,039,917,311      instructions:u            #    1.48  insn per cycle         
+     1,477,399,023      cycles:u                                                    
+     2,124,867,312      instructions:u            #    1.44  insn per cycle         
 
-       0.790027444 seconds time elapsed
+       0.725266569 seconds time elapsed
 
-       0.728101000 seconds user
-       0.038951000 seconds sys
-
-
-     2,046,728,926      cycles:u                                                    
-     2,998,658,167      instructions:u            #    1.47  insn per cycle         
-
-       0.792479916 seconds time elapsed
-
-       0.732738000 seconds user
-       0.034939000 seconds sys
+       0.529577000 seconds user
+       0.037898000 seconds sys
 
 
+     2,119,972,612      instructions:u            #    1.43  insn per cycle         
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+       1.678103746 seconds time elapsed
 
-         2,428,121      cache-references:u                                          
-         1,913,272      cache-misses:u            #   78.796 % of all cache refs    
-             4,074      page-faults:u                                               
-     2,046,723,353      cycles:u                                                    
-     2,992,609,653      instructions:u            #    1.46  insn per cycle         
-
-       0.787987815 seconds time elapsed
-
-       0.724916000 seconds user
-       0.042876000 seconds sys
+       0.534095000 seconds user
+       0.033879000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-         2,422,830      cache-references:u                                          
-         1,933,030      cache-misses:u            #   79.784 % of all cache refs    
-             4,075      page-faults:u                                               
-     2,047,903,233      cycles:u                                                    
-     2,995,069,885      instructions:u            #    1.46  insn per cycle         
-
-       0.790114167 seconds time elapsed
-
-       0.729149000 seconds user
-       0.039008000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,420,077      cache-references:u                                          
-         1,974,667      cache-misses:u            #   81.595 % of all cache refs    
-             4,074      page-faults:u                                               
-     2,045,419,726      cycles:u                                                    
-     2,989,989,734      instructions:u            #    1.46  insn per cycle         
-
-       0.790321712 seconds time elapsed
-
-       0.723558000 seconds user
-       0.043912000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,424,366      cache-references:u                                          
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,420,588      cache-references:u                                          
-         1,908,368      cache-misses:u            #   78.839 % of all cache refs    
-             4,074      page-faults:u                                               
-     2,048,002,683      cycles:u                                                    
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,421,742      cache-references:u                                          
-         1,897,275      cache-misses:u            #   78.343 % of all cache refs    
-             4,074      page-faults:u                                               
-     2,047,460,155      cycles:u                                                    
-     2,994,388,774      instructions:u            #    1.46  insn per cycle         
-
-       0.793892879 seconds time elapsed
-
-       0.731791000 seconds user
-       0.035989000 seconds sys
-
-
-         1,904,625      cache-misses:u            #   78.562 % of all cache refs    
-             4,074      page-faults:u                                               
-     2,042,247,344      cycles:u                                                    
-     3,014,381,634      instructions:u            #    1.48  insn per cycle         
-
-       0.791015037 seconds time elapsed
-
-       0.731927000 seconds user
-       0.035849000 seconds sys
-
-
-         2,418,370      cache-references:u                                          
-         1,897,943      cache-misses:u            #   78.480 % of all cache refs    
-             4,074      page-faults:u                                               
-     2,043,894,545      cycles:u                                                    
-     3,012,166,996      instructions:u            #    1.47  insn per cycle         
-
-       0.788967454 seconds time elapsed
-
-       0.727468000 seconds user
-       0.039806000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,426,632      cache-references:u                                          
-           530,284      cache-misses:u            #   21.853 % of all cache refs    
+         2,421,396      cache-references:u                                          
+         2,019,911      cache-misses:u            #   83.419 % of all cache refs    
              4,073      page-faults:u                                               
-     2,054,005,237      cycles:u                                                    
-     3,031,717,178      instructions:u            #    1.48  insn per cycle         
+     1,491,635,339      cycles:u                                                    
+     2,069,738,495      instructions:u            #    1.39  insn per cycle         
 
-       0.788682554 seconds time elapsed
+       0.585386184 seconds time elapsed
 
-       0.727025000 seconds user
-       0.039891000 seconds sys
+       0.526789000 seconds user
+       0.039908000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-         2,423,947      cache-references:u                                          
-         1,933,949      cache-misses:u            #   79.785 % of all cache refs    
+         2,401,147      cache-references:u                                          
+         1,549,832      cache-misses:u            #   64.545 % of all cache refs    
+             4,075      page-faults:u                                               
+     1,478,501,632      cycles:u                                                    
+     2,121,455,256      instructions:u            #    1.43  insn per cycle         
+
+       0.673932411 seconds time elapsed
+
+       0.530316000 seconds user
+       0.037951000 seconds sys
+
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,400,916      cache-references:u                                          
+         1,861,108      cache-misses:u            #   77.517 % of all cache refs    
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,403,938      cache-references:u                                          
+         1,858,376      cache-misses:u            #   77.305 % of all cache refs    
              4,074      page-faults:u                                               
-     2,045,838,338      cycles:u                                                    
-     2,998,546,204      instructions:u            #    1.47  insn per cycle         
+     1,475,649,468      cycles:u                                                    
+     2,100,658,870      instructions:u            #    1.42  insn per cycle         
 
-       0.793977514 seconds time elapsed
+       0.915763137 seconds time elapsed
 
-       0.732203000 seconds user
-       0.035960000 seconds sys
-
-
-     3,003,334,503      instructions:u            #    1.47  insn per cycle         
-
-       0.799685272 seconds time elapsed
-
-       0.728281000 seconds user
-       0.039960000 seconds sys
+       0.533458000 seconds user
+       0.034834000 seconds sys
 
 
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,465,906      cache-references:u                                          
-         2,047,684      cache-misses:u            #   83.040 % of all cache refs    
-             3,563      page-faults:u                                               
-     2,024,972,331      cycles:u                                                    
-     2,863,329,068      instructions:u            #    1.41  insn per cycle         
-
-       1.580940535 seconds time elapsed
-
-       0.733293000 seconds user
-       0.034918000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,467,594      cache-references:u                                          
-         1,096,269      cache-misses:u            #   44.427 % of all cache refs    
-             3,565      page-faults:u                                               
-     2,028,827,994      cycles:u                                                    
-     3,308,443,505      instructions:u            #    1.63  insn per cycle         
-
-       1.073768101 seconds time elapsed
-
-       0.719138000 seconds user
-       0.047677000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,462,097      cache-references:u                                          
-         2,045,880      cache-misses:u            #   83.095 % of all cache refs    
-             3,565      page-faults:u                                               
-     2,022,120,459      cycles:u                                                    
-     2,882,247,044      instructions:u            #    1.43  insn per cycle         
-
-         2,427,217      cache-references:u                                          
-         2,040,213      cache-misses:u            #   84.056 % of all cache refs    
              4,074      page-faults:u                                               
-     2,025,091,633      cycles:u                                                    
-     2,864,570,057      instructions:u            #    1.41  insn per cycle         
+     1,475,850,230      cycles:u                                                    
+     2,095,400,048      instructions:u            #    1.42  insn per cycle         
 
-       1.250627776 seconds time elapsed
+       0.627465220 seconds time elapsed
 
-       0.726594000 seconds user
-       0.042916000 seconds sys
-
-
-       1.140494113 seconds time elapsed
-
-       0.730099000 seconds user
-       0.038951000 seconds sys
+       0.534426000 seconds user
+       0.033026000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,427,340      cache-references:u                                          
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,461,158      cache-references:u                                          
-         1,949,993      cache-misses:u            #   79.231 % of all cache refs    
-             3,565      page-faults:u                                               
-     2,025,852,977      cycles:u                                                    
-     2,903,380,764      instructions:u            #    1.43  insn per cycle         
-
-       1.213665299 seconds time elapsed
-
-       0.737458000 seconds user
-       0.031933000 seconds sys
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
 
-         2,071,892      cache-misses:u            #   85.356 % of all cache refs    
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,397,646      cache-references:u                                          
+         2,401,159      cache-references:u                                          
+         1,916,054      cache-misses:u            #   79.797 % of all cache refs    
+             4,074      page-faults:u                                               
+     1,476,044,383      cycles:u                                                    
+     2,109,246,082      instructions:u            #    1.43  insn per cycle         
+
+       2.871420644 seconds time elapsed
+
+       0.531164000 seconds user
+       0.037869000 seconds sys
+
+
+         1,900,738      cache-misses:u            #   79.275 % of all cache refs    
+             4,074      page-faults:u                                               
+     1,476,472,169      cycles:u                                                    
+     2,108,141,696      instructions:u            #    1.43  insn per cycle         
+
+       0.993208028 seconds time elapsed
+
+       0.532877000 seconds user
+       0.034926000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,404,727      cache-references:u                                          
+         2,396,431      cache-references:u                                          
+         1,858,209      cache-misses:u            #   77.541 % of all cache refs    
+             4,074      page-faults:u                                               
+     1,477,462,504      cycles:u                                                    
+     2,099,317,278      instructions:u            #    1.42  insn per cycle         
+
+       1.834257646 seconds time elapsed
+
+       0.522255000 seconds user
+       0.046843000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,401,493      cache-references:u                                          
+         1,605,729      cache-misses:u            #   66.864 % of all cache refs    
+             4,074      page-faults:u                                               
+     1,477,591,739      cycles:u                                                    
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,403,551      cache-references:u                                          
+         1,575,400      cache-misses:u            #   65.545 % of all cache refs    
+             4,074      page-faults:u                                               
+     1,477,790,444      cycles:u                                                    
+     2,120,740,896      instructions:u            #    1.44  insn per cycle         
+
+       1.260175078 seconds time elapsed
+
+       0.532820000 seconds user
+       0.035786000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,406,905      cache-references:u                                          
+         1,575,599      cache-misses:u            #   65.462 % of all cache refs    
+             4,074      page-faults:u                                               
+     1,476,995,843      cycles:u                                                    
+     2,125,754,535      instructions:u            #    1.44  insn per cycle         
+
+       0.652885587 seconds time elapsed
+
+       0.535148000 seconds user
+       0.032886000 seconds sys
+
+
+         1,868,564      cache-misses:u            #   77.704 % of all cache refs    
+             4,074      page-faults:u                                               
+     1,475,488,302      cycles:u                                                    
+     2,098,781,056      instructions:u            #    1.42  insn per cycle         
+
+       1.048559356 seconds time elapsed
+
+       0.531365000 seconds user
+       0.036817000 seconds sys
+
+
+     2,124,115,931      instructions:u            #    1.44  insn per cycle         
+
+       4.423724055 seconds time elapsed
+
+       0.533620000 seconds user
+       0.035840000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,426,047      cache-references:u                                          
+         2,049,807      cache-misses:u            #   84.492 % of all cache refs    
+             4,073      page-faults:u                                               
+     1,491,930,173      cycles:u                                                    
+     2,057,022,789      instructions:u            #    1.38  insn per cycle         
+
+       0.599228080 seconds time elapsed
+
+       0.543690000 seconds user
+       0.024894000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,421,627      cache-references:u                                          
+         2,043,516      cache-misses:u            #   84.386 % of all cache refs    
              4,076      page-faults:u                                               
-     2,021,847,773      cycles:u                                                    
-     2,918,934,448      instructions:u            #    1.44  insn per cycle         
+     1,488,761,313      cycles:u                                                    
+     2,056,110,221      instructions:u            #    1.38  insn per cycle         
 
-       1.131029641 seconds time elapsed
+       0.590682332 seconds time elapsed
 
-       0.729587000 seconds user
-       0.038924000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,462,012      cache-references:u                                          
-         2,067,753      cache-misses:u            #   83.986 % of all cache refs    
-             3,565      page-faults:u                                               
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+       0.533541000 seconds user
+       0.033844000 seconds sys
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
 
-         2,429,471      cache-references:u                                          
-         2,033,456      cache-misses:u            #   83.700 % of all cache refs    
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,422,581      cache-references:u                                          
+         1,672,684      cache-misses:u            #   69.046 % of all cache refs    
              4,077      page-faults:u                                               
-     2,025,335,015      cycles:u                                                    
-     2,026,427,359      cycles:u                                                    
-     2,884,366,311      instructions:u            #    1.42  insn per cycle         
-
-       3.360293082 seconds time elapsed
-
-       0.726619000 seconds user
-       0.043916000 seconds sys
+     1,492,303,913      cycles:u                                                    
+     2,084,063,496      instructions:u            #    1.40  insn per cycle         
 
 
-         2,430,015      cache-references:u                                          
-         2,039,257      cache-misses:u            #   83.920 % of all cache refs    
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,420,367      cache-references:u                                          
+         2,031,560      cache-misses:u            #   83.936 % of all cache refs    
              4,076      page-faults:u                                               
-     2,024,495,161      cycles:u                                                    
-     2,888,202,556      instructions:u            #    1.43  insn per cycle         
+     1,488,656,805      cycles:u                                                    
+     2,065,152,344      instructions:u            #    1.39  insn per cycle         
 
-       1.218818164 seconds time elapsed
+       0.586784727 seconds time elapsed
 
-       0.723415000 seconds user
-       0.046897000 seconds sys
+       0.534133000 seconds user
+       0.033818000 seconds sys
 
 
-     2,882,146,313      instructions:u            #    1.42  insn per cycle         
+       0.593404394 seconds time elapsed
 
-       1.143394143 seconds time elapsed
-
-       0.733935000 seconds user
-       0.035899000 seconds sys
+       0.532152000 seconds user
+       0.032885000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-         2,434,751      cache-references:u                                          
-         2,074,125      cache-misses:u            #   85.188 % of all cache refs    
-             4,076      page-faults:u                                               
-     2,025,737,739      cycles:u                                                    
-     2,886,762,299      instructions:u            #    1.43  insn per cycle         
-
-       1.634770308 seconds time elapsed
-
-       0.727010000 seconds user
-       0.043879000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,461,648      cache-references:u                                          
-         2,071,182      cache-misses:u            #   84.138 % of all cache refs    
-             3,565      page-faults:u                                               
-     2,026,664,707      cycles:u                                                    
-     2,893,508,334      instructions:u            #    1.43  insn per cycle         
-
-       1.121882671 seconds time elapsed
-
-       0.732074000 seconds user
-       0.037952000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,466,392      cache-references:u                                          
-         2,067,428      cache-misses:u            #   83.824 % of all cache refs    
-             3,562      page-faults:u                                               
-     2,026,400,644      cycles:u                                                    
-     2,885,698,123      instructions:u            #    1.42  insn per cycle         
-
-       1.077129295 seconds time elapsed
-
-       0.725312000 seconds user
-       0.043897000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,433,871      cache-references:u                                          
-         2,057,352      cache-misses:u            #   84.530 % of all cache refs    
+         2,420,309      cache-references:u                                          
+         1,952,232      cache-misses:u            #   80.660 % of all cache refs    
              4,077      page-faults:u                                               
-     2,023,139,839      cycles:u                                                    
-     2,886,684,295      instructions:u            #    1.43  insn per cycle         
+     1,472,394,703      cycles:u                                                    
+     2,044,316,720      instructions:u            #    1.39  insn per cycle         
 
-       3.061440468 seconds time elapsed
+       0.815460616 seconds time elapsed
 
-       0.724839000 seconds user
-       0.045052000 seconds sys
+       0.520710000 seconds user
+       0.048878000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-         2,437,898      cache-references:u                                          
-         2,036,347      cache-misses:u            #   83.529 % of all cache refs    
+         2,425,824      cache-references:u                                          
+         1,970,439      cache-misses:u            #   81.228 % of all cache refs    
              4,076      page-faults:u                                               
-     2,022,583,138      cycles:u                                                    
-     2,889,894,624      instructions:u            #    1.43  insn per cycle         
+     1,468,727,037      cycles:u                                                    
+     2,047,602,296      instructions:u            #    1.39  insn per cycle         
 
-       1.161902959 seconds time elapsed
+       5.488100432 seconds time elapsed
 
-       0.721741000 seconds user
-       0.047916000 seconds sys
+       0.523312000 seconds user
+       0.045764000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-         2,427,711      cache-references:u                                          
-         2,022,305      cache-misses:u            #   83.301 % of all cache refs    
+         2,426,048      cache-references:u                                          
+         1,983,650      cache-misses:u            #   81.765 % of all cache refs    
+             4,073      page-faults:u                                               
+     1,468,996,500      cycles:u                                                    
+     2,042,978,508      instructions:u            #    1.39  insn per cycle         
+
+       1.881650077 seconds time elapsed
+
+       0.520875000 seconds user
+       0.047804000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,420,343      cache-references:u                                          
+         2,038,046      cache-misses:u            #   84.205 % of all cache refs    
              4,076      page-faults:u                                               
-     2,020,948,263      cycles:u                                                    
-     2,878,367,195      instructions:u            #    1.42  insn per cycle         
+     1,475,424,146      cycles:u                                                    
+     2,039,884,227      instructions:u            #    1.38  insn per cycle         
 
-       1.254121450 seconds time elapsed
+       0.590388355 seconds time elapsed
 
-       0.724910000 seconds user
-       0.044932000 seconds sys
+       0.534279000 seconds user
+       0.031074000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-         2,435,603      cache-references:u                                          
-         2,046,185      cache-misses:u            #   84.011 % of all cache refs    
+         2,428,554      cache-references:u                                          
+         2,051,125      cache-misses:u            #   84.459 % of all cache refs    
+             4,075      page-faults:u                                               
+     1,490,651,047      cycles:u                                                    
+     2,059,388,436      instructions:u            #    1.38  insn per cycle         
+
+       0.589169815 seconds time elapsed
+
+       0.535408000 seconds user
+       0.032963000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,420,492      cache-references:u                                          
+         2,028,178      cache-misses:u            #   83.792 % of all cache refs    
+             4,073      page-faults:u                                               
+     1,492,425,289      cycles:u                                                    
+     2,061,552,517      instructions:u            #    1.38  insn per cycle         
+
+       0.587747932 seconds time elapsed
+
+       0.533826000 seconds user
+       0.034923000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,425,661      cache-references:u                                          
+         2,066,144      cache-misses:u            #   85.179 % of all cache refs    
              4,076      page-faults:u                                               
-     2,025,195,936      cycles:u                                                    
-     2,873,016,398      instructions:u            #    1.42  insn per cycle         
+     1,489,450,937      cycles:u                                                    
+     2,071,246,755      instructions:u            #    1.39  insn per cycle         
 
-       1.146031040 seconds time elapsed
+       0.589359080 seconds time elapsed
 
-       0.725727000 seconds user
-       0.044921000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,430,731      cache-references:u                                          
-         2,057,330      cache-misses:u            #   84.638 % of all cache refs    
-             4,074      page-faults:u                                               
-     2,024,567,327      cycles:u                                                    
-     2,865,174,746      instructions:u            #    1.42  insn per cycle         
-
-       1.121576980 seconds time elapsed
-
-       0.724563000 seconds user
-       0.044910000 seconds sys
+       0.528955000 seconds user
+       0.039921000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-         2,426,572      cache-references:u                                          
-         2,026,060      cache-misses:u            #   83.495 % of all cache refs    
+         2,420,961      cache-references:u                                          
+         1,952,861      cache-misses:u            #   80.665 % of all cache refs    
+             4,077      page-faults:u                                               
+     1,470,751,664      cycles:u                                                    
+     2,048,798,221      instructions:u            #    1.39  insn per cycle         
+
+       0.614451025 seconds time elapsed
+
+       0.527499000 seconds user
+       0.040883000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,428,942      cache-references:u                                          
+         1,150,505      cache-misses:u            #   47.367 % of all cache refs    
+             4,075      page-faults:u                                               
+     1,499,425,578      cycles:u                                                    
+     2,466,788,727      instructions:u            #    1.65  insn per cycle         
+
+       0.612421936 seconds time elapsed
+
+       0.538929000 seconds user
+       0.029996000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,431,576      cache-references:u                                          
+         2,021,413      cache-misses:u            #   83.132 % of all cache refs    
              4,076      page-faults:u                                               
-     2,024,927,637      cycles:u                                                    
-     2,869,583,446      instructions:u            #    1.42  insn per cycle         
+     1,477,090,967      cycles:u                                                    
+     2,072,574,787      instructions:u            #    1.40  insn per cycle         
 
-       1.641438491 seconds time elapsed
+       0.599100328 seconds time elapsed
 
-       0.725996000 seconds user
-       0.044876000 seconds sys
+       0.527814000 seconds user
+       0.040908000 seconds sys
 
 
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
-
-         2,430,814      cache-references:u                                          
-         2,002,809      cache-misses:u            #   82.393 % of all cache refs    
+         2,418,166      cache-references:u                                          
+         1,985,861      cache-misses:u            #   82.123 % of all cache refs    
              4,076      page-faults:u                                               
-     2,024,409,858      cycles:u                                                    
-     2,865,733,759      instructions:u            #    1.42  insn per cycle         
+     1,477,692,617      cycles:u                                                    
+     2,051,768,838      instructions:u            #    1.39  insn per cycle         
 
-       1.160594958 seconds time elapsed
+       0.621378902 seconds time elapsed
 
-       0.720973000 seconds user
-       0.048930000 seconds sys
+       0.534401000 seconds user
+       0.034895000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
 
-         3,083,744      cache-references:u                                          
-         1,773,444      cache-misses:u            #   57.509 % of all cache refs    
-             7,617      page-faults:u                                               
-     1,767,672,925      cycles:u                                                    
-     2,485,244,656      instructions:u            #    1.41  insn per cycle         
+         2,428,459      cache-references:u                                          
+         1,968,281      cache-misses:u            #   81.051 % of all cache refs    
+             4,076      page-faults:u                                               
+     1,471,867,558      cycles:u                                                    
+     2,049,561,998      instructions:u            #    1.39  insn per cycle         
 
-       1.049147311 seconds time elapsed
+       0.633969540 seconds time elapsed
 
-       0.627673000 seconds user
-       0.053715000 seconds sys
+       0.529525000 seconds user
+       0.039813000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,422,438      cache-references:u                                          
+         1,954,786      cache-misses:u            #   80.695 % of all cache refs    
+             4,077      page-faults:u                                               
+     1,472,024,454      cycles:u                                                    
+     2,043,093,413      instructions:u            #    1.39  insn per cycle         
+
+       0.643303119 seconds time elapsed
+
+       0.535198000 seconds user
+       0.033885000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,426,918      cache-references:u                                          
+         1,722,676      cache-misses:u            #   70.982 % of all cache refs    
+             4,077      page-faults:u                                               
+     1,495,736,022      cycles:u                                                    
+     2,097,744,604      instructions:u            #    1.40  insn per cycle         
+
+       0.589246895 seconds time elapsed
+
+       0.529388000 seconds user
+       0.038955000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m56.txt 0':
+
+         2,765,383      cache-references:u                                          
+         2,108,919      cache-misses:u            #   76.261 % of all cache refs    
+             7,587      page-faults:u                                               
+     1,234,264,349      cycles:u                                                    
+     1,711,727,357      instructions:u            #    1.39  insn per cycle         
+
+       0.604132631 seconds time elapsed
+
+       0.443259000 seconds user
+       0.045923000 seconds sys
 
 
 
@@ -997,993 +979,491 @@ Matrix Multiply 2048x2048
 Number of Processes: 1, Number of Threads: 32
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt
 Multiplication Complete!
-Execution Time: 254 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m78.txt
-Answer Correct!
+Execution Time: 250 milliseconds
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 32 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 32 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-       323,647,754      cache-references:u                                          
-        45,077,875      cache-misses:u            #   13.928 % of all cache refs    
-            22,527      page-faults:u                                               
-    13,732,132,235      cycles:u                                                    
-    21,487,879,721      instructions:u            #    1.56  insn per cycle         
+       333,030,483      cache-references:u                                          
+        36,297,480      cache-misses:u            #   10.899 % of all cache refs    
+            18,432      page-faults:u                                               
+    13,308,943,360      cycles:u                                                    
+    18,372,197,519      instructions:u            #    1.38  insn per cycle         
 
-       1.880770599 seconds time elapsed
+       1.495063422 seconds time elapsed
 
-       5.939696000 seconds user
-       0.126376000 seconds sys
+       5.730219000 seconds user
+       0.128914000 seconds sys
 
 
 
 Number of Processes: 2, Number of Threads: 16
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt
 Multiplication Complete!
-Execution Time: 251 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m78.txt
-Answer Correct!
+Execution Time: 225 milliseconds
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 16 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 16 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-       141,377,080      cache-references:u                                          
-        21,585,204      cache-misses:u            #   15.268 % of all cache refs    
-            20,807      page-faults:u                                               
-     8,999,789,552      cycles:u                                                    
-    16,007,484,637      instructions:u            #    1.78  insn per cycle         
+       154,610,860      cache-references:u                                          
+        35,586,031      cache-misses:u            #   23.017 % of all cache refs    
+            14,311      page-faults:u                                               
+     8,872,421,075      cycles:u                                                    
+    15,215,841,461      instructions:u            #    1.71  insn per cycle         
 
-       2.141894043 seconds time elapsed
+       1.565248053 seconds time elapsed
 
-       3.670138000 seconds user
-       0.133005000 seconds sys
+       3.688031000 seconds user
+       0.103607000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 16 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 16 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-       202,689,237      cache-references:u                                          
-        51,068,957      cache-misses:u            #   25.196 % of all cache refs    
-            12,778      page-faults:u                                               
-     9,609,192,850      cycles:u                                                    
-    18,440,394,385      instructions:u            #    1.92  insn per cycle         
+       140,589,624      cache-references:u                                          
+        19,662,826      cache-misses:u            #   13.986 % of all cache refs    
+            18,451      page-faults:u                                               
+     7,811,532,322      cycles:u                                                    
+    12,645,526,758      instructions:u            #    1.62  insn per cycle         
 
-       1.911024570 seconds time elapsed
+       1.487268851 seconds time elapsed
 
-       3.899830000 seconds user
-       0.108939000 seconds sys
+       3.243002000 seconds user
+       0.120648000 seconds sys
 
 
 
 Number of Processes: 4, Number of Threads: 8
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt
 Multiplication Complete!
-Execution Time: 236 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m78.txt
-Answer Correct!
+Execution Time: 218 milliseconds
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-        93,386,607      cache-references:u                                          
-        30,919,242      cache-misses:u            #   33.109 % of all cache refs    
-            11,715      page-faults:u                                               
-     7,259,647,011      cycles:u                                                    
-    16,101,293,541      instructions:u            #    2.22  insn per cycle         
+        70,280,664      cache-references:u                                          
+        35,831,440      cache-misses:u            #   50.983 % of all cache refs    
+            12,228      page-faults:u                                               
+     6,669,527,678      cycles:u                                                    
+    13,160,390,144      instructions:u            #    1.97  insn per cycle         
 
-       1.958975202 seconds time elapsed
+       1.565903422 seconds time elapsed
 
-       2.799166000 seconds user
-       0.084065000 seconds sys
+       2.615717000 seconds user
+       0.082801000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
 
-        70,444,805      cache-references:u                                          
-        20,573,365      cache-misses:u            #   29.205 % of all cache refs    
-            11,206      page-faults:u                                               
-     7,925,700,607      cycles:u                                                    
-    16,206,987,846      instructions:u            #    2.04  insn per cycle         
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-       2.387410060 seconds time elapsed
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-       3.059964000 seconds user
-       0.098966000 seconds sys
+        70,108,234      cache-references:u                                          
+        89,092,399      cache-references:u                                          
+        18,790,386      cache-misses:u            #   26.802 % of all cache refs    
+            12,227      page-faults:u                                               
+        42,787,641      cache-misses:u            #   48.026 % of all cache refs    
+            12,227      page-faults:u                                               
+     6,423,415,284      cycles:u                                                    
+     6,451,229,940      cycles:u                                                    
+    12,945,983,215      instructions:u            #    2.02  insn per cycle         
 
+       1.980292025 seconds time elapsed
 
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        95,579,704      cache-references:u                                          
-        50,797,824      cache-misses:u            #   53.147 % of all cache refs    
-            11,205      page-faults:u                                               
-     7,637,262,222      cycles:u                                                    
-    15,867,197,077      instructions:u            #    2.08  insn per cycle         
-
-       1.963404494 seconds time elapsed
-
-       2.937832000 seconds user
-       0.115835000 seconds sys
+       2.516185000 seconds user
+       0.100887000 seconds sys
 
 
+    13,173,819,213      instructions:u            #    2.04  insn per cycle         
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+       2.001823942 seconds time elapsed
 
-        72,312,110      cache-references:u                                          
-        34,551,513      cache-misses:u            #   47.781 % of all cache refs    
-            19,942      page-faults:u                                               
-     6,813,661,233      cycles:u                                                    
-    12,754,860,645      instructions:u            #    1.87  insn per cycle         
+       2.517433000 seconds user
+       0.093718000 seconds sys
 
-       2.362634478 seconds time elapsed
 
-       2.664402000 seconds user
-       0.125547000 seconds sys
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
+
+        76,820,289      cache-references:u                                          
+        34,419,640      cache-misses:u            #   44.805 % of all cache refs    
+            18,547      page-faults:u                                               
+     5,555,634,601      cycles:u                                                    
+     9,403,447,174      instructions:u            #    1.69  insn per cycle         
+
+       1.581180415 seconds time elapsed
+
+       2.232377000 seconds user
+       0.113542000 seconds sys
 
 
 
 Number of Processes: 8, Number of Threads: 4
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt
 Multiplication Complete!
-Execution Time: 204 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m78.txt
-Answer Correct!
+Execution Time: 249 milliseconds
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-        35,610,031      cache-references:u                                          
-        18,358,259      cache-misses:u            #   51.554 % of all cache refs    
-            10,684      page-faults:u                                               
-     5,939,797,507      cycles:u                                                    
-    14,250,488,285      instructions:u            #    2.40  insn per cycle         
+        43,594,421      cache-references:u                                          
+        27,473,653      cache-misses:u            #   63.021 % of all cache refs    
+            11,198      page-faults:u                                               
+     5,361,721,262      cycles:u                                                    
+    10,874,875,360      instructions:u            #    2.03  insn per cycle         
 
-       1.869393011 seconds time elapsed
+       1.531298516 seconds time elapsed
 
-       2.212597000 seconds user
-       0.103840000 seconds sys
+       2.020824000 seconds user
+       0.094663000 seconds sys
 
 
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
 
-        35,422,629      cache-references:u                                          
-        28,117,322      cache-misses:u            #   79.377 % of all cache refs    
-            11,197      page-faults:u                                               
-        35,395,576      cache-references:u                                          
-        25,353,949      cache-misses:u            #   71.630 % of all cache refs    
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
+
+        42,090,176      cache-references:u                                          
+        50,023,345      cache-references:u                                          
+        39,921,179      cache-misses:u            #   79.805 % of all cache refs    
+
+        36,374,011      cache-references:u                                          
+        22,351,711      cache-misses:u            #   61.450 % of all cache refs    
+            11,198      page-faults:u                                               
+     5,367,883,081      cycles:u                                                    
+    10,856,598,884      instructions:u            #    2.02  insn per cycle         
+
+       1.524818477 seconds time elapsed
+
+        28,493,587      cache-misses:u            #   67.697 % of all cache refs    
             11,196      page-faults:u                                               
-     5,881,167,035      cycles:u                                                    
-        36,002,356      cache-references:u                                          
-        26,829,157      cache-misses:u            #   74.521 % of all cache refs    
-            10,174      page-faults:u                                               
-     6,137,487,630      cycles:u                                                    
-    14,049,045,471      instructions:u            #    2.29  insn per cycle         
+     5,351,287,493      cycles:u                                                    
+    10,285,761,556      instructions:u            #    1.92  insn per cycle         
 
-       2.507929872 seconds time elapsed
+       1.498958743 seconds time elapsed
 
-       2.306836000 seconds user
-       0.096699000 seconds sys
+       2.029995000 seconds user
+       0.082714000 seconds sys
 
 
-     5,858,051,112      cycles:u                                                    
-    14,360,615,201      instructions:u            #    2.45  insn per cycle         
+            11,195      page-faults:u                                               
+     5,459,804,565      cycles:u                                                    
+    10,087,050,245      instructions:u            #    1.85  insn per cycle         
 
-       1.880992356 seconds time elapsed
+       1.500109146 seconds time elapsed
 
-       2.170091000 seconds user
-       0.111850000 seconds sys
-
-
-    13,849,138,819      instructions:u            #    2.35  insn per cycle         
-
-       1.875240182 seconds time elapsed
-
-       2.181203000 seconds user
-       0.105767000 seconds sys
+       2.061128000 seconds user
+       0.087750000 seconds sys
 
 
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+        35,314,131      cache-references:u                                          
+        26,739,462      cache-misses:u            #   75.719 % of all cache refs    
 
-        36,768,071      cache-references:u                                          
-        23,264,243      cache-misses:u            #   63.273 % of all cache refs    
-            10,686      page-faults:u                                               
-     6,191,018,319      cycles:u                                                    
-    13,951,395,979      instructions:u            #    2.25  insn per cycle         
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-       2.300213236 seconds time elapsed
-
-       2.322577000 seconds user
-       0.104620000 seconds sys
+        35,431,380      cache-references:u                                          
+        25,119,003      cache-misses:u            #   70.895 % of all cache refs    
+       2.028363000 seconds user
+       0.091790000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-        35,522,895      cache-references:u                                          
-        30,946,210      cache-misses:u            #   87.116 % of all cache refs    
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        36,816,990      cache-references:u                                          
-        19,068,662      cache-misses:u            #   51.793 % of all cache refs    
-            11,197      page-faults:u                                               
-     6,196,530,124      cycles:u                                                    
-    13,146,391,401      instructions:u            #    2.12  insn per cycle         
-
-       2.569452514 seconds time elapsed
-
-       2.330485000 seconds user
-       0.092780000 seconds sys
-
-
+        35,893,944      cache-references:u                                          
+        18,207,762      cache-misses:u            #   50.727 % of all cache refs    
             11,196      page-faults:u                                               
-     6,153,486,517      cycles:u                                                    
-    13,200,217,517      instructions:u            #    2.15  insn per cycle         
+     4,980,010,951      cycles:u                                                    
+            11,193      page-faults:u                                               
+     4,879,537,647      cycles:u                                                    
+    11,344,706,133      instructions:u            #    2.32  insn per cycle         
 
-       2.276061820 seconds time elapsed
+       2.165016187 seconds time elapsed
 
-       2.306058000 seconds user
-       0.098702000 seconds sys
+       1.835237000 seconds user
+       0.086727000 seconds sys
+
+
+            11,197      page-faults:u                                               
+     4,884,118,784      cycles:u                                                    
+    11,378,360,980      instructions:u            #    2.33  insn per cycle         
+
+       2.178741421 seconds time elapsed
+
+       1.842646000 seconds user
+       0.082849000 seconds sys
+
+
+    11,282,094,338      instructions:u            #    2.27  insn per cycle         
+
+       2.151096217 seconds time elapsed
+
+       1.884636000 seconds user
+       0.077861000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-        37,685,000      cache-references:u                                          
-        32,716,071      cache-misses:u            #   86.815 % of all cache refs    
-            19,521      page-faults:u                                               
-     5,075,003,518      cycles:u                                                    
-    10,961,242,981      instructions:u            #    2.16  insn per cycle         
+        49,403,387      cache-references:u                                          
+        42,737,778      cache-misses:u            #   86.508 % of all cache refs    
+            18,805      page-faults:u                                               
+     4,380,192,764      cycles:u                                                    
+     7,779,203,013      instructions:u            #    1.78  insn per cycle         
 
-       2.279257361 seconds time elapsed
+       1.563120865 seconds time elapsed
 
-       1.922203000 seconds user
-       0.121759000 seconds sys
+       1.687505000 seconds user
+       0.121693000 seconds sys
 
 
 
 Number of Processes: 16, Number of Threads: 2
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt
 Multiplication Complete!
-Execution Time: 283 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m78.txt
-Answer Correct!
+Execution Time: 340 milliseconds
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-        18,034,510      cache-references:u                                          
-        16,330,058      cache-misses:u            #   90.549 % of all cache refs    
+        18,092,471      cache-references:u                                          
+        17,248,519      cache-misses:u            #   95.335 % of all cache refs    
+            10,693      page-faults:u                                               
+     4,753,760,633      cycles:u                                                    
+    10,247,469,837      instructions:u            #    2.16  insn per cycle         
+
+       1.661912032 seconds time elapsed
+
+       1.761468000 seconds user
+       0.071693000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
+
+        17,929,622      cache-references:u                                          
+        16,205,930      cache-misses:u            #   90.386 % of all cache refs    
+            10,691      page-faults:u                                               
+     4,517,576,300      cycles:u                                                    
+    11,146,432,639      instructions:u            #    2.47  insn per cycle         
+
+       2.344868779 seconds time elapsed
+
+       1.638788000 seconds user
+       0.086829000 seconds sys
+
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
+
+        17,958,461      cache-references:u                                          
+        17,926,438      cache-references:u                                          
+        15,496,627      cache-misses:u            #   86.446 % of all cache refs    
+        15,425,772      cache-misses:u            #   85.897 % of all cache refs    
+            10,691      page-faults:u                                               
+     4,509,103,262      cycles:u                                                    
             10,692      page-faults:u                                               
-     5,423,013,236      cycles:u                                                    
-    13,741,145,082      instructions:u            #    2.53  insn per cycle         
+     4,502,699,727      cycles:u                                                    
+    10,880,142,913      instructions:u            #    2.42  insn per cycle         
 
-       1.925969968 seconds time elapsed
+       2.249233694 seconds time elapsed
 
-       1.959668000 seconds user
-       0.098831000 seconds sys
+       1.633509000 seconds user
+       0.081775000 seconds sys
 
 
+    10,427,354,705      instructions:u            #    2.31  insn per cycle         
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+       2.410848286 seconds time elapsed
 
-        18,137,749      cache-references:u                                          
-        16,827,005      cache-misses:u            #   92.773 % of all cache refs    
-            10,183      page-faults:u                                               
-     5,567,544,472      cycles:u                                                    
-    13,094,109,786      instructions:u            #    2.35  insn per cycle         
-
-       2.364890217 seconds time elapsed
-
-       2.019225000 seconds user
-       0.109740000 seconds sys
+       1.629120000 seconds user
+       0.087737000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-        18,064,474      cache-references:u                                          
-        15,404,429      cache-misses:u            #   85.275 % of all cache refs    
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
+
+        17,942,814      cache-references:u                                          
+        16,266,299      cache-misses:u            #   90.656 % of all cache refs    
             10,692      page-faults:u                                               
-     5,407,281,503      cycles:u                                                    
-    13,313,900,531      instructions:u            #    2.46  insn per cycle         
-
-       1.944852175 seconds time elapsed
-
-       1.947166000 seconds user
-       0.101747000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        17,994,249      cache-references:u                                          
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,097,534      cache-references:u                                          
-        15,341,798      cache-misses:u            #   84.773 % of all cache refs    
+        17,939,180      cache-references:u                                          
+        16,328,769      cache-misses:u            #   91.023 % of all cache refs    
+        17,951,251      cache-references:u                                          
+        15,470,986      cache-misses:u            #   86.183 % of all cache refs    
             10,691      page-faults:u                                               
-     5,411,023,415      cycles:u                                                    
-    13,344,159,020      instructions:u            #    2.47  insn per cycle         
+     4,498,026,485      cycles:u                                                    
+     4,517,261,572      cycles:u                                                    
+    11,155,121,188      instructions:u            #    2.47  insn per cycle         
 
-       1.932215232 seconds time elapsed
+       2.709391178 seconds time elapsed
 
-       1.944480000 seconds user
-       0.102866000 seconds sys
+       1.625819000 seconds user
+       0.100802000 seconds sys
 
 
-        16,395,898      cache-misses:u            #   91.117 % of all cache refs    
             10,691      page-faults:u                                               
-     5,445,686,453      cycles:u                                                    
-    13,243,407,452      instructions:u            #    2.43  insn per cycle         
+     4,531,120,809      cycles:u                                                    
+    10,793,915,822      instructions:u            #    2.38  insn per cycle         
 
-       1.927684589 seconds time elapsed
+       2.239393024 seconds time elapsed
 
-       1.960281000 seconds user
-       0.099810000 seconds sys
+       1.630392000 seconds user
+       0.096785000 seconds sys
+
+
+    11,203,771,148      instructions:u            #    2.49  insn per cycle         
+
+       2.296603900 seconds time elapsed
+
+       1.627747000 seconds user
+       0.088768000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-        18,049,963      cache-references:u                                          
-        15,438,129      cache-misses:u            #   85.530 % of all cache refs    
+        31,655,850      cache-references:u                                          
+        29,462,483      cache-misses:u            #   93.071 % of all cache refs    
+            10,693      page-faults:u                                               
+     4,889,073,357      cycles:u                                                    
+     9,813,961,608      instructions:u            #    2.01  insn per cycle         
+
+       1.660090128 seconds time elapsed
+
+       1.810656000 seconds user
+       0.083798000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
+
+
+        18,029,007      cache-references:u                                          
+        17,225,711      cache-misses:u            #   95.544 % of all cache refs    
+            10,693      page-faults:u                                               
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
+
+        31,599,713      cache-references:u                                          
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
+
+     4,784,252,049      cycles:u                                                    
+     9,918,958,817      instructions:u            #    2.07  insn per cycle         
+
+       1.595397871 seconds time elapsed
+
+       1.769876000 seconds user
+       0.072871000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
+
+        29,582,243      cache-misses:u            #   93.616 % of all cache refs    
             10,691      page-faults:u                                               
-     5,392,116,375      cycles:u                                                    
-    13,762,268,197      instructions:u            #    2.55  insn per cycle         
+     4,889,491,835      cycles:u                                                    
+     9,800,817,844      instructions:u            #    2.00  insn per cycle         
 
-       1.948894765 seconds time elapsed
+       1.646926873 seconds time elapsed
 
-       1.944314000 seconds user
-       0.104747000 seconds sys
+       1.814044000 seconds user
+       0.078784000 seconds sys
 
 
-        18,033,048      cache-references:u                                          
-        16,320,489      cache-misses:u            #   90.503 % of all cache refs    
+        33,626,965      cache-references:u                                          
+        31,069,620      cache-misses:u            #   92.395 % of all cache refs    
+            10,692      page-faults:u                                               
+     4,879,471,597      cycles:u                                                    
+     9,792,672,330      instructions:u            #    2.01  insn per cycle         
+
+       1.670866815 seconds time elapsed
+
+       1.811723000 seconds user
+       0.080587000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
+
+        30,400,514      cache-references:u                                          
+        28,475,689      cache-misses:u            #   93.668 % of all cache refs    
+        34,950,561      cache-references:u                                          
+        32,197,115      cache-misses:u            #   92.122 % of all cache refs    
+            10,692      page-faults:u                                               
+     4,883,880,893      cycles:u                                                    
+     9,567,841,311      instructions:u            #    1.96  insn per cycle         
+
+       1.591946977 seconds time elapsed
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
+
+        18,028,095      cache-references:u                                          
+        17,186,489      cache-misses:u            #   95.332 % of all cache refs    
             10,691      page-faults:u                                               
-     5,427,369,737      cycles:u                                                    
-    13,751,326,487      instructions:u            #    2.53  insn per cycle         
+     4,764,696,151      cycles:u                                                    
+    10,171,826,236      instructions:u            #    2.13  insn per cycle         
 
-       1.927183140 seconds time elapsed
+       1.592682376 seconds time elapsed
 
-       1.976085000 seconds user
-       0.082877000 seconds sys
+       1.761136000 seconds user
+       0.075148000 seconds sys
 
 
+            10,690      page-faults:u                                               
+     4,885,801,893      cycles:u                                                    
+     9,831,400,169      instructions:u            #    2.01  insn per cycle         
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+       1.599142369 seconds time elapsed
 
-        18,111,475      cache-references:u                                          
-        16,921,702      cache-misses:u            #   93.431 % of all cache refs    
-            10,182      page-faults:u                                               
-     5,586,174,181      cycles:u                                                    
-    12,593,844,878      instructions:u            #    2.25  insn per cycle         
-
-       2.632958126 seconds time elapsed
-
-       2.034646000 seconds user
-       0.095842000 seconds sys
+       1.801950000 seconds user
+       0.090465000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-        18,106,210      cache-references:u                                          
-        16,957,535      cache-misses:u            #   93.656 % of all cache refs    
-            10,695      page-faults:u                                               
-     5,566,156,703      cycles:u                                                    
-    13,189,663,029      instructions:u            #    2.37  insn per cycle         
+        25,997,126      cache-references:u                                          
+        24,577,987      cache-misses:u            #   94.541 % of all cache refs    
+            10,690      page-faults:u                                               
+     4,864,121,667      cycles:u                                                    
+     9,900,480,055      instructions:u            #    2.04  insn per cycle         
 
-       2.406617158 seconds time elapsed
+       1.596201159 seconds time elapsed
 
-       2.037210000 seconds user
-       0.089788000 seconds sys
+       1.804831000 seconds user
+       0.077319000 seconds sys
 
 
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,071,618      cache-references:u                                          
-        17,166,669      cache-misses:u            #   94.992 % of all cache refs    
-            10,691      page-faults:u                                               
-     5,613,169,676      cycles:u                                                    
-    13,033,258,305      instructions:u            #    2.32  insn per cycle         
-
-       2.775954387 seconds time elapsed
-
-       2.050212000 seconds user
-       0.096726000 seconds sys
+       1.811695000 seconds user
+       0.078088000 seconds sys
 
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 0':
 
-        18,077,929      cache-references:u                                          
-        16,919,731      cache-misses:u            #   93.593 % of all cache refs    
-            10,691      page-faults:u                                               
-     5,579,786,563      cycles:u                                                    
-    13,132,243,607      instructions:u            #    2.35  insn per cycle         
+        19,109,477      cache-references:u                                          
+        17,976,472      cache-misses:u            #   94.071 % of all cache refs    
+            19,592      page-faults:u                                               
+     3,676,363,409      cycles:u                                                    
+     7,357,026,455      instructions:u            #    2.00  insn per cycle         
 
-       2.402680802 seconds time elapsed
+       1.624445939 seconds time elapsed
 
-       2.032388000 seconds user
-       0.100721000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,081,460      cache-references:u                                          
-        17,095,850      cache-misses:u            #   94.549 % of all cache refs    
-            10,695      page-faults:u                                               
-     5,601,379,089      cycles:u                                                    
-    13,070,077,180      instructions:u            #    2.33  insn per cycle         
-
-       2.377670780 seconds time elapsed
-
-       2.038661000 seconds user
-       0.104777000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,090,084      cache-references:u                                          
-        16,915,773      cache-misses:u            #   93.509 % of all cache refs    
-            10,695      page-faults:u                                               
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        30,957,682      cache-references:u                                          
-        27,262,633      cache-misses:u            #   88.064 % of all cache refs    
-            10,696      page-faults:u                                               
-     5,667,590,043      cycles:u                                                    
-    12,517,511,019      instructions:u            #    2.21  insn per cycle         
-
-       2.345882584 seconds time elapsed
-
-       2.064794000 seconds user
-       0.102890000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,094,799      cache-references:u                                          
-        16,886,169      cache-misses:u            #   93.321 % of all cache refs    
-            10,696      page-faults:u                                               
-     5,582,846,045      cycles:u                                                    
-    12,703,976,565      instructions:u            #    2.28  insn per cycle         
-
-       2.736628052 seconds time elapsed
-
-       2.031195000 seconds user
-       0.099813000 seconds sys
-
-
-     5,576,790,659      cycles:u                                                    
-    13,159,281,322      instructions:u            #    2.36  insn per cycle         
-
-       2.374797631 seconds time elapsed
-
-       2.034899000 seconds user
-       0.097898000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        32,697,854      cache-references:u                                          
-        28,097,828      cache-misses:u            #   85.932 % of all cache refs    
-            20,176      page-faults:u                                               
-     4,607,967,602      cycles:u                                                    
-    10,211,810,513      instructions:u            #    2.22  insn per cycle         
-
-       2.314093970 seconds time elapsed
-
-       1.711192000 seconds user
-       0.107802000 seconds sys
+       1.373261000 seconds user
+       0.115652000 seconds sys
 
 
 
 Number of Processes: 32, Number of Threads: 1
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt
-Multiplication Complete!
-Execution Time: 461 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m78.txt
-Answer Correct!
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,028,600      cache-references:u                                          
-        16,223,111      cache-misses:u            #   89.985 % of all cache refs    
-            14,127      page-faults:u                                               
-     8,664,422,027      cycles:u                                                    
-    12,405,714,886      instructions:u            #    1.43  insn per cycle         
-
-       3.227951803 seconds time elapsed
-
-       3.083530000 seconds user
-       0.110731000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,015,390      cache-references:u                                          
-        16,246,913      cache-misses:u            #   90.184 % of all cache refs    
-            14,127      page-faults:u                                               
-     8,675,322,582      cycles:u                                                    
-    12,415,164,432      instructions:u            #    1.43  insn per cycle         
-
-       3.222494128 seconds time elapsed
-
-       3.067238000 seconds user
-       0.127676000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,112,722      cache-references:u                                          
-        17,404,841      cache-misses:u            #   96.092 % of all cache refs    
-            14,129      page-faults:u                                               
-        18,138,582      cache-references:u                                          
-        17,419,318      cache-misses:u            #   96.035 % of all cache refs    
-            14,132      page-faults:u                                               
-     8,587,415,935      cycles:u                                                    
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,033,391      cache-references:u                                          
-        16,413,573      cache-misses:u            #   91.018 % of all cache refs    
-            14,129      page-faults:u                                               
-     8,539,542,945      cycles:u                                                    
-    12,821,328,318      instructions:u            #    1.50  insn per cycle         
-
-       3.479008841 seconds time elapsed
-
-       3.060392000 seconds user
-       0.130632000 seconds sys
-
-
-    11,727,238,661      instructions:u            #    1.37  insn per cycle         
-
-       3.523368810 seconds time elapsed
-
-       3.080996000 seconds user
-       0.117694000 seconds sys
-
-
-     8,662,498,413      cycles:u                                                    
-    12,422,300,949      instructions:u            #    1.43  insn per cycle         
-
-       3.241559395 seconds time elapsed
-
-       3.070779000 seconds user
-       0.128697000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        17,997,241      cache-references:u                                          
-        17,085,616      cache-misses:u            #   94.935 % of all cache refs    
-            14,127      page-faults:u                                               
-        18,017,036      cache-references:u                                          
-        16,299,540      cache-misses:u            #   90.467 % of all cache refs    
-            14,127      page-faults:u                                               
-     8,661,829,560      cycles:u                                                    
-    12,391,459,835      instructions:u            #    1.43  insn per cycle         
-
-       3.230174616 seconds time elapsed
-
-       3.079141000 seconds user
-       0.120731000 seconds sys
-
-
-     8,647,926,541      cycles:u                                                    
-    12,359,804,069      instructions:u            #    1.43  insn per cycle         
-
-       3.228458676 seconds time elapsed
-
-       3.058859000 seconds user
-       0.140625000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,036,978      cache-references:u                                          
-        16,226,723      cache-misses:u            #   89.964 % of all cache refs    
-            14,129      page-faults:u                                               
-     8,662,846,639      cycles:u                                                    
-    12,424,248,995      instructions:u            #    1.43  insn per cycle         
-
-       3.238374217 seconds time elapsed
-
-       3.065390000 seconds user
-       0.135619000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        17,991,329      cache-references:u                                          
-        16,227,656      cache-misses:u            #   90.197 % of all cache refs    
-            14,641      page-faults:u                                               
-     8,669,634,762      cycles:u                                                    
-    12,443,462,425      instructions:u            #    1.44  insn per cycle         
-
-       3.228189878 seconds time elapsed
-
-       3.090241000 seconds user
-       0.110722000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        17,972,018      cache-references:u                                          
-        17,075,914      cache-misses:u            #   95.014 % of all cache refs    
-            14,638      page-faults:u                                               
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        17,993,298      cache-references:u                                          
-        17,073,991      cache-misses:u            #   94.891 % of all cache refs    
-            14,640      page-faults:u                                               
-     8,660,416,917      cycles:u                                                    
-    12,274,396,741      instructions:u            #    1.42  insn per cycle         
-
-       3.230185190 seconds time elapsed
-
-       3.068409000 seconds user
-       0.132628000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        17,984,520      cache-references:u                                          
-        17,067,460      cache-misses:u            #   94.901 % of all cache refs    
-            14,638      page-faults:u                                               
-     8,664,506,751      cycles:u                                                    
-    12,252,254,536      instructions:u            #    1.41  insn per cycle         
-
-       3.228429607 seconds time elapsed
-
-       3.074857000 seconds user
-       0.125667000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,000,816      cache-references:u                                          
-        17,022,476      cache-misses:u            #   94.565 % of all cache refs    
-            14,640      page-faults:u                                               
-     8,649,372,020      cycles:u                                                    
-    12,258,756,090      instructions:u            #    1.42  insn per cycle         
-
-       3.237485245 seconds time elapsed
-
-       3.074125000 seconds user
-       0.127714000 seconds sys
-
-
-        18,000,263      cache-references:u                                          
-        17,014,970      cache-misses:u            #   94.526 % of all cache refs    
-            14,638      page-faults:u                                               
-     8,649,048,054      cycles:u                                                    
-    12,220,793,990      instructions:u            #    1.41  insn per cycle         
-
-       3.231301574 seconds time elapsed
-
-       3.070398000 seconds user
-       0.130676000 seconds sys
-
-
-     8,659,994,347      cycles:u                                                    
-    12,356,658,958      instructions:u            #    1.43  insn per cycle         
-
-       3.229551626 seconds time elapsed
-
-       3.067508000 seconds user
-       0.133673000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,031,566      cache-references:u                                          
-        17,399,322      cache-misses:u            #   96.494 % of all cache refs    
-            14,643      page-faults:u                                               
-     8,584,742,975      cycles:u                                                    
-    11,566,573,232      instructions:u            #    1.35  insn per cycle         
-
-       3.536987455 seconds time elapsed
-
-       3.077294000 seconds user
-       0.126682000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,100,196      cache-references:u                                          
-        17,397,604      cache-misses:u            #   96.118 % of all cache refs    
-            14,132      page-faults:u                                               
-     8,592,006,540      cycles:u                                                    
-    11,582,538,369      instructions:u            #    1.35  insn per cycle         
-
-       3.577204510 seconds time elapsed
-
-       3.072448000 seconds user
-       0.132475000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,089,671      cache-references:u                                          
-        17,417,539      cache-misses:u            #   96.284 % of all cache refs    
-            14,133      page-faults:u                                               
-     8,591,457,670      cycles:u                                                    
-    11,629,261,717      instructions:u            #    1.35  insn per cycle         
-
-       3.546164012 seconds time elapsed
-
-       3.090573000 seconds user
-       0.116699000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,103,879      cache-references:u                                          
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,062,236      cache-references:u                                          
-        17,419,108      cache-misses:u            #   96.218 % of all cache refs    
-            14,129      page-faults:u                                               
-     8,595,593,033      cycles:u                                                    
-    11,586,116,463      instructions:u            #    1.35  insn per cycle         
-
-       3.505950256 seconds time elapsed
-
-       3.079237000 seconds user
-       0.127719000 seconds sys
-
-
-        17,387,611      cache-misses:u            #   96.265 % of all cache refs    
-            14,127      page-faults:u                                               
-     8,594,929,985      cycles:u                                                    
-    11,503,189,761      instructions:u            #    1.34  insn per cycle         
-
-       3.640673453 seconds time elapsed
-
-       3.089247000 seconds user
-       0.119452000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,090,945      cache-references:u                                          
-        17,387,233      cache-misses:u            #   96.110 % of all cache refs    
-            14,643      page-faults:u                                               
-     8,590,848,237      cycles:u                                                    
-    11,610,442,561      instructions:u            #    1.35  insn per cycle         
-
-       3.721778399 seconds time elapsed
-
-       3.069512000 seconds user
-       0.131422000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,075,909      cache-references:u                                          
-        17,379,168      cache-misses:u            #   96.145 % of all cache refs    
-            14,643      page-faults:u                                               
-     8,592,842,572      cycles:u                                                    
-    11,582,624,330      instructions:u            #    1.35  insn per cycle         
-
-       3.751844233 seconds time elapsed
-
-       3.074914000 seconds user
-       0.134116000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,059,256      cache-references:u                                          
-        17,386,457      cache-misses:u            #   96.274 % of all cache refs    
-            14,643      page-faults:u                                               
-     8,589,669,167      cycles:u                                                    
-    11,618,359,156      instructions:u            #    1.35  insn per cycle         
-
-       3.804335865 seconds time elapsed
-
-       3.069174000 seconds user
-       0.140366000 seconds sys
-
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,072,985      cache-references:u                                          
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,074,529      cache-references:u                                          
-        17,401,403      cache-misses:u            #   96.276 % of all cache refs    
-            14,643      page-faults:u                                               
-     8,587,230,000      cycles:u                                                    
-        17,401,360      cache-misses:u            #   96.284 % of all cache refs    
-            14,643      page-faults:u                                               
-     8,590,609,344      cycles:u                                                    
-    11,577,751,407      instructions:u            #    1.35  insn per cycle         
-
-       3.840559059 seconds time elapsed
-
-       3.076337000 seconds user
-       0.133710000 seconds sys
-
-
-    11,607,033,029      instructions:u            #    1.35  insn per cycle         
-
-       3.810799964 seconds time elapsed
-
-       3.086651000 seconds user
-       0.121670000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,023,240      cache-references:u                                          
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,085,329      cache-references:u                                          
-        17,388,539      cache-misses:u            #   96.147 % of all cache refs    
-            14,644      page-faults:u                                               
-     8,594,820,084      cycles:u                                                    
-    11,533,001,848      instructions:u            #    1.34  insn per cycle         
-
-       3.642118051 seconds time elapsed
-
-       3.058492000 seconds user
-       0.151677000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,065,429      cache-references:u                                          
-        17,390,620      cache-misses:u            #   96.265 % of all cache refs    
-            14,641      page-faults:u                                               
-     8,594,158,805      cycles:u                                                    
-    11,480,241,438      instructions:u            #    1.34  insn per cycle         
-
-       3.977809861 seconds time elapsed
-
-       3.078697000 seconds user
-       0.130690000 seconds sys
-
-
-        18,065,635      cache-references:u                                          
-        17,417,854      cache-misses:u            #   96.414 % of all cache refs    
-            14,644      page-faults:u                                               
-     8,584,984,742      cycles:u                                                    
-    11,590,531,549      instructions:u            #    1.35  insn per cycle         
-
-       5.555847837 seconds time elapsed
-
-       3.078566000 seconds user
-       0.130599000 seconds sys
-
-
-        17,397,985      cache-misses:u            #   96.531 % of all cache refs    
-            14,643      page-faults:u                                               
-     8,589,909,767      cycles:u                                                    
-    11,567,325,476      instructions:u            #    1.35  insn per cycle         
-
-       4.667459418 seconds time elapsed
-
-       3.076105000 seconds user
-       0.133700000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,070,397      cache-references:u                                          
-        17,401,172      cache-misses:u            #   96.297 % of all cache refs    
-            14,643      page-faults:u                                               
-     8,591,835,523      cycles:u                                                    
-    11,527,562,602      instructions:u            #    1.34  insn per cycle         
-
-       3.952266005 seconds time elapsed
-
-       3.072624000 seconds user
-       0.136483000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,063,683      cache-references:u                                          
-        17,386,377      cache-misses:u            #   96.250 % of all cache refs    
-            14,642      page-faults:u                                               
-     8,592,325,212      cycles:u                                                    
-    11,519,712,692      instructions:u            #    1.34  insn per cycle         
-
-       3.741027345 seconds time elapsed
-
-       3.069418000 seconds user
-       0.139700000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        18,057,221      cache-references:u                                          
-        17,382,484      cache-misses:u            #   96.263 % of all cache refs    
-            14,638      page-faults:u                                               
-     8,593,084,206      cycles:u                                                    
-    11,511,667,035      instructions:u            #    1.34  insn per cycle         
-
-       3.656697257 seconds time elapsed
-
-       3.059415000 seconds user
-       0.148728000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/mpi 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m78.txt 1':
-
-        20,496,712      cache-references:u                                          
-        18,755,455      cache-misses:u            #   91.505 % of all cache refs    
-            29,598      page-faults:u                                               
-     7,547,229,369      cycles:u                                                    
-     9,837,657,678      instructions:u            #    1.30  insn per cycle         
-
-       3.486854642 seconds time elapsed
-
-       2.691514000 seconds user
-       0.151354000 seconds sys
-
-
-

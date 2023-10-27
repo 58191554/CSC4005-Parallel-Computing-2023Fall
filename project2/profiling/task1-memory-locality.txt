@@ -6,16 +6,16 @@ Execution Time: 0 milliseconds
 
  Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/locality /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix1.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix2.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m12.txt 0':
 
-            15,198      cache-references:u                                          
-             7,812      cache-misses:u            #   51.402 % of all cache refs    
-               348      page-faults:u                                               
-         1,637,513      cycles:u                                                    
-         1,500,723      instructions:u            #    0.92  insn per cycle         
+            15,155      cache-references:u                                          
+             9,279      cache-misses:u            #   61.227 % of all cache refs    
+               349      page-faults:u                                               
+         1,816,161      cycles:u                                                    
+         1,500,740      instructions:u            #    0.83  insn per cycle         
 
-       0.006467947 seconds time elapsed
+       0.006933278 seconds time elapsed
 
-       0.000000000 seconds user
-       0.002215000 seconds sys
+       0.000901000 seconds user
+       0.001803000 seconds sys
 
 
 
@@ -26,56 +26,56 @@ Execution Time: 1 milliseconds
 
  Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/locality /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix3.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix4.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m34.txt 0':
 
-            20,640      cache-references:u                                          
-             8,607      cache-misses:u            #   41.701 % of all cache refs    
-               402      page-faults:u                                               
-        15,244,218      cycles:u                                                    
-        38,428,547      instructions:u            #    2.52  insn per cycle         
+            20,638      cache-references:u                                          
+             9,572      cache-misses:u            #   46.380 % of all cache refs    
+               401      page-faults:u                                               
+        15,351,354      cycles:u                                                    
+        38,466,194      instructions:u            #    2.51  insn per cycle         
 
-       0.010545340 seconds time elapsed
+       0.010530432 seconds time elapsed
 
-       0.007230000 seconds user
-       0.000000000 seconds sys
+       0.004807000 seconds user
+       0.002403000 seconds sys
 
 
 
 M = 1024, N = 1024, K = 1024
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m56.txt
 Multiplication Complete!
-Execution Time: 775 milliseconds
+Execution Time: 778 milliseconds
 
  Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/locality /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m56.txt 0':
 
-        68,578,432      cache-references:u                                          
-           173,600      cache-misses:u            #    0.253 % of all cache refs    
+        68,597,901      cache-references:u                                          
+           278,471      cache-misses:u            #    0.406 % of all cache refs    
              3,463      page-faults:u                                               
-     2,785,279,365      cycles:u                                                    
-     8,009,831,596      instructions:u            #    2.88  insn per cycle         
+     2,792,830,671      cycles:u                                                    
+     8,008,522,975      instructions:u            #    2.87  insn per cycle         
 
-       1.083177024 seconds time elapsed
+       1.087761767 seconds time elapsed
 
-       0.960168000 seconds user
-       0.026976000 seconds sys
+       0.970794000 seconds user
+       0.019954000 seconds sys
 
 
 
 M = 2048, N = 2048, K = 2048
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m78.txt
 Multiplication Complete!
-Execution Time: 6460 milliseconds
+Execution Time: 6486 milliseconds
 
  Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/locality /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/mem_local/m78.txt 0':
 
-       545,972,424      cache-references:u                                          
-       130,592,488      cache-misses:u            #   23.919 % of all cache refs    
-            30,690      page-faults:u                                               
-    20,733,443,452      cycles:u                                                    
-    57,790,022,221      instructions:u            #    2.79  insn per cycle         
+       545,897,007      cache-references:u                                          
+       132,841,686      cache-misses:u            #   24.335 % of all cache refs    
+            30,685      page-faults:u                                               
+    20,796,242,589      cycles:u                                                    
+    57,792,119,423      instructions:u            #    2.78  insn per cycle         
 
-       7.668049639 seconds time elapsed
+       7.709875301 seconds time elapsed
 
-       7.197914000 seconds user
-       0.093829000 seconds sys
+       7.235018000 seconds user
+       0.090849000 seconds sys
 
 
 

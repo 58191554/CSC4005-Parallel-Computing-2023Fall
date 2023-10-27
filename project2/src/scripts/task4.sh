@@ -7,7 +7,7 @@
 #SBATCH --gres=gpu:1
 
 CURRENT_DIR=$(pwd)/src
-debug=1
+debug=0
 # Define the perf command with required events
 PERF_CMD="perf stat -e cache-references,cache-misses,page-faults,cycles,instructions -r 1"
 

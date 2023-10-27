@@ -7,6 +7,13 @@ if [ ! -d "results" ]; then
     echo "[Build Directory for results]"
 fi
 
+if [ ! -d "profiling" ]; then
+    # If it doesn't exist, create the 'results' directory and change to it
+    mkdir -p profiling
+    echo "[Build Directory for profiling]"
+fi
+
+
 if [ ! -d "results/answers" ]; then
     mkdir -p results/answers
     echo "[Build Directory for answers]"

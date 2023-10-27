@@ -1,55 +1,46 @@
-/var/spool/slurmd/job145464/slurm_script: line 14: SIMD: command not found
+/var/spool/slurmd/job146502/slurm_script: line 14: SIMD: command not found
 SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
 M = 4, N = 4, K = 4
-FUCK ME
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m12.txt
 Multiplication Complete!
 Execution Time: 0 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m12.txt
-Answer Correct!
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/simd /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix1.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix2.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m12.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/simd /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix1.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix2.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m12.txt 0':
 
-            16,974      cache-references:u                                          
-             8,023      cache-misses:u            #   47.266 % of all cache refs    
-               353      page-faults:u                                               
-         1,776,985      cycles:u                                                    
-         1,546,045      instructions:u            #    0.87  insn per cycle         
+            15,629      cache-references:u                                          
+             9,824      cache-misses:u            #   62.858 % of all cache refs    
+               351      page-faults:u                                               
+         1,809,844      cycles:u                                                    
+         1,524,968      instructions:u            #    0.84  insn per cycle         
 
-       0.007030706 seconds time elapsed
+       0.005384190 seconds time elapsed
 
        0.000000000 seconds user
-       0.002338000 seconds sys
+       0.002284000 seconds sys
 
 
 
 M = 128, N = 128, K = 128
-FUCK ME
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m34.txt
 Multiplication Complete!
 Execution Time: 0 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m34.txt
-Answer Correct!
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/simd /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix3.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix4.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m34.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/simd /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix3.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix4.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m34.txt 0':
 
-            30,932      cache-references:u                                          
-             8,564      cache-misses:u            #   27.687 % of all cache refs    
-               465      page-faults:u                                               
-        16,078,677      cycles:u                                                    
-        41,013,178      instructions:u            #    2.55  insn per cycle         
+            25,343      cache-references:u                                          
+            10,563      cache-misses:u            #   41.680 % of all cache refs    
+               464      page-faults:u                                               
+        11,945,487      cycles:u                                                    
+        29,518,491      instructions:u            #    2.47  insn per cycle         
 
-       0.012890944 seconds time elapsed
+       0.009440015 seconds time elapsed
 
-       0.005220000 seconds user
-       0.002610000 seconds sys
+       0.004263000 seconds user
+       0.002131000 seconds sys
 
 
 
 M = 1024, N = 1024, K = 1024
-FUCK ME
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m56.txt
 Multiplication Complete!
 Execution Time: 232 milliseconds
@@ -59,40 +50,36 @@ Answer Correct!
 
  Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/simd /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m56.txt 1':
 
-         9,779,347      cache-references:u                                          
-           643,019      cache-misses:u            #    6.575 % of all cache refs    
-             6,651      page-faults:u                                               
-     1,393,487,157      cycles:u                                                    
-     3,857,330,306      instructions:u            #    2.77  insn per cycle         
+         9,724,534      cache-references:u                                          
+           723,493      cache-misses:u            #    7.440 % of all cache refs    
+             6,650      page-faults:u                                               
+     1,396,558,933      cycles:u                                                    
+     3,857,870,771      instructions:u            #    2.76  insn per cycle         
 
-       0.656462172 seconds time elapsed
+       0.659020676 seconds time elapsed
 
-       0.527111000 seconds user
-       0.032067000 seconds sys
+       0.529043000 seconds user
+       0.034131000 seconds sys
 
 
 
 M = 2048, N = 2048, K = 2048
-FUCK ME
 Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m78.txt
 Multiplication Complete!
-Execution Time: 1833 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m78.txt
-Answer Correct!
+Execution Time: 1843 milliseconds
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/simd /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m78.txt 1':
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/simd /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/simd/m78.txt 0':
 
-        72,699,101      cache-references:u                                          
-        19,736,365      cache-misses:u            #   27.148 % of all cache refs    
-            45,927      page-faults:u                                               
-     7,786,145,349      cycles:u                                                    
-    21,257,516,541      instructions:u            #    2.73  insn per cycle         
+        71,434,765      cache-references:u                                          
+        20,712,574      cache-misses:u            #   28.995 % of all cache refs    
+            44,230      page-faults:u                                               
+     6,659,083,396      cycles:u                                                    
+    18,084,145,502      instructions:u            #    2.72  insn per cycle         
 
-       3.465921532 seconds time elapsed
+       3.051900814 seconds time elapsed
 
-       2.961100000 seconds user
-       0.132601000 seconds sys
+       2.560664000 seconds user
+       0.135876000 seconds sys
 
 
 
