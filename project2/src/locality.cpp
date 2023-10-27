@@ -21,69 +21,19 @@ Matrix matrix_multiply_locality(const Matrix& matrix1, const Matrix& matrix2) {
     std::cout << "M = " << M << ", N = "<<N << ", K = "<<K << std::endl;
 
     Matrix result(M, N);
-    auto ** memM1 = (float**)malloc((M) * sizeof(float*));
-    auto ** memM2 = (float**)malloc((K) * sizeof(float*));
-
-    for(size_t i = 0; i < M; i++){
-        // std::cout << i << std::endl;
-        memM1[i] = (float*) malloc((K)*sizeof(float));
-        if(i < M){
-            for(size_t j = 0; j < K; j++){
-                // std::cout << j << std::endl;
-                if(j < K){
-                    memM1[i][j] = static_cast< float >(matrix1[i][j]);   
-                }         
-            }
-        }
-    }
-    for(size_t i = 0; i < K; i++){
-        memM2[i] = (float*)malloc((N)*sizeof(float));
-        if(i<K){
-            for(size_t j = 0; j < N; j++){
-                if(j < N){
-                    memM2[i][j] = static_cast< float >(matrix2[i][j]);
-                }
-            }
-        }
-    }
-    auto ** memresult = (float**)malloc((M)*sizeof(float*));
-    for(size_t i = 0; i < M; i++){
-        memresult[i] = (float*)malloc((N)*sizeof(float));
-        for(size_t j = 0; j < N; j++){
-            memresult[i][j] = 0.0f;
-        }
-    }
     
     for(size_t i = 0; i < M; ++i){
-        auto mat1_ptr_i = memM1[i];
-        auto mem_result_ptr_i = memresult[i];
+        auto mat1_ptr_i = matrix1[i];
+        auto mem_result_ptr_i = result[i];
         for(size_t k = 0; k < K; ++k){
-            auto mat2_ptr_k = memM2[k];
+            auto mat2_ptr_k = matrix2[k];
             auto mat1_ik = mat1_ptr_i[k];
             for(size_t j = 0; j < N; ++j){
                 mem_result_ptr_i[j] += mat1_ik*mat2_ptr_k[j];
             }
         }
-
     }
 
-    for(int i = 0; i < M; i++){
-        auto mem_result_ptr_i = memresult[i];
-        for(int j = 0; j < N; j++){
-            result[i][j] = mem_result_ptr_i[j];
-        }
-    }
-
-    for(size_t i = 0; i < M; i++){
-        free(memM1[i]);
-    }
-    // transpose M2
-    for(size_t i = 0; i < K; i++){
-        free(memM2[i]);
-    }
-    for(size_t i = 0; i < M; i++){
-        free(memresult[i]);
-    }
     return result;
 }
 

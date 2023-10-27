@@ -40,9 +40,12 @@ Matrix matrix_multiply_locality(const Matrix& matrix1, const Matrix& matrix2) {
             d_result[i * N + j] = 0;
         }
     }
+    #pragma acc enter data copyin(d_mat1[0:M*K], d_mat2[0:K*N], d_result[0:M*N]) 
     
+    #pragma acc update device(d_mat1[0:M*K], d_mat2[0:K*N],d_result[0:M*N])
+    #pragma acc parallel present(d_mat1[0:M*K], d_mat2[0:K*N], d_result[0:M*N]) 
     // Parallelize the matrix multiplication using OpenACC
-    #pragma acc parallel loop collapse(2) copyin(d_mat1[0:M*K], d_mat2[0:K*N]) copyout(d_result[0:M*N])
+    #pragma acc loop independent
     for (size_t i = 0; i < M; ++i) {
         for (size_t k = 0; k < K; ++k) {
             for (size_t j = 0; j < N; ++j) {
@@ -50,6 +53,10 @@ Matrix matrix_multiply_locality(const Matrix& matrix1, const Matrix& matrix2) {
             }
         }
     }
+    #pragma acc update self(d_result[0:M*N])
+
+    #pragma acc exit data copyout(d_result[0:M*N])
+
 
     // Copy the result back from GPU to host
     for (size_t i = 0; i < M; i++) {
@@ -98,11 +105,14 @@ int main(int argc, char** argv) {
         // DEBUG THE ANSWER CORRECTNESS
         std::string ans_mat_path;
         if(result.getRows() == 4) ans_mat_path = "results/answers/m12.txt";
-        if(result.getRows() == 128) ans_mat_path = "results/answers/m34.txt";
-        if(result.getRows() == 1024) ans_mat_path = "results/answers/m56.txt";
-        if(result.getRows() == 2048) ans_mat_path = "results/answers/m78.txt";
-        if(result.getRows() == 127) ans_mat_path = "results/answers/m910.txt";
-        if(result.getRows() == 1818) ans_mat_path = "results/answers/m1112.txt";
+        else if(result.getRows() == 128) ans_mat_path = "results/answers/m34.txt";
+        else if(result.getRows() == 1024) ans_mat_path = "results/answers/m56.txt";
+        else if(result.getRows() == 2048) ans_mat_path = "results/answers/m78.txt";
+        else if(result.getRows() == 127) ans_mat_path = "results/answers/m910.txt";
+        else if(result.getRows() == 1818) ans_mat_path = "results/answers/m1112.txt";
+        else if(result.getRows() == 3) ans_mat_path = "results/answers/mab.txt";
+        else if(result.getRows() == 1) ans_mat_path = "results/answers/mcd.txt";
+        else return 0;
         
         std::cout << "ans_mat_path = " << ans_mat_path << std::endl;
         Matrix matrix_ans = Matrix::loadFromFile(ans_mat_path);

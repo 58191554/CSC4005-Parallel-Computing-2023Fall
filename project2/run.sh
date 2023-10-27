@@ -43,6 +43,11 @@ if [ ! -d "results/cuda" ]; then
     echo "[Build Directory for cuda]"
 fi
 
+if [ ! -d "results/openacc" ]; then
+    mkdir -p results/openacc
+    echo "[Build Directory for openacc]"
+fi
+
 # Create the 'build' directory if it doesn't exist and change to it
 mkdir -p build
 cd build

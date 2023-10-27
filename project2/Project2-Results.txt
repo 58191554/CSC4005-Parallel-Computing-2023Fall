@@ -1,64 +1,36 @@
-CUDA 4x4x4 Matrix Mulitiplication
-Max block size for device 0: 1024
-Debug Mode
-ans_mat_path = results/answers/m12.txt
-Answer Correct!
-Matrix Multiply Complete!
-GPU Execution Time: 0.04464 milliseconds
-
-CUDA 128x128x128 Matrix Mulitiplication
-Max block size for device 0: 1024
-Debug Mode
-ans_mat_path = results/answers/m34.txt
-Answer Correct!
-Matrix Multiply Complete!
-GPU Execution Time: 0.145664 milliseconds
-
-CUDA 1024x1024 Matrix Mulitiplication
-Max block size for device 0: 1024
-Debug Mode
-ans_mat_path = results/answers/m56.txt
-Answer Correct!
-Matrix Multiply Complete!
-GPU Execution Time: 31.7019 milliseconds
-
-CUDA 2048x2048 Matrix Mulitiplication
-Max block size for device 0: 1024
-Debug Mode
-ans_mat_path = results/answers/m78.txt
-Answer Correct!
-Matrix Multiply Complete!
-GPU Execution Time: 207.64 milliseconds
-
 OpenACC 4x4x4 Matrix Mulitiplication
-Max block size for device 0: 1024
+M = 4, N = 4, K = 4
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openacc/m12.txt
+Multiplication Complete!
+Execution Time: 981 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m12.txt
 Answer Correct!
-Matrix Multiply Complete!
-GPU Execution Time: 0.081248 milliseconds
 
 OpenACC 128x128x128 Matrix Mulitiplication
-Max block size for device 0: 1024
+M = 128, N = 128, K = 128
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openacc/m34.txt
+Multiplication Complete!
+Execution Time: 946 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m34.txt
 Answer Correct!
-Matrix Multiply Complete!
-GPU Execution Time: 0.148992 milliseconds
 
 OpenACC 1024x1024 Matrix Mulitiplication
-Max block size for device 0: 1024
+M = 1024, N = 1024, K = 1024
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openacc/m56.txt
+Multiplication Complete!
+Execution Time: 1358 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m56.txt
 Answer Correct!
-Matrix Multiply Complete!
-GPU Execution Time: 31.6929 milliseconds
 
 OpenACC 2048x2048 Matrix Mulitiplication
-Max block size for device 0: 1024
+M = 2048, N = 2048, K = 2048
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openacc/m78.txt
+Multiplication Complete!
+Execution Time: 2121 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m78.txt
 Answer Correct!
-Matrix Multiply Complete!
-GPU Execution Time: 203.791 milliseconds
 

@@ -52,7 +52,7 @@ int main(int argc, char** argv) {
     
     cudaMalloc((void**)&d_mat1, M * K * sizeof(int));
     for (int i = 0; i < M; i++) {
-        cudaMemcpy(&d_mat1[i*N], matrix1[i], K * sizeof(int), cudaMemcpyHostToDevice);
+        cudaMemcpy(&d_mat1[i*K], matrix1[i], K * sizeof(int), cudaMemcpyHostToDevice);
     }
     cudaMalloc((void**)&d_mat2, K * N * sizeof(int));
     for (int i = 0; i < K; i++) {
@@ -103,11 +103,14 @@ int main(int argc, char** argv) {
         // DEBUG THE ANSWER CORRECTNESS
         std::string ans_mat_path;
         if(result.getRows() == 4) ans_mat_path = "results/answers/m12.txt";
-        if(result.getRows() == 128) ans_mat_path = "results/answers/m34.txt";
-        if(result.getRows() == 1024) ans_mat_path = "results/answers/m56.txt";
-        if(result.getRows() == 2048) ans_mat_path = "results/answers/m78.txt";
-        if(result.getRows() == 127) ans_mat_path = "results/answers/m910.txt";
-        if(result.getRows() == 1818) ans_mat_path = "results/answers/m1112.txt";
+        else if(result.getRows() == 128) ans_mat_path = "results/answers/m34.txt";
+        else if(result.getRows() == 1024) ans_mat_path = "results/answers/m56.txt";
+        else if(result.getRows() == 2048) ans_mat_path = "results/answers/m78.txt";
+        else if(result.getRows() == 127) ans_mat_path = "results/answers/m910.txt";
+        else if(result.getRows() == 1818) ans_mat_path = "results/answers/m1112.txt";
+        else if(result.getRows() == 3) ans_mat_path = "results/answers/mab.txt";
+        else if(result.getRows() == 1) ans_mat_path = "results/answers/mcd.txt";
+        else return 0;
         
         std::cout << "ans_mat_path = " << ans_mat_path << std::endl;
         Matrix matrix_ans = Matrix::loadFromFile(ans_mat_path);

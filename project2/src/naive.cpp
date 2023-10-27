@@ -10,14 +10,6 @@
 #include "matrix.hpp"
 #include <cstdlib>
 
-size_t gcd(size_t a, size_t b) {
-    while (b != 0) {
-        size_t temp = b;
-        b = a % b;
-        a = temp;
-    }
-    return a;
-}
 
 Matrix matrix_multiply(const Matrix& matrix1, const Matrix& matrix2) {
     if (matrix1.getCols() != matrix2.getRows()) {

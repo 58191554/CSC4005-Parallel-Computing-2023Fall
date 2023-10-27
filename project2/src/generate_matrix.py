@@ -1,7 +1,7 @@
 import random
 
-row_num = 1717
-col_num = 2424
+row_num = 4
+col_num = 4
 
 maximum_limit = 100.0
 

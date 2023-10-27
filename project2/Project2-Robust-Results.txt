@@ -1,148 +1,35 @@
-MPI + OpenMP + SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
-Matrix Multiply 1024x1024
-Number of Processes: 1, Number of Threads: 32
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m910.txt
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/mab.txt
 Multiplication Complete!
-Execution Time: 15 milliseconds
+Execution Time: 0 milliseconds
+
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/mcd.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+
+OpenACC 4x4x4 Matrix Mulitiplication
+M = 127, N = 125, K = 126
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openacc/m910.txt
+Multiplication Complete!
+Execution Time: 987 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m910.txt
 Answer Correct!
 
-Number of Processes: 2, Number of Threads: 16
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m910.txt
+OpenACC 128x128x128 Matrix Mulitiplication
+M = 1818, N = 2424, K = 1717
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openacc/m1112.txt
 Multiplication Complete!
-Execution Time: 27 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m910.txt
-Answer Correct!
-
-Number of Processes: 4, Number of Threads: 8
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m910.txt
-Multiplication Complete!
-Execution Time: 25 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m910.txt
-Answer Correct!
-
-Number of Processes: 8, Number of Threads: 4
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m910.txt
-Multiplication Complete!
-Execution Time: 3 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m910.txt
-Answer Correct!
-
-Number of Processes: 16, Number of Threads: 2
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m910.txt
-Multiplication Complete!
-Execution Time: 5 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m910.txt
-Answer Correct!
-
-Number of Processes: 32, Number of Threads: 1
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m910.txt
-Multiplication Complete!
-Execution Time: 7 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m910.txt
-Answer Correct!
-
-Matrix Multiply 2048x2048
-Number of Processes: 1, Number of Threads: 32
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m1112.txt
-Multiplication Complete!
-Execution Time: 189 milliseconds
+Execution Time: 2406 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m1112.txt
 Answer Correct!
 
-Number of Processes: 2, Number of Threads: 16
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m1112.txt
+OpenACC 1024x1024 Matrix Mulitiplication
+M = 3, N = 5, K = 7
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openacc/mab.txt
 Multiplication Complete!
-Execution Time: 203 milliseconds
+Execution Time: 936 milliseconds
 Debug Mode
-ans_mat_path = results/answers/m1112.txt
-Answer Correct!
-
-Number of Processes: 4, Number of Threads: 8
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m1112.txt
-Multiplication Complete!
-Execution Time: 165 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m1112.txt
-Answer Correct!
-
-Number of Processes: 8, Number of Threads: 4
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m1112.txt
-Multiplication Complete!
-Execution Time: 181 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m1112.txt
-Answer Correct!
-
-Number of Processes: 16, Number of Threads: 2
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m1112.txt
-Multiplication Complete!
-Execution Time: 214 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m1112.txt
-Answer Correct!
-
-Number of Processes: 32, Number of Threads: 1
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m1112.txt
-Multiplication Complete!
-Execution Time: 411 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m1112.txt
-Answer Correct!
-
-Matrix Multiply 127x126x125
-Number of Processes: 1, Number of Threads: 32
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m1112.txt
-Multiplication Complete!
-Execution Time: 208 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m1112.txt
-Answer Correct!
-
-Number of Processes: 2, Number of Threads: 16
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m1112.txt
-Multiplication Complete!
-Execution Time: 166 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m1112.txt
-Answer Correct!
-
-Number of Processes: 4, Number of Threads: 8
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m1112.txt
-Multiplication Complete!
-Execution Time: 246 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m1112.txt
-Answer Correct!
-
-Number of Processes: 8, Number of Threads: 4
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m1112.txt
-Multiplication Complete!
-Execution Time: 183 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m1112.txt
-Answer Correct!
-
-Number of Processes: 16, Number of Threads: 2
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m1112.txt
-Multiplication Complete!
-Execution Time: 231 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m1112.txt
-Answer Correct!
-
-Number of Processes: 32, Number of Threads: 1
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/MPI/m1112.txt
-Multiplication Complete!
-Execution Time: 413 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m1112.txt
+ans_mat_path = results/answers/mab.txt
 Answer Correct!
 
