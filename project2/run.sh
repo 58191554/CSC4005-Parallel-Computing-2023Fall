@@ -62,4 +62,10 @@ make -j4
 
 # execute sbatch.sh
 cd ..
-sbatch src/sbach.sh 
+sbatch src/scripts/naive.sh 
+sbatch src/scripts/task1.sh 
+sbatch src/scripts/task2.sh 
+sbatch src/scripts/task3.sh 
+sbatch src/scripts/task3.sh 
+sbatch src/scripts/task4.sh 
+sbatch src/scripts/task5.sh 

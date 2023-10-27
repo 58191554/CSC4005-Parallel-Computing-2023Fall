@@ -1,0 +1,553 @@
+OpenMP + SIMD + Memory Locality Matrix Multiplication (Optimized with -O2)
+4x4 Number of cores: 1
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix1.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix2.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt 1':
+
+            17,595      cache-references:u                                          
+             8,631      cache-misses:u            #   49.054 % of all cache refs    
+               407      page-faults:u                                               
+         8,862,791      cycles:u                                                    
+         2,806,200      instructions:u            #    0.32  insn per cycle         
+
+       0.006141719 seconds time elapsed
+
+       0.004096000 seconds user
+       0.001024000 seconds sys
+
+
+
+4x4 Number of cores: 2
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix1.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix2.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt 1':
+
+            17,441      cache-references:u                                          
+             8,620      cache-misses:u            #   49.424 % of all cache refs    
+               405      page-faults:u                                               
+         6,681,671      cycles:u                                                    
+         2,494,722      instructions:u            #    0.37  insn per cycle         
+
+       0.003602295 seconds time elapsed
+
+       0.001979000 seconds user
+       0.001979000 seconds sys
+
+
+
+4x4 Number of cores: 4
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix1.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix2.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt 1':
+
+            18,154      cache-references:u                                          
+             9,206      cache-misses:u            #   50.711 % of all cache refs    
+               410      page-faults:u                                               
+         9,466,333      cycles:u                                                    
+         2,866,963      instructions:u            #    0.30  insn per cycle         
+
+       0.003868377 seconds time elapsed
+
+       0.007549000 seconds user
+       0.000000000 seconds sys
+
+
+
+4x4 Number of cores: 8
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
+Multiplication Complete!
+Execution Time: 16 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix1.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix2.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt 1':
+
+            22,844      cache-references:u                                          
+             9,575      cache-misses:u            #   41.915 % of all cache refs    
+               418      page-faults:u                                               
+       188,926,973      cycles:u                                                    
+        27,605,996      instructions:u            #    0.15  insn per cycle         
+
+       0.020251916 seconds time elapsed
+
+       0.121118000 seconds user
+       0.001969000 seconds sys
+
+
+
+4x4 Number of cores: 16
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
+Multiplication Complete!
+Execution Time: 16 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 16 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix1.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix2.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt 1':
+
+            25,051      cache-references:u                                          
+             9,400      cache-misses:u            #   37.523 % of all cache refs    
+               436      page-faults:u                                               
+       307,948,716      cycles:u                                                    
+        44,343,870      instructions:u            #    0.14  insn per cycle         
+
+       0.020777124 seconds time elapsed
+
+       0.224424000 seconds user
+       0.003937000 seconds sys
+
+
+
+4x4 Number of cores: 32
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt
+Multiplication Complete!
+Execution Time: 24 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 32 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix1.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix2.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m12.txt 1':
+
+            29,361      cache-references:u                                          
+            10,062      cache-misses:u            #   34.270 % of all cache refs    
+               471      page-faults:u                                               
+       933,269,677      cycles:u                                                    
+       130,114,067      instructions:u            #    0.14  insn per cycle         
+
+       0.029437388 seconds time elapsed
+
+       0.710092000 seconds user
+       0.007060000 seconds sys
+
+
+
+128x128 Number of cores: 1
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix3.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix4.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt 1':
+
+            25,927      cache-references:u                                          
+             8,699      cache-misses:u            #   33.552 % of all cache refs    
+               472      page-faults:u                                               
+        33,160,487      cycles:u                                                    
+        42,754,404      instructions:u            #    1.29  insn per cycle         
+
+       0.013175470 seconds time elapsed
+
+       0.012224000 seconds user
+       0.001880000 seconds sys
+
+
+
+128x128 Number of cores: 2
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix3.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix4.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt 1':
+
+            25,819      cache-references:u                                          
+             8,846      cache-misses:u            #   34.262 % of all cache refs    
+               473      page-faults:u                                               
+        33,751,303      cycles:u                                                    
+        42,746,497      instructions:u            #    1.27  insn per cycle         
+
+       0.011639144 seconds time elapsed
+
+       0.011978000 seconds user
+       0.002177000 seconds sys
+
+
+
+128x128 Number of cores: 4
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix3.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix4.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt 1':
+
+            33,859      cache-references:u                                          
+            17,989      cache-misses:u            #   53.129 % of all cache refs    
+               478      page-faults:u                                               
+        48,640,457      cycles:u                                                    
+        44,806,488      instructions:u            #    0.92  insn per cycle         
+
+       0.011694864 seconds time elapsed
+
+       0.027488000 seconds user
+       0.001895000 seconds sys
+
+
+
+128x128 Number of cores: 8
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt
+Multiplication Complete!
+Execution Time: 5 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix3.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix4.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt 1':
+
+            36,920      cache-references:u                                          
+            14,452      cache-misses:u            #   39.144 % of all cache refs    
+               487      page-faults:u                                               
+       123,553,500      cycles:u                                                    
+        55,133,359      instructions:u            #    0.45  insn per cycle         
+
+       0.018729641 seconds time elapsed
+
+       0.090825000 seconds user
+       0.004036000 seconds sys
+
+
+
+128x128 Number of cores: 16
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt
+Multiplication Complete!
+Execution Time: 22 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 16 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix3.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix4.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt 1':
+
+            48,768      cache-references:u                                          
+            15,248      cache-misses:u            #   31.266 % of all cache refs    
+               504      page-faults:u                                               
+       621,641,574      cycles:u                                                    
+       124,148,944      instructions:u            #    0.20  insn per cycle         
+
+       0.038992182 seconds time elapsed
+
+       0.388519000 seconds user
+       0.003011000 seconds sys
+
+
+
+128x128 Number of cores: 32
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt
+Multiplication Complete!
+Execution Time: 23 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 32 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix3.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix4.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m34.txt 1':
+
+            64,347      cache-references:u                                          
+            16,723      cache-misses:u            #   25.989 % of all cache refs    
+               539      page-faults:u                                               
+     1,277,661,225      cycles:u                                                    
+       213,494,702      instructions:u            #    0.17  insn per cycle         
+
+       0.040426180 seconds time elapsed
+
+       0.892068000 seconds user
+       0.005000000 seconds sys
+
+
+
+1024x1024 Number of cores: 1
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
+Multiplication Complete!
+Execution Time: 202 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt 1':
+
+        35,032,504      cache-references:u                                          
+           284,022      cache-misses:u            #    0.811 % of all cache refs    
+             4,557      page-faults:u                                               
+     1,840,201,371      cycles:u                                                    
+     3,839,045,926      instructions:u            #    2.09  insn per cycle         
+
+       0.624611821 seconds time elapsed
+
+       0.701861000 seconds user
+       0.032899000 seconds sys
+
+
+
+1024x1024 Number of cores: 2
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
+Multiplication Complete!
+Execution Time: 202 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt 1':
+
+        35,058,374      cache-references:u                                          
+           254,723      cache-misses:u            #    0.727 % of all cache refs    
+             4,558      page-faults:u                                               
+     1,842,583,730      cycles:u                                                    
+     3,837,994,948      instructions:u            #    2.08  insn per cycle         
+
+       0.624748694 seconds time elapsed
+
+       0.712042000 seconds user
+       0.023934000 seconds sys
+
+
+
+1024x1024 Number of cores: 4
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
+Multiplication Complete!
+Execution Time: 115 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt 1':
+
+        35,055,014      cache-references:u                                          
+           518,171      cache-misses:u            #    1.478 % of all cache refs    
+             4,563      page-faults:u                                               
+     1,902,598,036      cycles:u                                                    
+     3,849,026,766      instructions:u            #    2.02  insn per cycle         
+
+       0.537033210 seconds time elapsed
+
+       0.761542000 seconds user
+       0.022956000 seconds sys
+
+
+
+1024x1024 Number of cores: 8
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
+Multiplication Complete!
+Execution Time: 69 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt 1':
+
+        35,081,607      cache-references:u                                          
+           446,901      cache-misses:u            #    1.274 % of all cache refs    
+             4,577      page-faults:u                                               
+     2,020,574,324      cycles:u                                                    
+     3,862,983,263      instructions:u            #    1.91  insn per cycle         
+
+       0.521443591 seconds time elapsed
+
+       0.891888000 seconds user
+       0.020019000 seconds sys
+
+
+
+1024x1024 Number of cores: 16
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
+Multiplication Complete!
+Execution Time: 41 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 16 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt 1':
+
+        35,042,635      cache-references:u                                          
+           428,296      cache-misses:u            #    1.222 % of all cache refs    
+             4,601      page-faults:u                                               
+     2,090,907,022      cycles:u                                                    
+     3,875,465,681      instructions:u            #    1.85  insn per cycle         
+
+       0.497781263 seconds time elapsed
+
+       1.010795000 seconds user
+       0.035097000 seconds sys
+
+
+
+1024x1024 Number of cores: 32
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt
+Multiplication Complete!
+Execution Time: 41 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 32 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m56.txt 1':
+
+        39,701,503      cache-references:u                                          
+           473,748      cache-misses:u            #    1.193 % of all cache refs    
+             4,653      page-faults:u                                               
+     3,121,509,317      cycles:u                                                    
+     4,019,180,423      instructions:u            #    1.29  insn per cycle         
+
+       0.498362942 seconds time elapsed
+
+       1.588545000 seconds user
+       0.029916000 seconds sys
+
+
+
+2048x2048 Number of cores: 1
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
+Multiplication Complete!
+Execution Time: 1869 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 1 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt 1':
+
+       280,453,047      cache-references:u                                          
+        72,134,779      cache-misses:u            #   25.721 % of all cache refs    
+            30,214      page-faults:u                                               
+    12,504,740,864      cycles:u                                                    
+    21,254,262,435      instructions:u            #    1.70  insn per cycle         
+
+       3.499801009 seconds time elapsed
+
+       4.862576000 seconds user
+       0.119767000 seconds sys
+
+
+
+2048x2048 Number of cores: 2
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
+Multiplication Complete!
+Execution Time: 1873 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 2 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt 1':
+
+       278,363,388      cache-references:u                                          
+        70,538,297      cache-misses:u            #   25.340 % of all cache refs    
+            30,246      page-faults:u                                               
+    12,520,340,291      cycles:u                                                    
+    21,242,725,453      instructions:u            #    1.70  insn per cycle         
+
+       3.491159150 seconds time elapsed
+
+       4.870191000 seconds user
+       0.115838000 seconds sys
+
+
+
+2048x2048 Number of cores: 4
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
+Multiplication Complete!
+Execution Time: 995 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 4 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt 1':
+
+       277,778,588      cache-references:u                                          
+       104,809,678      cache-misses:u            #   37.731 % of all cache refs    
+            29,295      page-faults:u                                               
+    13,044,488,549      cycles:u                                                    
+    21,246,445,613      instructions:u            #    1.63  insn per cycle         
+
+       2.619041191 seconds time elapsed
+
+       5.118644000 seconds user
+       0.105827000 seconds sys
+
+
+
+2048x2048 Number of cores: 8
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
+Multiplication Complete!
+Execution Time: 515 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 8 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt 1':
+
+       278,358,497      cache-references:u                                          
+        72,099,572      cache-misses:u            #   25.902 % of all cache refs    
+            16,927      page-faults:u                                               
+    13,173,195,021      cycles:u                                                    
+    21,272,145,638      instructions:u            #    1.61  insn per cycle         
+
+       2.158397740 seconds time elapsed
+
+       5.227184000 seconds user
+       0.115716000 seconds sys
+
+
+
+2048x2048 Number of cores: 16
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
+Multiplication Complete!
+Execution Time: 321 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 16 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt 1':
+
+       340,608,924      cache-references:u                                          
+        68,343,283      cache-misses:u            #   20.065 % of all cache refs    
+            16,960      page-faults:u                                               
+    13,122,092,625      cycles:u                                                    
+    21,325,419,345      instructions:u            #    1.63  insn per cycle         
+
+       2.048563925 seconds time elapsed
+
+       5.332550000 seconds user
+       0.128916000 seconds sys
+
+
+
+2048x2048 Number of cores: 32
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt
+Multiplication Complete!
+Execution Time: 206 milliseconds
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/openmp 32 /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openMP/m78.txt 1':
+
+       322,447,748      cache-references:u                                          
+        41,405,360      cache-misses:u            #   12.841 % of all cache refs    
+            17,028      page-faults:u                                               
+    14,402,746,594      cycles:u                                                    
+    21,434,688,031      instructions:u            #    1.49  insn per cycle         
+
+       1.865380516 seconds time elapsed
+
+       6.228936000 seconds user
+       0.118207000 seconds sys
+
+
+

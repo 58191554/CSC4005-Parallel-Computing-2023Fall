@@ -1,0 +1,92 @@
+CUDA 4x4x4 Matrix Mulitiplication
+Max block size for device 0: 1024
+Debug Mode
+ans_mat_path = results/answers/m12.txt
+Answer Correct!
+Matrix Multiply Complete!
+GPU Execution Time: 0.081888 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/gpu/cudaMul /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix1.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix2.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/cuda/m12.txt 1':
+
+           746,474      cache-references:u                                          
+           189,246      cache-misses:u            #   25.352 % of all cache refs    
+             4,407      page-faults:u                                               
+        46,845,293      cycles:u                                                    
+        45,845,314      instructions:u            #    0.98  insn per cycle         
+
+       1.079974910 seconds time elapsed
+
+       0.018516000 seconds user
+       0.966742000 seconds sys
+
+
+
+CUDA 128x128x128 Matrix Mulitiplication
+Max block size for device 0: 1024
+Debug Mode
+ans_mat_path = results/answers/m34.txt
+Answer Correct!
+Matrix Multiply Complete!
+GPU Execution Time: 0.144928 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/gpu/cudaMul /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix3.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix4.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/cuda/m34.txt 1':
+
+           781,542      cache-references:u                                          
+           178,951      cache-misses:u            #   22.897 % of all cache refs    
+             3,964      page-faults:u                                               
+        62,809,703      cycles:u                                                    
+        86,755,659      instructions:u            #    1.38  insn per cycle         
+
+       1.032703893 seconds time elapsed
+
+       0.030096000 seconds user
+       0.880315000 seconds sys
+
+
+
+CUDA 1024x1024 Matrix Mulitiplication
+Max block size for device 0: 1024
+Debug Mode
+ans_mat_path = results/answers/m56.txt
+Answer Correct!
+Matrix Multiply Complete!
+GPU Execution Time: 31.7006 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/gpu/cudaMul /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/cuda/m56.txt 1':
+
+         1,465,266      cache-references:u                                          
+           547,154      cache-misses:u            #   37.342 % of all cache refs    
+             8,047      page-faults:u                                               
+       956,928,724      cycles:u                                                    
+     2,531,652,614      instructions:u            #    2.65  insn per cycle         
+
+       1.629141128 seconds time elapsed
+
+       0.372812000 seconds user
+       1.009658000 seconds sys
+
+
+
+CUDA 2048x2048 Matrix Mulitiplication
+Max block size for device 0: 1024
+Debug Mode
+ans_mat_path = results/answers/m78.txt
+Answer Correct!
+Matrix Multiply Complete!
+GPU Execution Time: 204.04 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/gpu/cudaMul /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/cuda/m78.txt 1':
+
+         3,505,845      cache-references:u                                          
+         1,989,400      cache-misses:u            #   56.745 % of all cache refs    
+            30,379      page-faults:u                                               
+     3,763,772,887      cycles:u                                                    
+    10,028,707,488      instructions:u            #    2.66  insn per cycle         
+
+       2.977199923 seconds time elapsed
+
+       1.358809000 seconds user
+       1.162712000 seconds sys
+
+
+

@@ -1,35 +1,25 @@
-OpenACC 4x4x4 Matrix Mulitiplication
-M = 4, N = 4, K = 4
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openacc/m12.txt
+Naive Matrix Multiplication (Optimized with -O2)
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive12.txt
 Multiplication Complete!
-Execution Time: 981 milliseconds
+Execution Time: 0 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m12.txt
 Answer Correct!
 
-OpenACC 128x128x128 Matrix Mulitiplication
-M = 128, N = 128, K = 128
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openacc/m34.txt
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive34.txt
 Multiplication Complete!
-Execution Time: 946 milliseconds
+Execution Time: 18 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m34.txt
 Answer Correct!
 
-OpenACC 1024x1024 Matrix Mulitiplication
-M = 1024, N = 1024, K = 1024
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openacc/m56.txt
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive56.txt
 Multiplication Complete!
-Execution Time: 1358 milliseconds
-Debug Mode
-ans_mat_path = results/answers/m56.txt
-Answer Correct!
+Execution Time: 8122 milliseconds
 
-OpenACC 2048x2048 Matrix Mulitiplication
-M = 2048, N = 2048, K = 2048
-Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/openacc/m78.txt
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/naives/naive78.txt
 Multiplication Complete!
-Execution Time: 2121 milliseconds
+Execution Time: 88544 milliseconds
 Debug Mode
 ans_mat_path = results/answers/m78.txt
 Answer Correct!

@@ -1,0 +1,210 @@
+Naive Matrix Multiplication (Optimized with -O2)
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/m12.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/naive /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix1.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix2.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/m12.txt 0':
+
+            15,393      cache-references:u                                          
+             9,188      cache-misses:u            #   59.689 % of all cache refs    
+               356      page-faults:u                                               
+         1,760,044      cycles:u                                                    
+         1,500,014      instructions:u            #    0.85  insn per cycle         
+
+       0.007363103 seconds time elapsed
+
+       0.001293000 seconds user
+       0.001293000 seconds sys
+
+
+
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/m34.txt
+Multiplication Complete!
+Execution Time: 10 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/naive /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix3.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix4.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/m34.txt 0':
+
+            21,173      cache-references:u                                          
+             9,921      cache-misses:u            #   46.857 % of all cache refs    
+               409      page-faults:u                                               
+        39,792,914      cycles:u                                                    
+        92,867,940      instructions:u            #    2.33  insn per cycle         
+
+       0.020187715 seconds time elapsed
+
+       0.013906000 seconds user
+       0.002139000 seconds sys
+
+
+
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/m56.txt
+Multiplication Complete!
+Execution Time: 8116 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/naive /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix5.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix6.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/m56.txt 0':
+
+        68,407,123      cache-references:u                                          
+           334,354      cache-misses:u            #    0.489 % of all cache refs    
+            10,071      page-faults:u                                               
+    23,914,984,164      cycles:u                                                    
+    35,919,247,167      instructions:u            #    1.50  insn per cycle         
+
+       8.427035400 seconds time elapsed
+
+       8.271139000 seconds user
+       0.044892000 seconds sys
+
+
+
+utput file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/mat1112.txt
+Multiplication Complete!
+Execution Time: 71712 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/naive /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix11.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix12.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/mat1112.txt 0':
+
+       477,690,455      cache-references:u                                          
+       104,942,546      cache-misses:u            #   21.969 % of all cache refs    
+            53,581      page-faults:u                                               
+   208,766,473,451      cycles:u                                                    
+   247,982,833,193      instructions:u            #    1.19  insn per cycle         
+
+      72.872479746 seconds time elapsed
+
+      72.192728000 seconds user
+       0.124695000 seconds sys
+
+
+
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/matab.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/naive /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrixa.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrixb.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/matab.txt 0':
+
+            16,079      cache-references:u                                          
+             8,387      cache-misses:u            #   52.161 % of all cache refs    
+               349      page-faults:u                                               
+         1,729,449      cycles:u                                                    
+         1,511,748      instructions:u            #    0.87  insn per cycle         
+
+       0.004302699 seconds time elapsed
+
+       0.000705000 seconds user
+       0.001411000 seconds sys
+
+
+
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/matcd.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/naive /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrixc.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrixd.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/matcd.txt 0':
+
+            15,698      cache-references:u                                          
+             7,710      cache-misses:u            #   49.115 % of all cache refs    
+               349      page-faults:u                                               
+         1,711,022      cycles:u                                                    
+         1,483,445      instructions:u            #    0.87  insn per cycle         
+
+       0.003806925 seconds time elapsed
+
+       0.001316000 seconds user
+       0.000658000 seconds sys
+
+
+
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/m78.txt
+Multiplication Complete!
+Execution Time: 88297 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/naive /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix7.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix8.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/m78.txt 0':
+
+       543,118,105      cache-references:u                                          
+       181,533,769      cache-misses:u            #   33.424 % of all cache refs    
+            54,517      page-faults:u                                               
+   256,283,149,571      cycles:u                                                    
+   281,102,170,234      instructions:u            #    1.10  insn per cycle         
+
+      89.497718869 seconds time elapsed
+
+      88.781498000 seconds user
+       0.159628000 seconds sys
+
+
+
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/m910.txt
+Multiplication Complete!
+Execution Time: 9 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/naive /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix9.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix10.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/m910.txt 0':
+
+            20,753      cache-references:u                                          
+             9,813      cache-misses:u            #   47.285 % of all cache refs    
+               407      page-faults:u                                               
+        37,478,671      cycles:u                                                    
+        88,996,521      instructions:u            #    2.37  insn per cycle         
+
+       0.020894433 seconds time elapsed
+
+       0.011964000 seconds user
+       0.003263000 seconds sys
+
+
+
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/m1112.txt
+Multiplication Complete!
+Execution Time: 75536 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/naive /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix11.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrix12.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/m1112.txt 0':
+
+       477,918,660      cache-references:u                                          
+       157,069,373      cache-misses:u            #   32.865 % of all cache refs    
+            53,298      page-faults:u                                               
+   219,399,531,868      cycles:u                                                    
+   247,977,370,357      instructions:u            #    1.13  insn per cycle         
+
+      76.699389385 seconds time elapsed
+
+      76.008459000 seconds user
+       0.147660000 seconds sys
+
+
+
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/mab.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/naive /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrixa.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrixb.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/mab.txt 0':
+
+            15,293      cache-references:u                                          
+             9,994      cache-misses:u            #   65.350 % of all cache refs    
+               357      page-faults:u                                               
+         1,789,858      cycles:u                                                    
+         1,511,783      instructions:u            #    0.84  insn per cycle         
+
+       0.004559200 seconds time elapsed
+
+       0.000612000 seconds user
+       0.001838000 seconds sys
+
+
+
+Output file to: /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/mcd.txt
+Multiplication Complete!
+Execution Time: 0 milliseconds
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project2/src/../build/src/naive /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrixc.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../matrices/matrixd.txt /nfsmnt/120090694/CSC4005-2023Fall/project2/src/../results/answers/mcd.txt 0':
+
+            15,246      cache-references:u                                          
+             9,585      cache-misses:u            #   62.869 % of all cache refs    
+               357      page-faults:u                                               
+         1,728,599      cycles:u                                                    
+         1,483,458      instructions:u            #    0.86  insn per cycle         
+
+       0.004589061 seconds time elapsed
+
+       0.000000000 seconds user
+       0.002222000 seconds sys
+
+
+

@@ -62,4 +62,4 @@ make -j4
 
 # execute sbatch.sh
 cd ..
-sbatch src/robust_test.sh 
+sbatch src/scripts/robust_test.sh 

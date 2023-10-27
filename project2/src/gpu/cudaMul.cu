@@ -71,7 +71,6 @@ int main(int argc, char** argv) {
     int thread_num_y = 16;
 
     // Determine the grid dimension.
-    // You want one thread block to handle each output element (row x column).
     int blocksPerGridY = (N + thread_num_y - 1) / thread_num_y;
     int blocksPerGridX = (M + thread_num_x - 1) / thread_num_x;
 
