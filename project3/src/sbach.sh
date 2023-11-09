@@ -7,20 +7,22 @@
 #SBATCH --gres=gpu:1
 
 CURRENT_DIR=$(pwd)/src
+big_size=100000000
+small_size=10
 
 # Quick Sort
 # Sequential
-echo "Quick Sort Sequential (Optimized with -O2)"
-srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/quicksort/quicksort_sequential 100000000
-echo ""
-# # MPI
-# echo "Quick Sort MPI (Optimized with -O2)"
-# for num_cores in 1 2 4 8 16 32
-# do
-#   echo "Number of cores: $num_cores"
-#   srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/quicksort/quicksort_mpi 100000000
-# done
+# echo "Quick Sort Sequential (Optimized with -O2)"
+# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/quicksort/quicksort_sequential ${small_size}
 # echo ""
+# MPI
+echo "Quick Sort MPI (Optimized with -O2)"
+for num_cores in 8
+do
+  echo "Number of cores: $num_cores"
+  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/quicksort/quicksort_mpi ${small_size}
+done
+echo ""
 
 # # Bucket Sort
 # # Sequential

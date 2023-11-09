@@ -9,9 +9,12 @@
 #include <iostream>
 #include <vector>
 #include <mpi.h>
+#include <queue>
+#include <utility>
 #include "../utils.hpp"
 
 #define MASTER 0
+#define TAG_GATHER 0
 
 int partition(std::vector<int> &vec, int low, int high) {
     int pivot = vec[high];
@@ -28,10 +31,12 @@ int partition(std::vector<int> &vec, int low, int high) {
     return i + 1;
 }
 
-void quickSort(std::vector<int>& vec, int numtasks, int taskid, MPI_Status* status) {
-    /* Your code here!
-       Implement parallel quick sort with MPI
-    */
+void quickSort(std::vector<int> &vec, int low, int high) {
+    if (low < high) {
+        int pivotIndex = partition(vec, low, high);
+        quickSort(vec, low, pivotIndex - 1);
+        quickSort(vec, pivotIndex + 1, high);
+    }
 }
 
 int main(int argc, char** argv) {
@@ -63,10 +68,90 @@ int main(int argc, char** argv) {
     std::vector<int> vec_clone = vec;
 
     auto start_time = std::chrono::high_resolution_clock::now();
+    for(int i = 0 ; i < size; i++){
+        std::cout << vec[i] << ", " ;
+    }
+    std::cout<< std::endl;
 
-    quickSort(vec, numtasks, taskid, &status);
+    
+    // divide task
+    int num_per_task = size / numtasks;
+    int left_num = size % numtasks;
+    std::vector<int> cuts(numtasks + 1, 0);
+    int divided_left_num = 0;
+    for (int i = 0; i < numtasks; ++i) {
+        if (divided_left_num < left_num) {
+            cuts[i+1] = cuts[i] + num_per_task + 1;
+            divided_left_num++;
+        } else cuts[i+1] = cuts[i] + num_per_task;
+    }
 
     if (taskid == MASTER) {
+        // malloc pointer array for answer storing
+        int ** rows = (int**)malloc(numtasks*sizeof(int*));
+        for(int i = 0; i < numtasks; ++i){
+            rows[i] = (int*)malloc((cuts[i+1]-cuts[i])*sizeof(int));
+        }
+
+        quickSort(vec, cuts[taskid], cuts[taskid+1]-1);
+        auto row = rows[MASTER];
+        int row_size = cuts[MASTER+1]-cuts[MASTER];
+        for(int i = 0; i < row_size; ++i){
+            row[i] = vec[i];
+        }
+
+        for (int tid = MASTER + 1; tid < numtasks; ++tid) {
+            int length = cuts[tid+1]-cuts[tid];
+            MPI_Recv(rows[tid], length, MPI_INT, tid, TAG_GATHER, MPI_COMM_WORLD, &status);
+        }
+
+        std::cout << "CHECK RECEIVE " << std::endl;
+        for(int i = 0; i < numtasks; ++i){
+            auto row = rows[i];
+            for(int j = 0; j < cuts[i+1]-cuts[i]; ++j){
+                std::cout << row[j] << ", ";
+            }
+            std::cout << std::endl;
+        }
+
+        // TODO Merge answers
+        typedef std::pair<int, int> pi; 
+        std::priority_queue<pi , std::vector<pi>, std::greater<pi> >compare_q;  
+        
+        // initialize the queue
+        // std::cout << "INITIALIZE" <<std::endl;
+        int indcies[numtasks];
+        for(int i = 0; i < numtasks; i++){
+            auto p0 = std::make_pair(rows[i][0], i);
+            compare_q.push(p0);
+            indcies[i] = 1;
+            // std::cout << p0.first <<" ,";
+        }
+        // std::cout << std::endl;
+        
+        int index = 0;
+        while(!compare_q.empty()){
+            auto smallest = compare_q.top();
+            // add the smallest element into the vector
+            // std::cout << "<" << smallest.first << ", " << smallest.second << ">, ";
+            vec[index] = smallest.first;
+            index++;
+            compare_q.pop();
+            int row_num = smallest.second;
+            // Check if there are element to add?
+            if(indcies[row_num] <cuts[row_num+1]-cuts[row_num]){
+                compare_q.push(std::make_pair(rows[row_num][indcies[row_num]], row_num));
+                indcies[row_num]+=1;
+            }
+        }
+
+        std::cout <<"ANSWER"<<std::endl;
+        for(int i = 0 ; i < size; i++){
+            std::cout << vec[i] << ", " ;
+        }
+        std::cout<< std::endl;
+
+
         auto end_time = std::chrono::high_resolution_clock::now();
         auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(
             end_time - start_time);
@@ -76,6 +161,10 @@ int main(int argc, char** argv) {
                 << std::endl;
         
         checkSortResult(vec_clone, vec);
+    }else{
+        quickSort(vec, cuts[taskid], cuts[taskid+1]);
+        int slave_size = cuts[taskid+1]-cuts[taskid];
+        MPI_Send(&vec[cuts[taskid]], slave_size, MPI_INT, MASTER, TAG_GATHER, MPI_COMM_WORLD);
     }
 
     MPI_Finalize();

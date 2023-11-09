@@ -1,6 +1,28 @@
-Quick Sort Sequential (Optimized with -O2)
+Quick Sort MPI (Optimized with -O2)
+Number of cores: 8
+8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
+8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
+8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
+8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
+8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
+8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
+8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
+8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
+CHECK RECEIVE 
+1, 8, 
+4, 7, 
+3, 
+2, 
+1, 
+0, 
+0, 
+0, 
+ANSWER
+0, 0, 0, 1, 1, 2, 3, 4, 7, 8, 
 Quick Sort Complete!
-Execution Time: 12816 milliseconds
-std::sort Time: 11872 milliseconds
-Pass the sorting result check!
+Execution Time: 2 milliseconds
+std::sort Time: 0 milliseconds
+Fail to pass the sorting result check!
+2th element of the sorted vector is expected to be 1
+But your 2th element is 0
 
