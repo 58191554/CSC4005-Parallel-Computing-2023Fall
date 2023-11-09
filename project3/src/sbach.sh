@@ -33,7 +33,7 @@ small_bucket=10
 # echo ""
 # MPI
 echo "Bucket Sort MPI (Optimized with -O2)"
-for num_cores in 8
+for num_cores in 2
 do
   echo "Number of cores: $num_cores"
   srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/bucketsort/bucketsort_mpi ${small_size} ${small_bucket}
