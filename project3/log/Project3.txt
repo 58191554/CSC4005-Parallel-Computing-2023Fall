@@ -1,0 +1,6 @@
+Quick Sort Sequential (Optimized with -O2)
+Quick Sort Complete!
+Execution Time: 12816 milliseconds
+std::sort Time: 11872 milliseconds
+Pass the sorting result check!
+
