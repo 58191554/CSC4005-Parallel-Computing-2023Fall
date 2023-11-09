@@ -1,28 +1,32 @@
 Quick Sort MPI (Optimized with -O2)
-Number of cores: 8
-8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
-8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
-8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
-8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
-8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
-8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
-8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
-8, 1, 7, 7, 4, 3, 2, 1, 0, 0, 
-CHECK RECEIVE 
-1, 8, 
-4, 7, 
-3, 
-2, 
-1, 
-0, 
-0, 
-0, 
-ANSWER
-0, 0, 0, 1, 1, 2, 3, 4, 7, 8, 
+Number of cores: 1
 Quick Sort Complete!
-Execution Time: 2 milliseconds
-std::sort Time: 0 milliseconds
-Fail to pass the sorting result check!
-2th element of the sorted vector is expected to be 1
-But your 2th element is 0
+Execution Time: 14435 milliseconds
+std::sort Time: 11975 milliseconds
+Pass the sorting result check!
+Number of cores: 2
+Quick Sort Complete!
+Execution Time: 12701 milliseconds
+std::sort Time: 15963 milliseconds
+Pass the sorting result check!
+Number of cores: 4
+Quick Sort Complete!
+Execution Time: 9175 milliseconds
+std::sort Time: 15980 milliseconds
+Pass the sorting result check!
+Number of cores: 8
+Quick Sort Complete!
+Execution Time: 7927 milliseconds
+std::sort Time: 15882 milliseconds
+Pass the sorting result check!
+Number of cores: 16
+Quick Sort Complete!
+Execution Time: 7909 milliseconds
+std::sort Time: 15966 milliseconds
+Pass the sorting result check!
+Number of cores: 32
+Quick Sort Complete!
+Execution Time: 8660 milliseconds
+std::sort Time: 16122 milliseconds
+Pass the sorting result check!
 

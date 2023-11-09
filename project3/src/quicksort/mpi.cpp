@@ -68,11 +68,6 @@ int main(int argc, char** argv) {
     std::vector<int> vec_clone = vec;
 
     auto start_time = std::chrono::high_resolution_clock::now();
-    for(int i = 0 ; i < size; i++){
-        std::cout << vec[i] << ", " ;
-    }
-    std::cout<< std::endl;
-
     
     // divide task
     int num_per_task = size / numtasks;
@@ -105,35 +100,23 @@ int main(int argc, char** argv) {
             MPI_Recv(rows[tid], length, MPI_INT, tid, TAG_GATHER, MPI_COMM_WORLD, &status);
         }
 
-        std::cout << "CHECK RECEIVE " << std::endl;
-        for(int i = 0; i < numtasks; ++i){
-            auto row = rows[i];
-            for(int j = 0; j < cuts[i+1]-cuts[i]; ++j){
-                std::cout << row[j] << ", ";
-            }
-            std::cout << std::endl;
-        }
 
         // TODO Merge answers
         typedef std::pair<int, int> pi; 
         std::priority_queue<pi , std::vector<pi>, std::greater<pi> >compare_q;  
         
         // initialize the queue
-        // std::cout << "INITIALIZE" <<std::endl;
         int indcies[numtasks];
         for(int i = 0; i < numtasks; i++){
             auto p0 = std::make_pair(rows[i][0], i);
             compare_q.push(p0);
             indcies[i] = 1;
-            // std::cout << p0.first <<" ,";
         }
-        // std::cout << std::endl;
         
         int index = 0;
         while(!compare_q.empty()){
             auto smallest = compare_q.top();
             // add the smallest element into the vector
-            // std::cout << "<" << smallest.first << ", " << smallest.second << ">, ";
             vec[index] = smallest.first;
             index++;
             compare_q.pop();
@@ -145,11 +128,6 @@ int main(int argc, char** argv) {
             }
         }
 
-        std::cout <<"ANSWER"<<std::endl;
-        for(int i = 0 ; i < size; i++){
-            std::cout << vec[i] << ", " ;
-        }
-        std::cout<< std::endl;
 
 
         auto end_time = std::chrono::high_resolution_clock::now();
@@ -162,7 +140,7 @@ int main(int argc, char** argv) {
         
         checkSortResult(vec_clone, vec);
     }else{
-        quickSort(vec, cuts[taskid], cuts[taskid+1]);
+        quickSort(vec, cuts[taskid], cuts[taskid+1]-1);
         int slave_size = cuts[taskid+1]-cuts[taskid];
         MPI_Send(&vec[cuts[taskid]], slave_size, MPI_INT, MASTER, TAG_GATHER, MPI_COMM_WORLD);
     }

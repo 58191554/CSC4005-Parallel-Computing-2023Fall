@@ -17,10 +17,10 @@ small_size=10
 # echo ""
 # MPI
 echo "Quick Sort MPI (Optimized with -O2)"
-for num_cores in 8
+for num_cores in 1 2 4 8 16 32
 do
   echo "Number of cores: $num_cores"
-  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/quicksort/quicksort_mpi ${small_size}
+  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/quicksort/quicksort_mpi ${big_size}
 done
 echo ""
 
