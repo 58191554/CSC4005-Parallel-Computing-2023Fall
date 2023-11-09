@@ -11,8 +11,10 @@
 #include "../utils.hpp"
 
 #define MASTER 0
+#define TAG_GATHER 0
+typedef std::vector<int> vi; 
 
-void insertionSort(std::vector<int>& bucket) {
+void insertionSort(vi& bucket) {
     for (int i = 1; i < bucket.size(); ++i) {
         int key = bucket[i];
         int j = i - 1;
@@ -26,10 +28,37 @@ void insertionSort(std::vector<int>& bucket) {
     }
 }
 
-void bucketSort(std::vector<int>& vec, int num_buckets, int numtasks, int taskid, MPI_Status* status) {
-    /* Your code here!
-       Implement parallel bucket sort with MPI
-    */
+int bucketSort(vi& vec, vi &cuts, int num_per_bucket, int taskid, int * row) {
+
+    // Pre-allocate space to avoid re-allocation
+    int num_buckets = cuts[taskid+1]-cuts[taskid];
+    std::vector<std::vector<int>> buckets(num_buckets);
+    // Pre-allocate space to avoid re-allocation
+    for (std::vector<int>& bucket : buckets) {
+        bucket.reserve(num_per_bucket);
+    }
+
+    int min_bucket_id = cuts[taskid];
+    int max_bucket_id = cuts[taskid+1]-1;
+    // Place each element in the appropriate bucket
+    for(int num: vec){
+        int bucket_id = num/num_per_bucket;
+        // check if the num is in the range of the slave buckets
+        if(bucket_id >= min_bucket_id && bucket_id <= max_bucket_id){
+            buckets[bucket_id].push_back(num);
+        }
+    }
+    // Sort each bucket using insertion sort
+    for (std::vector<int>& bucket : buckets) {
+        insertionSort(bucket);
+    }
+    int index = 0;
+    for (const std::vector<int>& bucket : buckets) {
+        for (int num : bucket) {
+            row[index++] = num;
+        }
+    }
+    return index;
 }
 
 int main(int argc, char** argv) {
@@ -59,14 +88,60 @@ int main(int argc, char** argv) {
 
     const int seed = 4005;
 
-    std::vector<int> vec = createRandomVec(size, seed);
-    std::vector<int> vec_clone = vec;
+    vi vec = createRandomVec(size, seed);
+    vi vec_clone = vec;
 
     auto start_time = std::chrono::high_resolution_clock::now();
 
-    bucketSort(vec, bucket_num, numtasks, taskid, &status);
+    int max_val = *std::max_element(vec.begin(), vec.end());
+    int min_val = *std::min_element(vec.begin(), vec.end());
+    int range = max_val - min_val + 1;
+    // divide bucket
+    int num_per_bucket = range/bucket_num+1;
+    int num_redundent = num_per_bucket*bucket_num-range;
+
+    // divide task
+    int buckets_per_task = bucket_num/numtasks;
+    int buckets_left = bucket_num%numtasks;
+    int divided_bucket_left = 0;
+    vi cuts(numtasks+1, 0);
+    for(int i = 0; i < numtasks; ++i){
+        if(divided_bucket_left<buckets_left){
+            cuts[i+1] = cuts[i] + buckets_per_task + 1;
+            divided_bucket_left ++;
+        }
+        else{
+            cuts[i+1] = cuts[i] + buckets_per_task;
+        }
+    }
 
     if (taskid == MASTER) {
+        int ** rows = (int**)malloc(numtasks*sizeof(int*));
+        for(int i = 0; i < numtasks; ++i){
+            int row_length = (cuts[i+1]-cuts[i])*num_per_bucket;
+            rows[i] = (int*) malloc(row_length*sizeof(int));
+        }
+        int sort_sizes[numtasks];
+        bucketSort(vec, cuts, num_per_bucket, taskid, rows[MASTER]);
+        for (int tid = MASTER + 1; tid < numtasks; ++tid) {
+            int * write_in_pos = rows[tid];
+            int length = (cuts[tid+1] - cuts[tid]) * num_per_bucket;
+            MPI_Recv(write_in_pos, length, MPI_INT, tid, TAG_GATHER, MPI_COMM_WORLD, &status);
+            MPI_Recv(&sort_sizes[tid], 1, MPI_INT, tid, TAG_GATHER, MPI_COMM_WORLD, &status);
+        }
+
+        std::cout << "FUCK ME" << std::endl;
+
+        // load the data from the int array to the vector
+        int index = 0;
+        for(int i = 0; i < numtasks; i++){
+            auto row = rows[i];
+            for(int j = 0; j < sort_sizes[i]; ++j){
+                vec[i*num_per_bucket+j] = row[j];
+                index++;
+            }
+        }
+
         auto end_time = std::chrono::high_resolution_clock::now();
         auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(
             end_time - start_time);
@@ -76,6 +151,16 @@ int main(int argc, char** argv) {
                 << std::endl;
         
         checkSortResult(vec_clone, vec);
+        for(int i = 0; i < numtasks; ++i){
+            free(rows[i]);
+        }        
+        free(rows);
+    }else{
+        int range = (cuts[taskid+1]-cuts[taskid])*num_per_bucket;
+        int * row = (int*)malloc(range*sizeof(int));
+        int row_size = bucketSort(vec, cuts, num_per_bucket, taskid, row);
+        MPI_Send(row, range, MPI_INT, MASTER, TAG_GATHER, MPI_COMM_WORLD);
+        MPI_Send(&row_size, 1, MPI_INT, MASTER, TAG_GATHER, MPI_COMM_WORLD);
     }
 
     MPI_Finalize();
