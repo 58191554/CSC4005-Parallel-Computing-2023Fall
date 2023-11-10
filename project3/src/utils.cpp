@@ -52,9 +52,9 @@ std::vector<int> createRandomVec(int size, int seed) {
 void checkSortResult(std::vector<int>& vec1, std::vector<int>& vec2) {
     auto start_time = std::chrono::high_resolution_clock::now();
     std::sort(vec1.begin(), vec1.end());
-    for(int e:vec1){
-        std::cout << e << ", " ;
-    }
+    // for(int e:vec1){
+    //     std::cout << e << ", " ;
+    // }
     auto end_time = std::chrono::high_resolution_clock::now();
     auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(
         end_time - start_time);
