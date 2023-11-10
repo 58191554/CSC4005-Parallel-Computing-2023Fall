@@ -32,24 +32,26 @@ small_bucket=10
 # srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/bucketsort/bucketsort_sequential 100000000 1000000
 # echo ""
 # MPI
-echo "Bucket Sort MPI (Optimized with -O2)"
-for num_cores in 1 2 4 8 16 32
-do
-  echo "Number of cores: $num_cores"
-  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/bucketsort/bucketsort_mpi ${big_size} ${big_bucket}
-done
-echo ""
-
-# # Odd-Even Sort
-# # Sequential
-# echo "Odd-Even Sort Sequential (Optimized with -O2)"
-# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/odd-even-sort/odd-even-sort_sequential 200000
-# echo ""
-# # MPI
-# echo "Odd-Even Sort MPI (Optimized with -O2)"
+# echo "Bucket Sort MPI (Optimized with -O2)"
 # for num_cores in 1 2 4 8 16 32
 # do
 #   echo "Number of cores: $num_cores"
-#   srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/odd-even-sort/odd-even-sort_mpi 200000
+#   srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/bucketsort/bucketsort_mpi ${big_size} ${big_bucket}
 # done
 # echo ""
+
+oddeven_size=200000
+
+# Odd-Even Sort
+# Sequential
+# echo "Odd-Even Sort Sequential (Optimized with -O2)"
+# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/odd-even-sort/odd-even-sort_sequential ${oddeven_size}
+# echo ""
+# MPI
+echo "Odd-Even Sort MPI (Optimized with -O2)"
+for num_cores in 8
+do
+  echo "Number of cores: $num_cores"
+  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/odd-even-sort/odd-even-sort_mpi ${small_size}
+done
+echo ""

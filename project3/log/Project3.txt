@@ -1,8 +1,625 @@
-Bucket Sort MPI (Optimized with -O2)
-Number of cores: 2
-max = 60
-min = 30
-37, 34, 35, 32, 34, 32, 47, 43, 50, 34, 40, 39, 46, 31, 33, 41, 31, 45, srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** JOB 157193 ON node22 CANCELLED AT 2023-11-10T10:59:54 DUE TO TIME LIMIT ***
-slurmstepd: error: *** STEP 157193.0 ON node22 CANCELLED AT 2023-11-10T10:59:54 DUE TO TIME LIMIT ***
-srun: error: node22: task 1: Terminated
+Odd-Even Sort MPI (Optimized with -O2)
+Number of cores: 8
+37, 6, 34, 35, 22, 18, 13, 5, 3, 0, 4, 1, 32, 28, 25, 28, 34, 32, 47, 43, 50, 19, 34, 40, 11, 9, 24, 24, 29, 39, 27, 22, 2, 46, 7, 31, 33, 13, 22, 20, 41, 5, 24, 22, 31, 5, 11, 45, 41, 43, 
+Index range = <0, 7>: 37, 6, 34, 35, 22, 18, 13, 5, 
+Index range = <8, 14>: 3, 0, 4, 1, 32, 28, 25, 
+Index range = <15, 21>: 28, 34, 32, 47, 43, 50, 19, 
+Index range = <22, 28>: 34, 40, 11, 9, 24, 24, 29, 
+Index range = <29, 35>: 39, 27, 22, 2, 46, 7, 31, 
+Index range = <36, 42>: 33, 13, 22, 20, 41, 5, 24, 
+Index range = <43, 49>: 22, 31, 5, 11, 45, 41, 43, 
+ROUND = 0
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 6, 37, 34, 35, 18, 22, 5, 13, 
+Index range = <8, 14>: 0, 3, 1, 4, 28, 32, 25, 
+Index range = <15, 21>: 28, 32, 34, 43, 47, 19, 50, 
+Index range = <22, 28>: 34, 40, 9, 11, 24, 24, 29, 
+Index range = <29, 35>: 39, 22, 27, 2, 46, 7, 31, 
+Index range = <36, 42>: 13, 33, 20, 22, 5, 41, 22, 
+Index range = <43, 49>: 24, 5, 31, 11, 45, 41, 43, 
+ROUND = 1
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Check Answer after One Iteration
+taskid = 1, state = 1, Communicate with the RIGHT slave
+Index range = <0, 7>: 6, 34, 37, 18, 35, 5, 22, 0, 
+Index range = <8, 14>: 13, 1, 3, 4, 28, 25, 32, 
+Index range = <15, 21>: 28, 32, 34, 43, 19, 47, 34, 
+Index range = <22, 28>: 50, 9, 40, 11, 24, 24, 29, 
+Index range = <29, 35>: 22, 39, 2, 27, 7, 46, 13, 
+Index range = <36, 42>: 31, 20, 33, 5, 22, 22, 41, 
+Index range = <43, 49>: 5, 24, 11, 31, 41, 45, 43, 
+ROUND = 2
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 6, 34, 18, 37, 5, 35, 0, 22, 
+Index range = <8, 14>: 1, 13, 3, 4, 25, 28, 28, 
+Index range = <15, 21>: 32, 32, 34, 19, 43, 34, 47, 
+Index range = <22, 28>: 9, 50, 11, 40, 24, 24, 22, 
+Index range = <29, 35>: 29, 2, 39, 7, 27, 13, 46, 
+Index range = <36, 42>: 20, 31, 5, 33, 22, 22, 5, 
+Index range = <43, 49>: 41, 11, 24, 31, 41, 43, 45, 
+ROUND = 3
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 6, 18, 34, 5, 37, 0, 35, 0, 
+Index range = <8, 14>: 22, 3, 13, 4, 25, 28, 28, 
+Index range = <15, 21>: 32, 32, 19, 34, 34, 43, 9, 
+Index range = <22, 28>: 47, 11, 50, 24, 40, 22, 24, 
+Index range = <29, 35>: 2, 29, 7, 39, 13, 27, 20, 
+Index range = <36, 42>: 46, 5, 31, 22, 33, 5, 22, 
+Index range = <43, 49>: 11, 41, 24, 31, 41, 43, 45, 
+ROUND = 4
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 6, 18, 5, 34, 0, 37, 0, 35, 
+Index range = <8, 14>: 3, 22, 4, 13, 25, 28, 28, 
+Index range = <15, 21>: 32, 19, 32, 34, 34, 9, 43, 
+Index range = <22, 28>: 11, 47, 24, 50, 22, 40, 2, 
+Index range = <29, 35>: 24, 7, 29, 13, 39, 20, 27, 
+Index range = <36, 42>: 5, 46, 22, 31, 5, 33, 11, 
+Index range = <43, 49>: 22, 24, 41, 31, 41, 43, 45, 
+ROUND = 5
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 6, 5, 18, 0, 34, 0, 37, 1, 
+Index range = <8, 14>: 35, 4, 22, 13, 25, 28, 28, 
+Index range = <15, 21>: 19, 32, 32, 34, 9, 34, 11, 
+Index range = <22, 28>: 43, 24, 47, 22, 50, 2, 40, 
+Index range = <29, 35>: 7, 24, 13, 29, 20, 39, 5, 
+Index range = <36, 42>: 27, 22, 46, 5, 31, 11, 33, 
+Index range = <43, 49>: 22, 24, 31, 41, 41, 43, 45, 
+ROUND = 6
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 5, 6, 0, 18, 0, 34, 1, 37, 
+Index range = <8, 14>: 4, 35, 13, 22, 25, 28, 19, 
+Index range = <15, 21>: 28, 32, 32, 9, 34, 11, 34, 
+Index range = <22, 28>: 24, 43, 22, 47, 2, 50, 7, 
+Index range = <29, 35>: 40, 13, 24, 20, 29, 5, 39, 
+Index range = <36, 42>: 22, 27, 5, 46, 11, 31, 22, 
+Index range = <43, 49>: 33, 24, 31, 41, 41, 43, 45, 
+ROUND = 7
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 5, 0, 6, 0, 18, 1, 34, 3, 
+Index range = <8, 14>: 37, 13, 35, 22, 25, 19, 28, 
+taskid = 1, state = 1, Communicate with the RIGHT slave
+Index range = <15, 21>: 28, 32, 9, 32, 11, 34, 24, 
+Index range = <22, 28>: 34, 22, 43, 2, 47, 7, 50, 
+Index range = <29, 35>: 13, 40, 20, 24, 5, 29, 22, 
+Index range = <36, 42>: 39, 5, 27, 11, 46, 22, 31, 
+Index range = <43, 49>: 24, 33, 31, 41, 41, 43, 45, 
+ROUND = 8
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 5, 0, 6, 1, 18, 3, 34, 
+Index range = <8, 14>: 13, 37, 22, 35, 19, 25, 28, 
+Index range = <15, 21>: 28, 9, 32, 11, 32, 24, 34, 
+Index range = <22, 28>: 22, 34, 2, 43, 7, 47, 13, 
+Index range = <29, 35>: 50, 20, 40, 5, 24, 22, 29, 
+Index range = <36, 42>: 5, 39, 11, 27, 22, 46, 24, 
+Index range = <43, 49>: 31, 31, 33, 41, 41, 43, 45, 
+ROUND = 9
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 5, 1, 6, 3, 18, 4, 
+Index range = <8, 14>: 34, 22, 37, 19, 35, 25, 28, 
+Index range = <15, 21>: 9, 28, 11, 32, 24, 32, 22, 
+Index range = <22, 28>: 34, 2, 34, 7, 43, 13, 47, 
+Index range = <29, 35>: 20, 50, 5, 40, 22, 24, 5, 
+Index range = <36, 42>: 29, 11, 39, 22, 27, 24, 46, 
+Index range = <43, 49>: 31, 31, 33, 41, 41, 43, 45, 
+ROUND = 10
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 5, 3, 6, 4, 18, 
+Index range = <8, 14>: 22, 34, 19, 37, 25, 35, 9, 
+Index range = <15, 21>: 28, 11, 28, 24, 32, 22, 32, 
+Index range = <22, 28>: 2, 34, 7, 34, 13, 43, 20, 
+Index range = <29, 35>: 47, 5, 50, 22, 40, 5, 24, 
+Index range = <36, 42>: 11, 29, 22, 39, 24, 27, 31, 
+Index range = <43, 49>: 46, 31, 33, 41, 41, 43, 45, 
+ROUND = 11
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 3, 5, 4, 6, 13, 
+Index range = <8, 14>: 22, 19, 34, 25, 37, 9, 35, 
+Index range = <15, 21>: 11, 28, 24, 28, 22, 32, 2, 
+Index range = <22, 28>: 32, 7, 34, 13, 34, 20, 43, 
+Index range = <29, 35>: 5, 47, 22, 50, 5, 40, 11, 
+Index range = <36, 42>: 24, 22, 29, 24, 39, 27, 31, 
+Index range = <43, 49>: 31, 46, 33, 41, 41, 43, 45, 
+ROUND = 12
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 13, 
+Index range = <8, 14>: 19, 22, 25, 34, 9, 37, 11, 
+Index range = <15, 21>: 35, 24, 28, 22, 28, 2, 32, 
+Index range = <22, 28>: 7, 32, 13, 34, 20, 34, 5, 
+Index range = <29, 35>: 43, 22, 47, 5, 50, 11, 40, 
+Index range = <36, 42>: 22, 24, 24, 29, 27, 39, 31, 
+Index range = <43, 49>: 31, 33, 46, 41, 41, 43, 45, 
+ROUND = 13
+Check Answer after One Iteration
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 13, 
+Index range = <8, 14>: 19, 22, 25, 9, 34, 11, 37, 
+Index range = <15, 21>: 24, 35, 22, 28, 2, 28, 7, 
+Index range = <22, 28>: 32, 13, 32, 20, 34, 5, 34, 
+Index range = <29, 35>: 22, 43, 5, 47, 11, 50, 22, 
+Index range = <36, 42>: 40, 24, 24, 27, 29, 31, 39, 
+Index range = <43, 49>: 31, 33, 41, 46, 41, 43, 45, 
+ROUND = 14
+Check Answer after One Iteration
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 13, 
+Index range = <8, 14>: 19, 22, 9, 25, 11, 34, 24, 
+Index range = <15, 21>: 37, 22, 35, 2, 28, 7, 28, 
+Index range = <22, 28>: 13, 32, 20, 32, 5, 34, 22, 
+Index range = <29, 35>: 34, 5, 43, 11, 47, 22, 50, 
+Index range = <36, 42>: 24, 40, 24, 27, 29, 31, 31, 
+Index range = <43, 49>: 39, 33, 41, 41, 46, 43, 45, 
+ROUND = 15
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 13, 
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Index range = <8, 14>: 19, 9, 22, 11, 25, 24, 34, 
+Index range = <15, 21>: 22, 37, 2, 35, 7, 28, 13, 
+Index range = <22, 28>: 28, 20, 32, 5, 32, 22, 34, 
+Index range = <29, 35>: 5, 34, 11, 43, 22, 47, 24, 
+Index range = <36, 42>: 50, 24, 40, 27, 29, 31, 31, 
+Index range = <43, 49>: 33, 39, 41, 41, 43, 46, 45, 
+ROUND = 16
+Check Answer after One Iteration
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 13, 
+Index range = <8, 14>: 9, 19, 11, 22, 24, 25, 22, 
+Index range = <15, 21>: 34, 2, 37, 7, 35, 13, 28, 
+Index range = <22, 28>: 20, 28, 5, 32, 22, 32, 5, 
+Index range = <29, 35>: 34, 11, 34, 22, 43, 24, 47, 
+Index range = <36, 42>: 24, 50, 27, 40, 29, 31, 31, 
+Index range = <43, 49>: 33, 39, 41, 41, 43, 45, 46, 
+ROUND = 17
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 9, 
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Index range = <8, 14>: 13, 11, 19, 22, 24, 22, 25, 
+Index range = <15, 21>: 2, 34, 7, 37, 13, 35, 20, 
+Index range = <22, 28>: 28, 5, 28, 22, 32, 5, 32, 
+Index range = <29, 35>: 11, 34, 22, 34, 24, 43, 24, 
+Index range = <36, 42>: 47, 27, 50, 29, 40, 31, 31, 
+Index range = <43, 49>: 33, 39, 41, 41, 43, 45, 46, 
+ROUND = 18
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 9, 
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Index range = <8, 14>: 11, 13, 19, 22, 22, 24, 2, 
+Index range = <15, 21>: 25, 7, 34, 13, 37, 20, 35, 
+Index range = <22, 28>: 5, 28, 22, 28, 5, 32, 11, 
+Index range = <29, 35>: 32, 22, 34, 24, 34, 24, 43, 
+Index range = <36, 42>: 27, 47, 29, 50, 31, 40, 31, 
+Index range = <43, 49>: 33, 39, 41, 41, 43, 45, 46, 
+ROUND = 19
+Check Answer after One Iteration
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 9, 
+Index range = <8, 14>: 11, 13, 19, 22, 22, 2, 24, 
+Index range = <15, 21>: 7, 25, 13, 34, 20, 37, 5, 
+Index range = <22, 28>: 35, 22, 28, 5, 28, 11, 32, 
+Index range = <29, 35>: 22, 32, 24, 34, 24, 34, 27, 
+Index range = <36, 42>: 43, 29, 47, 31, 50, 31, 40, 
+Index range = <43, 49>: 33, 39, 41, 41, 43, 45, 46, 
+ROUND = 20
+Check Answer after One Iteration
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 9, 
+Index range = <8, 14>: 11, 13, 19, 22, 2, 22, 7, 
+Index range = <15, 21>: 24, 13, 25, 20, 34, 5, 37, 
+Index range = <22, 28>: 22, 35, 5, 28, 11, 28, 22, 
+Index range = <29, 35>: 32, 24, 32, 24, 34, 27, 34, 
+Index range = <36, 42>: 29, 43, 31, 47, 31, 50, 33, 
+Index range = <43, 49>: 40, 39, 41, 41, 43, 45, 46, 
+ROUND = 21
+Check Answer after One Iteration
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 9, 
+Index range = <8, 14>: 11, 13, 19, 2, 22, 7, 22, 
+Index range = <15, 21>: 13, 24, 20, 25, 5, 34, 22, 
+Index range = <22, 28>: 37, 5, 35, 11, 28, 22, 28, 
+Index range = <29, 35>: 24, 32, 24, 32, 27, 34, 29, 
+Index range = <36, 42>: 34, 31, 43, 31, 47, 33, 50, 
+Index range = <43, 49>: 39, 40, 41, 41, 43, 45, 46, 
+ROUND = 22
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 9, 
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Index range = <8, 14>: 11, 13, 2, 19, 7, 22, 13, 
+Index range = <15, 21>: 22, 20, 24, 5, 25, 22, 34, 
+Index range = <22, 28>: 5, 37, 11, 35, 22, 28, 24, 
+Index range = <29, 35>: 28, 24, 32, 27, 32, 29, 34, 
+Index range = <36, 42>: 31, 34, 31, 43, 33, 47, 39, 
+Index range = <43, 49>: 50, 40, 41, 41, 43, 45, 46, 
+ROUND = 23
+Check Answer after One Iteration
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 9, 
+Index range = <8, 14>: 11, 2, 13, 7, 19, 13, 22, 
+Index range = <15, 21>: 20, 22, 5, 24, 22, 25, 5, 
+Index range = <22, 28>: 34, 11, 37, 22, 35, 24, 28, 
+Index range = <29, 35>: 24, 28, 27, 32, 29, 32, 31, 
+Index range = <36, 42>: 34, 31, 34, 33, 43, 39, 47, 
+Index range = <43, 49>: 40, 50, 41, 41, 43, 45, 46, 
+ROUND = 24
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 9, 
+Index range = <8, 14>: 2, 11, 7, 13, 13, 19, 20, 
+Index range = <15, 21>: 22, 5, 22, 22, 24, 5, 25, 
+Index range = <22, 28>: 11, 34, 22, 37, 24, 35, 24, 
+Index range = <29, 35>: 28, 27, 28, 29, 32, 31, 32, 
+Index range = <36, 42>: 31, 34, 33, 34, 39, 43, 40, 
+Index range = <43, 49>: 47, 41, 50, 41, 43, 45, 46, 
+ROUND = 25
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 6, 2, 
+Index range = <8, 14>: 9, 7, 11, 13, 13, 19, 20, 
+Index range = <15, 21>: 5, 22, 22, 22, 5, 24, 11, 
+Index range = <22, 28>: 25, 22, 34, 24, 37, 24, 35, 
+Index range = <29, 35>: 27, 28, 28, 29, 31, 32, 31, 
+Index range = <36, 42>: 32, 33, 34, 34, 39, 40, 43, 
+Index range = <43, 49>: 41, 47, 41, 50, 43, 45, 46, 
+ROUND = 26
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 3, 4, 5, 2, 6, 
+Index range = <8, 14>: 7, 9, 11, 13, 13, 19, 5, 
+Index range = <15, 21>: 20, 22, 22, 5, 22, 11, 24, 
+Index range = <22, 28>: 22, 25, 24, 34, 24, 37, 27, 
+Index range = <29, 35>: 35, 28, 28, 29, 31, 31, 32, 
+Index range = <36, 42>: 32, 33, 34, 34, 39, 40, 41, 
+Index range = <43, 49>: 43, 41, 47, 43, 50, 45, 46, 
+ROUND = 27
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 3, 4, 2, 5, 6, 
+Index range = <8, 14>: 7, 9, 11, 13, 13, 5, 19, 
+Index range = <15, 21>: 20, 22, 5, 22, 11, 22, 22, 
+Index range = <22, 28>: 24, 24, 25, 24, 34, 27, 37, 
+Index range = <29, 35>: 28, 35, 28, 29, 31, 31, 32, 
+Index range = <36, 42>: 32, 33, 34, 34, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 47, 45, 50, 46, 
+ROUND = 28
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 3, 2, 4, 5, 6, 
+Index range = <8, 14>: 7, 9, 11, 13, 5, 13, 19, 
+Index range = <15, 21>: 20, 5, 22, 11, 22, 22, 22, 
+Index range = <22, 28>: 24, 24, 24, 25, 27, 34, 28, 
+Index range = <29, 35>: 37, 28, 35, 29, 31, 31, 32, 
+Index range = <36, 42>: 32, 33, 34, 34, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 45, 47, 46, 50, 
+ROUND = 29
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 2, 3, 4, 5, 6, 
+Index range = <8, 14>: 7, 9, 11, 5, 13, 13, 19, 
+Index range = <15, 21>: 5, 20, 11, 22, 22, 22, 22, 
+Index range = <22, 28>: 24, 24, 24, 25, 27, 28, 34, 
+Index range = <29, 35>: 28, 37, 29, 35, 31, 31, 32, 
+Index range = <36, 42>: 32, 33, 34, 34, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 45, 46, 47, 48, 
+ROUND = 30
+Check Answer after One Iteration
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Index range = <0, 7>: 0, 0, 1, 2, 3, 4, 5, 6, 
+Index range = <8, 14>: 7, 9, 5, 11, 13, 13, 5, 
+Index range = <15, 21>: 19, 11, 20, 22, 22, 22, 22, 
+Index range = <22, 28>: 24, 24, 24, 25, 27, 28, 28, 
+Index range = <29, 35>: 34, 29, 37, 31, 35, 31, 32, 
+Index range = <36, 42>: 32, 33, 34, 34, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 45, 46, 47, 48, 
+ROUND = 31
+Check Answer after One Iteration
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Index range = <0, 7>: 0, 0, 1, 2, 3, 4, 5, 6, 
+Index range = <8, 14>: 7, 5, 9, 11, 13, 5, 13, 
+Index range = <15, 21>: 11, 19, 20, 22, 22, 22, 22, 
+Index range = <22, 28>: 24, 24, 24, 25, 27, 28, 28, 
+Index range = <29, 35>: 29, 34, 31, 37, 31, 35, 32, 
+Index range = <36, 42>: 32, 33, 34, 34, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 45, 46, 47, 48, 
+ROUND = 32
+Check Answer after One Iteration
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Index range = <0, 7>: 0, 0, 1, 2, 3, 4, 5, 6, 
+Index range = <8, 14>: 5, 7, 9, 11, 5, 13, 11, 
+Index range = <15, 21>: 13, 19, 20, 22, 22, 22, 22, 
+Index range = <22, 28>: 24, 24, 24, 25, 27, 28, 28, 
+Index range = <29, 35>: 29, 31, 34, 31, 37, 32, 35, 
+Index range = <36, 42>: 32, 33, 34, 34, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 45, 46, 47, 48, 
+ROUND = 33
+taskid = 2, state = 1, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 2, 3, 4, 5, 5, 
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Index range = <8, 14>: 6, 7, 9, 5, 11, 11, 13, 
+Index range = <15, 21>: 13, 19, 20, 22, 22, 22, 22, 
+Index range = <22, 28>: 24, 24, 24, 25, 27, 28, 28, 
+Index range = <29, 35>: 29, 31, 31, 34, 32, 37, 32, 
+Index range = <36, 42>: 35, 33, 34, 34, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 45, 46, 47, 48, 
+ROUND = 34
+Check Answer after One Iteration
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Index range = <0, 7>: 0, 0, 1, 2, 3, 4, 5, 5, 
+Index range = <8, 14>: 6, 7, 5, 9, 11, 11, 13, 
+Index range = <15, 21>: 13, 19, 20, 22, 22, 22, 22, 
+Index range = <22, 28>: 24, 24, 24, 25, 27, 28, 28, 
+Index range = <29, 35>: 29, 31, 31, 32, 34, 32, 37, 
+Index range = <36, 42>: 33, 35, 34, 34, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 45, 46, 47, 48, 
+ROUND = 35
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 2, 3, 4, 5, 5, 
+Index range = <8, 14>: 6, 5, 7, 9, 11, 11, 13, 
+Index range = <15, 21>: 13, 19, 20, 22, 22, 22, 22, 
+Index range = <22, 28>: 24, 24, 24, 25, 27, 28, 28, 
+Index range = <29, 35>: 29, 31, 31, 32, 32, 34, 33, 
+Index range = <36, 42>: 37, 34, 35, 34, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 45, 46, 47, 48, 
+ROUND = 36
+Check Answer after One Iteration
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Index range = <0, 7>: 0, 0, 1, 2, 3, 4, 5, 5, 
+Index range = <8, 14>: 5, 6, 7, 9, 11, 11, 13, 
+Index range = <15, 21>: 13, 19, 20, 22, 22, 22, 22, 
+Index range = <22, 28>: 24, 24, 24, 25, 27, 28, 28, 
+Index range = <29, 35>: 29, 31, 31, 32, 32, 33, 34, 
+Index range = <36, 42>: 34, 37, 34, 35, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 45, 46, 47, 48, 
+ROUND = 37
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 2, 3, 4, 5, 5, 
+Index range = <8, 14>: 5, 6, 7, 9, 11, 11, 13, 
+Index range = <15, 21>: 13, 19, 20, 22, 22, 22, 22, 
+Index range = <22, 28>: 24, 24, 24, 25, 27, 28, 28, 
+Index range = <29, 35>: 29, 31, 31, 32, 32, 33, 34, 
+Index range = <36, 42>: 34, 34, 37, 35, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 45, 46, 47, 48, 
+ROUND = 38
+Check Answer after One Iteration
+taskid = 2, state = 0, Communicate with the RIGHT slave
+taskid = 3, state = 0, Communicate with the LEFT slave
+taskid = 4, state = 0, Communicate with the RIGHT slave
+taskid = 5, state = 0, Communicate with the LEFT slave
+taskid = 6, state = 0, Communicate with the RIGHT slave
+taskid = 7, state = 0, Communicate with the LEFT slave
+Index range = <0, 7>: 0, 0, 1, 2, 3, 4, 5, 5, 
+Index range = <8, 14>: 5, 6, 7, 9, 11, 11, 13, 
+Index range = <15, 21>: 13, 19, 20, 22, 22, 22, 22, 
+Index range = <22, 28>: 24, 24, 24, 25, 27, 28, 28, 
+Index range = <29, 35>: 29, 31, 31, 32, 32, 33, 34, 
+Index range = <36, 42>: 34, 34, 35, 37, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 45, 46, 47, 48, 
+ROUND = 39
+taskid = 1, state = 1, Communicate with the RIGHT slave
+taskid = 2, state = 1, Communicate with the LEFT slave
+taskid = 3, state = 1, Communicate with the RIGHT slave
+taskid = 4, state = 1, Communicate with the LEFT slave
+taskid = 5, state = 1, Communicate with the RIGHT slave
+taskid = 6, state = 1, Communicate with the LEFT slave
+Check Answer after One Iteration
+Index range = <0, 7>: 0, 0, 1, 2, 3, 4, 5, 5, 
+Index range = <8, 14>: 5, 6, 7, 9, 11, 11, 13, 
+Index range = <15, 21>: 13, 19, 20, 22, 22, 22, 22, 
+Index range = <22, 28>: 24, 24, 24, 25, 27, 28, 28, 
+Index range = <29, 35>: 29, 31, 31, 32, 32, 33, 34, 
+Index range = <36, 42>: 34, 34, 35, 37, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 45, 46, 47, 48, 
+Check Answer!
+Index range = <0, 7>: 0, 0, 1, 2, 3, 4, 5, 5, 
+Index range = <8, 14>: 5, 6, 7, 9, 11, 11, 13, 
+Index range = <15, 21>: 13, 19, 20, 22, 22, 22, 22, 
+Index range = <22, 28>: 24, 24, 24, 25, 27, 28, 28, 
+Index range = <29, 35>: 29, 31, 31, 32, 32, 33, 34, 
+Index range = <36, 42>: 34, 34, 35, 37, 39, 40, 41, 
+Index range = <43, 49>: 41, 43, 43, 45, 46, 47, 48, 
+Odd-Even Sort Complete!
+Execution Time: 13 milliseconds
+0, 1, 2, 3, 4, 5, 5, 5, 6, 7, 9, 11, 11, 13, 13, 18, 19, 20, 22, 22, 22, 22, 24, 24, 24, 25, 27, 28, 28, 29, 31, 31, 32, 32, 33, 34, 34, 34, 35, 37, 39, 40, 41, 41, 43, 43, 45, 46, 47, 50, std::sort Time: 0 milliseconds
+Fail to pass the sorting result check!
+1th element of the sorted vector is expected to be 1
+But your 1th element is 0
+

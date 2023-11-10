@@ -29,15 +29,12 @@ void insertionSort(vi& bucket) {
     }
 }
 
-void bucketSort(vi& vec, vi &cuts, int min_num, int size, int num_per_bucket, int taskid, int * row, int * sorted_size) {
+void bucketSort(vi& vec, vi &cuts, int min_num, int size, int num_per_bucket, int taskid, int * result) {
     // put number into slave buckets, sort, and report the number in the buckets.
     int b_min = min_num + cuts[taskid] * num_per_bucket;
     int b_max = min_num + cuts[taskid+1]*num_per_bucket;
     int num_buckets = cuts[taskid+1]-cuts[taskid];
     std::vector<std::vector<int>> buckets(num_buckets);
-    for (std::vector<int>& bucket : buckets) {
-        bucket.reserve(size);
-    }
     // std::cout << "max = " << b_max << std::endl;
     // std::cout << "min = " << b_min << std::endl;
     for(int num: vec){
@@ -52,17 +49,17 @@ void bucketSort(vi& vec, vi &cuts, int min_num, int size, int num_per_bucket, in
         insertionSort(bucket);
     }
     // load the sorted data to the row
-    int index = 0;
+    int index = 1;
     for (const std::vector<int>& bucket : buckets) {
         for (int num : bucket) {
-            row[index++] = num;
+            result[index++] = num;
         }
     }
     // for(int i = 0; i < index; ++i){
     //     std::cout << row[i] << ", ";
     // }
     // std::cout << "sorted number = " << index<< std::endl;
-    sorted_size[0] = index;
+    result[0] = index-1;
 }
 
 int main(int argc, char** argv) {
@@ -122,22 +119,22 @@ int main(int argc, char** argv) {
         int ** task_data = (int**)malloc(numtasks*sizeof(int*));
         for(int i = 0; i < numtasks; i++){
             // the bucketed sort can be extremely concentrate
-            task_data[i] = (int*) malloc(size*sizeof(int));
+            // Set the first element in array as size header
+            task_data[i] = (int*) malloc((1+size)*sizeof(int));
         }
-        int * sorted_size = (int*)malloc(numtasks*sizeof(int));
-        bucketSort(vec, cuts, min_val, size, num_per_bucket, MASTER, task_data[MASTER], sorted_size);
+        bucketSort(vec, cuts, min_val, size, num_per_bucket, MASTER, task_data[MASTER]);
 
         for (int tid = MASTER + 1; tid < numtasks; ++tid) {
             int * write_in_pos = task_data[tid];
-            MPI_Recv(write_in_pos, size, MPI_INT, tid, TAG_GATHER, MPI_COMM_WORLD, &status);
-            MPI_Recv(&sorted_size[tid], 1, MPI_INT, tid, TAG_GATHER, MPI_COMM_WORLD, &status);
+            MPI_Recv(write_in_pos, size+1, MPI_INT, tid, TAG_GATHER, MPI_COMM_WORLD, &status);
         }
         // load the data from the int array to the vector
         int index = 0;
         for(int tid = 0; tid < numtasks; ++tid){
             auto result = task_data[tid];
+            int sort_size = result[0];
             // std::cout << "result size" << sorted_size[tid] << std::endl;
-            for(int j = 0; j < sorted_size[tid]; j++){
+            for(int j = 1; j < sort_size+1; j++){
                 // std::cout << "j = " << j << std::endl;
                 vec[index++] = result[j];
             }
@@ -152,12 +149,16 @@ int main(int argc, char** argv) {
                 << std::endl;
 
         checkSortResult(vec_clone, vec);
+        for(int i = 0; i < numtasks; i++){
+            free(task_data[i]);
+        }
+        free(task_data);
     }else{
-        int * result = (int*)malloc(size*sizeof(int));
-        int * sorted_size = (int*)malloc(sizeof(int));
-        bucketSort(vec, cuts, min_val, size, num_per_bucket, taskid, result, sorted_size);
-        MPI_Send(result, size, MPI_INT, MASTER, TAG_GATHER, MPI_COMM_WORLD);
-        MPI_Send(sorted_size, 1, MPI_INT, MASTER, TAG_GATHER, MPI_COMM_WORLD);
+        // set the first int in result as the size header
+        int * result = (int*)malloc((1+size)*sizeof(int));
+        bucketSort(vec, cuts, min_val, size, num_per_bucket, taskid, result);
+        MPI_Send(result, result[0]+1, MPI_INT, MASTER, TAG_GATHER, MPI_COMM_WORLD);
+        free(result);
     }
 
     MPI_Finalize();
