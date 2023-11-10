@@ -49,9 +49,9 @@ oddeven_size=200000
 # echo ""
 # MPI
 echo "Odd-Even Sort MPI (Optimized with -O2)"
-for num_cores in 8
+for num_cores in 16 32
 do
   echo "Number of cores: $num_cores"
-  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/odd-even-sort/odd-even-sort_mpi ${small_size}
+  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/odd-even-sort/odd-even-sort_mpi ${oddeven_size}
 done
 echo ""

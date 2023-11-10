@@ -16,9 +16,34 @@
 #define From_Master 4
 #define From_Slave 5
 
-int oddEvenSort(int * vec, int sid, int oddeven, std::vector<int> &cuts) {
+void singleOddEvenSort(std::vector<int>& vec) {
+    bool sorted = false;
+
+    while (!sorted) {
+        sorted = true;
+
+        // Perform the odd phase
+        for (int i = 1; i < vec.size() - 1; i += 2) {
+            if (vec[i] > vec[i + 1]) {
+                std::swap(vec[i], vec[i + 1]);
+                sorted = false;
+            }
+        }
+
+        // Perform the even phase
+        for (int i = 0; i < vec.size() - 1; i += 2) {
+            if (vec[i] > vec[i + 1]) {
+                std::swap(vec[i], vec[i + 1]);
+                sorted = false;
+            }
+        }
+    }
+}
+
+
+bool oddEvenSort(int * vec, int sid, int oddeven, std::vector<int> &cuts) {
     // return the subdomain updated and need to do the sort again
-    int update = 0;
+    bool update = false;
     int index;
     if(oddeven%2 == 0){
         if(cuts[sid] % 2 == 0){
@@ -35,17 +60,16 @@ int oddEvenSort(int * vec, int sid, int oddeven, std::vector<int> &cuts) {
             index = 1;
         }
     }
-    for(; index < cuts[sid+1]-cuts[sid]; index+=2){
+    for(; index+1 < cuts[sid+1]-cuts[sid]; index+=2){
         int a = vec[index];
         int b = vec[index+1];
         if(b<a){
             vec[index] = b;
             vec[index+1] = a;
-            update = 1;
+            update = true;
         }
     }
     return update;
-
 }
 
 int main(int argc, char** argv) {
@@ -72,7 +96,7 @@ int main(int argc, char** argv) {
     const int size = atoi(argv[1]);
 
     // divide task
-    int numslaves = numtasks-1;
+    int numslaves = numtasks==1 ? 1 : numtasks-1;
     int num_per_slave = size/numslaves;
     int num_left = size%numslaves;
     int divided_number_left = 0;
@@ -96,102 +120,85 @@ int main(int argc, char** argv) {
         std::vector<int> vec = createRandomVec(size, seed);
         std::vector<int> vec_clone = vec;
 
-        for(int i = 0; i < size; i ++){
-            std::cout << vec[i] << ", ";
+
+        if(numtasks == 1){
+            singleOddEvenSort(vec);
         }
-        std::cout << std::endl;
-
-
-
-
-        int load_index = 0;
-        int** task_data = (int**)malloc((numslaves)*sizeof(int*));
-        for(int i = 0; i < numslaves; i++){
-            int cut_length = cuts[i+1]-cuts[i];
-            // the message: (signal) + vec_cut
-            task_data[i] = (int*)malloc((1+cut_length)*sizeof(int));
-            auto message = task_data[i];
-            std::cout << "Index range = <" << cuts[i] << ", " << cuts[i+1]-1 << ">: ";
-            for(int j = 1; j < cut_length + 1; j++){
-                message[j] = vec[load_index++];
-                std::cout << message[j] <<", ";
-            }
-            std::cout << std::endl;
-        }
-
-        bool sorted = false;
-        int round = 0;
-        while (sorted != true)
-        {
-            std::cout << "ROUND = " << round << std::endl;
-            sorted = true;
-            // Construct msg and send
-            for(int tid = MASTER+1; tid<numtasks; tid++){
-                int sid = tid-1;
-                int cut_length = cuts[sid+1]-cuts[sid];
-                int msg_length = cut_length + 1;
-                int * msg = task_data[sid];
-                // add the odd/even signal
-                msg[0] = round%2;
-
-                MPI_Send(msg, msg_length, MPI_INT, tid, From_Master, MPI_COMM_WORLD);                
-            }
-
-            // Collect the sort state, and update the task_data
-            for(int tid = MASTER+1; tid<numtasks; tid++){
-
-                int sid = tid-1;
-                auto write_in_msg = task_data[sid];
-                int cut_length = cuts[sid+1]-cuts[sid];
-                int msg_length = cut_length + 1;
-                // receive data, and update data
-
-                MPI_Recv(write_in_msg, msg_length, MPI_INT, tid, From_Slave, MPI_COMM_WORLD, &status);
-                // check if next sort is needed.
-                if(write_in_msg[0] == 1){
-                    sorted = false;
+        else{
+            int load_index = 0;
+            int** task_data = (int**)malloc((numslaves)*sizeof(int*));
+            for(int i = 0; i < numslaves; i++){
+                int cut_length = cuts[i+1]-cuts[i];
+                // the message: (signal) + vec_cut
+                task_data[i] = (int*)malloc((1+cut_length)*sizeof(int));
+                auto message = task_data[i];
+                for(int j = 1; j < cut_length + 1; j++){
+                    message[j] = vec[load_index++];
                 }
             }
 
+            bool sorted = false;
+            int round = 0;
+            while (sorted != true)
+            {
+                sorted = true;
+                // Construct msg and send
+                for(int tid = MASTER+1; tid<numtasks; tid++){
+                    int sid = tid-1;
+                    int cut_length = cuts[sid+1]-cuts[sid];
+                    int msg_length = cut_length + 1;
+                    int * msg = task_data[sid];
+                    // add the odd/even signal
+                    msg[0] = round%2;
+                    MPI_Send(msg, msg_length, MPI_INT, tid, From_Master, MPI_COMM_WORLD);                
+                }
 
-            std::cout << "Check Answer after One Iteration" << std::endl;
+                // Collect the sort state, and update the task_data
+                for(int tid = MASTER+1; tid<numtasks; tid++){
+                    int sid = tid-1;
+                    auto write_in_msg = task_data[sid];
+                    int cut_length = cuts[sid+1]-cuts[sid];
+                    int msg_length = cut_length + 1;
+                    // receive data, and update data
+                    MPI_Recv(write_in_msg, msg_length, MPI_INT, tid, From_Slave, MPI_COMM_WORLD, &status);
+                    // check if next sort is needed.
+                    if(write_in_msg[0] == 1){
+                        sorted = false;
+                    }
+                }
+
+                // std::cout << "CHECK Answer" << std::endl;
+                // for(int i = 0; i < numslaves; i++){
+                //     auto results = task_data[i];
+                //     int cut_size = cuts[i+1]-cuts[i];
+                //     for(int j = 0; j < cut_size; j++){
+                //         std::cout << results[j+1] << ", ";
+                //     }
+                //     std::cout << std::endl;
+                // }
+                round++;
+            }
+            // Communicate with slave let them stop
+            int stop = -1;
+            for(int tid = MASTER+1; tid < numtasks; tid++){
+                MPI_Send(&stop, 1, MPI_INT, tid, From_Master, MPI_COMM_WORLD);                
+            }
+
+            // load the result in the vec
+            int index = 0;
+            std::cout << "Final Check" << std::endl;
             for(int i = 0; i < numslaves; ++i){
                 auto result = task_data[i];
                 int cut_length = cuts[i+1]-cuts[i];
-                std::cout << "Index range = <" << cuts[i] << ", " << cuts[i+1]-1 << ">: ";
-
                 for(int j = 0; j < cut_length; j++){
-                    std::cout << result[j+1] <<", ";
+                    vec[index] = result[j+1];
+                    std::cout << result[j+1] << ", ";
+                    index++;
                 }
                 std::cout << std::endl;
-
             }
+        }       
 
-            round++;
-        }
-        // Communicate with slave let them stop
-        int stop = -1;
-        for(int tid = MASTER+1; tid < numtasks; tid++){
-            MPI_Send(&stop, 1, MPI_INT, tid, From_Master, MPI_COMM_WORLD);                
-        }
-        
-        // load the result in the vec
-        std::cout << "Check Answer!"<<std::endl;
-        int index = 0;
-        for(int i = 0; i < numslaves; ++i){
-            auto result = task_data[i];
-            int cut_length = cuts[i+1]-cuts[i];
-            std::cout << "Index range = <" << cuts[i] << ", " << cuts[i+1]-1 << ">: ";
-
-            for(int j = 0; j < cut_length; j++){
-                std::cout << result[j+1] <<", ";
-                vec[index] = result[j+1];
-                index++;
-            }
-            std::cout << std::endl;
-
-        }
-        
         auto end_time = std::chrono::high_resolution_clock::now();
         auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(
             end_time - start_time);
@@ -210,6 +217,7 @@ int main(int argc, char** argv) {
         int msg_length = cut_length+1;
         // message = (oddevenSignal) + vec_cut
         int * message = (int*)malloc((cut_length+1)*sizeof(int));
+        int round = 0;
         while(true){
             MPI_Recv(message, msg_length, MPI_INT, MASTER, From_Master, MPI_COMM_WORLD, &status);
             if(message[0] == -1){
@@ -217,6 +225,7 @@ int main(int argc, char** argv) {
             }
             int oddeven = message[0]; 
             int * vec = &message[1];
+            bool update = false;
 
             // check whether the right-most element need to communicate with slave right
             bool rightComm = false;
@@ -232,16 +241,17 @@ int main(int argc, char** argv) {
             // Communicate with the right slave
             if(rightComm && taskid<numtasks-1){
                 int from_right_val;
-                std::cout << "taskid = " << taskid << ", state = " << oddeven << ", Communicate with the RIGHT slave"<< std::endl;
                 MPI_Recv(&from_right_val, 1, MPI_INT, taskid+1, From_Right_TAG, MPI_COMM_WORLD, &status);
                 // compare value
-                if(vec[cut_length-1] < from_right_val){
-                    // Do nothing and send back
-                    MPI_Send(&from_right_val, 1, MPI_INT, taskid+1, From_Left_TAG, MPI_COMM_WORLD);
-                }
-                else{
+                if(vec[cut_length-1] > from_right_val){
                     MPI_Send(&vec[cut_length-1], 1, MPI_INT, taskid+1, From_Left_TAG, MPI_COMM_WORLD);
                     vec[cut_length-1] = from_right_val;
+                    update = update || true;
+                }
+                else{
+                    // Do nothing and send back
+                    MPI_Send(&from_right_val, 1, MPI_INT, taskid+1, From_Left_TAG, MPI_COMM_WORLD);
+
                 }
             }
 
@@ -261,15 +271,15 @@ int main(int argc, char** argv) {
             // communicate with left slave
             if(taskid!=1 && leftComm){
                 int from_left_val;
-                std::cout << "taskid = " << taskid << ", state = " << oddeven << ", Communicate with the LEFT slave"<< std::endl;
                 MPI_Send(&vec[0], 1, MPI_INT, taskid-1, From_Right_TAG, MPI_COMM_WORLD);
                 // Received the compared 
                 MPI_Recv(&from_left_val, 1, MPI_INT, taskid-1, From_Left_TAG, MPI_COMM_WORLD, &status);
                 vec[0] = from_left_val;
             }
-            message[0] = oddEvenSort(vec, sid, oddeven, cuts);
+            update = update || oddEvenSort(vec, sid, oddeven, cuts);
+            message[0] = update ? 1 : 0;
             MPI_Send(message, msg_length, MPI_INT, MASTER, From_Slave, MPI_COMM_WORLD);
-
+            round ++;
         }
         free(message);
     }
