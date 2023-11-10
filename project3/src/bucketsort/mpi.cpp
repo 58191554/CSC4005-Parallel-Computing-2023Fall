@@ -1,6 +1,6 @@
 //
-// Created by Yang Yufan on 2023/10/31.
-// Email: yufanyang1@link.cuhk.edu.cn
+// Created by Zhen Tong 
+// Email: 120090694@link.cuhk.edu.cn
 //
 // Parallel Bucket Sort with MPI
 //
@@ -29,7 +29,7 @@ void insertionSort(vi& bucket) {
     }
 }
 
-int bucketSort(vi& vec, vi &cuts, int min_num, int size, int num_per_bucket, int taskid, int * row) {
+void bucketSort(vi& vec, vi &cuts, int min_num, int size, int num_per_bucket, int taskid, int * row, int * sorted_size) {
     // put number into slave buckets, sort, and report the number in the buckets.
     int b_min = min_num + cuts[taskid] * num_per_bucket;
     int b_max = min_num + cuts[taskid+1]*num_per_bucket;
@@ -38,18 +38,19 @@ int bucketSort(vi& vec, vi &cuts, int min_num, int size, int num_per_bucket, int
     for (std::vector<int>& bucket : buckets) {
         bucket.reserve(size);
     }
+    // std::cout << "max = " << b_max << std::endl;
+    // std::cout << "min = " << b_min << std::endl;
     for(int num: vec){
         if(num<b_max && num >= b_min){
             int bi = (num-b_min)/num_per_bucket;
-            std::cout << num << ", " ;
+            // std::cout << num << ", " ;
             buckets[bi].push_back(num);
         }
     }
-    std::cout <<std::endl;
+    // std::cout <<std::endl;
     for (std::vector<int>& bucket : buckets) {
         insertionSort(bucket);
     }
-
     // load the sorted data to the row
     int index = 0;
     for (const std::vector<int>& bucket : buckets) {
@@ -57,7 +58,11 @@ int bucketSort(vi& vec, vi &cuts, int min_num, int size, int num_per_bucket, int
             row[index++] = num;
         }
     }
-    return index;
+    // for(int i = 0; i < index; ++i){
+    //     std::cout << row[i] << ", ";
+    // }
+    // std::cout << "sorted number = " << index<< std::endl;
+    sorted_size[0] = index;
 }
 
 int main(int argc, char** argv) {
@@ -119,20 +124,21 @@ int main(int argc, char** argv) {
             // the bucketed sort can be extremely concentrate
             task_data[i] = (int*) malloc(size*sizeof(int));
         }
-        int sorted_size[numtasks];
-        sorted_size[MASTER] = bucketSort(vec, cuts, min_val, size, num_per_bucket, MASTER, task_data[MASTER]);
+        int * sorted_size = (int*)malloc(numtasks*sizeof(int));
+        bucketSort(vec, cuts, min_val, size, num_per_bucket, MASTER, task_data[MASTER], sorted_size);
 
         for (int tid = MASTER + 1; tid < numtasks; ++tid) {
             int * write_in_pos = task_data[tid];
             MPI_Recv(write_in_pos, size, MPI_INT, tid, TAG_GATHER, MPI_COMM_WORLD, &status);
-            MPI_Recv(sorted_size, 1, MPI_INT, tid, TAG_GATHER, MPI_COMM_WORLD, &status);
+            MPI_Recv(&sorted_size[tid], 1, MPI_INT, tid, TAG_GATHER, MPI_COMM_WORLD, &status);
         }
-
         // load the data from the int array to the vector
         int index = 0;
         for(int tid = 0; tid < numtasks; ++tid){
             auto result = task_data[tid];
+            // std::cout << "result size" << sorted_size[tid] << std::endl;
             for(int j = 0; j < sorted_size[tid]; j++){
+                // std::cout << "j = " << j << std::endl;
                 vec[index++] = result[j];
             }
         }
@@ -148,9 +154,10 @@ int main(int argc, char** argv) {
         checkSortResult(vec_clone, vec);
     }else{
         int * result = (int*)malloc(size*sizeof(int));
-        int sorted_size = bucketSort(vec, cuts, min_val, size, num_per_bucket, taskid, result);
+        int * sorted_size = (int*)malloc(sizeof(int));
+        bucketSort(vec, cuts, min_val, size, num_per_bucket, taskid, result, sorted_size);
         MPI_Send(result, size, MPI_INT, MASTER, TAG_GATHER, MPI_COMM_WORLD);
-        MPI_Send(&sorted_size, 1, MPI_INT, MASTER, TAG_GATHER, MPI_COMM_WORLD);
+        MPI_Send(sorted_size, 1, MPI_INT, MASTER, TAG_GATHER, MPI_COMM_WORLD);
     }
 
     MPI_Finalize();

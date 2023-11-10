@@ -8,7 +8,7 @@
 
 CURRENT_DIR=$(pwd)/src
 big_size=100000000
-small_size=100
+small_size=50
 big_bucket=1000000
 small_bucket=10
 
@@ -33,10 +33,10 @@ small_bucket=10
 # echo ""
 # MPI
 echo "Bucket Sort MPI (Optimized with -O2)"
-for num_cores in 2
+for num_cores in 1 2 4 8 16 32
 do
   echo "Number of cores: $num_cores"
-  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/bucketsort/bucketsort_mpi ${small_size} ${small_bucket}
+  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/bucketsort/bucketsort_mpi ${big_size} ${big_bucket}
 done
 echo ""
 
