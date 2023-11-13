@@ -1,14 +1,32 @@
 Odd-Even Sort MPI (Optimized with -O2)
+Number of cores: 1
+Odd-Even Sort Complete!
+Execution Time: 41253 milliseconds
+std::sort Time: 16 milliseconds
+Pass the sorting result check!
+Number of cores: 2
+Odd-Even Sort Complete!
+Execution Time: 100473 milliseconds
+std::sort Time: 20 milliseconds
+Pass the sorting result check!
+Number of cores: 4
+Odd-Even Sort Complete!
+Execution Time: 82468 milliseconds
+std::sort Time: 20 milliseconds
+Pass the sorting result check!
+Number of cores: 8
+Odd-Even Sort Complete!
+Execution Time: 55274 milliseconds
+std::sort Time: 20 milliseconds
+Pass the sorting result check!
 Number of cores: 16
 Odd-Even Sort Complete!
-Execution Time: 89046 milliseconds
+Execution Time: 52121 milliseconds
 std::sort Time: 20 milliseconds
 Pass the sorting result check!
 Number of cores: 32
 Odd-Even Sort Complete!
-Execution Time: 89069 milliseconds
+Execution Time: 49094 milliseconds
 std::sort Time: 20 milliseconds
-Fail to pass the sorting result check!
-7th element of the sorted vector is expected to be 3
-But your 7th element is 4
+Pass the sorting result check!
 
