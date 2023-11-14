@@ -1,84 +1,32 @@
-Quick Sort MPI (Optimized with -O2)
-Number of cores: 1
-Quick Sort Complete!
-Execution Time: 14391 milliseconds
-std::sort Time: 11942 milliseconds
-Pass the sorting result check!
-Number of cores: 2
-Quick Sort Complete!
-Execution Time: 12690 milliseconds
-std::sort Time: 15940 milliseconds
-Pass the sorting result check!
-Number of cores: 4
-Quick Sort Complete!
-Execution Time: 9145 milliseconds
-std::sort Time: 15882 milliseconds
-Pass the sorting result check!
-Number of cores: 8
-Quick Sort Complete!
-Execution Time: 8177 milliseconds
-std::sort Time: 15885 milliseconds
-Pass the sorting result check!
-Number of cores: 16
-Quick Sort Complete!
-Execution Time: 7886 milliseconds
-std::sort Time: 15968 milliseconds
-Pass the sorting result check!
-Number of cores: 32
-Quick Sort Complete!
-Execution Time: 8397 milliseconds
-std::sort Time: 16027 milliseconds
-Pass the sorting result check!
-
-Bucket Sort MPI (Optimized with -O2)
-Number of cores: 1
-Bucket Sort Complete!
-Execution Time: 12708 milliseconds
-std::sort Time: 11810 milliseconds
-Pass the sorting result check!
-Number of cores: 2
-Bucket Sort Complete!
-Execution Time: 8376 milliseconds
-std::sort Time: 15120 milliseconds
-Pass the sorting result check!
-Number of cores: 4
-Bucket Sort Complete!
-Execution Time: 4268 milliseconds
-std::sort Time: 15068 milliseconds
-Pass the sorting result check!
-Number of cores: 8
-Bucket Sort Complete!
-Execution Time: 2469 milliseconds
-std::sort Time: 15072 milliseconds
-Pass the sorting result check!
-Number of cores: 16
-Bucket Sort Complete!
-Execution Time: 1699 milliseconds
-std::sort Time: 15150 milliseconds
-Pass the sorting result check!
-Number of cores: 32
-Bucket Sort Complete!
-Execution Time: 1282 milliseconds
-std::sort Time: 15195 milliseconds
-Pass the sorting result check!
-
 Odd-Even Sort MPI (Optimized with -O2)
 Number of cores: 1
 Odd-Even Sort Complete!
-Execution Time: 41257 milliseconds
+Execution Time: 42597 milliseconds
 std::sort Time: 16 milliseconds
 Pass the sorting result check!
 Number of cores: 2
 Odd-Even Sort Complete!
-Execution Time: 100708 milliseconds
-std::sort Time: 20 milliseconds
+Execution Time: 34883 milliseconds
+std::sort Time: 21 milliseconds
 Pass the sorting result check!
 Number of cores: 4
 Odd-Even Sort Complete!
-Execution Time: 82017 milliseconds
-std::sort Time: 20 milliseconds
+Execution Time: 21589 milliseconds
+std::sort Time: 21 milliseconds
 Pass the sorting result check!
 Number of cores: 8
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** JOB 163187 ON node34 CANCELLED AT 2023-11-13T23:10:36 ***
-slurmstepd: error: *** STEP 163187.15 ON node34 CANCELLED AT 2023-11-13T23:10:36 ***
+Odd-Even Sort Complete!
+Execution Time: 13130 milliseconds
+std::sort Time: 21 milliseconds
+Pass the sorting result check!
+Number of cores: 16
+Odd-Even Sort Complete!
+Execution Time: 8291 milliseconds
+std::sort Time: 21 milliseconds
+Pass the sorting result check!
+Number of cores: 32
+Odd-Even Sort Complete!
+Execution Time: 6389 milliseconds
+std::sort Time: 21 milliseconds
+Pass the sorting result check!
+
