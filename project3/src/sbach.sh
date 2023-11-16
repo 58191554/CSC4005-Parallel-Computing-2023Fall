@@ -8,7 +8,7 @@
 
 CURRENT_DIR=$(pwd)/src
 big_size=100000000
-small_size=50
+small_size=50000
 big_bucket=1000000
 small_bucket=10
 
@@ -48,10 +48,24 @@ oddeven_size=200000
 # srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/odd-even-sort/odd-even-sort_sequential ${oddeven_size}
 # echo ""
 # MPI
-echo "Odd-Even Sort MPI (Optimized with -O2)"
+# echo "Odd-Even Sort MPI (Optimized with -O2)"
 for num_cores in 1 2 4 8 16 32
 do
   echo "Number of cores: $num_cores"
   srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/odd-even-sort/odd-even-sort_mpi ${oddeven_size}
 done
 echo ""
+
+# # Merge Sort
+# # Sequential
+# echo "Merge Sort Sequential (Optimized with -O2)"
+# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/mergesort/mergesort_parallel ${big_size}
+# echo ""
+# # MPI
+# echo "Merge Sort MPI (Optimized with -O2)"
+# for num_cores in 1 2 4 8 16 32
+# do
+#   echo "Number of cores: $num_cores"
+#   srun -n $num_cores ${CURRENT_DIR}/../build/src/mergesort/mergesort_parallel ${big_size}
+# done
+# echo ""

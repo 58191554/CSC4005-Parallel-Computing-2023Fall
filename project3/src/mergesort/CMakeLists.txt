@@ -10,7 +10,7 @@ add_executable(mergesort_sequential
         ../utils.cpp ../utils.hpp)
 target_compile_options(mergesort_sequential PRIVATE -O2)
 
-## Parallel
+## OpenMP
 add_executable(mergesort_parallel
         parallel.cpp
         ../utils.cpp ../utils.hpp)

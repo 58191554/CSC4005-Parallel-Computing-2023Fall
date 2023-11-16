@@ -21,9 +21,26 @@ typedef std::vector<int> vi;
 
 void singleSort(std::vector<int>& vec) {
     bool sorted = false;
-
+    int round = 0;
+    int N = sizeof(vec);
     while (!sorted) {
         sorted = true;
+
+        for(int i = 0; i < N; i++){
+            // Perform the odd phase
+            for (int i = 1; i < vec.size() - 1; i += 2) {
+                if (vec[i] > vec[i + 1]) {
+                    std::swap(vec[i], vec[i + 1]);
+                }
+            }
+
+            // Perform the even phase
+            for (int i = 0; i < vec.size() - 1; i += 2) {
+                if (vec[i] > vec[i + 1]) {
+                    std::swap(vec[i], vec[i + 1]);
+                }
+            }
+        }
 
         // Perform the odd phase
         for (int i = 1; i < vec.size() - 1; i += 2) {
@@ -32,7 +49,7 @@ void singleSort(std::vector<int>& vec) {
                 sorted = false;
             }
         }
-
+    
         // Perform the even phase
         for (int i = 0; i < vec.size() - 1; i += 2) {
             if (vec[i] > vec[i + 1]) {
@@ -56,6 +73,7 @@ void oddEvenSort(vi& vec, int numtasks, int taskid, vi& cuts, MPI_Status* status
     // }
     // std::cout << std::endl;
     int round = 0;
+    int N = sizeof(vec);
     while (true) {
         // std::cout << "round = " << round << std::endl;
         // std::cout << "<" << cuts[taskid] << ", " << cuts[taskid+1]-1 <<">=";
@@ -151,29 +169,30 @@ void oddEvenSort(vi& vec, int numtasks, int taskid, vi& cuts, MPI_Status* status
         //     std::cout << vec[i] << ", ";
         // }
 
-
-        // send end signal
-        if(taskid == MASTER){
-            int recv_sorted;
-            int global_sorted = sorted;
-            // std::cout << "tid = Master" << ", sort = " << recv_sorted << std::endl;
-            for(int tid = MASTER+1; tid < numtasks; tid++){
-                MPI_Recv(&recv_sorted, 1, MPI_INT, tid, From_Slave_TAG, MPI_COMM_WORLD, status);
-                global_sorted *= recv_sorted;
-                // std::cout << "tid = " << tid << ", sort = " << recv_sorted << std::endl;
-            }
-            for(int tid = MASTER+1; tid < numtasks; tid++){
-                MPI_Send(&global_sorted, 1, MPI_INT, tid, From_Master_TAG, MPI_COMM_WORLD);
-            }
-            if(global_sorted == 1){
-                break;
-            }
-        }else{
-            int global_sorted;
-            MPI_Send(&sorted, 1, MPI_INT, MASTER, From_Slave_TAG, MPI_COMM_WORLD);
-            MPI_Recv(&global_sorted, 1, MPI_INT, MASTER, From_Master_TAG, MPI_COMM_WORLD, status);
-            if(global_sorted == 1){
-                break;
+        if((round % N == 0)&&(round > N*N)){
+            // send end signal
+            if(taskid == MASTER){
+                int recv_sorted;
+                int global_sorted = sorted;
+                // std::cout << "tid = Master" << ", sort = " << recv_sorted << std::endl;
+                for(int tid = MASTER+1; tid < numtasks; tid++){
+                    MPI_Recv(&recv_sorted, 1, MPI_INT, tid, From_Slave_TAG, MPI_COMM_WORLD, status);
+                    global_sorted *= recv_sorted;
+                    // std::cout << "tid = " << tid << ", sort = " << recv_sorted << std::endl;
+                }
+                for(int tid = MASTER+1; tid < numtasks; tid++){
+                    MPI_Send(&global_sorted, 1, MPI_INT, tid, From_Master_TAG, MPI_COMM_WORLD);
+                }
+                if(global_sorted == 1){
+                    break;
+                }
+            }else{
+                int global_sorted;
+                MPI_Send(&sorted, 1, MPI_INT, MASTER, From_Slave_TAG, MPI_COMM_WORLD);
+                MPI_Recv(&global_sorted, 1, MPI_INT, MASTER, From_Master_TAG, MPI_COMM_WORLD, status);
+                if(global_sorted == 1){
+                    break;
+                }
             }
         }
     }

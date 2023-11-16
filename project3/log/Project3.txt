@@ -1,32 +1,29 @@
-Odd-Even Sort MPI (Optimized with -O2)
 Number of cores: 1
 Odd-Even Sort Complete!
-Execution Time: 42597 milliseconds
-std::sort Time: 16 milliseconds
+Execution Time: 46808 milliseconds
+std::sort Time: 18 milliseconds
 Pass the sorting result check!
 Number of cores: 2
 Odd-Even Sort Complete!
-Execution Time: 34883 milliseconds
-std::sort Time: 21 milliseconds
+Execution Time: 76187 milliseconds
+std::sort Time: 20 milliseconds
 Pass the sorting result check!
 Number of cores: 4
 Odd-Even Sort Complete!
-Execution Time: 21589 milliseconds
-std::sort Time: 21 milliseconds
+Execution Time: 39002 milliseconds
+std::sort Time: 44 milliseconds
 Pass the sorting result check!
 Number of cores: 8
 Odd-Even Sort Complete!
-Execution Time: 13130 milliseconds
-std::sort Time: 21 milliseconds
+Execution Time: 22682 milliseconds
+std::sort Time: 46 milliseconds
 Pass the sorting result check!
 Number of cores: 16
 Odd-Even Sort Complete!
-Execution Time: 8291 milliseconds
-std::sort Time: 21 milliseconds
+Execution Time: 13186 milliseconds
+std::sort Time: 19 milliseconds
 Pass the sorting result check!
 Number of cores: 32
 Odd-Even Sort Complete!
-Execution Time: 6389 milliseconds
-std::sort Time: 21 milliseconds
-Pass the sorting result check!
-
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 168777 ON node37 CANCELLED AT 2023-11-15T23:28:12 ***
