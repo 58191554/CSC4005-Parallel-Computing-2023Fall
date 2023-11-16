@@ -8,7 +8,7 @@
 
 CURRENT_DIR=$(pwd)/src
 big_size=100000000
-small_size=50000
+small_size=500
 big_bucket=1000000
 small_bucket=10
 
@@ -63,7 +63,7 @@ small_bucket=10
 # echo ""
 # OpenMP
 echo "Merge Sort MPI (Optimized with -O2)"
-for num_cores in 1 2 4 8 16 32
+for num_cores in 2 4 8 16 32
 do
   echo "Number of cores: $num_cores"
   srun -n $num_cores ${CURRENT_DIR}/../build/src/mergesort/mergesort_parallel ${num_cores} ${big_size}

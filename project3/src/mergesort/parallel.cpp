@@ -10,62 +10,96 @@
 #include "../utils.hpp"
 #include <cmath>
 
-void merge(std::vector<int>& vec, int left, int mid, int right) {
-    int n1 = mid - left + 1;
-    int n2 = right - mid;
+typedef std::vector<int> vi;
 
-    std::vector<int> leftArray(n1);
-    std::vector<int> rightArray(n2);
 
-    for (int i = 0; i < n1; i++)
-        leftArray[i] = vec[left + i];
-    for (int j = 0; j < n2; j++)
-        rightArray[j] = vec[mid + 1 + j];
 
-    int i = 0, j = 0, k = left;
+void merge(std::vector<int>& vec, int l, int m, int r) {
+    int n1 = m - l + 1;
+    int n2 = r - m;
+
+    // Create temporary vectors
+    std::vector<int> L(n1);
+    std::vector<int> R(n2);
+
+    // Copy data to temporary vectors L[] and R[]
+    for (int i = 0; i < n1; i++) {
+        L[i] = vec[l + i];
+    }
+    for (int i = 0; i < n2; i++) {
+        R[i] = vec[m + 1 + i];
+    }
+
+    // Merge the temporary vectors back into v[l..r]
+    int i = 0; // Initial index of the first subarray
+    int j = 0; // Initial index of the second subarray
+    int k = l; // Initial index of the merged subarray
+
     while (i < n1 && j < n2) {
-        if (leftArray[i] <= rightArray[j]) {
-            vec[k] = leftArray[i];
+        if (L[i] <= R[j]) {
+            vec[k] = L[i];
             i++;
         } else {
-            vec[k] = rightArray[j];
+            vec[k] = R[j];
             j++;
         }
         k++;
     }
 
+    // Copy the remaining elements of L[], if there are any
     while (i < n1) {
-        vec[k] = leftArray[i];
+        vec[k] = L[i];
         i++;
         k++;
     }
 
+    // Copy the remaining elements of R[], if there are any
     while (j < n2) {
-        vec[k] = rightArray[j];
+        vec[k] = R[j];
         j++;
         k++;
     }
 }
 
-void mergeSort(std::vector<int>& vec, int left, int right, int threshold) {
-    if (left < right) {
-        if (right - left <= threshold) {
-            // Sequential merge sort for small chunks
-            std::sort(vec.begin() + left, vec.begin() + right + 1);
-        } else {
-            int mid = left + (right - left) / 2;
-
-            #pragma omp parallel sections
-            {
-                #pragma omp section
-                mergeSort(vec, left, mid, threshold);
-
-                #pragma omp section
-                mergeSort(vec, mid + 1, right, threshold);
-            }
-
-            merge(vec, left, mid, right);
+void mergeSort(std::vector<int>& vec, int num_threads) {
+    vi cuts(num_threads+1, 0);
+    int N = vec.size();
+    int num_per_thread = N/num_threads;
+    int left_num = N%num_threads;
+    int divide_left_num = 0;
+    for(int i = 0; i < num_threads; i++){
+        if(divide_left_num<left_num){
+            cuts[i+1] = cuts[i] + num_per_thread + 1;
+            divide_left_num++;
+        }else{
+            cuts[i+1] = cuts[i] + num_per_thread;
         }
+    }
+    #pragma omp parallel for num_threads(num_threads)
+    for(int i = 0; i < num_threads; ++i){
+        std::sort(vec.begin() + cuts[i], vec.begin() + cuts[i+1]);
+    }
+
+    // merge
+    int num_cuts = num_threads;
+    while(num_cuts>1){
+        #pragma omp parallel for 
+        for(int i = 0; i< num_cuts-1; i+=2){
+            merge(vec, cuts[i], cuts[i+1]-1, cuts[i+2]-1);
+        }
+        int tmp_cuts = (num_cuts%2==0) ? num_cuts/2 : num_cuts/2 +1;
+        // std::cout << "new cuts: ";
+        for(int i = 0; i < num_cuts; i++){
+            if(i < tmp_cuts){
+                cuts[i+1] = cuts[2*(i+1)];
+            }
+            else{
+                cuts[i+1] = 0;
+            }
+            // std::cout << cuts[i] << ", ";
+        }
+        // std::cout << std::endl;
+        num_cuts = tmp_cuts;
     }
 }
 
@@ -91,13 +125,12 @@ int main(int argc, char** argv) {
     std::vector<int> results(size);
 
     auto start_time = std::chrono::high_resolution_clock::now();
-    int n = 1;
-    while(std::pow(2, n)<thread_num+1){
-        n++;
-    }
-    int threshold = size/(std::pow(2, n-1))+1;
 
-    mergeSort(vec, 0, size - 1, threshold);
+    mergeSort(vec, thread_num);
+    // for(int i = 0; i < size; ++i){
+    //     std::cout << vec[i] << ", ";
+    // }
+    // std::cout << std::endl;
 
     auto end_time = std::chrono::high_resolution_clock::now();
     auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(
