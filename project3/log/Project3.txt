@@ -1,29 +1,130 @@
+Merge Sort MPI (Optimized with -O2)
 Number of cores: 1
-Odd-Even Sort Complete!
-Execution Time: 46808 milliseconds
-std::sort Time: 18 milliseconds
+Merge Sort Complete!
+Execution Time: 12070 milliseconds
+std::sort Time: 11833 milliseconds
 Pass the sorting result check!
 Number of cores: 2
-Odd-Even Sort Complete!
-Execution Time: 76187 milliseconds
-std::sort Time: 20 milliseconds
+Merge Sort Complete!
+Execution Time: 6701 milliseconds
+Merge Sort Complete!
+Execution Time: 6741 milliseconds
+std::sort Time: 11842 milliseconds
+std::sort Time: 11839 milliseconds
+Pass the sorting result check!
 Pass the sorting result check!
 Number of cores: 4
-Odd-Even Sort Complete!
-Execution Time: 39002 milliseconds
-std::sort Time: 44 milliseconds
+Merge Sort Complete!
+Execution Time: 8590 milliseconds
+Merge Sort Complete!
+Execution Time: 8612 milliseconds
+Merge Sort Complete!
+Execution Time: 8678 milliseconds
+Merge Sort Complete!
+Execution Time: 8681 milliseconds
+std::sort Time: 11852 milliseconds
+std::sort Time: 11851 milliseconds
+std::sort Time: 11852 milliseconds
+std::sort Time: 11856 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
 Pass the sorting result check!
 Number of cores: 8
-Odd-Even Sort Complete!
-Execution Time: 22682 milliseconds
-std::sort Time: 46 milliseconds
+Merge Sort Complete!
+Execution Time: 7839 milliseconds
+Merge Sort Complete!
+Execution Time: 8333 milliseconds
+Merge Sort Complete!
+Execution Time: 8543 milliseconds
+Merge Sort Complete!
+Execution Time: 9029 milliseconds
+Merge Sort Complete!
+Execution Time: 7539 milliseconds
+Merge Sort Complete!
+Execution Time: 8230 milliseconds
+Merge Sort Complete!
+Execution Time: 8856 milliseconds
+Merge Sort Complete!
+Execution Time: 8711 milliseconds
+std::sort Time: 11981 milliseconds
+Pass the sorting result check!
+std::sort Time: 11931 milliseconds
+std::sort Time: 12088 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+std::sort Time: 11865 milliseconds
+Pass the sorting result check!
+std::sort Time: 14386 milliseconds
+Pass the sorting result check!
+std::sort Time: 14772 milliseconds
+Pass the sorting result check!
+std::sort Time: 14334 milliseconds
+Pass the sorting result check!
+std::sort Time: 14539 milliseconds
 Pass the sorting result check!
 Number of cores: 16
-Odd-Even Sort Complete!
-Execution Time: 13186 milliseconds
-std::sort Time: 19 milliseconds
+Merge Sort Complete!
+Execution Time: 9806 milliseconds
+Merge Sort Complete!
+Execution Time: 9914 milliseconds
+Merge Sort Complete!
+Execution Time: 10021 milliseconds
+Merge Sort Complete!
+Execution Time: 10066 milliseconds
+Merge Sort Complete!
+Execution Time: 10067 milliseconds
+Merge Sort Complete!
+Execution Time: 10061 milliseconds
+Merge Sort Complete!
+Execution Time: 10791 milliseconds
+Merge Sort Complete!
+Execution Time: 10737 milliseconds
+Merge Sort Complete!
+Execution Time: 10786 milliseconds
+Merge Sort Complete!
+Execution Time: 10817 milliseconds
+Merge Sort Complete!
+Execution Time: 10916 milliseconds
+Merge Sort Complete!
+Execution Time: 11070 milliseconds
+Merge Sort Complete!
+Execution Time: 11223 milliseconds
+Merge Sort Complete!
+Execution Time: 10910 milliseconds
+Merge Sort Complete!
+Execution Time: 11309 milliseconds
+Merge Sort Complete!
+Execution Time: 13780 milliseconds
+std::sort Time: 11881 milliseconds
 Pass the sorting result check!
-Number of cores: 32
-Odd-Even Sort Complete!
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** JOB 168777 ON node37 CANCELLED AT 2023-11-15T23:28:12 ***
+std::sort Time: 11876 milliseconds
+Pass the sorting result check!
+std::sort Time: 11881 milliseconds
+std::sort Time: 11886 milliseconds
+std::sort Time: 11884 milliseconds
+std::sort Time: 11888 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+std::sort Time: 11973 milliseconds
+std::sort Time: 11895 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+std::sort Time: 12153 milliseconds
+std::sort Time: 12334 milliseconds
+std::sort Time: 12082 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+std::sort Time: 12043 milliseconds
+Pass the sorting result check!
+std::sort Time: 13269 milliseconds
+std::sort Time: 12040 milliseconds
+Pass the sorting result check!
+std::sort Time: 12346 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+std::sort Time: 13908 milliseconds
+Pass the sorting result check!

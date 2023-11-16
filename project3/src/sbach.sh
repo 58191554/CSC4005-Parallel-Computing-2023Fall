@@ -40,7 +40,7 @@ small_bucket=10
 # done
 # echo ""
 
-oddeven_size=200000
+# oddeven_size=200000
 
 # Odd-Even Sort
 # Sequential
@@ -49,23 +49,23 @@ oddeven_size=200000
 # echo ""
 # MPI
 # echo "Odd-Even Sort MPI (Optimized with -O2)"
-for num_cores in 1 2 4 8 16 32
-do
-  echo "Number of cores: $num_cores"
-  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/odd-even-sort/odd-even-sort_mpi ${oddeven_size}
-done
-echo ""
-
-# # Merge Sort
-# # Sequential
-# echo "Merge Sort Sequential (Optimized with -O2)"
-# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/mergesort/mergesort_parallel ${big_size}
-# echo ""
-# # MPI
-# echo "Merge Sort MPI (Optimized with -O2)"
 # for num_cores in 1 2 4 8 16 32
 # do
 #   echo "Number of cores: $num_cores"
-#   srun -n $num_cores ${CURRENT_DIR}/../build/src/mergesort/mergesort_parallel ${big_size}
+#   srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/odd-even-sort/odd-even-sort_mpi ${oddeven_size}
 # done
 # echo ""
+
+# Merge Sort
+# Sequential
+# echo "Merge Sort Sequential (Optimized with -O2)"
+# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/mergesort/mergesort_sequential ${big_size}
+# echo ""
+# OpenMP
+echo "Merge Sort MPI (Optimized with -O2)"
+for num_cores in 1 2 4 8 16 32
+do
+  echo "Number of cores: $num_cores"
+  srun -n $num_cores ${CURRENT_DIR}/../build/src/mergesort/mergesort_parallel ${num_cores} ${big_size}
+done
+echo ""
