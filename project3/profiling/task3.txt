@@ -1,0 +1,914 @@
+Odd-Even Sort MPI (Optimized with -O2)
+Number of cores: 1
+Odd-Even Sort Complete!
+Execution Time: 37411 milliseconds
+std::sort Time: 16 milliseconds
+Pass the sorting result check!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+   107,997,280,687      cycles:u                                                    
+   160,222,015,385      instructions:u            #    1.48  insn per cycle         
+       857,956,879      cache-references:u                                          
+           189,906      cache-misses:u            #    0.022 % of all cache refs    
+
+      37.469770442 seconds time elapsed
+
+      37.349055000 seconds user
+       0.010974000 seconds sys
+
+
+Number of cores: 2
+Odd-Even Sort Complete!
+Execution Time: 32267 milliseconds
+std::sort Time: 21 milliseconds
+Pass the sorting result check!
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    93,108,669,541      cycles:u                                                    
+   110,496,980,778      instructions:u            #    1.19  insn per cycle         
+    93,102,319,600      cycles:u                                                    
+   110,611,116,975      instructions:u            #    1.19  insn per cycle         
+       331,693,194      cache-references:u                                          
+           577,933      cache-misses:u            #    0.174 % of all cache refs    
+
+      32.323672913 seconds time elapsed
+
+      32.212271000 seconds user
+       359,262,608      cache-references:u                                          
+           245,415      cache-misses:u            #    0.068 % of all cache refs    
+
+      32.323767595 seconds time elapsed
+
+      32.215459000 seconds user
+       0.014964000 seconds sys
+
+
+       0.019953000 seconds sys
+
+
+Number of cores: 4
+Odd-Even Sort Complete!
+Execution Time: 19552 milliseconds
+std::sort Time: 21 milliseconds
+Pass the sorting result check!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    56,374,629,356      cycles:u                                                    
+    55,496,575,749      instructions:u            #    0.98  insn per cycle         
+         2,064,362      cache-references:u                                          
+         1,820,146      cache-misses:u            #   88.170 % of all cache refs    
+
+      19.617482278 seconds time elapsed
+
+      19.532481000 seconds user
+       0.020951000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    55,456,421,456      cycles:u                                                    
+    87,300,279,629      instructions:u            #    1.57  insn per cycle         
+         3,032,267      cache-references:u                                          
+         2,787,907      cache-misses:u            #   91.941 % of all cache refs    
+
+      19.618642635 seconds time elapsed
+
+      19.303823000 seconds user
+       0.250413000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    56,396,865,518      cycles:u                                                    
+    53,950,416,941      instructions:u            #    0.96  insn per cycle         
+         8,291,308      cache-references:u                                          
+         1,045,161      cache-misses:u            #   12.606 % of all cache refs    
+
+      19.964032703 seconds time elapsed
+
+    55,469,537,358      cycles:u                                                    
+    87,195,109,202      instructions:u            #    1.57  insn per cycle         
+        13,092,536      cache-references:u                                          
+         3,657,692      cache-misses:u            #   27.937 % of all cache refs    
+
+      19.976251995 seconds time elapsed
+
+      19.292053000 seconds user
+       0.262375000 seconds sys
+
+
+      19.541578000 seconds user
+       0.016959000 seconds sys
+
+
+Number of cores: 8
+Odd-Even Sort Complete!
+Execution Time: 11418 milliseconds
+std::sort Time: 21 milliseconds
+Pass the sorting result check!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    32,133,432,269      cycles:u                                                    
+    54,806,202,452      instructions:u            #    1.71  insn per cycle         
+         4,741,780      cache-references:u                                          
+         4,454,305      cache-misses:u            #   93.937 % of all cache refs    
+
+      11.956731652 seconds time elapsed
+
+      11.234555000 seconds user
+       0.204518000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    32,779,993,119      cycles:u                                                    
+    34,616,661,939      instructions:u            #    1.06  insn per cycle         
+         4,597,151      cache-references:u                                          
+         4,402,463      cache-misses:u            #   95.765 % of all cache refs    
+
+      11.942998350 seconds time elapsed
+
+      11.370873000 seconds user
+       0.067832000 seconds sys
+
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    32,739,087,818      cycles:u                                                    
+    33,545,692,500      instructions:u            #    1.02  insn per cycle         
+         2,208,269      cache-references:u                                          
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    32,806,407,536      cycles:u                                                    
+    34,275,806,264      instructions:u            #    1.04  insn per cycle         
+         2,760,443      cache-references:u                                          
+         2,587,533      cache-misses:u            #   93.736 % of all cache refs    
+
+      11.484276901 seconds time elapsed
+
+      11.376885000 seconds user
+       0.062850000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    32,432,571,516      cycles:u                                                    
+    46,680,302,479      instructions:u            #    1.44  insn per cycle         
+         2,865,342      cache-references:u                                          
+         2,626,101      cache-misses:u            #   91.651 % of all cache refs    
+
+      12.006966430 seconds time elapsed
+
+      11.303208000 seconds user
+       0.136676000 seconds sys
+
+
+    32,171,976,575      cycles:u                                                    
+    54,133,856,178      instructions:u            #    1.68  insn per cycle         
+         3,514,009      cache-references:u                                          
+         3,151,691      cache-misses:u            #   89.689 % of all cache refs    
+
+      11.483214816 seconds time elapsed
+
+      11.211959000 seconds user
+       0.227451000 seconds sys
+
+
+    32,431,374,901      cycles:u                                                    
+    46,515,994,754      instructions:u            #    1.43  insn per cycle         
+         5,031,188      cache-references:u                                          
+         4,736,202      cache-misses:u            #   94.137 % of all cache refs    
+
+      11.492838377 seconds time elapsed
+
+      11.299226000 seconds user
+       0.140666000 seconds sys
+
+
+         2,015,851      cache-misses:u            #   91.286 % of all cache refs    
+
+      11.489854972 seconds time elapsed
+
+      11.373131000 seconds user
+       0.065844000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    32,735,789,046      cycles:u                                                    
+    33,244,541,060      instructions:u            #    1.02  insn per cycle         
+         1,681,015      cache-references:u                                          
+         1,327,314      cache-misses:u            #   78.959 % of all cache refs    
+
+      11.939206605 seconds time elapsed
+
+      11.372100000 seconds user
+       0.074816000 seconds sys
+
+
+Number of cores: 16
+Odd-Even Sort Complete!
+Execution Time: 6103 milliseconds
+std::sort Time: 21 milliseconds
+Pass the sorting result check!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    17,225,774,503      cycles:u                                                    
+    27,993,659,683      instructions:u            #    1.63  insn per cycle         
+    17,331,021,727      cycles:u                                                    
+    24,840,133,508      instructions:u            #    1.43  insn per cycle         
+         4,479,363      cache-references:u                                          
+         3,985,690      cache-misses:u            #   88.979 % of all cache refs    
+
+       6.590410798 seconds time elapsed
+
+       6.049890000 seconds user
+       0.088792000 seconds sys
+
+
+         5,250,527      cache-references:u                                          
+         4,606,552      cache-misses:u            #   87.735 % of all cache refs    
+
+       6.615526154 seconds time elapsed
+
+       6.018285000 seconds user
+       0.120704000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    17,193,328,107      cycles:u                                                    
+    28,707,737,304      instructions:u            #    1.67  insn per cycle         
+         4,826,947      cache-references:u                                          
+         4,144,191      cache-misses:u            #   85.855 % of all cache refs    
+
+       6.750328301 seconds time elapsed
+
+       6.003968000 seconds user
+       0.135660000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    17,550,829,894      cycles:u                                                    
+    16,756,080,666      instructions:u            #    0.95  insn per cycle         
+         4,106,589      cache-references:u                                          
+         3,536,802      cache-misses:u            #   86.125 % of all cache refs    
+
+       6.611160912 seconds time elapsed
+
+       6.113597000 seconds user
+       0.024945000 seconds sys
+
+
+    17,548,291,921      cycles:u                                                    
+    17,958,858,553      instructions:u            #    1.02  insn per cycle         
+         3,479,615      cache-references:u                                          
+         3,100,413      cache-misses:u            #   89.102 % of all cache refs    
+
+       6.621264292 seconds time elapsed
+
+       6.099178000 seconds user
+       0.039909000 seconds sys
+
+
+    17,548,195,166      cycles:u                                                    
+    17,709,898,813      instructions:u            #    1.01  insn per cycle         
+         3,776,073      cache-references:u                                          
+         3,462,715      cache-misses:u            #   91.701 % of all cache refs    
+
+       6.186773656 seconds time elapsed
+
+       6.103277000 seconds user
+       0.035919000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    17,253,575,586      cycles:u                                                    
+    27,274,364,244      instructions:u            #    1.58  insn per cycle         
+         4,553,221      cache-references:u                                          
+         3,806,269      cache-misses:u            #   83.595 % of all cache refs    
+
+       6.635458680 seconds time elapsed
+
+       6.021128000 seconds user
+       0.117728000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    17,460,492,125      cycles:u                                                    
+    20,383,231,664      instructions:u            #    1.17  insn per cycle         
+    17,489,778,335      cycles:u                                                    
+    20,312,112,587      instructions:u            #    1.16  insn per cycle         
+         3,766,271      cache-references:u                                          
+         3,579,371      cache-misses:u            #   95.038 % of all cache refs    
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    17,363,262,099      cycles:u                                                    
+    24,592,468,418      instructions:u            #    1.42  insn per cycle         
+         4,971,757      cache-references:u                                          
+         4,627,132      cache-misses:u            #   93.068 % of all cache refs    
+
+       6.176703299 seconds time elapsed
+
+       6.045953000 seconds user
+       0.093766000 seconds sys
+
+
+         4,744,854      cache-references:u                                          
+         4,074,869      cache-misses:u            #   85.880 % of all cache refs    
+
+       6.642738436 seconds time elapsed
+
+       6.067427000 seconds user
+       0.071815000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+       6.171527918 seconds time elapsed
+
+       6.086395000 seconds user
+       0.052873000 seconds sys
+
+
+    17,573,781,844      cycles:u                                                    
+    16,758,369,029      instructions:u            #    0.95  insn per cycle         
+         2,800,658      cache-references:u                                          
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    17,217,571,384      cycles:u                                                    
+    28,621,932,411      instructions:u            #    1.66  insn per cycle         
+         2,627,402      cache-misses:u            #   93.814 % of all cache refs    
+
+       6.175258398 seconds time elapsed
+
+       6.094249000 seconds user
+       0.045888000 seconds sys
+
+
+    17,279,439,691      cycles:u                                                    
+    27,148,161,855      instructions:u            #    1.57  insn per cycle         
+         3,383,116      cache-references:u                                          
+         3,091,956      cache-misses:u            #   91.394 % of all cache refs    
+
+       6.181238251 seconds time elapsed
+
+       6.031344000 seconds user
+       0.108735000 seconds sys
+
+
+         4,934,396      cache-references:u                                          
+         4,573,903      cache-misses:u            #   92.694 % of all cache refs    
+
+       6.175733667 seconds time elapsed
+
+       6.014708000 seconds user
+       0.124703000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    17,246,997,898      cycles:u                                                    
+    27,920,001,520      instructions:u            #    1.62  insn per cycle         
+         3,789,236      cache-references:u                                          
+         3,469,698      cache-misses:u            #   91.567 % of all cache refs    
+
+       6.172938346 seconds time elapsed
+
+       6.023519000 seconds user
+       0.115721000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    17,392,566,039      cycles:u                                                    
+    20,749,859,845      instructions:u            #    1.19  insn per cycle         
+         2,517,265      cache-references:u                                          
+         2,252,076      cache-misses:u            #   89.465 % of all cache refs    
+
+       6.189087641 seconds time elapsed
+
+       6.056463000 seconds user
+       0.083812000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+    17,375,883,521      cycles:u                                                    
+    21,338,298,673      instructions:u            #    1.23  insn per cycle         
+         2,598,518      cache-references:u                                          
+         1,788,395      cache-misses:u            #   68.824 % of all cache refs    
+
+       6.579650727 seconds time elapsed
+
+       6.077654000 seconds user
+       0.071842000 seconds sys
+
+
+Number of cores: 32
+Odd-Even Sort Complete!
+Execution Time: 3120 milliseconds
+std::sort Time: 21 milliseconds
+Pass the sorting result check!
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,971,595,052      cycles:u                                                    
+    11,163,595,893      instructions:u            #    1.24  insn per cycle         
+         5,739,517      cache-references:u                                          
+         4,918,676      cache-misses:u            #   85.698 % of all cache refs    
+
+       3.190778085 seconds time elapsed
+
+       3.130618000 seconds user
+       0.032943000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,978,885,538      cycles:u                                                    
+    10,259,918,740      instructions:u            #    1.14  insn per cycle         
+         4,491,659      cache-references:u                                          
+         3,835,587      cache-misses:u            #   85.394 % of all cache refs    
+
+       3.189420865 seconds time elapsed
+
+       3.128775000 seconds user
+       0.034908000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,851,472,198      cycles:u                                                    
+    14,427,174,182      instructions:u            #    1.63  insn per cycle         
+         5,447,718      cache-references:u                                          
+         4,858,330      cache-misses:u            #   89.181 % of all cache refs    
+
+       3.206083174 seconds time elapsed
+
+       3.105613000 seconds user
+       0.059819000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,900,206,060      cycles:u                                                    
+    13,181,600,000      instructions:u            #    1.48  insn per cycle         
+         7,061,295      cache-references:u                                          
+         5,653,517      cache-misses:u            #   80.063 % of all cache refs    
+
+       3.192612523 seconds time elapsed
+
+       3.112400000 seconds user
+       0.051889000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,873,482,880      cycles:u                                                    
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,871,274,617      cycles:u                                                    
+    14,169,051,921      instructions:u            #    1.60  insn per cycle         
+         4,964,501      cache-references:u                                          
+    13,808,609,166      instructions:u            #    1.56  insn per cycle         
+         6,907,708      cache-references:u                                          
+         5,199,384      cache-misses:u            #   75.269 % of all cache refs    
+
+       3.192067567 seconds time elapsed
+
+       3.102646000 seconds user
+       0.062871000 seconds sys
+
+
+         3,820,385      cache-misses:u            #   76.954 % of all cache refs    
+
+       3.191770945 seconds time elapsed
+
+       3.108850000 seconds user
+       0.055907000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,986,475,121      cycles:u                                                    
+    10,470,704,026      instructions:u            #    1.17  insn per cycle         
+         5,571,331      cache-references:u                                          
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,890,422,040      cycles:u                                                    
+    13,419,324,025      instructions:u            #    1.51  insn per cycle         
+         7,183,958      cache-references:u                                          
+         5,989,145      cache-misses:u            #   83.368 % of all cache refs    
+
+         4,706,935      cache-misses:u            #   84.485 % of all cache refs    
+
+       3.197654474 seconds time elapsed
+
+       3.129749000 seconds user
+       0.035916000 seconds sys
+
+
+       3.200525613 seconds time elapsed
+
+       3.107596000 seconds user
+       0.057880000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,909,586,903      cycles:u                                                    
+    11,571,520,411      instructions:u            #    1.30  insn per cycle         
+         2,514,338      cache-references:u                                          
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,934,421,506      cycles:u                                                    
+    11,209,168,840      instructions:u            #    1.25  insn per cycle         
+         4,204,018      cache-references:u                                          
+         3,432,941      cache-misses:u            #   81.659 % of all cache refs    
+
+       5.839434544 seconds time elapsed
+
+       3.115983000 seconds user
+       0.049871000 seconds sys
+
+
+     8,833,645,516      cycles:u                                                    
+    13,999,749,456      instructions:u            #    1.58  insn per cycle         
+         8,994,930      cache-references:u                                          
+         7,393,224      cache-misses:u            #   82.193 % of all cache refs    
+
+       3.622101875 seconds time elapsed
+
+       3.102161000 seconds user
+       0.062881000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,828,657,258      cycles:u                                                    
+    14,054,317,595      instructions:u            #    1.59  insn per cycle         
+         8,228,228      cache-references:u                                          
+         6,817,375      cache-misses:u            #   82.854 % of all cache refs    
+
+       3.796697489 seconds time elapsed
+
+       3.104640000 seconds user
+       0.060875000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,842,278,781      cycles:u                                                    
+    14,458,415,239      instructions:u            #    1.64  insn per cycle         
+         5,711,327      cache-references:u                                          
+         5,297,355      cache-misses:u            #   92.752 % of all cache refs    
+
+       3.203698736 seconds time elapsed
+
+       3.093284000 seconds user
+       0.071867000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,814,826,752      cycles:u                                                    
+    14,466,057,884      instructions:u            #    1.64  insn per cycle         
+         5,915,982      cache-references:u                                          
+         4,584,155      cache-misses:u            #   77.488 % of all cache refs    
+
+       3.809777277 seconds time elapsed
+
+       3.103592000 seconds user
+       0.061872000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,892,753,653      cycles:u                                                    
+    13,522,133,889      instructions:u            #    1.52  insn per cycle         
+         4,758,958      cache-references:u                                          
+         4,093,216      cache-misses:u            #   86.011 % of all cache refs    
+
+       3.191203310 seconds time elapsed
+
+       3.100986000 seconds user
+       0.063855000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,912,686,068      cycles:u                                                    
+    12,934,577,260      instructions:u            #    1.45  insn per cycle         
+         4,341,098      cache-references:u                                          
+         3,833,418      cache-misses:u            #   88.305 % of all cache refs    
+
+       3.195424049 seconds time elapsed
+
+       3.115412000 seconds user
+       0.049910000 seconds sys
+
+
+         2,003,863      cache-misses:u            #   79.697 % of all cache refs    
+
+       3.601592743 seconds time elapsed
+
+       3.116217000 seconds user
+       0.048893000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,952,553,112      cycles:u                                                    
+    10,540,618,813      instructions:u            #    1.18  insn per cycle         
+         4,472,734      cache-references:u                                          
+         3,906,142      cache-misses:u            #   87.332 % of all cache refs    
+
+       3.194454391 seconds time elapsed
+
+       3.126437000 seconds user
+       0.038905000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,834,112,316      cycles:u                                                    
+    13,912,451,830      instructions:u            #    1.57  insn per cycle         
+         5,290,639      cache-references:u                                          
+         4,254,068      cache-misses:u            #   80.407 % of all cache refs    
+
+       3.650591551 seconds time elapsed
+
+       3.106346000 seconds user
+       0.058892000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,812,528,093      cycles:u                                                    
+    14,435,998,218      instructions:u            #    1.64  insn per cycle         
+         4,859,267      cache-references:u                                          
+         3,668,686      cache-misses:u            #   75.499 % of all cache refs    
+
+       3.542358137 seconds time elapsed
+
+       3.103872000 seconds user
+       0.061857000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,908,855,192      cycles:u                                                    
+    11,485,197,376      instructions:u            #    1.29  insn per cycle         
+         2,115,266      cache-references:u                                          
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,844,510,596      cycles:u                                                    
+    12,180,665,313      instructions:u            #    1.38  insn per cycle         
+           794,830      cache-references:u                                          
+           391,851      cache-misses:u            #   49.300 % of all cache refs    
+
+       3.601599470 seconds time elapsed
+
+       3.104875000 seconds user
+       0.060860000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,861,952,499      cycles:u                                                    
+    13,155,259,589      instructions:u            #    1.48  insn per cycle         
+         6,400,729      cache-references:u                                          
+         4,449,434      cache-misses:u            #   69.514 % of all cache refs    
+
+       3.595160908 seconds time elapsed
+
+       3.114829000 seconds user
+       0.050899000 seconds sys
+
+
+           408,243      cache-misses:u            #   19.300 % of all cache refs    
+
+       3.545888816 seconds time elapsed
+
+       3.121642000 seconds user
+       0.043910000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,845,923,397      cycles:u                                                    
+    13,588,520,241      instructions:u            #    1.54  insn per cycle         
+         4,787,665      cache-references:u                                          
+         3,841,048      cache-misses:u            #   80.228 % of all cache refs    
+
+       3.535145260 seconds time elapsed
+
+       3.107865000 seconds user
+       0.057885000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,937,779,404      cycles:u                                                    
+    10,435,639,413      instructions:u            #    1.17  insn per cycle         
+         2,429,979      cache-references:u                                          
+           479,033      cache-misses:u            #   19.713 % of all cache refs    
+
+       3.632228160 seconds time elapsed
+
+       3.129377000 seconds user
+       0.036933000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,942,087,447      cycles:u                                                    
+    10,180,483,606      instructions:u            #    1.14  insn per cycle         
+         1,929,225      cache-references:u                                          
+           274,724      cache-misses:u            #   14.240 % of all cache refs    
+
+       3.539836201 seconds time elapsed
+
+       3.128100000 seconds user
+       0.037916000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,945,142,401      cycles:u                                                    
+     9,964,176,479      instructions:u            #    1.11  insn per cycle         
+         2,351,995      cache-references:u                                          
+           459,318      cache-misses:u            #   19.529 % of all cache refs    
+
+       3.988207000 seconds time elapsed
+
+       3.121053000 seconds user
+       0.044914000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,946,833,132      cycles:u                                                    
+    10,149,776,693      instructions:u            #    1.13  insn per cycle         
+         4,142,382      cache-references:u                                          
+         3,336,656      cache-misses:u            #   80.549 % of all cache refs    
+
+       3.634955715 seconds time elapsed
+
+       3.129443000 seconds user
+       0.036934000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,940,496,444      cycles:u                                                    
+    10,569,973,377      instructions:u            #    1.18  insn per cycle         
+         5,228,658      cache-references:u                                          
+         4,266,625      cache-misses:u            #   81.601 % of all cache refs    
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,873,682,925      cycles:u                                                    
+    12,698,863,037      instructions:u            #    1.43  insn per cycle         
+         5,567,942      cache-references:u                                          
+         3,775,828      cache-misses:u            #   67.814 % of all cache refs    
+
+       3.570162216 seconds time elapsed
+
+       3.113171000 seconds user
+       0.052917000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,943,181,977      cycles:u                                                    
+     9,857,253,198      instructions:u            #    1.10  insn per cycle         
+         1,890,812      cache-references:u                                          
+           230,475      cache-misses:u            #   12.189 % of all cache refs    
+
+       4.043457693 seconds time elapsed
+
+       3.131646000 seconds user
+       0.034940000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,878,884,433      cycles:u                                                    
+    11,461,961,453      instructions:u            #    1.29  insn per cycle         
+         2,225,977      cache-references:u                                          
+           375,577      cache-misses:u            #   16.872 % of all cache refs    
+
+       3.580820864 seconds time elapsed
+
+       3.129521000 seconds user
+       0.035925000 seconds sys
+
+
+       3.580144978 seconds time elapsed
+
+       3.122476000 seconds user
+       0.043922000 seconds sys
+
+
+
+ Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/odd-even-sort/odd-even-sort_mpi 200000':
+
+     8,879,046,671      cycles:u                                                    
+    12,422,020,609      instructions:u            #    1.40  insn per cycle         
+         3,721,342      cache-references:u                                          
+         2,237,382      cache-misses:u            #   60.123 % of all cache refs    
+
+       5.104523586 seconds time elapsed
+
+       3.110706000 seconds user
+       0.067819000 seconds sys
+
+
+

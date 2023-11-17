@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -o log/task1.txt
+#SBATCH -o profiling/task1.txt
 #SBATCH -p Project
 #SBATCH -J Project3
 #SBATCH --nodes=1
