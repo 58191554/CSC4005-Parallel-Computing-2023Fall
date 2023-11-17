@@ -9,3 +9,4 @@ make -j4
 # Run
 cd ..
 sbatch src/sbach.sh
+sbatch src/sbach_bonus.sh

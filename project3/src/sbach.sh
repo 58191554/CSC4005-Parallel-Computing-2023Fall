@@ -11,20 +11,21 @@ big_size=100000000
 small_size=50
 big_bucket=1000000
 small_bucket=10
-
+perf_command="perf stat -e cycles,instructions,cache-references,cache-misses"
 # Quick Sort
 # Sequential
 # echo "Quick Sort Sequential (Optimized with -O2)"
 # srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/quicksort/quicksort_sequential ${small_size}
 # echo ""
 # MPI
-# echo "Quick Sort MPI (Optimized with -O2)"
-# for num_cores in 1 2 4 8 16 32
-# do
-#   echo "Number of cores: $num_cores"
-#   srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/quicksort/quicksort_mpi ${big_size}
-# done
-# echo ""
+echo "Quick Sort MPI (Optimized with -O2)"
+for num_cores in 1 2 4 8 16 32
+do
+  echo "Number of cores: $num_cores"
+  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/quicksort/quicksort_mpi ${big_size}
+  # srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/quicksort/quicksort_mpi ${big_size}
+done
+echo ""
 
 # Bucket Sort
 # Sequential
@@ -32,13 +33,13 @@ small_bucket=10
 # srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/bucketsort/bucketsort_sequential 100000000 1000000
 # echo ""
 # MPI
-# echo "Bucket Sort MPI (Optimized with -O2)"
-# for num_cores in 1 2 4 8 16 32
-# do
-#   echo "Number of cores: $num_cores"
-#   srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/bucketsort/bucketsort_mpi ${big_size} ${big_bucket}
-# done
-# echo ""
+echo "Bucket Sort MPI (Optimized with -O2)"
+for num_cores in 1 2 4 8 16 32
+do
+  echo "Number of cores: $num_cores"
+  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/bucketsort/bucketsort_mpi ${big_size} ${big_bucket}
+done
+echo ""
 
 # oddeven_size=200000
 
@@ -48,33 +49,11 @@ small_bucket=10
 # srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/odd-even-sort/odd-even-sort_sequential ${oddeven_size}
 # echo ""
 # MPI
-# echo "Odd-Even Sort MPI (Optimized with -O2)"
-# for num_cores in 1 2 4 8 16 32
-# do
-#   echo "Number of cores: $num_cores"
-#   srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/odd-even-sort/odd-even-sort_mpi ${oddeven_size}
-# done
-# echo ""
-
-# Merge Sort
-# Sequential
-# echo "Merge Sort Sequential (Optimized with -O2)"
-# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/../build/src/mergesort/mergesort_sequential ${big_size}
-# echo ""
-# OpenMP
-# echo "Merge Sort OpenMP (Optimized with -O2)"
-for num_cores in 32
+echo "Odd-Even Sort MPI (Optimized with -O2)"
+for num_cores in 1 2 4 8 16 32
 do
   echo "Number of cores: $num_cores"
-  srun -n $num_cores ${CURRENT_DIR}/../build/src/mergesort/mergesort_parallel ${num_cores} ${big_size}
+  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/odd-even-sort/odd-even-sort_mpi ${oddeven_size}
 done
 echo ""
 
-# Task 5
-# echo "Quick Sort OpenMP (Optimized with -O2)"
-# for num_cores in 1 2 4 8 16 32
-# do
-#   echo "Number of cores: $num_cores"
-#   srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/quicksort/quicksort_parallel ${num_cores} ${big_size}
-# done
-# echo ""

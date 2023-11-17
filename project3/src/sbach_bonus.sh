@@ -1,31 +1,32 @@
 #!/bin/bash
-#SBATCH -o /nfsmnt/your/path/to/project3/build/Project3.txt
+#SBATCH -o log/bonus.txt
 #SBATCH -p Project
 #SBATCH -J Project3
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=32
 #SBATCH --gres=gpu:1
 
+CURRENT_DIR=$(pwd)/src
+big_size=100000000
+small_size=50
+big_bucket=1000000
+small_bucket=10
+
 # Merge Sort
-# Sequential
-echo "Merge Sort Sequential (Optimized with -O2)"
-srun -n 1 --cpus-per-task 1 /nfsmnt/your/path/to/project3/build/src/mergesort/mergesort_sequential 100000000
-echo ""
-# Parallel
-echo "Merge Sort Parallel (Optimized with -O2)"
-for num_cores in 1 2 4 8 16 32
+# OpenMP
+echo "Merge Sort OpenMP (Optimized with -O2)"
+for num_cores in  1 2 4 8 16 32
 do
   echo "Number of cores: $num_cores"
-  srun -n 1 --cpus-per-task $num_cores /nfsmnt/your/path/to/project3/build/src/mergesort/mergesort_parallel $num_cores 100000000
+  srun -n $num_cores ${CURRENT_DIR}/../build/src/mergesort/mergesort_parallel ${num_cores} ${big_size}
 done
 echo ""
 
-# Quick Sort
-# Parallel
-echo "Quick Sort Parallel (Optimized with -O2)"
+# Task 5
+echo "Quick Sort OpenMP (Optimized with -O2)"
 for num_cores in 1 2 4 8 16 32
 do
   echo "Number of cores: $num_cores"
-  srun -n 1 --cpus-per-task $num_cores /nfsmnt/your/path/to/project3/build/src/quicksort/quicksort_parallel $num_cores 100000000
+  srun -n $num_cores --cpus-per-task 1 --mpi=pmi2 ${CURRENT_DIR}/../build/src/quicksort/quicksort_parallel ${num_cores} ${big_size}
 done
 echo ""

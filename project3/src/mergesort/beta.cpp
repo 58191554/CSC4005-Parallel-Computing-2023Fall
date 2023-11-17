@@ -1,6 +1,6 @@
 //
-// Created by Zhen TONG.
-// Email: 120090694@link.cuhk.edu.cn
+// Created by Yang Yufan on 2023/10/31.
+// Email: yufanyang1@link.cuhk.edu.cn
 //
 // Parallel Merge Sort
 //
@@ -29,7 +29,7 @@ int binarySearch(vi &vec, int val) {
     return low; // Returns the rightmost position
 }
 
-void merge(std::vector<int>& vec, int l, int m, int r) {
+void merge(std::vector<int>& vec, int l, int m, int r, int num_thread) {
     int n1 = m - l + 1;
     int n2 = r - m;
 
@@ -46,22 +46,54 @@ void merge(std::vector<int>& vec, int l, int m, int r) {
         R[i] = vec[m + 1 + i];
     }
 
-    
+    int num_used = vec.size()/(r-l);
+    int num_chunck = (num_thread-num_used)/num_used;
+    num_chunck = num_chunck>2 ? num_chunck : 2;
+    int k = n1/num_chunck;
 
-    int kl;
-    int kr = 0;
-    int k = 0;
+    vi cuts_L(num_chunck+1, 0);
+    for(int i = 1; i < num_chunck; i++){
+        cuts_L[i] = i*k;
+    }
+    cuts_L[num_chunck] = n1;
+    vi cuts_R(num_chunck+1, 0);
+    vi cuts_LR(num_chunck+1, 0);
+    for(int i = 1; i < num_chunck; i++){
+        cuts_R[i] = binarySearch(R, L[cuts_L[i]]);
+        cuts_LR[i] = cuts_R[i] + cuts_L[i];
+    }
+    cuts_R[num_chunck] = n2;
+    cuts_LR[num_chunck] = n1+n2;
+    #pragma omp parallel for
+    for(int t = 0; t < num_chunck; t++){
+        int i = cuts_L[t]; // Initial index of the first subarray
+        int j = cuts_R[t]; // Initial index of the second subarray
+        int k = cuts_LR[t]; // Initial index of the merged subarray
 
-    for(int i = 0; i < n1; i++){
-        // find the position of L[i]
-        kl = binarySearch(R, L[i]);
-        for(int j = kr; j < kl; j++){
-            vec[l+k] = R[j];
+        while (i < cuts_L[t+1] && j < cuts_R[t+1]) {
+            if (L[i] <= R[j]) {
+                vec[k] = L[i];
+                i++;
+            } else {
+                vec[k] = R[j];
+                j++;
+            }
             k++;
         }
-        vec[l+k] = L[i];
-        k++;
-        kr = kl;
+
+        // Copy the remaining elements of L[], if there are any
+        while (i < cuts_L[t+1]) {
+            vec[k] = L[i];
+            i++;
+            k++;
+        }
+
+        // Copy the remaining elements of R[], if there are any
+        while (j < cuts_R[t+1]) {
+            vec[k] = R[j];
+            j++;
+            k++;
+        }
     }
 }
 
@@ -89,7 +121,7 @@ void mergeSort(std::vector<int>& vec, int num_threads) {
     while(num_cuts>1){
         #pragma omp parallel for 
         for(int i = 0; i< num_cuts-1; i+=2){
-            merge(vec, cuts[i], cuts[i+1]-1, cuts[i+2]-1);
+            merge(vec, cuts[i], cuts[i+1]-1, cuts[i+2]-1, num_threads);
         }
         int tmp_cuts = (num_cuts%2==0) ? num_cuts/2 : num_cuts/2 +1;
         // std::cout << "new cuts: ";

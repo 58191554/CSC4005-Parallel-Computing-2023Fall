@@ -1,6 +1,6 @@
 //
-// Created by Yang Yufan on 2023/10/31.
-// Email: yufanyang1@link.cuhk.edu.cn
+// Created by Zhen TONG.
+// Email: 120090694@link.cuhk.edu.cn
 //
 // Parallel Quick Sort with MPI
 //
