@@ -12,7 +12,22 @@
 
 typedef std::vector<int> vi;
 
+int binarySearch(vi &vec, int val) {
+    int low = 0;
+    int high = vec.size();
 
+    while (low < high) {
+        int mid = low + (high - low) / 2;
+
+        if (vec[mid]<= val) {
+            low = mid+1;
+        } else {
+            high = mid;
+        }
+    }
+
+    return low; // Returns the rightmost position
+}
 
 void merge(std::vector<int>& vec, int l, int m, int r) {
     int n1 = m - l + 1;
@@ -21,43 +36,32 @@ void merge(std::vector<int>& vec, int l, int m, int r) {
     // Create temporary vectors
     std::vector<int> L(n1);
     std::vector<int> R(n2);
-
+    #pragma omp parallel for
     // Copy data to temporary vectors L[] and R[]
     for (int i = 0; i < n1; i++) {
         L[i] = vec[l + i];
     }
+    #pragma omp parallel for
     for (int i = 0; i < n2; i++) {
         R[i] = vec[m + 1 + i];
     }
 
-    // Merge the temporary vectors back into v[l..r]
-    int i = 0; // Initial index of the first subarray
-    int j = 0; // Initial index of the second subarray
-    int k = l; // Initial index of the merged subarray
+    
 
-    while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
-            vec[k] = L[i];
-            i++;
-        } else {
-            vec[k] = R[j];
-            j++;
+    int kl;
+    int kr = 0;
+    int k = 0;
+
+    for(int i = 0; i < n1; i++){
+        // find the position of L[i]
+        kl = binarySearch(R, L[i]);
+        for(int j = kr; j < kl; j++){
+            vec[l+k] = R[j];
+            k++;
         }
+        vec[l+k] = L[i];
         k++;
-    }
-
-    // Copy the remaining elements of L[], if there are any
-    while (i < n1) {
-        vec[k] = L[i];
-        i++;
-        k++;
-    }
-
-    // Copy the remaining elements of R[], if there are any
-    while (j < n2) {
-        vec[k] = R[j];
-        j++;
-        k++;
+        kr = kl;
     }
 }
 

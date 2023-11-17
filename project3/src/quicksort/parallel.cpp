@@ -8,17 +8,68 @@
 #include <iostream>
 #include <vector>
 #include "../utils.hpp"
+#define THRESHOLD 1000
 
-int partition(std::vector<int> &vec, int low, int high) {
-    /* Your code here!
-       Implement parallel partition algorithm
-    */
+void swap(int* a, int* b) {
+    int t = *a;
+    *a = *b;
+    *b = t;
 }
 
-void quickSort(std::vector<int> &vec, int low, int high) {
-    /* Your code here!
-       Implement parallel quick sort with dynamic threads creation
-    */
+int partition(int arr[], int low, int high) {
+    int pivot = arr[high];
+    int i = low - 1;
+
+    for (int j = low; j <= high - 1; j++) {
+        if (arr[j] < pivot) {
+            i++;
+            swap(&arr[i], &arr[j]);
+        }
+    }
+
+    swap(&arr[i + 1], &arr[high]);
+    return i + 1;
+}
+
+void quickSortParallel(int arr[], int low, int high, int threads) {
+    if (low < high) {
+        int pi = partition(arr, low, high);
+
+        // Check if the task is large enough to parallelize
+        if (high - low > THRESHOLD) {
+#pragma omp parallel sections
+            {
+#pragma omp section
+                {
+                    // Recursive call to the left partition
+                    #pragma omp task
+                    quickSortParallel(arr, low, pi - 1, threads);
+                }
+#pragma omp section
+                {
+                    // Recursive call to the right partition
+                    #pragma omp task
+                    quickSortParallel(arr, pi + 1, high, threads);
+                }
+            }
+        } else {
+            // If the task is small, do it sequentially
+            quickSortParallel(arr, low, pi - 1, threads);
+            quickSortParallel(arr, pi + 1, high, threads);
+        }
+    }
+}
+
+void quickSort(int arr[], int low, int high) {
+    if (low < high) {
+        int pi = partition(arr, low, high);
+
+        // Recursive call to the left partition
+        quickSort(arr, low, pi - 1);
+
+        // Recursive call to the right partition
+        quickSort(arr, pi + 1, high);
+    }
 }
 
 int main(int argc, char** argv) {
@@ -39,9 +90,13 @@ int main(int argc, char** argv) {
     std::vector<int> vec_clone = vec;
 
     auto start_time = std::chrono::high_resolution_clock::now();
-
-    quickSort(vec, 0, size - 1);
-
+    #pragma omp parallel
+    {
+        #pragma omp single nowait
+        {    
+            quickSortParallel(&vec[0], 0, size - 1, thread_num);
+        }
+    }
     auto end_time = std::chrono::high_resolution_clock::now();
     auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(
         end_time - start_time);
