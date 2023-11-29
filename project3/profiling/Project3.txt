@@ -1,914 +1,270 @@
 Quick Sort MPI (Optimized with -O2)
 Number of cores: 1
 Quick Sort Complete!
-Execution Time: 14392 milliseconds
-std::sort Time: 11942 milliseconds
+Execution Time: 14388 milliseconds
+std::sort Time: 11937 milliseconds
 Pass the sorting result check!
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    84,533,100,536      cycles:u                                                    
-    87,541,620,401      instructions:u            #    1.04  insn per cycle         
-       239,127,006      cache-references:u                                          
-       153,309,437      cache-misses:u            #   64.112 % of all cache refs    
-
-      29.587389026 seconds time elapsed
-
-      29.248844000 seconds user
-       0.241404000 seconds sys
-
-
 Number of cores: 2
 Quick Sort Complete!
-Execution Time: 12694 milliseconds
-std::sort Time: 15941 milliseconds
+Execution Time: 12875 milliseconds
+std::sort Time: 15933 milliseconds
 Pass the sorting result check!
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    92,362,840,971      cycles:u                                                    
-   117,354,040,801      instructions:u            #    1.27  insn per cycle         
-        70,677,232      cache-references:u                                          
-        40,654,151      cache-misses:u            #   57.521 % of all cache refs    
-
-      33.319250732 seconds time elapsed
-
-      32.302630000 seconds user
-       0.919796000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    95,176,922,137      cycles:u                                                    
-    68,698,565,717      instructions:u            #    0.72  insn per cycle         
-       177,788,404      cache-references:u                                          
-       118,288,375      cache-misses:u            #   66.533 % of all cache refs    
-
-      33.320759762 seconds time elapsed
-
-      32.926651000 seconds user
-       0.296330000 seconds sys
-
-
 Number of cores: 4
 Quick Sort Complete!
-Execution Time: 9192 milliseconds
-std::sort Time: 15871 milliseconds
+Execution Time: 9124 milliseconds
+std::sort Time: 15903 milliseconds
 Pass the sorting result check!
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    81,945,617,096      cycles:u                                                    
-   107,915,059,748      instructions:u            #    1.32  insn per cycle         
-        43,565,537      cache-references:u                                          
-        26,067,779      cache-misses:u            #   59.836 % of all cache refs    
-
-      29.758643593 seconds time elapsed
-
-      28.832854000 seconds user
-       0.838019000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    81,928,739,650      cycles:u                                                    
-   107,954,421,379      instructions:u            #    1.32  insn per cycle         
-        44,026,888      cache-references:u                                          
-        25,167,422      cache-misses:u            #   57.164 % of all cache refs    
-
-      29.760281084 seconds time elapsed
-
-      28.692155000 seconds user
-       0.979683000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    81,780,853,261      cycles:u                                                    
-   110,932,328,825      instructions:u            #    1.36  insn per cycle         
-        42,549,991      cache-references:u                                          
-        23,543,144      cache-misses:u            #   55.331 % of all cache refs    
-
-      30.154894612 seconds time elapsed
-
-      28.707248000 seconds user
-       0.964656000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    84,831,133,819      cycles:u                                                    
-    59,708,829,721      instructions:u            #    0.70  insn per cycle         
-       149,940,918      cache-references:u                                          
-       102,524,720      cache-misses:u            #   68.377 % of all cache refs    
-
-      30.129206912 seconds time elapsed
-
-      29.374283000 seconds user
-       0.299235000 seconds sys
-
-
 Number of cores: 8
 Quick Sort Complete!
-Execution Time: 7974 milliseconds
-std::sort Time: 15892 milliseconds
+Execution Time: 7890 milliseconds
+std::sort Time: 15887 milliseconds
 Pass the sorting result check!
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,134,191,415      cycles:u                                                    
-   110,099,169,197      instructions:u            #    1.41  insn per cycle         
-        24,414,901      cache-references:u                                          
-        16,285,703      cache-misses:u            #   66.704 % of all cache refs    
-
-      29.116240255 seconds time elapsed
-
-      27.428333000 seconds user
-       1.045534000 seconds sys
-
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,276,879,066      cycles:u                                                    
-    78,450,321,336      cycles:u                                                    
-   101,751,415,947      instructions:u            #    1.30  insn per cycle         
-        24,708,889      cache-references:u                                          
-        14,966,702      cache-misses:u            #   60.572 % of all cache refs    
-
-   107,014,378,909      instructions:u            #    1.37  insn per cycle         
-        25,691,763      cache-references:u                                          
-        17,173,544      cache-misses:u            #   66.845 % of all cache refs    
-
-      28.570653328 seconds time elapsed
-
-      27.437926000 seconds user
-       1.036579000 seconds sys
-
-
-      28.565349278 seconds time elapsed
-
-      27.480785000 seconds user
-       0.992680000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,316,051,900      cycles:u                                                    
-   106,688,944,360      instructions:u            #    1.36  insn per cycle         
-        24,472,758      cache-references:u                                          
-        15,668,596      cache-misses:u            #   64.025 % of all cache refs    
-
-      28.558648972 seconds time elapsed
-
-      27.464562000 seconds user
-       1.009594000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,260,845,915      cycles:u                                                    
-   107,163,712,270      instructions:u            #    1.37  insn per cycle         
-        25,301,103      cache-references:u                                          
-        15,321,264      cache-misses:u            #   60.556 % of all cache refs    
-
-      29.073703587 seconds time elapsed
-
-      27.413243000 seconds user
-       1.060456000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,471,528,496      cycles:u                                                    
-   100,274,118,556      instructions:u            #    1.28  insn per cycle         
-        25,234,091      cache-references:u                                          
-        15,650,054      cache-misses:u            #   62.019 % of all cache refs    
-
-      29.082975842 seconds time elapsed
-
-      27.484458000 seconds user
-       0.989675000 seconds sys
-
-
-    78,324,117,669      cycles:u                                                    
-   106,969,912,855      instructions:u            #    1.37  insn per cycle         
-        24,631,214      cache-references:u                                          
-        16,198,641      cache-misses:u            #   65.765 % of all cache refs    
-
-      28.559972548 seconds time elapsed
-
-      27.470065000 seconds user
-       1.004625000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    81,247,609,525      cycles:u                                                    
-    55,936,239,405      instructions:u            #    0.69  insn per cycle         
-       136,145,377      cache-references:u                                          
-        95,898,669      cache-misses:u            #   70.438 % of all cache refs    
-
-      29.052863861 seconds time elapsed
-
-      28.159826000 seconds user
-       0.318161000 seconds sys
-
-
 Number of cores: 16
 Quick Sort Complete!
-Execution Time: 8042 milliseconds
-std::sort Time: 15959 milliseconds
+Execution Time: 7905 milliseconds
+std::sort Time: 15970 milliseconds
 Pass the sorting result check!
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,469,663,592      cycles:u                                                    
-   106,917,554,099      instructions:u            #    1.36  insn per cycle         
-        17,900,466      cache-references:u                                          
-        14,183,656      cache-misses:u            #   79.236 % of all cache refs    
-
-      29.087306035 seconds time elapsed
-
-      27.554943000 seconds user
-       1.061493000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,538,246,630      cycles:u                                                    
-   106,573,270,133      instructions:u            #    1.36  insn per cycle         
-        18,374,463      cache-references:u                                          
-        13,844,805      cache-misses:u            #   75.348 % of all cache refs    
-
-      28.706828233 seconds time elapsed
-
-      27.581462000 seconds user
-       1.035539000 seconds sys
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,428,261,872      cycles:u                                                    
-   109,079,142,826      instructions:u            #    1.39  insn per cycle         
-        18,325,372      cache-references:u                                          
-        13,718,115      cache-misses:u            #   74.859 % of all cache refs    
-
-      28.702403268 seconds time elapsed
-
-      27.479751000 seconds user
-       1.138255000 seconds sys
-
-
-    78,476,936,975      cycles:u                                                    
-   108,894,799,148      instructions:u            #    1.39  insn per cycle         
-        17,532,352      cache-references:u                                          
-        13,589,199      cache-misses:u            #   77.509 % of all cache refs    
-
-      28.702414138 seconds time elapsed
-
-      27.544499000 seconds user
-       1.073447000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,518,891,190      cycles:u                                                    
-   106,861,840,593      instructions:u            #    1.36  insn per cycle         
-        18,670,304      cache-references:u                                          
-        14,025,247      cache-misses:u            #   75.121 % of all cache refs    
-
-      28.723824952 seconds time elapsed
-
-      27.516471000 seconds user
-       1.101377000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,541,890,266      cycles:u                                                    
-   106,195,030,163      instructions:u            #    1.35  insn per cycle         
-        18,246,447      cache-references:u                                          
-        13,714,189      cache-misses:u            #   75.161 % of all cache refs    
-
-      28.736490576 seconds time elapsed
-
-      27.581581000 seconds user
-       1.036578000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,491,930,850      cycles:u                                                    
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,533,876,005      cycles:u                                                    
-   107,161,667,153      instructions:u            #    1.36  insn per cycle         
-        18,119,016      cache-references:u                                          
-   106,386,808,255      instructions:u            #    1.36  insn per cycle         
-        18,437,303      cache-references:u                                          
-        13,862,344      cache-misses:u            #   75.186 % of all cache refs    
-
-      28.704878279 seconds time elapsed
-
-      27.594350000 seconds user
-       1.023564000 seconds sys
-
-
-        14,164,102      cache-misses:u            #   78.173 % of all cache refs    
-
-      28.709584347 seconds time elapsed
-
-      27.523033000 seconds user
-       1.095374000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,532,601,981      cycles:u                                                    
-   106,770,639,434      instructions:u            #    1.36  insn per cycle         
-        17,510,881      cache-references:u                                          
-        13,891,858      cache-misses:u            #   79.333 % of all cache refs    
-
-      28.709770801 seconds time elapsed
-
-      27.573406000 seconds user
-       1.044553000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,501,521,877      cycles:u                                                    
-   106,215,637,501      instructions:u            #    1.35  insn per cycle         
-        17,611,562      cache-references:u                                          
-        12,464,915      cache-misses:u            #   70.777 % of all cache refs    
-
-      29.162893287 seconds time elapsed
-
-      27.555116000 seconds user
-       1.063418000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    77,762,190,736      cycles:u                                                    
-   111,133,285,174      instructions:u            #    1.43  insn per cycle         
-        17,758,762      cache-references:u                                          
-        13,288,233      cache-misses:u            #   74.826 % of all cache refs    
-
-      29.168290501 seconds time elapsed
-
-      27.340244000 seconds user
-    78,485,389,863      cycles:u                                                    
-   106,321,421,119      instructions:u            #    1.35  insn per cycle         
-        17,698,057      cache-references:u                                          
-        12,490,607      cache-misses:u            #   70.576 % of all cache refs    
-
-      29.110050656 seconds time elapsed
-
-      27.560241000 seconds user
-       1.058512000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,524,778,069      cycles:u                                                    
-   106,713,335,053      instructions:u            #    1.36  insn per cycle         
-        18,131,883      cache-references:u                                          
-        12,713,516      cache-misses:u            #   70.117 % of all cache refs    
-
-      29.082480363 seconds time elapsed
-
-      27.598759000 seconds user
-       1.017520000 seconds sys
-
-
-       1.279017000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,387,305,082      cycles:u                                                    
-   109,323,446,553      instructions:u            #    1.39  insn per cycle         
-        18,312,818      cache-references:u                                          
-        14,149,656      cache-misses:u            #   77.266 % of all cache refs    
-
-      29.076816894 seconds time elapsed
-
-      27.470159000 seconds user
-       1.148289000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    78,487,031,882      cycles:u                                                    
-   106,590,894,929      instructions:u            #    1.36  insn per cycle         
-        18,005,031      cache-references:u                                          
-        13,331,600      cache-misses:u            #   74.044 % of all cache refs    
-
-      29.086900730 seconds time elapsed
-
-      27.539087000 seconds user
-       1.079455000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    81,615,755,746      cycles:u                                                    
-    56,125,154,009      instructions:u            #    0.69  insn per cycle         
-       131,171,489      cache-references:u                                          
-        95,575,188      cache-misses:u            #   72.863 % of all cache refs    
-
-      29.069202767 seconds time elapsed
-
-      28.292022000 seconds user
-       0.333175000 seconds sys
-
-
 Number of cores: 32
 Quick Sort Complete!
-Execution Time: 8393 milliseconds
-std::sort Time: 16033 milliseconds
+Execution Time: 8367 milliseconds
+std::sort Time: 16022 milliseconds
 Pass the sorting result check!
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
+Bucket Sort MPI (Optimized with -O2)
+Number of cores: 1
+Bucket Sort Complete!
+Execution Time: 12773 milliseconds
+std::sort Time: 11810 milliseconds
+Pass the sorting result check!
+Number of cores: 2
+Bucket Sort Complete!
+Execution Time: 8617 milliseconds
+std::sort Time: 15147 milliseconds
+Pass the sorting result check!
+Number of cores: 4
+Bucket Sort Complete!
+Execution Time: 4440 milliseconds
+std::sort Time: 15045 milliseconds
+Pass the sorting result check!
+Number of cores: 8
+Bucket Sort Complete!
+Execution Time: 2832 milliseconds
+std::sort Time: 15060 milliseconds
+Pass the sorting result check!
+Number of cores: 16
+Bucket Sort Complete!
+Execution Time: 1827 milliseconds
+std::sort Time: 15171 milliseconds
+Pass the sorting result check!
+Number of cores: 32
+Bucket Sort Complete!
+Execution Time: 1296 milliseconds
+std::sort Time: 15205 milliseconds
+Pass the sorting result check!
+
+Odd-Even Sort MPI (Optimized with -O2)
+Number of cores: 1
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
+
+srun: error: node37: task 0: Aborted (core dumped)
+Number of cores: 2
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
+
+  what():  Invalid argument, should be: ./executable vector_size
+
+srun: error: node37: tasks 0-1: Aborted (core dumped)
+Number of cores: 4
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
+
+  what():  Invalid argument, should be: ./executable vector_size
+
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
+  what():  Invalid argument, should be: ./executable vector_size
+
+
+srun: error: node37: tasks 0-3: Aborted (core dumped)
+Number of cores: 8
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
+
+  what():  Invalid argument, should be: ./executable vector_size
+
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
+  what():  Invalid argument, should be: ./executable vector_size
+
 
-    80,266,606,120      cycles:u                                                    
-   112,894,798,480      instructions:u            #    1.41  insn per cycle         
-        15,214,886      cache-references:u                                          
-        12,465,115      cache-misses:u            #   81.927 % of all cache refs    
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
+
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-      29.447333520 seconds time elapsed
+  what():  Invalid argument, should be: ./executable vector_size
 
-      28.154755000 seconds user
-       1.204124000 seconds sys
+  what():  Invalid argument, should be: ./executable vector_size
 
+srun: error: node37: tasks 0,2,4,6: Aborted (core dumped)
+srun: error: node37: tasks 1,3,5,7: Aborted
+Number of cores: 16
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-    80,293,200,321      cycles:u                                                    
-   112,698,029,456      instructions:u            #    1.40  insn per cycle         
-        14,854,244      cache-references:u                                          
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
+  what():  Invalid argument, should be: ./executable vector_size
 
-    80,252,203,114      cycles:u                                                    
-   112,894,360,092      instructions:u            #    1.41  insn per cycle         
-        14,873,774      cache-references:u                                          
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
+  what():  Invalid argument, should be: ./executable vector_size
 
-    80,252,642,922      cycles:u                                                    
-   112,564,699,993      instructions:u            #    1.40  insn per cycle         
-        14,839,461      cache-references:u                                          
-        12,078,904      cache-misses:u            #   81.397 % of all cache refs    
 
-      29.482841763 seconds time elapsed
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-      28.168530000 seconds user
-       1.191189000 seconds sys
+  what():  Invalid argument, should be: ./executable vector_size
 
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-    80,251,902,194      cycles:u                                                    
-   112,977,929,254      instructions:u            #    1.41  insn per cycle         
-        14,861,760      cache-references:u                                          
-        12,421,025      cache-misses:u            #   83.577 % of all cache refs    
+  what():  Invalid argument, should be: ./executable vector_size
 
-      29.461299233 seconds time elapsed
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-      28.158427000 seconds user
-       1.201202000 seconds sys
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
+srun: error: node37: tasks 0-3,5,7,10-15: Aborted
+srun: error: node37: tasks 4,6,8-9: Aborted (core dumped)
+Number of cores: 32
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-        12,244,471      cache-misses:u            #   82.431 % of all cache refs    
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-      29.447266084 seconds time elapsed
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-      28.198758000 seconds user
-       1.160274000 seconds sys
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-        12,448,963      cache-misses:u            #   83.697 % of all cache refs    
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-      29.453229401 seconds time elapsed
+  what():  Invalid argument, should be: ./executable vector_size
 
-      28.172853000 seconds user
-       1.186172000 seconds sys
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
+  what():  Invalid argument, should be: ./executable vector_size
 
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-    80,240,544,205      cycles:u                                                    
-   112,843,004,063      instructions:u            #    1.41  insn per cycle         
-        15,132,329      cache-references:u                                          
-        12,453,479      cache-misses:u            #   82.297 % of all cache refs    
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-      29.455354384 seconds time elapsed
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-      28.155975000 seconds user
-       1.203178000 seconds sys
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-    80,222,072,658      cycles:u                                                    
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-    80,235,247,656      cycles:u                                                    
-   112,528,640,627      instructions:u            #    1.40  insn per cycle         
-        14,994,290      cache-references:u                                          
-        12,374,155      cache-misses:u            #   82.526 % of all cache refs    
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-   112,693,988,270      instructions:u            #    1.40  insn per cycle         
-        15,088,558      cache-references:u                                          
-        13,116,948      cache-misses:u            #   86.933 % of all cache refs    
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-      29.450542633 seconds time elapsed
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-      28.101005000 seconds user
-       1.259043000 seconds sys
+  what():  Invalid argument, should be: ./executable vector_size
 
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
+  what():  Invalid argument, should be: ./executable vector_size
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
+terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-    80,245,662,017      cycles:u                                                    
-   112,447,158,339      instructions:u            #    1.40  insn per cycle         
-        15,104,152      cache-references:u                                          
-        12,545,368      cache-misses:u            #   83.059 % of all cache refs    
+  what():  Invalid argument, should be: ./executable vector_size
 
-      29.447665497 seconds time elapsed
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-      28.209208000 seconds user
-       1.150276000 seconds sys
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid argument, should be: ./executable vector_size
 
-    80,271,041,339      cycles:u                                                    
-   112,501,323,363      instructions:u            #    1.40  insn per cycle         
-        14,750,692      cache-references:u                                          
-        12,068,635      cache-misses:u            #   81.817 % of all cache refs    
-
-      29.452728108 seconds time elapsed
-
-      28.169860000 seconds user
-       1.190163000 seconds sys
-
-
-      29.451257589 seconds time elapsed
-
-      28.167031000 seconds user
-       1.192165000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    80,209,884,540      cycles:u                                                    
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-   114,647,779,490      instructions:u            #    1.43  insn per cycle         
-        15,283,990      cache-references:u                                          
-        12,374,378      cache-misses:u            #   80.963 % of all cache refs    
-
-      29.451534068 seconds time elapsed
-
-      28.184959000 seconds user
-       1.175287000 seconds sys
-
-
-    80,249,626,696      cycles:u                                                    
-   112,145,343,292      instructions:u            #    1.40  insn per cycle         
-        15,152,511      cache-references:u                                          
-        12,552,513      cache-misses:u            #   82.841 % of all cache refs    
-
-      29.450610647 seconds time elapsed
-
-      28.193430000 seconds user
-       1.166287000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,755,981,330      cycles:u                                                    
-   115,894,018,527      instructions:u            #    1.45  insn per cycle         
-        15,328,331      cache-references:u                                          
-        13,171,446      cache-misses:u            #   85.929 % of all cache refs    
-
-      29.831756172 seconds time elapsed
-
-      28.085506000 seconds user
-       1.277928000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,937,431,286      cycles:u                                                    
-   110,711,942,534      instructions:u            #    1.38  insn per cycle         
-        15,278,704      cache-references:u                                          
-        13,216,446      cache-misses:u            #   86.502 % of all cache refs    
-
-      30.022612580 seconds time elapsed
-
-    79,394,804,048      cycles:u                                                    
-   110,811,380,042      instructions:u            #    1.40  insn per cycle         
-        14,918,391      cache-references:u                                          
-        13,077,563      cache-misses:u            #   87.661 % of all cache refs    
-
-      29.863575004 seconds time elapsed
-
-      27.882568000 seconds user
-       1.482414000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,877,697,755      cycles:u                                                    
-      28.072879000 seconds user
-       1.291865000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,876,502,687      cycles:u                                                    
-   111,636,780,494      instructions:u            #    1.40  insn per cycle         
-        14,793,623      cache-references:u                                          
-        13,012,839      cache-misses:u            #   87.962 % of all cache refs    
-
-      29.901540442 seconds time elapsed
-
-      28.109175000 seconds user
-       1.252932000 seconds sys
-
-
-   111,592,690,368      instructions:u            #    1.40  insn per cycle         
-        15,004,136      cache-references:u                                          
-        13,081,039      cache-misses:u            #   87.183 % of all cache refs    
-
-      30.525636486 seconds time elapsed
-
-      28.081732000 seconds user
-       1.281883000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,848,599,558      cycles:u                                                    
-   111,206,171,433      instructions:u            #    1.39  insn per cycle         
-        14,974,769      cache-references:u                                          
-        13,364,290      cache-misses:u            #   89.245 % of all cache refs    
-
-      29.860848932 seconds time elapsed
-
-      28.046669000 seconds user
-       1.317836000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,925,016,924      cycles:u                                                    
-   110,229,124,046      instructions:u            #    1.38  insn per cycle         
-        14,978,939      cache-references:u                                          
-        12,904,547      cache-misses:u            #   86.151 % of all cache refs    
-
-      30.232469832 seconds time elapsed
-
-      28.136644000 seconds user
-       1.228103000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,935,256,870      cycles:u                                                    
-   110,597,665,584      instructions:u            #    1.38  insn per cycle         
-        15,088,167      cache-references:u                                          
-        13,052,833      cache-misses:u            #   86.510 % of all cache refs    
-
-      29.882515779 seconds time elapsed
-
-      28.115297000 seconds user
-       1.249081000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,924,630,632      cycles:u                                                    
-   110,505,696,133      instructions:u            #    1.38  insn per cycle         
-        14,695,460      cache-references:u                                          
-        12,551,981      cache-misses:u            #   85.414 % of all cache refs    
-
-      30.031151729 seconds time elapsed
-
-      28.122693000 seconds user
-       1.242071000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,834,081,557      cycles:u                                                    
-   113,145,299,340      instructions:u            #    1.42  insn per cycle         
-        14,797,805      cache-references:u                                          
-        13,002,494      cache-misses:u            #   87.868 % of all cache refs    
-
-      29.832749783 seconds time elapsed
-
-      28.091727000 seconds user
-       1.271908000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,889,645,898      cycles:u                                                    
-   111,376,711,764      instructions:u            #    1.39  insn per cycle         
-        14,720,158      cache-references:u                                          
-        12,698,167      cache-misses:u            #   86.264 % of all cache refs    
-
-      29.889886595 seconds time elapsed
-
-      28.026300000 seconds user
-       1.338861000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,889,529,941      cycles:u                                                    
-   112,086,469,165      instructions:u            #    1.40  insn per cycle         
-        15,135,772      cache-references:u                                          
-        13,216,708      cache-misses:u            #   87.321 % of all cache refs    
-
-      29.840405110 seconds time elapsed
-
-      28.172344000 seconds user
-       1.191223000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,895,527,349      cycles:u                                                    
-   111,626,187,774      instructions:u            #    1.40  insn per cycle         
-        14,812,077      cache-references:u                                          
-        12,560,149      cache-misses:u            #   84.797 % of all cache refs    
-
-      29.904425915 seconds time elapsed
-
-      28.087351000 seconds user
-       1.277015000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,886,297,725      cycles:u                                                    
-   111,303,838,476      instructions:u            #    1.39  insn per cycle         
-        14,712,048      cache-references:u                                          
-        12,211,376      cache-misses:u            #   83.003 % of all cache refs    
-
-      30.106807636 seconds time elapsed
-
-      28.135597000 seconds user
-       1.229099000 seconds sys
-
-
-    79,912,659,886      cycles:u                                                    
-   110,462,438,452      instructions:u            #    1.38  insn per cycle         
-        14,709,376      cache-references:u                                          
-        13,036,249      cache-misses:u            #   88.625 % of all cache refs    
-
-      31.392926747 seconds time elapsed
-
-      28.126834000 seconds user
-       1.238043000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,913,300,057      cycles:u                                                    
-   110,402,753,834      instructions:u            #    1.38  insn per cycle         
-        15,065,185      cache-references:u                                          
-        12,718,771      cache-misses:u            #   84.425 % of all cache refs    
-
-      29.940414873 seconds time elapsed
-
-      28.117995000 seconds user
-       1.247028000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,829,819,063      cycles:u                                                    
-   111,553,747,743      instructions:u            #    1.40  insn per cycle         
-        15,019,420      cache-references:u                                          
-        13,207,465      cache-misses:u            #   87.936 % of all cache refs    
-
-      29.927232760 seconds time elapsed
-
-      28.088211000 seconds user
-       1.275966000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,901,549,910      cycles:u                                                    
-   111,293,545,745      instructions:u            #    1.39  insn per cycle         
-        14,725,158      cache-references:u                                          
-        12,670,521      cache-misses:u            #   86.047 % of all cache refs    
-
-      30.022299461 seconds time elapsed
-
-      28.069004000 seconds user
-       1.296950000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    79,865,155,901      cycles:u                                                    
-   111,214,120,431      instructions:u            #    1.39  insn per cycle         
-        15,006,864      cache-references:u                                          
-        12,999,531      cache-misses:u            #   86.624 % of all cache refs    
-
-      29.979986778 seconds time elapsed
-
-      28.104105000 seconds user
-       1.255832000 seconds sys
-
-
-
- Performance counter stats for '/nfsmnt/120090694/CSC4005-2023Fall/project3/src/../build/src/quicksort/quicksort_mpi 100000000':
-
-    83,181,324,132      cycles:u                                                    
-    55,993,730,219      instructions:u            #    0.67  insn per cycle         
-       127,970,492      cache-references:u                                          
-        93,864,459      cache-misses:u            #   73.349 % of all cache refs    
-
-      29.831314246 seconds time elapsed
-
-      28.870902000 seconds user
-       0.500057000 seconds sys
-
-
+srun: error: node37: tasks 0,2-8,10-11,13,15-31: Aborted
+srun: error: node37: tasks 1,9,12,14: Aborted (core dumped)
 

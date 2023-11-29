@@ -1,499 +1,379 @@
 Merge Sort OpenMP (Optimized with -O2)
 Number of cores: 1
 Merge Sort Complete!
-Execution Time: 12109 milliseconds
-std::sort Time: 12122 milliseconds
+Execution Time: 11867 milliseconds
+std::sort Time: 11846 milliseconds
 Pass the sorting result check!
 Number of cores: 2
 Merge Sort Complete!
-Execution Time: 6697 milliseconds
+Execution Time: 9356 milliseconds
 Merge Sort Complete!
-Execution Time: 6706 milliseconds
-std::sort Time: 12116 milliseconds
-std::sort Time: 12141 milliseconds
+Execution Time: 9356 milliseconds
+std::sort Time: 11859 milliseconds
+std::sort Time: 11859 milliseconds
 Pass the sorting result check!
 Pass the sorting result check!
 Number of cores: 4
 Merge Sort Complete!
-Execution Time: 3913 milliseconds
+Execution Time: 8277 milliseconds
 Merge Sort Complete!
-Execution Time: 4168 milliseconds
+Execution Time: 8302 milliseconds
 Merge Sort Complete!
-Execution Time: 4387 milliseconds
+Execution Time: 8795 milliseconds
 Merge Sort Complete!
-Execution Time: 4681 milliseconds
-std::sort Time: 12160 milliseconds
-Fail to pass the sorting result check!
-4th element of the sorted vector is expected to be 4
-But your 4th element is 5
-std::sort Time: 12193 milliseconds
-Fail to pass the sorting result check!
-4th element of the sorted vector is expected to be 4
-But your 4th element is 5
-std::sort Time: 12127 milliseconds
-Fail to pass the sorting result check!
-4th element of the sorted vector is expected to be 4
-But your 4th element is 5
-std::sort Time: 12129 milliseconds
-Fail to pass the sorting result check!
-4th element of the sorted vector is expected to be 4
-But your 4th element is 5
+Execution Time: 8864 milliseconds
+std::sort Time: 11869 milliseconds
+std::sort Time: 11860 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+std::sort Time: 11857 milliseconds
+std::sort Time: 11875 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
 Number of cores: 8
-Merge Sort Complete!
-Execution Time: 4281 milliseconds
-Merge Sort Complete!
-Execution Time: 4966 milliseconds
-Merge Sort Complete!
-Execution Time: 5067 milliseconds
-Merge Sort Complete!
-Execution Time: 5268 milliseconds
-Merge Sort Complete!
-Execution Time: 5312 milliseconds
-Merge Sort Complete!
-Execution Time: 5347 milliseconds
-Merge Sort Complete!
-Execution Time: 5410 milliseconds
-Merge Sort Complete!
-Execution Time: 5402 milliseconds
-std::sort Time: 12173 milliseconds
-Fail to pass the sorting result check!
-1th element of the sorted vector is expected to be 1
-But your 1th element is 2
-std::sort Time: 12220 milliseconds
-Fail to pass the sorting result check!
-1th element of the sorted vector is expected to be 1
-But your 1th element is 2
-std::sort Time: 12160 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 4
-std::sort Time: 12176 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 4
-std::sort Time: 12148 milliseconds
-Fail to pass the sorting result check!
-1th element of the sorted vector is expected to be 1
-But your 1th element is 4
-std::sort Time: 12137 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 4
-std::sort Time: 12132 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 4
-std::sort Time: 12206 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 5
-Number of cores: 16
-Merge Sort Complete!
-Execution Time: 9176 milliseconds
-Merge Sort Complete!
-Execution Time: 9272 milliseconds
-Merge Sort Complete!
-Execution Time: 9287 milliseconds
-Merge Sort Complete!
-Execution Time: 9292 milliseconds
-Merge Sort Complete!
-Execution Time: 9299 milliseconds
-Merge Sort Complete!
-Execution Time: 9304 milliseconds
-Merge Sort Complete!
-Execution Time: 9823 milliseconds
-Merge Sort Complete!
-Execution Time: 9844 milliseconds
-Merge Sort Complete!
-Execution Time: 9892 milliseconds
-Merge Sort Complete!
-Execution Time: 9948 milliseconds
-Merge Sort Complete!
-Execution Time: 9991 milliseconds
-Merge Sort Complete!
-Execution Time: 10085 milliseconds
 Merge Sort Complete!
 Execution Time: 10117 milliseconds
 Merge Sort Complete!
-Execution Time: 10107 milliseconds
+Execution Time: 10268 milliseconds
 Merge Sort Complete!
-Execution Time: 10112 milliseconds
+Execution Time: 10412 milliseconds
 Merge Sort Complete!
-Execution Time: 10106 milliseconds
-std::sort Time: 12155 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 5
-std::sort Time: 12141 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 6
-std::sort Time: 12146 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 5
-std::sort Time: 12147 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 6
-std::sort Time: 12148 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 6
-std::sort Time: 12151 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 6
-std::sort Time: 12158 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 5
-std::sort Time: 12171 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 6
-std::sort Time: 12153 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 5
-std::sort Time: 12160 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 6
-std::sort Time: 12169 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 6
-std::sort Time: 12163 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 5
-std::sort Time: 12185 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 6
-std::sort Time: 12183 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 6
-std::sort Time: 12187 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 6
-std::sort Time: 12214 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 5
+Execution Time: 10701 milliseconds
+Merge Sort Complete!
+Execution Time: 11045 milliseconds
+Merge Sort Complete!
+Execution Time: 11103 milliseconds
+Merge Sort Complete!
+Execution Time: 11122 milliseconds
+Merge Sort Complete!
+Execution Time: 11083 milliseconds
+std::sort Time: 11875 milliseconds
+Pass the sorting result check!
+std::sort Time: 11874 milliseconds
+Pass the sorting result check!
+std::sort Time: 11873 milliseconds
+Pass the sorting result check!
+std::sort Time: 11868 milliseconds
+Pass the sorting result check!
+std::sort Time: 11885 milliseconds
+std::sort Time: 11875 milliseconds
+std::sort Time: 11882 milliseconds
+std::sort Time: 11881 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Number of cores: 16
+Merge Sort Complete!
+Execution Time: 18532 milliseconds
+Merge Sort Complete!
+Execution Time: 18610 milliseconds
+Merge Sort Complete!
+Execution Time: 18629 milliseconds
+Merge Sort Complete!
+Execution Time: 18627 milliseconds
+Merge Sort Complete!
+Execution Time: 18642 milliseconds
+Merge Sort Complete!
+Execution Time: 18655 milliseconds
+Merge Sort Complete!
+Execution Time: 18411 milliseconds
+Merge Sort Complete!
+Execution Time: 18649 milliseconds
+Merge Sort Complete!
+Execution Time: 19149 milliseconds
+Merge Sort Complete!
+Execution Time: 19187 milliseconds
+Merge Sort Complete!
+Execution Time: 19190 milliseconds
+Merge Sort Complete!
+Execution Time: 19195 milliseconds
+Merge Sort Complete!
+Execution Time: 19201 milliseconds
+Merge Sort Complete!
+Execution Time: 19207 milliseconds
+Merge Sort Complete!
+Execution Time: 19208 milliseconds
+Merge Sort Complete!
+Execution Time: 19209 milliseconds
+std::sort Time: 11881 milliseconds
+std::sort Time: 11881 milliseconds
+Pass the sorting result check!
+std::sort Time: 11889 milliseconds
+std::sort Time: 11898 milliseconds
+std::sort Time: 11890 milliseconds
+std::sort Time: 11883 milliseconds
+Pass the sorting result check!
+std::sort Time: 11890 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+std::sort Time: 11925 milliseconds
+Pass the sorting result check!
+std::sort Time: 11896 milliseconds
+std::sort Time: 11894 milliseconds
+std::sort Time: 11892 milliseconds
+std::sort Time: 11896 milliseconds
+std::sort Time: 11899 milliseconds
+std::sort Time: 11896 milliseconds
+std::sort Time: 11896 milliseconds
+std::sort Time: 11914 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
 Number of cores: 32
 Merge Sort Complete!
-Execution Time: 17972 milliseconds
+Execution Time: 39418 milliseconds
 Merge Sort Complete!
-Execution Time: 18008 milliseconds
+Execution Time: 39424 milliseconds
 Merge Sort Complete!
-Execution Time: 18036 milliseconds
+Execution Time: 39433 milliseconds
 Merge Sort Complete!
-Execution Time: 18173 milliseconds
+Execution Time: 39436 milliseconds
 Merge Sort Complete!
-Execution Time: 18183 milliseconds
+Execution Time: 39473 milliseconds
 Merge Sort Complete!
-Execution Time: 18226 milliseconds
+Execution Time: 39474 milliseconds
 Merge Sort Complete!
-Execution Time: 18302 milliseconds
+Execution Time: 39526 milliseconds
 Merge Sort Complete!
-Execution Time: 18337 milliseconds
+Execution Time: 39527 milliseconds
 Merge Sort Complete!
-Execution Time: 18355 milliseconds
+Execution Time: 39543 milliseconds
 Merge Sort Complete!
-Execution Time: 18379 milliseconds
+Execution Time: 39543 milliseconds
 Merge Sort Complete!
-Execution Time: 18380 milliseconds
+Execution Time: 39538 milliseconds
 Merge Sort Complete!
-Execution Time: 18398 milliseconds
+Execution Time: 39538 milliseconds
 Merge Sort Complete!
-Execution Time: 19754 milliseconds
+Execution Time: 39822 milliseconds
 Merge Sort Complete!
-Execution Time: 19959 milliseconds
+Execution Time: 39844 milliseconds
 Merge Sort Complete!
-Execution Time: 20033 milliseconds
+Execution Time: 39847 milliseconds
 Merge Sort Complete!
-Execution Time: 20063 milliseconds
+Execution Time: 40126 milliseconds
 Merge Sort Complete!
-Execution Time: 20123 milliseconds
+Execution Time: 40136 milliseconds
 Merge Sort Complete!
-Execution Time: 20150 milliseconds
+Execution Time: 40159 milliseconds
 Merge Sort Complete!
-Execution Time: 20159 milliseconds
+Execution Time: 40198 milliseconds
 Merge Sort Complete!
-Execution Time: 20188 milliseconds
+Execution Time: 40260 milliseconds
 Merge Sort Complete!
-Execution Time: 20256 milliseconds
+Execution Time: 40400 milliseconds
 Merge Sort Complete!
-Execution Time: 20238 milliseconds
+Execution Time: 40469 milliseconds
 Merge Sort Complete!
-Execution Time: 20342 milliseconds
+Execution Time: 40394 milliseconds
 Merge Sort Complete!
-Execution Time: 20311 milliseconds
+Execution Time: 40468 milliseconds
 Merge Sort Complete!
-Execution Time: 20346 milliseconds
+Execution Time: 40463 milliseconds
 Merge Sort Complete!
-Execution Time: 20340 milliseconds
+Execution Time: 40484 milliseconds
 Merge Sort Complete!
-Execution Time: 20379 milliseconds
+Execution Time: 40520 milliseconds
 Merge Sort Complete!
-Execution Time: 20396 milliseconds
+Execution Time: 40521 milliseconds
 Merge Sort Complete!
-Execution Time: 20354 milliseconds
+Execution Time: 40518 milliseconds
 Merge Sort Complete!
-Execution Time: 20489 milliseconds
+Execution Time: 40535 milliseconds
 Merge Sort Complete!
-Execution Time: 20520 milliseconds
+Execution Time: 40550 milliseconds
 Merge Sort Complete!
-Execution Time: 20479 milliseconds
-std::sort Time: 16243 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16246 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16249 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16309 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16294 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16290 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16261 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16258 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16257 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16324 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16325 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16326 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16249 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16246 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16353 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16274 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16310 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16252 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16279 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16262 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16306 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16345 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16297 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16296 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16340 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16339 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16277 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16332 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16356 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16362 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16430 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
-std::sort Time: 16414 milliseconds
-Fail to pass the sorting result check!
-0th element of the sorted vector is expected to be 1
-But your 0th element is 17
+Execution Time: 40568 milliseconds
+std::sort Time: 15478 milliseconds
+std::sort Time: 15491 milliseconds
+std::sort Time: 15635 milliseconds
+std::sort Time: 15630 milliseconds
+std::sort Time: 15661 milliseconds
+std::sort Time: 15654 milliseconds
+std::sort Time: 15617 milliseconds
+Pass the sorting result check!
+std::sort Time: 15621 milliseconds
+Pass the sorting result check!
+std::sort Time: 15620 milliseconds
+std::sort Time: 15639 milliseconds
+std::sort Time: 15644 milliseconds
+std::sort Time: 15644 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+std::sort Time: 15708 milliseconds
+std::sort Time: 15699 milliseconds
+std::sort Time: 15707 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+std::sort Time: 15701 milliseconds
+std::sort Time: 15709 milliseconds
+std::sort Time: 15707 milliseconds
+std::sort Time: 15733 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+std::sort Time: 15695 milliseconds
+std::sort Time: 15713 milliseconds
+std::sort Time: 15696 milliseconds
+std::sort Time: 15727 milliseconds
+std::sort Time: 15664 milliseconds
+std::sort Time: 15657 milliseconds
+Pass the sorting result check!
+std::sort Time: 15669 milliseconds
+std::sort Time: 15671 milliseconds
+Pass the sorting result check!
+std::sort Time: 15698 milliseconds
+Pass the sorting result check!
+std::sort Time: 15670 milliseconds
+std::sort Time: 15730 milliseconds
+std::sort Time: 15698 milliseconds
+Pass the sorting result check!
+std::sort Time: 15724 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
+Pass the sorting result check!
 
 Quick Sort OpenMP (Optimized with -O2)
 Number of cores: 1
 Quick Sort Complete!
-Execution Time: 12642 milliseconds
-std::sort Time: 11841 milliseconds
+Execution Time: 12655 milliseconds
+std::sort Time: 11830 milliseconds
 Pass the sorting result check!
 Number of cores: 2
 Quick Sort Complete!
-Execution Time: 18015 milliseconds
+Execution Time: 18190 milliseconds
 Quick Sort Complete!
-Execution Time: 18052 milliseconds
-std::sort Time: 15584 milliseconds
-std::sort Time: 15668 milliseconds
+Execution Time: 18189 milliseconds
+std::sort Time: 15454 milliseconds
+std::sort Time: 15455 milliseconds
 Pass the sorting result check!
 Pass the sorting result check!
 Number of cores: 4
 Quick Sort Complete!
-Execution Time: 18043 milliseconds
+Execution Time: 18019 milliseconds
 Quick Sort Complete!
-Execution Time: 18040 milliseconds
+Execution Time: 18030 milliseconds
 Quick Sort Complete!
-Execution Time: 18049 milliseconds
+Execution Time: 18232 milliseconds
 Quick Sort Complete!
-Execution Time: 18079 milliseconds
-std::sort Time: 15516 milliseconds
-std::sort Time: 15540 milliseconds
-std::sort Time: 15589 milliseconds
-std::sort Time: 15628 milliseconds
+Execution Time: 18232 milliseconds
+std::sort Time: 15675 milliseconds
+std::sort Time: 15686 milliseconds
+std::sort Time: 15521 milliseconds
+std::sort Time: 15543 milliseconds
 Pass the sorting result check!
 Pass the sorting result check!
 Pass the sorting result check!
 Pass the sorting result check!
 Number of cores: 8
 Quick Sort Complete!
-Execution Time: 18150 milliseconds
+Execution Time: 18041 milliseconds
 Quick Sort Complete!
-Execution Time: 18144 milliseconds
+Execution Time: 18041 milliseconds
 Quick Sort Complete!
-Execution Time: 18207 milliseconds
+Execution Time: 18020 milliseconds
 Quick Sort Complete!
-Execution Time: 18208 milliseconds
+Execution Time: 18032 milliseconds
 Quick Sort Complete!
-Execution Time: 18244 milliseconds
+Execution Time: 18010 milliseconds
 Quick Sort Complete!
-Execution Time: 18243 milliseconds
+Execution Time: 18009 milliseconds
 Quick Sort Complete!
-Execution Time: 18300 milliseconds
+Execution Time: 18321 milliseconds
 Quick Sort Complete!
-Execution Time: 18300 milliseconds
-std::sort Time: 15455 milliseconds
-std::sort Time: 15481 milliseconds
-std::sort Time: 15474 milliseconds
-std::sort Time: 15474 milliseconds
-std::sort Time: 15526 milliseconds
-std::sort Time: 15540 milliseconds
-Pass the sorting result check!
-std::sort Time: 15541 milliseconds
+Execution Time: 18320 milliseconds
+std::sort Time: 15418 milliseconds
+std::sort Time: 15418 milliseconds
+std::sort Time: 15578 milliseconds
+std::sort Time: 15567 milliseconds
+std::sort Time: 15563 milliseconds
+std::sort Time: 15587 milliseconds
 Pass the sorting result check!
 Pass the sorting result check!
+std::sort Time: 15342 milliseconds
+std::sort Time: 15346 milliseconds
 Pass the sorting result check!
-std::sort Time: 15583 milliseconds
+Pass the sorting result check!
 Pass the sorting result check!
 Pass the sorting result check!
 Pass the sorting result check!
 Pass the sorting result check!
 Number of cores: 16
 Quick Sort Complete!
-Execution Time: 18036 milliseconds
+Execution Time: 18181 milliseconds
 Quick Sort Complete!
-Execution Time: 18046 milliseconds
+Execution Time: 18192 milliseconds
 Quick Sort Complete!
-Execution Time: 18072 milliseconds
+Execution Time: 18180 milliseconds
 Quick Sort Complete!
-Execution Time: 18072 milliseconds
-Quick Sort Complete!
-Execution Time: 18059 milliseconds
-Quick Sort Complete!
-Execution Time: 18069 milliseconds
-Quick Sort Complete!
-Execution Time: 18082 milliseconds
-Quick Sort Complete!
-Execution Time: 18079 milliseconds
-Quick Sort Complete!
-Execution Time: 18162 milliseconds
-Quick Sort Complete!
-Execution Time: 18162 milliseconds
-Quick Sort Complete!
-Execution Time: 18287 milliseconds
-Quick Sort Complete!
-Execution Time: 18286 milliseconds
-Quick Sort Complete!
-Execution Time: 18308 milliseconds
-Quick Sort Complete!
-Execution Time: 18307 milliseconds
+Execution Time: 18180 milliseconds
 Quick Sort Complete!
 Execution Time: 18274 milliseconds
 Quick Sort Complete!
-Execution Time: 18272 milliseconds
-std::sort Time: 15488 milliseconds
-std::sort Time: 15488 milliseconds
-std::sort Time: 15595 milliseconds
-std::sort Time: 15630 milliseconds
-std::sort Time: 15480 milliseconds
-std::sort Time: 15480 milliseconds
-std::sort Time: 15570 milliseconds
-std::sort Time: 15605 milliseconds
-std::sort Time: 15595 milliseconds
-std::sort Time: 15637 milliseconds
-Pass the sorting result check!
-Pass the sorting result check!
+Execution Time: 18273 milliseconds
+Quick Sort Complete!
+Execution Time: 18289 milliseconds
+Quick Sort Complete!
+Execution Time: 18288 milliseconds
+Quick Sort Complete!
+Execution Time: 18335 milliseconds
+Quick Sort Complete!
+Execution Time: 18335 milliseconds
+Quick Sort Complete!
+Execution Time: 18293 milliseconds
+Quick Sort Complete!
+Execution Time: 18292 milliseconds
+Quick Sort Complete!
+Execution Time: 18326 milliseconds
+Quick Sort Complete!
+Execution Time: 18325 milliseconds
+Quick Sort Complete!
+Execution Time: 18336 milliseconds
+Quick Sort Complete!
+Execution Time: 18336 milliseconds
+std::sort Time: 15396 milliseconds
+std::sort Time: 15407 milliseconds
+std::sort Time: 15395 milliseconds
+std::sort Time: 15408 milliseconds
+std::sort Time: 15396 milliseconds
+std::sort Time: 15405 milliseconds
+std::sort Time: 15589 milliseconds
+std::sort Time: 15581 milliseconds
+std::sort Time: 15574 milliseconds
+std::sort Time: 15599 milliseconds
 std::sort Time: 15489 milliseconds
 std::sort Time: 15489 milliseconds
-std::sort Time: 15490 milliseconds
-std::sort Time: 15490 milliseconds
-std::sort Time: 15496 milliseconds
-std::sort Time: 15496 milliseconds
+std::sort Time: 15489 milliseconds
+std::sort Time: 15489 milliseconds
+std::sort Time: 15489 milliseconds
+std::sort Time: 15489 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
 Pass the sorting result check!
 Pass the sorting result check!
 Pass the sorting result check!
@@ -510,83 +390,83 @@ Pass the sorting result check!
 Pass the sorting result check!
 Number of cores: 32
 Quick Sort Complete!
-Execution Time: 18056 milliseconds
+Execution Time: 18046 milliseconds
 Quick Sort Complete!
-Execution Time: 18056 milliseconds
+Execution Time: 18048 milliseconds
 Quick Sort Complete!
-Execution Time: 18212 milliseconds
+Execution Time: 18153 milliseconds
 Quick Sort Complete!
-Execution Time: 18213 milliseconds
+Execution Time: 18155 milliseconds
 Quick Sort Complete!
-Execution Time: 18280 milliseconds
+Execution Time: 18189 milliseconds
 Quick Sort Complete!
-Execution Time: 18279 milliseconds
+Execution Time: 18249 milliseconds
 Quick Sort Complete!
-Execution Time: 18299 milliseconds
+Execution Time: 18190 milliseconds
 Quick Sort Complete!
-Execution Time: 18298 milliseconds
-Quick Sort Complete!
-Execution Time: 18357 milliseconds
-Quick Sort Complete!
-Execution Time: 18357 milliseconds
-Quick Sort Complete!
-Execution Time: 18342 milliseconds
-Quick Sort Complete!
-Execution Time: 18341 milliseconds
-Quick Sort Complete!
-Execution Time: 18283 milliseconds
-Quick Sort Complete!
-Execution Time: 18295 milliseconds
+Execution Time: 18251 milliseconds
 Quick Sort Complete!
 Execution Time: 18291 milliseconds
 Quick Sort Complete!
+Execution Time: 18292 milliseconds
+Quick Sort Complete!
+Execution Time: 18324 milliseconds
+Quick Sort Complete!
+Execution Time: 18324 milliseconds
+Quick Sort Complete!
+Execution Time: 18281 milliseconds
+Quick Sort Complete!
+Execution Time: 18292 milliseconds
+Quick Sort Complete!
 Execution Time: 18316 milliseconds
 Quick Sort Complete!
-Execution Time: 18349 milliseconds
+Execution Time: 18324 milliseconds
 Quick Sort Complete!
-Execution Time: 18349 milliseconds
+Execution Time: 18339 milliseconds
 Quick Sort Complete!
-Execution Time: 18327 milliseconds
+Execution Time: 18340 milliseconds
 Quick Sort Complete!
-Execution Time: 18332 milliseconds
-Quick Sort Complete!
-Execution Time: 18329 milliseconds
-Quick Sort Complete!
-Execution Time: 18346 milliseconds
+Execution Time: 18345 milliseconds
 Quick Sort Complete!
 Execution Time: 18351 milliseconds
 Quick Sort Complete!
-Execution Time: 18351 milliseconds
+Execution Time: 18350 milliseconds
 Quick Sort Complete!
-Execution Time: 18387 milliseconds
+Execution Time: 18371 milliseconds
+Quick Sort Complete!
+Execution Time: 18361 milliseconds
+Quick Sort Complete!
+Execution Time: 18371 milliseconds
+Quick Sort Complete!
+Execution Time: 18389 milliseconds
+Quick Sort Complete!
+Execution Time: 18392 milliseconds
+Quick Sort Complete!
+Execution Time: 18447 milliseconds
+Quick Sort Complete!
+Execution Time: 18411 milliseconds
+Quick Sort Complete!
+Execution Time: 18433 milliseconds
 Quick Sort Complete!
 Execution Time: 18399 milliseconds
 Quick Sort Complete!
-Execution Time: 18408 milliseconds
+Execution Time: 18417 milliseconds
 Quick Sort Complete!
-Execution Time: 18416 milliseconds
-Quick Sort Complete!
-Execution Time: 18421 milliseconds
-Quick Sort Complete!
-Execution Time: 18427 milliseconds
-Quick Sort Complete!
-Execution Time: 18463 milliseconds
-Quick Sort Complete!
-Execution Time: 18495 milliseconds
-std::sort Time: 15527 milliseconds
-std::sort Time: 15527 milliseconds
-std::sort Time: 15382 milliseconds
-std::sort Time: 15386 milliseconds
-std::sort Time: 15504 milliseconds
-std::sort Time: 15504 milliseconds
-std::sort Time: 15383 milliseconds
-std::sort Time: 15387 milliseconds
-std::sort Time: 15474 milliseconds
-std::sort Time: 15487 milliseconds
+Execution Time: 18436 milliseconds
+std::sort Time: 15542 milliseconds
+std::sort Time: 15545 milliseconds
+std::sort Time: 15532 milliseconds
+std::sort Time: 15532 milliseconds
 Pass the sorting result check!
 Pass the sorting result check!
 std::sort Time: 15505 milliseconds
 std::sort Time: 15505 milliseconds
+std::sort Time: 15503 milliseconds
+std::sort Time: 15503 milliseconds
+std::sort Time: 15596 milliseconds
+std::sort Time: 15595 milliseconds
+std::sort Time: 15618 milliseconds
+std::sort Time: 15618 milliseconds
 Pass the sorting result check!
 Pass the sorting result check!
 Pass the sorting result check!
@@ -597,31 +477,31 @@ Pass the sorting result check!
 Pass the sorting result check!
 Pass the sorting result check!
 Pass the sorting result check!
-std::sort Time: 15459 milliseconds
-std::sort Time: 15465 milliseconds
-std::sort Time: 15658 milliseconds
-std::sort Time: 15674 milliseconds
-std::sort Time: 15701 milliseconds
-Pass the sorting result check!
-Pass the sorting result check!
-std::sort Time: 15691 milliseconds
-std::sort Time: 15674 milliseconds
-std::sort Time: 15735 milliseconds
-std::sort Time: 15701 milliseconds
-std::sort Time: 15703 milliseconds
-std::sort Time: 15687 milliseconds
-std::sort Time: 15697 milliseconds
-std::sort Time: 15694 milliseconds
-Pass the sorting result check!
-std::sort Time: 15686 milliseconds
-std::sort Time: 15708 milliseconds
-Pass the sorting result check!
-std::sort Time: 15681 milliseconds
-std::sort Time: 15693 milliseconds
-std::sort Time: 15735 milliseconds
+std::sort Time: 15684 milliseconds
+std::sort Time: 15684 milliseconds
 std::sort Time: 15719 milliseconds
+std::sort Time: 15710 milliseconds
+std::sort Time: 15640 milliseconds
+std::sort Time: 15622 milliseconds
+std::sort Time: 15667 milliseconds
+std::sort Time: 15663 milliseconds
+std::sort Time: 15645 milliseconds
+std::sort Time: 15661 milliseconds
+std::sort Time: 15694 milliseconds
+std::sort Time: 15732 milliseconds
+std::sort Time: 15716 milliseconds
+std::sort Time: 15645 milliseconds
+std::sort Time: 15719 milliseconds
+std::sort Time: 15676 milliseconds
+std::sort Time: 15676 milliseconds
+std::sort Time: 15677 milliseconds
+std::sort Time: 15698 milliseconds
 Pass the sorting result check!
-std::sort Time: 15720 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
+std::sort Time: 15747 milliseconds
+Pass the sorting result check!
+Pass the sorting result check!
 Pass the sorting result check!
 Pass the sorting result check!
 Pass the sorting result check!
