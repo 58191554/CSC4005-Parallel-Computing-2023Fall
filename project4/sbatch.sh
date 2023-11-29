@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -o ./Project4-Results.txt
+#SBATCH -o Project4-Results.txt
 #SBATCH -p Project
 #SBATCH -J Project4
 #SBATCH --nodes=1
@@ -20,15 +20,15 @@ echo "Softmax Sequential"
 srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/build/softmax $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
 echo ""
 
-echo "Softmax OpenACC"
-srun -n 1 --gpus 1 ${CURRENT_DIR}/build/softmax_openacc $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
-echo ""
+# echo "Softmax OpenACC"
+# srun -n 1 --gpus 1 ${CURRENT_DIR}/build/softmax_openacc $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
+# echo ""
 
-# NN
-echo "NN Sequential"
-srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/build/nn $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
-echo ""
+# # NN
+# echo "NN Sequential"
+# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/build/nn $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
+# echo ""
 
-echo "NN OpenACC"
-srun -n 1 --gpus 1 ${CURRENT_DIR}/build/nn_openacc $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
-echo ""
+# echo "NN OpenACC"
+# srun -n 1 --gpus 1 ${CURRENT_DIR}/build/nn_openacc $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
+# echo ""

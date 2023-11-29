@@ -1,4 +1,5 @@
 #include "simple_ml_ext.hpp"
+#include <math.h>
 
 DataSet::DataSet(size_t images_num, size_t input_dim)
     : images_num(images_num), input_dim(input_dim)
@@ -89,7 +90,15 @@ void print_matrix(float *A, size_t m, size_t n)
 void matrix_dot(const float *A, const float *B, float *C, size_t m, size_t n, size_t k)
 {
     // BEGIN YOUR CODE
-
+    for(int i = 0; i < m; i ++){
+        for(int j = 0; j < k; j++){
+            float sum = 0;
+            for(int x = 0; x < n; x++){
+                sum += A[i*n+x]*B[x*k+j];
+            }
+            C[i*k+j] = sum;
+        }
+    }
     // END YOUR CODE
 }
 
@@ -104,7 +113,15 @@ void matrix_dot(const float *A, const float *B, float *C, size_t m, size_t n, si
 void matrix_dot_trans(const float *A, const float *B, float *C, size_t n, size_t m, size_t k)
 {
     // BEGIN YOUR CODE
-
+    for(size_t i = 0; i < n; i++){
+        for(size_t j = 0; j < k; j++){
+            float sum = 0;
+            for(size_t x = 0; x < m; x++){
+                sum += A[x*n+i]*B[x*k+j];
+            }
+            C[i*k+j] = sum;
+        }
+    }
     // END YOUR CODE
 }
 
@@ -134,7 +151,9 @@ void matrix_trans_dot(const float *A, const float *B, float *C, size_t m, size_t
 void matrix_minus(float *A, const float *B, size_t m, size_t n)
 {
     // BEGIN YOUR CODE
-
+    for(int i = 0; i < m*n; i++){
+        A[i] -= B[i];
+    }
     // END YOUR CODE
 }
 
@@ -148,7 +167,9 @@ void matrix_minus(float *A, const float *B, size_t m, size_t n)
 void matrix_mul_scalar(float *C, float scalar, size_t m, size_t n)
 {
     // BEGIN YOUR CODE
-
+    for(size_t i = 0; i < m*n; i++){
+        C[i] *= scalar;
+    }
     // END YOUR CODE
 }
 
@@ -162,7 +183,9 @@ void matrix_mul_scalar(float *C, float scalar, size_t m, size_t n)
 void matrix_div_scalar(float *C, float scalar, size_t m, size_t n)
 {
     // BEGIN YOUR CODE
-
+    for(size_t i = 0; i < m*n; i++){
+        C[i] /= scalar;
+    }
     // END YOUR CODE
 }
 
@@ -175,8 +198,28 @@ void matrix_div_scalar(float *C, float scalar, size_t m, size_t n)
 void matrix_softmax_normalize(float *C, size_t m, size_t n)
 {
     // BEGIN YOUR CODE
+    // Iterate over each row
+    for (size_t i = 0; i < m; ++i) {
+        // Find the maximum value in the row
+        float max_val = C[i * n];
+        for (size_t j = 1; j < n; ++j) {
+            if (C[i * n + j] > max_val) {
+                max_val = C[i * n + j];
+            }
+        }
 
-    // END YOUR CODE
+        // Apply softmax normalization to the row
+        float sum_exp = 0.0;
+        for (size_t j = 0; j < n; ++j) {
+            C[i * n + j] = expf(C[i * n + j] - max_val);
+            sum_exp += C[i * n + j];
+        }
+
+        // Normalize the row
+        for (size_t j = 0; j < n; ++j) {
+            C[i * n + j] /= sum_exp;
+        }
+    }    // END YOUR CODE
 }
 
 /**
@@ -189,7 +232,14 @@ void matrix_softmax_normalize(float *C, size_t m, size_t n)
 void vector_to_one_hot_matrix(const unsigned char *y, float *Y, size_t m, size_t n)
 {
     // BEGIN YOUR CODE
-
+    for(size_t i = 0; i < m; i++){
+        for(size_t j = 0; j < n; j++){
+            Y[i*m+j] = 0;
+            if(j == y[i]){
+                Y[i*m+j] = 1;
+            }
+        }
+    }
     // END YOUR CODE
 }
 
@@ -234,10 +284,29 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
     float train_loss, train_err, test_loss, test_err;
     std::cout << "| Epoch | Train Loss | Train Err | Test Loss | Test Err |" << std::endl;
     auto start_time = std::chrono::high_resolution_clock::now();
+
+    size_t input_dim = train_data->input_dim;
+    float * Z_b = new float[batch*num_classes];
+    float * Y = new float[batch*num_classes];
+    float * gradients = new float[input_dim*num_classes];
+
     for (size_t epoch = 0; epoch < epochs; epoch++)
     {
         // BEGIN YOUR CODE
-
+        for(int i = 0; i < train_data->images_num; i+=batch){
+            auto X_b = &train_data->images_matrix[batch*input_dim];
+            matrix_dot(X_b, theta, Z_b, batch, input_dim, num_classes);
+            matrix_softmax_normalize(Z_b, batch, num_classes);
+            vector_to_one_hot_matrix(train_data->labels_array, Y, batch, num_classes);
+            matrix_minus(Z_b, Y, batch, num_classes);
+            matrix_dot_trans(X_b, Z_b, gradients,input_dim, batch, num_classes);
+            matrix_div_scalar(gradients, batch, input_dim, num_classes);
+            matrix_mul_scalar(gradients, lr, input_dim, num_classes);
+            matrix_minus(theta, gradients, input_dim, num_classes);
+        }
+        matrix_dot(train_data->images_matrix, theta, train_result, train_data->images_num, input_dim, num_classes);
+        matrix_softmax_normalize(train_result, train_data->images_num, num_classes);
+        
         // END YOUR CODE
         train_loss = mean_softmax_loss(train_result, train_data->labels_array, train_data->images_num, num_classes);
         test_loss = mean_softmax_loss(test_result, test_data->labels_array, test_data->images_num, num_classes);
@@ -255,6 +324,11 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
                                                               start_time);
     std::cout << "Execution Time: " << elapsed_time.count()
               << " milliseconds\n";
+
+    delete[] Z_b;
+    delete[] Y;
+    delete[] gradients;
+
     delete[] theta;
     delete[] train_result;
     delete[] test_result;
@@ -276,7 +350,7 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
 float mean_softmax_loss(const float *result, const unsigned char *labels_array, size_t images_num, size_t num_classes)
 {
     // BEGIN YOUR CODE
-
+    
     // END YOUR CODE
 }
 
