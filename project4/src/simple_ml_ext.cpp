@@ -290,7 +290,7 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
     float * Y = new float[batch*num_classes];
     float * gradients = new float[input_dim*num_classes];
 
-    for (size_t epoch = 0; epoch < epochs; epoch++)
+    for (size_t epoch = 0; epoch < 1; epoch++)
     {
         // BEGIN YOUR CODE
         for(int i = 0; i < train_data->images_num; i+=batch){
@@ -300,13 +300,26 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
             vector_to_one_hot_matrix(train_data->labels_array, Y, batch, num_classes);
             matrix_minus(Z_b, Y, batch, num_classes);
             matrix_dot_trans(X_b, Z_b, gradients,input_dim, batch, num_classes);
+            for(int k = 0; k < input_dim; k++){
+                for(int x = 0; x < num_classes; x++){
+                    std::cout << gradients[k*num_classes+x] << ", ";
+                }
+                std::cout << std::endl;
+            }
             matrix_div_scalar(gradients, batch, input_dim, num_classes);
             matrix_mul_scalar(gradients, lr, input_dim, num_classes);
             matrix_minus(theta, gradients, input_dim, num_classes);
         }
+        // for(int i = 0; i < input_dim; i++){
+        //     for(int j = 0; j < num_classes; j++){
+        //         std::cout << theta[i*num_classes+j] << ", ";
+        //     }
+        //     std::cout << std::endl;
+        // }
+
         matrix_dot(train_data->images_matrix, theta, train_result, train_data->images_num, input_dim, num_classes);
+
         matrix_softmax_normalize(train_result, train_data->images_num, num_classes);
-        
         // END YOUR CODE
         train_loss = mean_softmax_loss(train_result, train_data->labels_array, train_data->images_num, num_classes);
         test_loss = mean_softmax_loss(test_result, test_data->labels_array, test_data->images_num, num_classes);
