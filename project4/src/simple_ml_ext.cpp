@@ -1,5 +1,6 @@
 #include "simple_ml_ext.hpp"
 #include <math.h>
+#include <cmath>
 
 DataSet::DataSet(size_t images_num, size_t input_dim)
     : images_num(images_num), input_dim(input_dim)
@@ -113,11 +114,11 @@ void matrix_dot(const float *A, const float *B, float *C, size_t m, size_t n, si
 void matrix_dot_trans(const float *A, const float *B, float *C, size_t n, size_t m, size_t k)
 {
     // BEGIN YOUR CODE
-    for(size_t i = 0; i < n; i++){
+    for(size_t i = 0; i < m; i++){
         for(size_t j = 0; j < k; j++){
             float sum = 0;
-            for(size_t x = 0; x < m; x++){
-                sum += A[x*n+i]*B[x*k+j];
+            for(size_t x = 0; x < n; x++){
+                sum += A[x*m+i]*B[x*k+j];
             }
             C[i*k+j] = sum;
         }
@@ -234,8 +235,8 @@ void vector_to_one_hot_matrix(const unsigned char *y, float *Y, size_t m, size_t
     // BEGIN YOUR CODE
     for(size_t i = 0; i < m; i++){
         for(size_t j = 0; j < n; j++){
-            Y[i*m+j] = 0;
-            if(j == y[i]){
+            Y[i*n+j] = 0;
+            if(static_cast<size_t>(y[i]) == j){
                 Y[i*m+j] = 1;
             }
         }
@@ -306,7 +307,8 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
         }
         matrix_dot(train_data->images_matrix, theta, train_result, train_data->images_num, input_dim, num_classes);
         matrix_softmax_normalize(train_result, train_data->images_num, num_classes);
-        
+        matrix_dot(test_data->images_matrix, theta, test_result, test_data->images_num, input_dim, num_classes);
+        matrix_softmax_normalize(test_result, test_data->images_num, num_classes);
         // END YOUR CODE
         train_loss = mean_softmax_loss(train_result, train_data->labels_array, train_data->images_num, num_classes);
         test_loss = mean_softmax_loss(test_result, test_data->labels_array, test_data->images_num, num_classes);
@@ -324,7 +326,7 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
                                                               start_time);
     std::cout << "Execution Time: " << elapsed_time.count()
               << " milliseconds\n";
-
+    std::cout << "FUCKME" <<std::endl;
     delete[] Z_b;
     delete[] Y;
     delete[] gradients;
@@ -350,7 +352,12 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
 float mean_softmax_loss(const float *result, const unsigned char *labels_array, size_t images_num, size_t num_classes)
 {
     // BEGIN YOUR CODE
-    
+    float cross_entropy_loss = 0;
+    for(int i = 0; i < images_num; i++){
+        int one_hot_index = static_cast<int>(labels_array[i]);
+        cross_entropy_loss += - std::log(result[i*num_classes+one_hot_index] + 1e-10);
+    }
+    return cross_entropy_loss/images_num;
     // END YOUR CODE
 }
 
@@ -368,7 +375,28 @@ float mean_softmax_loss(const float *result, const unsigned char *labels_array, 
 float mean_err(float *result, const unsigned char *labels_array, size_t images_num, size_t num_classes)
 {
     // BEGIN YOUR CODE
+    float probability;
+    int output;
+    float err = 0;
+    for(int i = 0; i < images_num; i++){
+        probability = 0;
+        output = 0;
+        // find the max probability output
+        for(int j = 0; j < num_classes; j++){
+            if(result[i*num_classes + j]>probability){
+                probability = result[i*num_classes + j];
+                output = j;
+            }
+        }
+        // compute err
+        if(output == static_cast<int>(labels_array[i])){
+            err += 0;
+        }else{
+            err += 1;
+        }
+    }
 
+    return err/images_num;
     // END YOUR CODE
 }
 

@@ -12,8 +12,7 @@ cmake ..
 # Run make
 make
 
+# Navigate back to the original directory
 cd ..
-
-chmod +x sbatch.sh
-chmod +x test.sh
-sbatch ./sbatch.sh
+chmod +x run_pc.sh
+./run_pc.sh

@@ -9,6 +9,7 @@ int main()
 
     std::cout << "Training softmax regression" << std::endl;
     train_softmax(train_data, test_data, 10, 10, 0.2);
+    // train_softmax(train_data, test_data, 10, 100, 0.2);
 
     delete train_data;
     delete test_data;
