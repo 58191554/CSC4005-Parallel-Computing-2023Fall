@@ -91,6 +91,7 @@ void print_matrix(float *A, size_t m, size_t n)
 void matrix_dot(const float *A, const float *B, float *C, size_t m, size_t n, size_t k)
 {
     // BEGIN YOUR CODE
+    memset(C, 0, m * k * sizeof(float));
     for(size_t i = 0; i < m; i ++){
         auto A_row = A + i*n;
         auto C_row = C + i*k;
@@ -108,6 +109,7 @@ void matrix_dot(const float *A, const float *B, float *C, size_t m, size_t n, si
 void matrix_dot_unroll(const float *A, const float *B, float *C, size_t m, size_t n, size_t k)
 {
     // BEGIN YOUR CODE
+    memset(C, 0, m * k * sizeof(float));
     for(size_t i = 0; i < m; i ++){
         auto A_row = A + i*n;
         auto C_row = C + i*k;
@@ -139,19 +141,11 @@ void matrix_dot_unroll(const float *A, const float *B, float *C, size_t m, size_
  **/
 void matrix_dot_trans(const float *A, const float *B, float *C, size_t n, size_t m, size_t k)
 {
+    memset(C, 0, m * k * sizeof(float));
     int input_dim = m;
     int batch_size = n;
     int num_class = k;
     // BEGIN YOUR CODE
-    // for(size_t i = 0; i < m; i++){
-    //     for(size_t j = 0; j < k; j++){
-    //         float sum = 0;
-    //         for(size_t x = 0; x < n; x++){
-    //             sum += A[x*m+i]*B[x*k+j];
-    //         }
-    //         C[i*k+j] = sum;
-    //     }
-    // }
     for(size_t x = 0; x < n; x++){
         auto A_row = A + x*m;
         auto B_row = B + x*k;
@@ -167,6 +161,7 @@ void matrix_dot_trans(const float *A, const float *B, float *C, size_t n, size_t
 
 void matrix_dot_trans_unroll(const float *A, const float *B, float *C, size_t n, size_t m, size_t k)
 {
+    memset(C, 0, m * k * sizeof(float));
     int input_dim = m;
     int batch_size = n;
     int num_class = k;
@@ -176,16 +171,17 @@ void matrix_dot_trans_unroll(const float *A, const float *B, float *C, size_t n,
         auto B_row = B + x*k;
         for(size_t i = 0; i < m; i++){
             auto C_row = C + i*k;
-            C_row[0] += A_row[i] * B_row[0];
-            C_row[1] += A_row[i] * B_row[1];
-            C_row[2] += A_row[i] * B_row[2];
-            C_row[3] += A_row[i] * B_row[3];
-            C_row[4] += A_row[i] * B_row[4];
-            C_row[5] += A_row[i] * B_row[5];
-            C_row[6] += A_row[i] * B_row[6];
-            C_row[7] += A_row[i] * B_row[7];
-            C_row[8] += A_row[i] * B_row[8];
-            C_row[9] += A_row[i] * B_row[9];
+            float A_row_i = A_row[i];
+            C_row[0] += A_row_i * B_row[0];
+            C_row[1] += A_row_i * B_row[1];
+            C_row[2] += A_row_i * B_row[2];
+            C_row[3] += A_row_i * B_row[3];
+            C_row[4] += A_row_i * B_row[4];
+            C_row[5] += A_row_i * B_row[5];
+            C_row[6] += A_row_i * B_row[6];
+            C_row[7] += A_row_i * B_row[7];
+            C_row[8] += A_row_i * B_row[8];
+            C_row[9] += A_row_i * B_row[9];
         }
     }
     // END YOUR CODE
@@ -420,6 +416,7 @@ void softmax_regression_epoch_cpp(const float *X, const unsigned char *y, float 
         matrix_dot_trans_unroll(local_X, local_logit, gradients, length, n, k);
         // Update theta values
         matrix_mul_scalar(gradients, lr/length, n, k);
+        // matrix_div_scalar(gradients, length, n, k);
         matrix_minus(theta, gradients, n, k);
         // Reset gradients for next minibatch
         std::fill(gradients, gradients + n * k, 0.0);
@@ -454,12 +451,10 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
         // BEGIN YOUR CODE
         softmax_regression_epoch_cpp(train_data->images_matrix, train_data->labels_array, theta, train_data->images_num, input_dim, num_classes, lr, batch);
         matrix_dot_unroll(train_data->images_matrix, theta, train_result, train_data->images_num, input_dim, num_classes);
-        matrix_softmax_normalize_unroll(train_result, train_data->images_num, num_classes);
         matrix_dot_unroll(test_data->images_matrix, theta, test_result, test_data->images_num, input_dim, num_classes);
-        matrix_softmax_normalize_unroll(test_result, test_data->images_num, num_classes);
         // END YOUR CODE
-        train_loss = mean_softmax_loss_unroll(train_result, train_data->labels_array, train_data->images_num, num_classes);
-        test_loss = mean_softmax_loss_unroll(test_result, test_data->labels_array, test_data->images_num, num_classes);
+        train_loss = mean_softmax_loss(train_result, train_data->labels_array, train_data->images_num, num_classes);
+        test_loss = mean_softmax_loss(test_result, test_data->labels_array, test_data->images_num, num_classes);
         train_err = mean_err(train_result, train_data->labels_array, train_data->images_num, num_classes);
         test_err = mean_err(test_result, test_data->labels_array, test_data->images_num, num_classes);
         std::cout << "|  " << std::setw(4) << std::right << epoch << " |    "
@@ -496,26 +491,64 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
 float mean_softmax_loss(const float *result, const unsigned char *labels_array, size_t images_num, size_t num_classes)
 {
     // BEGIN YOUR CODE
-    float cross_entropy_loss = 0;
-    for(int i = 0; i < images_num; ++i){
-        float z_y = 0;
-        auto result_row = result + i*num_classes;
-        for(int j = 0; j < num_classes; ++j){
-            if(result[i*num_classes + j]>z_y){
-                z_y = result_row[j];
+    // float cross_entropy_loss = 0;
+    // for(int i = 0; i < images_num; ++i){
+    //     float z_y = 0;
+    //     auto result_row = result + i*num_classes;
+    //     for(int j = 0; j < num_classes; ++j){
+    //         if(result[i*num_classes + j]>z_y){
+    //             z_y = result_row[j];
+    //         }
+    //     }
+    //     float entropy = 0;
+    //     for(int j = 0; j < num_classes; j++){
+    //         entropy += expf(result_row[j]);
+    //     }
+    //     entropy = log2f(entropy);
+    //     cross_entropy_loss += (-z_y + entropy);
+    // }
+    // return cross_entropy_loss/images_num;
+    float total_loss = 0.0;
+
+    for (size_t i = 0; i < images_num; ++i)
+    {
+        // Get the logits for the current example
+        const float *logits = &result[i * num_classes];
+
+        // Get the true label for the current example
+        unsigned char true_label = labels_array[i];
+
+        // Compute the softmax probabilities and the loss
+        float sum_exp = 0.0;
+        float loss = 0.0;
+
+        // Compute the sum of exponentials (without subtracting the max_logit)
+        for (size_t j = 0; j < num_classes; ++j)
+        {
+            float exp_logit = exp(logits[j]);
+            sum_exp += exp_logit;
+        }
+
+        // Compute the softmax probabilities and the loss
+        for (size_t j = 0; j < num_classes; ++j)
+        {
+            float softmax_prob = exp(logits[j]) / sum_exp;
+
+            if (j == true_label)
+            {
+                loss = -log(softmax_prob);
             }
         }
-        float entropy = 0;
-        for(int j = 0; j < num_classes; j++){
-            entropy += expf(result_row[j]);
-        }
-        entropy = log2f(entropy);
-        cross_entropy_loss += (-z_y + entropy);
+
+        // Accumulate the loss for the current example
+        total_loss += loss;
     }
-    // for(int i = 0; i < images_num; i++){
-    //     cross_entropy_loss += - log2(result[labels_array[i]]);
-    // }
-    return cross_entropy_loss/images_num;
+
+    // Compute the average loss over all examples
+    float average_loss = total_loss / images_num;
+
+    return average_loss;
+
     // END YOUR CODE
 }
 
