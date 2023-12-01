@@ -92,9 +92,13 @@ void matrix_dot(const float *A, const float *B, float *C, size_t m, size_t n, si
 {
     // BEGIN YOUR CODE
     for(size_t i = 0; i < m; i ++){
-        for(size_t j = 0; j < k; j++){
-            for(size_t l = 0; l < n; l++){
-                C[i*k+j] += A[i*n+l]*B[l*k+j];
+        auto A_row = A + i*n;
+        auto C_row = C + i*k;
+        for(size_t l = 0; l < n; l++){
+            auto B_row = B + l*k;
+            float A_il = A_row[l];
+            for(size_t j = 0; j < k; j++){
+                C_row[j] += A_il*B_row[j];
             }
         }
     }
@@ -386,9 +390,12 @@ float mean_softmax_loss(const float *result, const unsigned char *labels_array, 
         for(int j = 0; j < num_classes; j++){
             entropy += expf(result[i*num_classes + j]);
         }
-        entropy = log(entropy);
+        entropy = log2f(entropy);
         cross_entropy_loss += (-z_y + entropy);
     }
+    // for(int i = 0; i < images_num; i++){
+    //     cross_entropy_loss += - log2(result[labels_array[i]]);
+    // }
     return cross_entropy_loss/images_num;
     // END YOUR CODE
 }
