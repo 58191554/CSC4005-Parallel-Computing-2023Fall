@@ -199,8 +199,43 @@ void matrix_dot_trans_unroll(const float *A, const float *B, float *C, size_t n,
 void matrix_trans_dot(const float *A, const float *B, float *C, size_t m, size_t n, size_t k)
 {
     // BEGIN YOUR CODE
-
+    memset(C, 0, m*k*sizeof(float));
+    for(size_t i = 0; i < m; i++){
+        for(size_t j = 0; j < k; j++){
+            for(size_t x = 0; x < n; x++){
+                C[i*k+j] = A[i*n+x] * B[j*n+x];
+            }
+        }
+    }
     // END YOUR CODE
+}
+/**
+ * Matrix Dot Multiplication Trans Version 2
+ * Efficiently compute C = A.dot(B.T)
+ * Args:
+ *     A (const float*): Matrix of size m * n
+ *     B (const float*): Matrix of size k * n
+ *     C (float*): Matrix of size m * k
+ **/
+void matrix_trans_dot_unroll(const float *A, const float *B, float *C, size_t m, size_t n, size_t k){
+    memset(C, 0, m*k*sizeof(float));
+    for(size_t i = 0; i < m; i++){
+        auto A_row = A + i*n;
+        auto C_row = C + i*k;
+        for(size_t j = 0; j < k; j++){
+            auto B_row = B + j*n;
+            C_row[0] = A_row[0] * B_row[0];
+            C_row[1] = A_row[1] * B_row[1];
+            C_row[2] = A_row[2] * B_row[2];
+            C_row[3] = A_row[3] * B_row[3];
+            C_row[4] = A_row[4] * B_row[4];
+            C_row[5] = A_row[5] * B_row[5];
+            C_row[6] = A_row[6] * B_row[6];
+            C_row[7] = A_row[7] * B_row[7];
+            C_row[8] = A_row[8] * B_row[8];
+            C_row[9] = A_row[9] * B_row[9];
+        }
+    }
 }
 
 /**
@@ -402,7 +437,7 @@ void softmax_regression_epoch_cpp(const float *X, const unsigned char *y, float 
     float *Y = new float[m*k]();
     vector_to_one_hot_matrix(y, Y, m, k);
     // Loop over minibatches
-    for (size_t start = 0; start < m; start += batch) {
+    for (size_t start = 0; start < m-batch; start += batch) {
         size_t end = std::min(start + batch, m);
         auto local_logit = logits + start*k;
         auto local_X = X + start*n;
@@ -638,7 +673,36 @@ void matrix_mul(float *A, const float *B, size_t size)
 
     // END YOUR CODE
 }
+/**
+ * Produce the ReLU output of an input matrix A
+ * first dimension for data number
+ * second dimension for feature
+ * load the one-order derivitive in cache
+ **/
+void matrix_relu_cache(float * A, float * A_cache, size_t m, size_t n){
+    for(size_t i = 0; i < m; i++){
+        auto A_row = A + i*n;
+        auto A_cacheRow = A_cache + i*n;
+        for(size_t j = 0; j < n; j++){
+            A_row[j] = A_row[j] > 0 ? A_row[j] : 0;
+            A_cacheRow[j] = A_row[j] > 0 ? 1 : 0;
+        }
+    }
+}
 
+/**
+ * Produce the ReLU output of an input matrix A
+ * first dimension for data number
+ * second dimension for feature
+ **/
+void matrix_relu(float * A, size_t m, size_t n){
+    for(size_t i = 0; i < m; i++){
+        auto A_row = A + i*n;
+        for(size_t j = 0; j < n; j++){
+            A_row[j] = A_row[j] > 0 ? A_row[j] : 0;
+        }
+    }
+}
 /*
 Run a single epoch of SGD for a two-layer neural network defined by the
 weights W1 and W2 (with no bias terms):
@@ -663,7 +727,53 @@ Args:
 */
 void nn_epoch_cpp(const float *X, const unsigned char *y, float *W1, float *W2, size_t m, size_t n, size_t l, size_t k, float lr, size_t batch)
 {
+    float *Z1 = new float[batch * l]();
+    memset(Z1, 0, batch*l*sizeof(float));
+    float *Z1_cache = new float[batch * l]();
+    memset(Z1_cache, 0, batch*l*sizeof(float));
+    float *Z2 = new float[batch * k]();
+    memset(Z2, 0, batch*k*sizeof(float));
+    // float *Z2 = new float]
+    float *gradients = new float[n * k]();
+    memset(gradients, 0, n*k*sizeof(float));
+    float *Y = new float[m*k]();
+    vector_to_one_hot_matrix(y, Y, m, k);
+    float *G1 = new float[batch * l]();
+    memset(G1, 0, batch * l * sizeof(float));
+    float *W1_l = new float[n * l]();
+    memset(W1_l, 0, n * l *sizeof(float));
+    float *W2_l = new float[l * k]();
+    memset(W2_l, 0, l * k * sizeof(float));
+
     // BEGIN YOUR CODE
+    for(size_t start = 0; start < m-batch; start += batch){
+        size_t end = std::min(start + batch, m);
+        size_t length = end-start;
+        auto X_b = X + start*n;
+        matrix_dot(X_b, W1, Z1, length, n, l);
+        matrix_relu_cache(Z1, Z1_cache, length, l);
+        matrix_dot(Z1, W2, Z2, length, l, k);
+        matrix_softmax_normalize(Z2, length, k);
+        auto Y_b = Y + start*k;
+        // G2 = Z2 - Y_b
+        matrix_minus(Z2, Y_b, length, k);
+        // dot(Z2 - Y, W2.T)
+        matrix_trans_dot_unroll(Z2, W2, G1, length, l, k);
+        // G1 = dot(Z2 - Y, W2.T) * (Z1 > 0)
+        matrix_mul(G1, Z1_cache, length*l);
+        // W1_l = dot(X_b.T, G1)
+        matrix_dot_trans(X_b, G1, W1_l, length, n, l);
+        // W1_l = dot(X_b.T, G1) / batch * lr
+        matrix_mul_scalar(W1_l, lr/batch, n, l);
+        // W1 -= W1_l
+        matrix_minus(W1, W1_l, n, l);
+        // W2_l = dot(Z1.T, Z2 - Y) 
+        matrix_dot_trans(Z1, Z2, W2_l, length, l, k);
+        // W2_l = dot(Z1.T, Z2 - Y) / batch * lr
+        matrix_mul_scalar(W2_l, lr/batch, l, k);
+        // W2 -= W2_l
+        matrix_minus(W2, W2_l, l, k);
+    }
 
     // END YOUR CODE
 }
@@ -677,6 +787,11 @@ void train_nn(const DataSet *train_data, const DataSet *test_data, size_t num_cl
     size_t size_w2 = hidden_dim * num_classes;
     float *W1 = new float[size_w1];
     float *W2 = new float[size_w2];
+    float *Z1_train = new float[train_data->images_num*hidden_dim];
+    float *Z2_train = new float[train_data->images_num*num_classes];
+    float *Z1_test = new float[test_data->images_num*hidden_dim];
+    float *Z2_test = new float[test_data->images_num*num_classes];
+
     std::mt19937 rng;
     rng.seed(0);
     std::normal_distribution<float> dist(0.0, 1.0);
@@ -698,7 +813,11 @@ void train_nn(const DataSet *train_data, const DataSet *test_data, size_t num_cl
     for (size_t epoch = 0; epoch < epochs; epoch++)
     {
         // BEGIN YOUR CODE
-
+        nn_epoch_cpp(train_data->images_matrix, train_data->labels_array, W1, W2, \
+            train_data->images_num, train_data->input_dim, hidden_dim, num_classes, \
+            lr, batch);
+        // Z = dot(W2.T, ReLU(W1.T, X))
+        
         // END YOUR CODE
         train_loss = mean_softmax_loss(train_result, train_data->labels_array, train_data->images_num, num_classes);
         test_loss = mean_softmax_loss(test_result, test_data->labels_array, test_data->images_num, num_classes);

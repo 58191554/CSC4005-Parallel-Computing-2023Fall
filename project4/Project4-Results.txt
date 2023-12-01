@@ -1,4 +1,20 @@
 Current directory: /nfsmnt/120090694/CSC4005-2023Fall/project4
+Softmax Sequential
+Training softmax regression
+input_dim = 784
+| Epoch | Train Loss | Train Err | Test Loss | Test Err |
+|     0 |    0.35204 |   0.10110 |   0.33656 |  0.09360 |
+|     1 |    0.32215 |   0.09203 |   0.31162 |  0.08730 |
+|     2 |    0.30861 |   0.08822 |   0.30159 |  0.08610 |
+|     3 |    0.30033 |   0.08532 |   0.29608 |  0.08420 |
+|     4 |    0.29453 |   0.08337 |   0.29255 |  0.08370 |
+|     5 |    0.29012 |   0.08192 |   0.29007 |  0.08230 |
+|     6 |    0.28659 |   0.08070 |   0.28821 |  0.08120 |
+|     7 |    0.28367 |   0.07997 |   0.28676 |  0.08070 |
+|     8 |    0.28119 |   0.07928 |   0.28558 |  0.08020 |
+|     9 |    0.27904 |   0.07853 |   0.28460 |  0.08000 |
+Execution Time: 7142 milliseconds
+
 NN Sequential
 Training two layer neural network w/ 400 hidden units
 | Epoch | Train Loss | Train Err | Test Loss | Test Err |
@@ -22,5 +38,5 @@ Training two layer neural network w/ 400 hidden units
 |    17 |    2.30289 |   0.90128 |   2.30270 |  0.90200 |
 |    18 |    2.30289 |   0.90128 |   2.30270 |  0.90200 |
 |    19 |    2.30289 |   0.90128 |   2.30270 |  0.90200 |
-Execution Time: 217 milliseconds
+Execution Time: 219 milliseconds
 
