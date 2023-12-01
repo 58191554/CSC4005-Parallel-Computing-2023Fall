@@ -91,13 +91,11 @@ void print_matrix(float *A, size_t m, size_t n)
 void matrix_dot(const float *A, const float *B, float *C, size_t m, size_t n, size_t k)
 {
     // BEGIN YOUR CODE
-    for(int i = 0; i < m; i ++){
-        for(int j = 0; j < k; j++){
-            float sum = 0;
-            for(int x = 0; x < n; x++){
-                sum += A[i*n+x]*B[x*k+j];
+    for(size_t i = 0; i < m; i ++){
+        for(size_t j = 0; j < k; j++){
+            for(size_t l = 0; l < n; l++){
+                C[i*k+j] += A[i*n+l]*B[l*k+j];
             }
-            C[i*k+j] = sum;
         }
     }
     // END YOUR CODE
@@ -113,6 +111,9 @@ void matrix_dot(const float *A, const float *B, float *C, size_t m, size_t n, si
  **/
 void matrix_dot_trans(const float *A, const float *B, float *C, size_t n, size_t m, size_t k)
 {
+    int input_dim = m;
+    int batch_size = n;
+    int num_class = k;
     // BEGIN YOUR CODE
     for(size_t i = 0; i < m; i++){
         for(size_t j = 0; j < k; j++){
@@ -221,6 +222,19 @@ void matrix_softmax_normalize(float *C, size_t m, size_t n)
             C[i * n + j] /= sum_exp;
         }
     }    // END YOUR CODE
+    
+    // for(int i = 0; i < m; ++i){
+    //     float row_divider = 0;
+    //     // compute the row divider
+    //     for(int j = 0; j < n; ++j){
+    //         row_divider += expf(C[i*n+j]);
+    //     }
+
+    //     for(int j = 0; j < n; ++j){
+    //         C[i*n+j] = C[i*n+j]/row_divider;
+    //     }
+    // }
+
 }
 
 /**
@@ -237,7 +251,7 @@ void vector_to_one_hot_matrix(const unsigned char *y, float *Y, size_t m, size_t
         for(size_t j = 0; j < n; j++){
             Y[i*n+j] = 0;
             if(static_cast<size_t>(y[i]) == j){
-                Y[i*m+j] = 1;
+                Y[i*n+j] = 1;
             }
         }
     }
@@ -248,7 +262,7 @@ void vector_to_one_hot_matrix(const unsigned char *y, float *Y, size_t m, size_t
  * A C++ version of the softmax regression epoch code.  This should run a
  * single epoch over the data defined by X and y (and sizes m,n,k), and
  * modify theta in place.  Your function will probably want to allocate
- * (and then delete) some helper arrays to store the logits and gradients.
+ * (and then delete) some helper arrays to store the Z_b and gradients.
  *
  * Args:
  *     X (const float *): pointer to X data, of size m*n, stored in row
@@ -267,9 +281,32 @@ void vector_to_one_hot_matrix(const unsigned char *y, float *Y, size_t m, size_t
  */
 void softmax_regression_epoch_cpp(const float *X, const unsigned char *y, float *theta, size_t m, size_t n, size_t k, float lr, size_t batch)
 {
-    // BEGIN YOUR CODE
-
-    // END YOUR CODE
+    float *logits = new float[m * k]();
+    float *gradients = new float[n * k]();
+    float *Y = new float[m*k]();
+    vector_to_one_hot_matrix(y, Y, m, k);
+    // Loop over minibatches
+    for (size_t start = 0; start < m; start += batch) {
+        size_t end = std::min(start + batch, m);
+        auto local_logit = logits + start*k;
+        auto local_Y = Y + start*k;
+        size_t length = end-start;
+        matrix_dot(X + start*n, theta, local_logit, length, n, k);
+        // Apply softmax function to logits
+        matrix_softmax_normalize(local_logit, length, k);
+        // Calculate gradients and accumulate over minibatch
+        matrix_minus(local_logit, local_Y, length, k);
+        matrix_dot_trans(X + start*n, local_logit, gradients, length, n, k);
+        // Update theta values
+        matrix_mul_scalar(gradients, lr/length, n, k);
+        matrix_minus(theta, gradients, n, k);
+        // Reset gradients for next minibatch
+        std::fill(gradients, gradients + n * k, 0.0);
+        }
+    // Deallocate memory for logits and gradients arrays
+    delete[] logits;
+    delete[] gradients;
+    delete[] Y;
 }
 
 /**
@@ -283,28 +320,17 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
     float *train_result = new float[train_data->images_num * num_classes];
     float *test_result = new float[test_data->images_num * num_classes];
     float train_loss, train_err, test_loss, test_err;
+    size_t input_dim = train_data->input_dim;
+    std::cout << "input_dim = " << input_dim << std::endl;
+
     std::cout << "| Epoch | Train Loss | Train Err | Test Loss | Test Err |" << std::endl;
     auto start_time = std::chrono::high_resolution_clock::now();
 
-    size_t input_dim = train_data->input_dim;
-    float * Z_b = new float[batch*num_classes];
-    float * Y = new float[batch*num_classes];
-    float * gradients = new float[input_dim*num_classes];
 
     for (size_t epoch = 0; epoch < epochs; epoch++)
-    {
+    {   
+        softmax_regression_epoch_cpp(train_data->images_matrix, train_data->labels_array, theta, train_data->images_num, input_dim, num_classes, lr, batch);
         // BEGIN YOUR CODE
-        for(int i = 0; i < train_data->images_num; i+=batch){
-            auto X_b = &train_data->images_matrix[batch*input_dim];
-            matrix_dot(X_b, theta, Z_b, batch, input_dim, num_classes);
-            matrix_softmax_normalize(Z_b, batch, num_classes);
-            vector_to_one_hot_matrix(train_data->labels_array, Y, batch, num_classes);
-            matrix_minus(Z_b, Y, batch, num_classes);
-            matrix_dot_trans(X_b, Z_b, gradients,input_dim, batch, num_classes);
-            matrix_div_scalar(gradients, batch, input_dim, num_classes);
-            matrix_mul_scalar(gradients, lr, input_dim, num_classes);
-            matrix_minus(theta, gradients, input_dim, num_classes);
-        }
         matrix_dot(train_data->images_matrix, theta, train_result, train_data->images_num, input_dim, num_classes);
         matrix_softmax_normalize(train_result, train_data->images_num, num_classes);
         matrix_dot(test_data->images_matrix, theta, test_result, test_data->images_num, input_dim, num_classes);
@@ -326,10 +352,6 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
                                                               start_time);
     std::cout << "Execution Time: " << elapsed_time.count()
               << " milliseconds\n";
-    std::cout << "FUCKME" <<std::endl;
-    delete[] Z_b;
-    delete[] Y;
-    delete[] gradients;
 
     delete[] theta;
     delete[] train_result;
@@ -353,9 +375,19 @@ float mean_softmax_loss(const float *result, const unsigned char *labels_array, 
 {
     // BEGIN YOUR CODE
     float cross_entropy_loss = 0;
-    for(int i = 0; i < images_num; i++){
-        int one_hot_index = static_cast<int>(labels_array[i]);
-        cross_entropy_loss += - std::log(result[i*num_classes+one_hot_index] + 1e-10);
+    for(int i = 0; i < images_num; ++i){
+        float z_y = 0;
+        for(int j = 0; j < num_classes; ++j){
+            if(result[i*num_classes + j]>z_y){
+                z_y = result[i*num_classes + j];
+            }
+        }
+        float entropy = 0;
+        for(int j = 0; j < num_classes; j++){
+            entropy += expf(result[i*num_classes + j]);
+        }
+        entropy = log(entropy);
+        cross_entropy_loss += (-z_y + entropy);
     }
     return cross_entropy_loss/images_num;
     // END YOUR CODE
@@ -418,7 +450,7 @@ void matrix_mul(float *A, const float *B, size_t size)
 /*
 Run a single epoch of SGD for a two-layer neural network defined by the
 weights W1 and W2 (with no bias terms):
-    logits = ReLU(X * W1) * W2
+    Z_b = ReLU(X * W1) * W2
 The function should use the step size lr, and the specified batch size (and
 again, without randomizing the order of X).  It should modify the
 W1 and W2 matrices in place.
