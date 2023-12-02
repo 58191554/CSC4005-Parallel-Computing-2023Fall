@@ -1,69 +1,62 @@
 # Project 4: Parallel Programming with Machine Learning
 
 ```cpp
-    // Allocate memory for logits and gradients arrays
-    float *logits = new float[m * k]();
-    float *gradients = new float[n * k]();
+/*
+ *Return softmax loss.  Note that for the purposes of this assignment,
+ *you don't need to worry about "nicely" scaling the numerical properties
+ *of the log-sum-exp computation, but can just compute this directly.
+ *Args:
+ *    result (const float *): 1D array of shape
+ *        (batch_size x num_classes), containing the logit predictions for
+ *        each class.
+ *    labels_array (const unsigned char *): 1D array of shape (batch_size, )
+ *        containing the true label of each example.
+ *Returns:
+ *    Average softmax loss over the sample.
+ */
+float mean_softmax_loss(const float *result, const unsigned char *labels_array, size_t images_num, size_t num_classes)
+{
+    float total_loss = 0.0;
 
-    // Loop over minibatches
-    for (size_t start = 0; start < m; start += batch) {
-        size_t end = std::min(start + batch, m);
+    for (size_t i = 0; i < images_num; ++i)
+    {
+        // Get the logits for the current example
+        const float *logits = &result[i * num_classes];
 
-        // Calculate logits for each example
-        for (size_t i = start; i < end; i++) {
-            for (size_t j = 0; j < k; j++) {
-                for (size_t l = 0; l < n; l++) {
-                    logits[i * k + j] += X[i * n + l] * theta[l * k + j];
-                }
+        // Get the true label for the current example
+        unsigned char true_label = labels_array[i];
+
+        // Compute the softmax probabilities and the loss
+        float sum_exp = 0.0;
+        float loss = 0.0;
+
+        // Compute the sum of exponentials (without subtracting the max_logit)
+        for (size_t j = 0; j < num_classes; ++j)
+        {
+            float exp_logit = exp(logits[j]);
+            sum_exp += exp_logit;
+        }
+
+        // Compute the softmax probabilities and the loss
+        for (size_t j = 0; j < num_classes; ++j)
+        {
+            float softmax_prob = exp(logits[j]) / sum_exp;
+
+            if (j == true_label)
+            {
+                loss = -log(softmax_prob);
             }
         }
 
-        // Apply softmax function to logits
-        for (size_t i = start; i < end; i++) {
-            float max_logit = logits[i * k];
-            for (size_t j = 1; j < k; j++) {
-                max_logit = std::max(max_logit, logits[i * k + j]);
-            }
-
-            float sum_exp_logit = 0.0;
-            for (size_t j = 0; j < k; j++) {
-                logits[i * k + j] = std::exp(logits[i * k + j] - max_logit);
-                sum_exp_logit += logits[i * k + j];
-            }
-
-            for (size_t j = 0; j < k; j++) {
-                logits[i * k + j] /= sum_exp_logit;
-            }
-        }
-
-        // Calculate gradients and accumulate over minibatch
-        for (size_t i = start; i < end; i++) {
-            for (size_t j = 0; j < k; j++) {
-                gradients[j] += (logits[i * k + j] - (y[i] == j)) * X[i * n];
-            }
-
-            for (size_t l = 1; l < n; l++) {
-                for (size_t j = 0; j < k; j++) {
-                    gradients[l * k + j] += (logits[i * k + j] - (y[i] == j)) * X[i * n + l];
-                }
-            }
-        }
-
-        // Update theta values
-        for (size_t l = 0; l < n; l++) {
-            for (size_t j = 0; j < k; j++) {
-                theta[l * k + j] -= (lr / batch) * gradients[l * k + j];
-            }
-        }
-
-        // Reset gradients for next minibatch
-        std::fill(gradients, gradients + n * k, 0.0);
+        // Accumulate the loss for the current example
+        total_loss += loss;
     }
 
-    // Deallocate memory for logits and gradients arrays
-    delete[] logits;
-    delete[] gradients;
+    // Compute the average loss over all examples
+    float average_loss = total_loss / images_num;
 
+    return average_loss;
+}
 ```
 
 
@@ -121,18 +114,19 @@
 
 ```
 Training softmax regression
+input_dim = 784
 | Epoch | Train Loss | Train Err | Test Loss | Test Err |
-|     0 |    2.29209 |   0.89367 |   2.29511 |  0.89320 |
-|     1 |    2.29235 |   0.89432 |   2.29529 |  0.89360 |
-|     2 |    2.29311 |   0.89417 |   2.29598 |  0.89370 |
-|     3 |    2.29360 |   0.89383 |   2.29637 |  0.89360 |
-|     4 |    2.29386 |   0.89362 |   2.29655 |  0.89320 |
-|     5 |    2.29400 |   0.89338 |   2.29662 |  0.89310 |
-|     6 |    2.29410 |   0.89335 |   2.29664 |  0.89300 |
-|     7 |    2.29417 |   0.89308 |   2.29665 |  0.89270 |
-|     8 |    2.29424 |   0.89288 |   2.29665 |  0.89250 |
-|     9 |    2.29430 |   0.89278 |   2.29667 |  0.89260 |
-Execution Time: 58362 milliseconds
+|     0 |    2.67117 |   0.10182 |   2.66763 |  0.09400 |
+|     1 |    2.62657 |   0.09448 |   2.62391 |  0.08830 |
+|     2 |    2.61604 |   0.09002 |   2.61380 |  0.08600 |
+|     3 |    2.61150 |   0.08712 |   2.60972 |  0.08480 |
+|     4 |    2.60885 |   0.08478 |   2.60746 |  0.08350 |
+|     5 |    2.60708 |   0.08300 |   2.60597 |  0.08170 |
+|     6 |    2.60577 |   0.08152 |   2.60479 |  0.08090 |
+|     7 |    2.60479 |   0.08072 |   2.60386 |  0.08080 |
+|     8 |    2.60400 |   0.07972 |   2.60304 |  0.08060 |
+|     9 |    2.60337 |   0.07907 |   2.60235 |  0.08020 |
+Execution Time: 46108 milliseconds
 
 ```
 
