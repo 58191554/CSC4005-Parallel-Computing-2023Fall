@@ -1,0 +1,106 @@
+Current directory: /nfsmnt/120090694/CSC4005-2023Fall/project4
+Softmax Sequential
+Training softmax regression
+input_dim = 784
+| Epoch | Train Loss | Train Err | Test Loss | Test Err |
+|     0 |    0.35204 |   0.10110 |   0.33656 |  0.09360 |
+|     1 |    0.32215 |   0.09203 |   0.31162 |  0.08730 |
+|     2 |    0.30861 |   0.08822 |   0.30159 |  0.08610 |
+|     3 |    0.30033 |   0.08532 |   0.29608 |  0.08420 |
+|     4 |    0.29453 |   0.08337 |   0.29255 |  0.08370 |
+|     5 |    0.29012 |   0.08192 |   0.29007 |  0.08230 |
+|     6 |    0.28659 |   0.08070 |   0.28821 |  0.08120 |
+|     7 |    0.28367 |   0.07997 |   0.28676 |  0.08070 |
+|     8 |    0.28119 |   0.07928 |   0.28558 |  0.08020 |
+|     9 |    0.27904 |   0.07853 |   0.28460 |  0.08000 |
+Execution Time: 7169 milliseconds
+
+Softmax OpenACC
+Collecting data...
+Training softmax regression (GPU)
+| Epoch | Train Loss | Train Err | Test Loss | Test Err |
+|     0 |    0.35204 |   0.10110 |   0.33656 |  0.09360 |
+|     1 |    0.32215 |   0.09203 |   0.31162 |  0.08730 |
+|     2 |    0.30861 |   0.08822 |   0.30159 |  0.08610 |
+|     3 |    0.30033 |   0.08532 |   0.29608 |  0.08420 |
+|     4 |    0.29453 |   0.08337 |   0.29255 |  0.08370 |
+|     5 |    0.29012 |   0.08192 |   0.29007 |  0.08230 |
+|     6 |    0.28660 |   0.08070 |   0.28821 |  0.08120 |
+|     7 |    0.28368 |   0.07997 |   0.28676 |  0.08070 |
+|     8 |    0.28119 |   0.07928 |   0.28558 |  0.08020 |
+|     9 |    0.27904 |   0.07853 |   0.28460 |  0.08000 |
+Execution Time: 2017 milliseconds
+Processing events...
+Saving temporary "/tmp/nsys-report-70bb-2c72-badb-60f5.qdstrm" file to disk...
+
+Creating final output files...
+Processing [0%                                                                ]Processing [1%                                                                ]Processing [2%                                                                ]Processing [1%                                                                ]Processing [0%                                                                ]Processing [3%                                                                ]Processing [2%                                                                ]Processing [1%                                                                ]Processing [3%                                                                ]Processing [2%                                                                ]Processing [3%                                                                ]Processing [2%                                                                ]Processing [1%                                                                ]Processing [2%                                                                ]Processing [3%                                                                ]Processing [4%                                                                ]Processing [=5%                                                               ]Processing [=6%                                                               ]Processing [==7%                                                              ]Processing [===8%                                                             ]Processing [===9%                                                             ]Processing [===10%                                                            ]Processing [====11%                                                           ]Processing [====12%                                                           ]Processing [=====13%                                                          ]Processing [======14%                                                         ]Processing [======15%                                                         ]Processing [=======16%                                                        ]Processing [========17%                                                       ]Processing [========18%                                                       ]Processing [=========19%                                                      ]Processing [==========20%                                                     ]Processing [==========21%                                                     ]Processing [===========22%                                                    ]Processing [============23%                                                   ]Processing [============24%                                                   ]Processing [=============25%                                                  ]Processing [==============26%                                                 ]Processing [==============27%                                                 ]Processing [===============28%                                                ]Processing [================29%                                               ]Processing [==============================================================100%]
+Saved report file to "/tmp/nsys-report-70bb-2c72-badb-60f5.qdrep"
+Unable to create output file /nfsmnt/120090694/CSC4005-2023Fall/project4/profiling/report1.qdrep : File exists
+Use `--force-overwrite true` to override existing files.
+Please manually fetch report file(s) from:
+* /tmp/nsys-report-70bb-2c72-badb-60f5.qdrep
+
+
+NN Sequential
+Training two layer neural network w/ 400 hidden units
+| Epoch | Train Loss | Train Err | Test Loss | Test Err |
+|     0 |    0.12778 |   0.03730 |   0.13340 |  0.04050 |
+|     1 |    0.10210 |   0.03227 |   0.12063 |  0.03980 |
+|     2 |    0.07666 |   0.02345 |   0.10349 |  0.03320 |
+|     3 |    0.06147 |   0.01840 |   0.09395 |  0.03010 |
+|     4 |    0.04859 |   0.01382 |   0.08546 |  0.02660 |
+|     5 |    0.03902 |   0.01040 |   0.07938 |  0.02480 |
+|     6 |    0.03324 |   0.00837 |   0.07634 |  0.02380 |
+|     7 |    0.02829 |   0.00677 |   0.07399 |  0.02330 |
+|     8 |    0.02445 |   0.00557 |   0.07211 |  0.02230 |
+|     9 |    0.02113 |   0.00448 |   0.07075 |  0.02180 |
+|    10 |    0.01865 |   0.00382 |   0.06955 |  0.02120 |
+|    11 |    0.01642 |   0.00300 |   0.06853 |  0.02070 |
+|    12 |    0.01468 |   0.00248 |   0.06793 |  0.02070 |
+|    13 |    0.01317 |   0.00200 |   0.06746 |  0.02080 |
+|    14 |    0.01192 |   0.00148 |   0.06693 |  0.02070 |
+|    15 |    0.01084 |   0.00103 |   0.06664 |  0.02050 |
+|    16 |    0.00989 |   0.00085 |   0.06630 |  0.02030 |
+|    17 |    0.00909 |   0.00058 |   0.06612 |  0.02050 |
+|    18 |    0.00839 |   0.00043 |   0.06588 |  0.02030 |
+|    19 |    0.00779 |   0.00035 |   0.06574 |  0.02000 |
+Execution Time: 731968 milliseconds
+
+NN OpenACC
+Collecting data...
+Training two layer neural network w/ 400 hidden units (GPU)
+| Epoch | Train Loss | Train Err | Test Loss | Test Err |
+|     0 |    0.13320 |   0.03975 |   0.14085 |  0.04190 |
+|     1 |    0.09605 |   0.02975 |   0.11479 |  0.03670 |
+|     2 |    0.07293 |   0.02173 |   0.09978 |  0.03130 |
+|     3 |    0.05875 |   0.01692 |   0.09105 |  0.02860 |
+|     4 |    0.04768 |   0.01338 |   0.08462 |  0.02640 |
+|     5 |    0.03932 |   0.01035 |   0.07984 |  0.02540 |
+|     6 |    0.03359 |   0.00855 |   0.07682 |  0.02480 |
+|     7 |    0.02887 |   0.00718 |   0.07429 |  0.02430 |
+|     8 |    0.02478 |   0.00587 |   0.07260 |  0.02340 |
+|     9 |    0.02174 |   0.00482 |   0.07106 |  0.02280 |
+|    10 |    0.01907 |   0.00393 |   0.06976 |  0.02200 |
+|    11 |    0.01693 |   0.00318 |   0.06888 |  0.02100 |
+|    12 |    0.01501 |   0.00262 |   0.06817 |  0.02040 |
+|    13 |    0.01375 |   0.00220 |   0.06791 |  0.02080 |
+|    14 |    0.01248 |   0.00172 |   0.06751 |  0.02040 |
+|    15 |    0.01131 |   0.00130 |   0.06710 |  0.02070 |
+|    16 |    0.01024 |   0.00097 |   0.06671 |  0.02050 |
+|    17 |    0.00952 |   0.00082 |   0.06679 |  0.02030 |
+|    18 |    0.00872 |   0.00067 |   0.06629 |  0.02030 |
+|    19 |    0.00805 |   0.00045 |   0.06620 |  0.02020 |
+Execution Time: 72851 milliseconds
+Processing events...
+Saving temporary "/tmp/nsys-report-7bfe-3d9c-687b-7e20.qdstrm" file to disk...
+
+Creating final output files...
+Processing [0%                                                                ]Processing [1%                                                                ]Processing [0%                                                                ]Processing [1%                                                                ]Processing [2%                                                                ]Processing [1%                                                                ]Processing [0%                                                                ]Processing [3%                                                                ]Processing [2%                                                                ]Processing [1%                                                                ]Processing [2%                                                                ]Processing [3%                                                                ]Processing [2%                                                                ]Processing [3%                                                                ]Processing [2%                                                                ]Processing [3%                                                                ]Processing [2%                                                                ]Processing [3%                                                                ]Processing [4%                                                                ]Processing [=5%                                                               ]Processing [=6%                                                               ]Processing [==7%                                                              ]Processing [===8%                                                             ]Processing [===9%                                                             ]Processing [===10%                                                            ]Processing [====11%                                                           ]Processing [====12%                                                           ]Processing [=====13%                                                          ]Processing [======14%                                                         ]Processing [======15%                                                         ]Processing [=======16%                                                        ]Processing [========17%                                                       ]Processing [========18%                                                       ]Processing [=========19%                                                      ]Processing [==========20%                                                     ]Processing [==========21%                                                     ]Processing [===========22%                                                    ]Processing [============23%                                                   ]Processing [============24%                                                   ]Processing [=============25%                                                  ]Processing [==============26%                                                 ]Processing [==============27%                                                 ]Processing [===============28%                                                ]Processing [================29%                                               ]Processing [================30%                                               ]Processing [=================31%                                              ]Processing [==================32%                                             ]Processing [==============================================================100%]
+Saved report file to "/tmp/nsys-report-7bfe-3d9c-687b-7e20.qdrep"
+Unable to create output file /nfsmnt/120090694/CSC4005-2023Fall/project4/profiling/report2.qdrep : File exists
+Use `--force-overwrite true` to override existing files.
+Please manually fetch report file(s) from:
+* /tmp/nsys-report-7bfe-3d9c-687b-7e20.qdrep
+
+
