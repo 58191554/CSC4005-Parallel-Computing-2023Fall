@@ -20,15 +20,17 @@ echo "Softmax Sequential"
 srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/build/softmax $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
 echo ""
 
-# echo "Softmax OpenACC"
+echo "Softmax OpenACC"
 # srun -n 1 --gpus 1 ${CURRENT_DIR}/build/softmax_openacc $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
-# echo ""
+srun -n 1 --gpus 1 nsys profile -o profiling/report1.qdrep ${CURRENT_DIR}/build/softmax_openacc $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
+echo ""
 
 # # NN
-# echo "NN Sequential"
-# srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/build/nn $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
-# echo ""
+echo "NN Sequential"
+srun -n 1 --cpus-per-task 1 ${CURRENT_DIR}/build/nn $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
+echo ""
 
-# echo "NN OpenACC"
+echo "NN OpenACC"
 # srun -n 1 --gpus 1 ${CURRENT_DIR}/build/nn_openacc $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
-# echo ""
+srun -n 1 --gpus 1 nsys profile -o profiling/report2.qdrep ${CURRENT_DIR}/build/nn_openacc $TRAIN_X $TRAIN_Y $TEST_X $TEST_Y
+echo ""

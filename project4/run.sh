@@ -14,5 +14,4 @@ make
 
 # Navigate back to the original directory
 cd ..
-chmod +x run_pc.sh
-./run_pc.sh
+sbatch ./sbatch.sh

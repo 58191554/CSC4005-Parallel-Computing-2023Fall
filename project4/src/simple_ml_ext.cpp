@@ -91,6 +91,7 @@ void print_matrix(float *A, size_t m, size_t n)
 void matrix_dot(const float *A, const float *B, float *C, size_t m, size_t n, size_t k)
 {
     // BEGIN YOUR CODE
+    memset(C, 0, m * k * sizeof(float));
     for(size_t i = 0; i < m; i ++){
         auto A_row = A + i*n;
         auto C_row = C + i*k;
@@ -100,6 +101,38 @@ void matrix_dot(const float *A, const float *B, float *C, size_t m, size_t n, si
             for(size_t j = 0; j < k; j++){
                 C_row[j] += A_il*B_row[j];
             }
+        }
+    }
+    // END YOUR CODE
+}
+/**
+ * Matrix Dot Multiplication Unroll(k=10) Speedup
+ * Efficiently compute C = A.dot(B)
+ * Args:
+ *     A (const float*): Matrix of size m * n
+ *     B (const float*): Matrix of size n * (k=10)
+ *     C (float*): Matrix of size m * (k=10)
+ **/
+void matrix_dot_unroll(const float *A, const float *B, float *C, size_t m, size_t n, size_t k)
+{
+    // BEGIN YOUR CODE
+    memset(C, 0, m * k * sizeof(float));
+    for(size_t i = 0; i < m; i ++){
+        auto A_row = A + i*n;
+        auto C_row = C + i*k;
+        for(size_t l = 0; l < n; l++){
+            auto B_row = B + l*k;
+            float A_il = A_row[l];
+            C_row[0] += A_il*B_row[0];
+            C_row[1] += A_il*B_row[1];
+            C_row[2] += A_il*B_row[2];
+            C_row[3] += A_il*B_row[3];
+            C_row[4] += A_il*B_row[4];
+            C_row[5] += A_il*B_row[5];
+            C_row[6] += A_il*B_row[6];
+            C_row[7] += A_il*B_row[7];
+            C_row[8] += A_il*B_row[8];
+            C_row[9] += A_il*B_row[9];
         }
     }
     // END YOUR CODE
@@ -115,19 +148,8 @@ void matrix_dot(const float *A, const float *B, float *C, size_t m, size_t n, si
  **/
 void matrix_dot_trans(const float *A, const float *B, float *C, size_t n, size_t m, size_t k)
 {
-    int input_dim = m;
-    int batch_size = n;
-    int num_class = k;
+    memset(C, 0, m * k * sizeof(float));
     // BEGIN YOUR CODE
-    // for(size_t i = 0; i < m; i++){
-    //     for(size_t j = 0; j < k; j++){
-    //         float sum = 0;
-    //         for(size_t x = 0; x < n; x++){
-    //             sum += A[x*m+i]*B[x*k+j];
-    //         }
-    //         C[i*k+j] = sum;
-    //     }
-    // }
     for(size_t x = 0; x < n; x++){
         auto A_row = A + x*m;
         auto B_row = B + x*k;
@@ -140,6 +162,40 @@ void matrix_dot_trans(const float *A, const float *B, float *C, size_t n, size_t
     }
     // END YOUR CODE
 }
+/**
+ * Matrix Dot Multiplication Trans Version Unroll(k = 10) Speedup
+ * Efficiently compute C = A.T.dot(B)
+ * Args:
+ *     A (const float*): Matrix of size n * m
+ *     B (const float*): Matrix of size n * (k=10)
+ *     C (float*): Matrix of size m * (k=10)
+ **/
+
+void matrix_dot_trans_unroll(const float *A, const float *B, float *C, size_t n, size_t m, size_t k)
+{
+    memset(C, 0, m * k * sizeof(float));
+    // BEGIN YOUR CODE
+    for(size_t x = 0; x < n; x++){
+        auto A_row = A + x*m;
+        auto B_row = B + x*k;
+        for(size_t i = 0; i < m; i++){
+            auto C_row = C + i*k;
+            float A_row_i = A_row[i];
+            C_row[0] += A_row_i * B_row[0];
+            C_row[1] += A_row_i * B_row[1];
+            C_row[2] += A_row_i * B_row[2];
+            C_row[3] += A_row_i * B_row[3];
+            C_row[4] += A_row_i * B_row[4];
+            C_row[5] += A_row_i * B_row[5];
+            C_row[6] += A_row_i * B_row[6];
+            C_row[7] += A_row_i * B_row[7];
+            C_row[8] += A_row_i * B_row[8];
+            C_row[9] += A_row_i * B_row[9];
+        }
+    }
+    // END YOUR CODE
+}
+
 
 /**
  * Matrix Dot Multiplication Trans Version 2
@@ -152,7 +208,53 @@ void matrix_dot_trans(const float *A, const float *B, float *C, size_t n, size_t
 void matrix_trans_dot(const float *A, const float *B, float *C, size_t m, size_t n, size_t k)
 {
     // BEGIN YOUR CODE
+    memset(C, 0, m*k*sizeof(float));
+    for(int i = 0; i < m; i++){
+        auto A_row = A + i*n;
+        auto C_row = C + i*k;
+        for(int x = 0; x < k; x++){
+            auto B_row = B + x*n;
+            for(int j = 0; j < n; j++){
+                C_row[x] += A_row[j] * B_row[j];
+            }
+        }
+    }
+    // END YOUR CODE
+}
 
+/**
+ * Matrix Dot Multiplication Trans Version 2 Unroll Speedup
+ * Efficiently compute C = A.dot(B.T)
+ * Args:
+ *     A (const float*): Matrix of size m * n
+ *     B (const float*): Matrix of size k * n
+ *     C (float*): Matrix of size m * k
+ **/
+void matrix_trans_dot_unroll(const float *A, const float *B, float *C, size_t m, size_t n, size_t k)
+{
+    // BEGIN YOUR CODE
+    memset(C, 0, m*k*sizeof(float));
+    for(int i = 0; i < m; i++){
+        auto A_row = A + i*n;
+        auto C_row = C + i*k;
+        for(int x = 0; x < k; x++){
+            auto B_row = B + x*n;
+            // for(int j = 0; j < n; j+=10){
+            //     C_row[x] += A_row[j] * B_row[j];
+            // }
+            C_row[x] += A_row[0] * B_row[0];
+            C_row[x] += A_row[1] * B_row[1];
+            C_row[x] += A_row[2] * B_row[2];
+            C_row[x] += A_row[3] * B_row[3];
+            C_row[x] += A_row[4] * B_row[4];
+            C_row[x] += A_row[5] * B_row[5];
+            C_row[x] += A_row[6] * B_row[6];
+            C_row[x] += A_row[7] * B_row[7];
+            C_row[x] += A_row[8] * B_row[8];
+            C_row[x] += A_row[9] * B_row[9];
+
+        }
+    }
     // END YOUR CODE
 }
 
@@ -209,11 +311,8 @@ void matrix_mul_scalar(float *C, float scalar, size_t m, size_t n)
 void matrix_div_scalar(float *C, float scalar, size_t m, size_t n)
 {
     // BEGIN YOUR CODE
-    for(size_t i = 0; i < m; i++){
-        auto C_row = C + i*n;
-        for(size_t j = 0; j < n; ++j){
-            C_row[j] /= scalar;
-        }
+    for(size_t i = 0; i < m*n; ++i){
+        C[i] /= scalar;
     }
     // END YOUR CODE
 }
@@ -230,8 +329,9 @@ void matrix_softmax_normalize(float *C, size_t m, size_t n)
     // Iterate over each row
     for (size_t i = 0; i < m; ++i) {
         // Find the maximum value in the row
-        float max_val = C[i * n];
         auto C_row = C + i*n;
+        float max_val = C_row[0];
+
         for (size_t j = 1; j < n; ++j) {
             if (C_row[j] > max_val) {
                 max_val = C_row[j];
@@ -241,7 +341,8 @@ void matrix_softmax_normalize(float *C, size_t m, size_t n)
         // Apply softmax normalization to the row
         float sum_exp = 0.0;
         for (size_t j = 0; j < n; ++j) {
-            C_row[j] = expf(C_row[j] - max_val);
+            // C_row[j] = expf(C_row[j] - max_val);
+            C_row[j] = expf(C_row[j]);
             sum_exp += C_row[j];
         }
 
@@ -252,6 +353,66 @@ void matrix_softmax_normalize(float *C, size_t m, size_t n)
     }    
     // END YOUR CODE
 }
+/**
+ * Matrix Softmax Normalize Unroll(n=10) Speedup
+ * For each row of the matrix, we do softmax normalization
+ * Args:
+ *     C (float*): Matrix of size m * (n=10)
+ **/
+void matrix_softmax_normalize_unroll(float *C, size_t m, size_t n)
+{
+    // BEGIN YOUR CODE
+    // Iterate over each row
+    for (size_t i = 0; i < m; ++i) {
+        // Find the maximum value in the row
+        auto C_row = C + i*n;
+        float max_val = C_row[0];
+
+        for (size_t j = 1; j < n; ++j) {
+            if (C_row[j] > max_val) {
+                max_val = C_row[j];
+            }
+        }
+
+        // Apply softmax normalization to the row
+        float sum_exp = 0.0;
+        C_row[0] = expf(C_row[0]);
+        C_row[1] = expf(C_row[1]);
+        C_row[2] = expf(C_row[2]);
+        C_row[3] = expf(C_row[3]);
+        C_row[4] = expf(C_row[4]);
+        C_row[5] = expf(C_row[5]);
+        C_row[6] = expf(C_row[6]);
+        C_row[7] = expf(C_row[7]);
+        C_row[8] = expf(C_row[8]);
+        C_row[9] = expf(C_row[9]);
+
+        sum_exp += C_row[0];
+        sum_exp += C_row[1];
+        sum_exp += C_row[2];
+        sum_exp += C_row[3];
+        sum_exp += C_row[4];
+        sum_exp += C_row[5];
+        sum_exp += C_row[6];
+        sum_exp += C_row[7];
+        sum_exp += C_row[8];
+        sum_exp += C_row[9];
+        
+        // Normalize the row
+        C_row[0] /= sum_exp;
+        C_row[1] /= sum_exp;
+        C_row[2] /= sum_exp;
+        C_row[3] /= sum_exp;
+        C_row[4] /= sum_exp;
+        C_row[5] /= sum_exp;
+        C_row[6] /= sum_exp;
+        C_row[7] /= sum_exp;
+        C_row[8] /= sum_exp;
+        C_row[9] /= sum_exp;
+    }    
+    // END YOUR CODE
+}
+
 
 /**
  * Vector to One-Hot Matrix
@@ -265,12 +426,7 @@ void vector_to_one_hot_matrix(const unsigned char *y, float *Y, size_t m, size_t
     // BEGIN YOUR CODE
     for(size_t i = 0; i < m; i++){
         auto Y_row = Y + i*n;
-        for(size_t j = 0; j < n; j++){
-            Y_row[j] = 0;
-            if(static_cast<size_t>(y[i]) == j){
-                Y_row[j] = 1;
-            }
-        }
+        Y_row[y[i]] = 1;
     }
     // END YOUR CODE
 }
@@ -298,38 +454,40 @@ void vector_to_one_hot_matrix(const unsigned char *y, float *Y, size_t m, size_t
  */
 void softmax_regression_epoch_cpp(const float *X, const unsigned char *y, float *theta, size_t m, size_t n, size_t k, float lr, size_t batch)
 {
-    float *MySpace = new float[m * k + n * k + m*k]();
-    // float *logits = new float[m * k]();
-    // float *gradients = new float[n * k]();
-    // float *Y = new float[m*k]();
-    float * logits = MySpace;
-    float * gradients = MySpace + m * k;
-    float * Y = MySpace + m * k + n * k;
+    float *logits = new float[m * k]();
+    float *gradients = new float[n * k]();
+    float *Y = new float[m*k]();
     vector_to_one_hot_matrix(y, Y, m, k);
     // Loop over minibatches
-    for (size_t start = 0; start < m; start += batch) {
+    for (size_t start = 0; start < m-batch; start += batch) {
         size_t end = std::min(start + batch, m);
         auto local_logit = logits + start*k;
         auto local_X = X + start*n;
         auto local_Y = Y + start*k;
         size_t length = end-start;
-        matrix_dot(local_X, theta, local_logit, length, n, k);
+        matrix_dot_unroll(local_X, theta, local_logit, length, n, k);
         // Apply softmax function to logits
-        matrix_softmax_normalize(local_logit, length, k);
+        matrix_softmax_normalize_unroll(local_logit, length, k);
         // Calculate gradients and accumulate over minibatch
         matrix_minus(local_logit, local_Y, length, k);
-        matrix_dot_trans(local_X, local_logit, gradients, length, n, k);
+        matrix_dot_trans_unroll(local_X, local_logit, gradients, length, n, k);
         // Update theta values
         matrix_mul_scalar(gradients, lr/length, n, k);
+        // matrix_div_scalar(gradients, length, n, k);
         matrix_minus(theta, gradients, n, k);
         // Reset gradients for next minibatch
         std::fill(gradients, gradients + n * k, 0.0);
-        }
+        // for(size_t i = 0; i < 200; i++){
+        //     for(size_t j = 0; j < k; j++){
+        //         printf("%f, ", theta[i*k+j]);
+        //     }
+        //     printf("\n");
+        // }
+    }
     // Deallocate memory for logits and gradients arrays
-    // delete[] logits;
-    // delete[] gradients;
-    // delete[] Y;
-    delete[] MySpace;
+    delete[] logits;
+    delete[] gradients;
+    delete[] Y;
 }
 
 /**
@@ -344,7 +502,6 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
     float *test_result = new float[test_data->images_num * num_classes];
     float train_loss, train_err, test_loss, test_err;
     size_t input_dim = train_data->input_dim;
-    size_t img_num = train_data->images_num;
     std::cout << "input_dim = " << input_dim << std::endl;
 
     std::cout << "| Epoch | Train Loss | Train Err | Test Loss | Test Err |" << std::endl;
@@ -353,12 +510,10 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
 
     for (size_t epoch = 0; epoch < epochs; epoch++)
     {   
-        softmax_regression_epoch_cpp(train_data->images_matrix, train_data->labels_array, theta, train_data->images_num, input_dim, num_classes, lr, batch);
         // BEGIN YOUR CODE
-        matrix_dot(train_data->images_matrix, theta, train_result, train_data->images_num, input_dim, num_classes);
-        matrix_softmax_normalize(train_result, train_data->images_num, num_classes);
-        matrix_dot(test_data->images_matrix, theta, test_result, test_data->images_num, input_dim, num_classes);
-        matrix_softmax_normalize(test_result, test_data->images_num, num_classes);
+        softmax_regression_epoch_cpp(train_data->images_matrix, train_data->labels_array, theta, train_data->images_num, input_dim, num_classes, lr, batch);
+        matrix_dot_unroll(train_data->images_matrix, theta, train_result, train_data->images_num, input_dim, num_classes);
+        matrix_dot_unroll(test_data->images_matrix, theta, test_result, test_data->images_num, input_dim, num_classes);
         // END YOUR CODE
         train_loss = mean_softmax_loss(train_result, train_data->labels_array, train_data->images_num, num_classes);
         test_loss = mean_softmax_loss(test_result, test_data->labels_array, test_data->images_num, num_classes);
@@ -398,24 +553,78 @@ void train_softmax(const DataSet *train_data, const DataSet *test_data, size_t n
 float mean_softmax_loss(const float *result, const unsigned char *labels_array, size_t images_num, size_t num_classes)
 {
     // BEGIN YOUR CODE
+    float total_loss = 0.0;
+
+    for (size_t i = 0; i < images_num; ++i)
+    {
+        // Get the logits for the current example
+        const float *logits = &result[i * num_classes];
+
+        // Get the true label for the current example
+        unsigned char true_label = labels_array[i];
+
+        // Compute the softmax probabilities and the loss
+        float sum_exp = 0.0;
+        float loss = 0.0;
+
+        // Compute the sum of exponentials (without subtracting the max_logit)
+        for (size_t j = 0; j < num_classes; ++j)
+        {
+            float exp_logit = expf(logits[j]);
+            sum_exp += exp_logit;
+        }
+
+        // Compute the softmax probabilities and the loss
+        for (size_t j = 0; j < num_classes; ++j)
+        {
+            float softmax_prob = expf(logits[j]) / sum_exp;
+
+            if (j == true_label)
+            {
+                loss = -logf(softmax_prob);
+            }
+        }
+
+        // Accumulate the loss for the current example
+        total_loss += loss;
+    }
+
+    // Compute the average loss over all examples
+    float average_loss = total_loss / images_num;
+
+    return average_loss;
+
+    // END YOUR CODE
+}
+
+float mean_softmax_loss_unroll(const float *result, const unsigned char *labels_array, size_t images_num, size_t num_classes)
+{
+    // BEGIN YOUR CODE
     float cross_entropy_loss = 0;
     for(int i = 0; i < images_num; ++i){
         float z_y = 0;
+        auto result_row = result + i*num_classes;
         for(int j = 0; j < num_classes; ++j){
             if(result[i*num_classes + j]>z_y){
-                z_y = result[i*num_classes + j];
+                z_y = result_row[j];
             }
         }
         float entropy = 0;
-        for(int j = 0; j < num_classes; j++){
-            entropy += expf(result[i*num_classes + j]);
-        }
+        // unroll
+        entropy += expf(result_row[0]);
+        entropy += expf(result_row[1]);
+        entropy += expf(result_row[2]);
+        entropy += expf(result_row[3]);
+        entropy += expf(result_row[4]);
+        entropy += expf(result_row[5]);
+        entropy += expf(result_row[6]);
+        entropy += expf(result_row[7]);
+        entropy += expf(result_row[8]);
+        entropy += expf(result_row[9]);
+
         entropy = log2f(entropy);
         cross_entropy_loss += (-z_y + entropy);
     }
-    // for(int i = 0; i < images_num; i++){
-    //     cross_entropy_loss += - log2(result[labels_array[i]]);
-    // }
     return cross_entropy_loss/images_num;
     // END YOUR CODE
 }
@@ -441,9 +650,10 @@ float mean_err(float *result, const unsigned char *labels_array, size_t images_n
         probability = 0;
         output = 0;
         // find the max probability output
+        auto result_row = result + i*num_classes;
         for(int j = 0; j < num_classes; j++){
-            if(result[i*num_classes + j]>probability){
-                probability = result[i*num_classes + j];
+            if(result_row[j]>probability){
+                probability = result_row[j];
                 output = j;
             }
         }
@@ -462,7 +672,7 @@ float mean_err(float *result, const unsigned char *labels_array, size_t images_n
 /**
  * Matrix Multiplication
  * Efficiently compute A = A * B
- * For each element A[i], B[i] of A and B, A[i] -= B[i]
+ * For each element A[i], B[i] of A and B, A[i] *= B[i]
  * Args:
  *     A (float*): Matrix of size m * n
  *     B (const float*): Matrix of size m * n
@@ -470,10 +680,59 @@ float mean_err(float *result, const unsigned char *labels_array, size_t images_n
 void matrix_mul(float *A, const float *B, size_t size)
 {
     // BEGIN YOUR CODE
-
+    for(int i = 0; i < size; i++){
+        A[i] *= B[i];
+    }
     // END YOUR CODE
 }
+/**
+ * Produce the ReLU output of an input matrix A
+ * first dimension for data number
+ * second dimension for feature
+ * load the one-order derivitive in cache
+ **/
+void matrix_relu_cache(float * A, float * A_cache, size_t m, size_t n){
+    for(size_t i = 0; i < m; i++){
+        auto A_row = A + i*n;
+        auto A_cacheRow = A_cache + i*n;
+        for(size_t j = 0; j < n; j++){
+            A_row[j] = A_row[j] > 0 ? A_row[j] : 0;
+            A_cacheRow[j] = A_row[j] > 0 ? 1 : 0;
+        }
+    }
+}
 
+/**
+ * Produce the ReLU output of an input matrix A
+ * first dimension for data number
+ * second dimension for feature
+ **/
+void matrix_relu(float * A, size_t m, size_t n){
+    for(size_t i = 0; i < m; i++){
+        auto A_row = A + i*n;
+        for(size_t j = 0; j < n; j++){
+            A_row[j] = A_row[j] > 0 ? A_row[j] : 0;
+        }
+    }
+}
+
+/**
+ * Check Matrix(m x n) Look in the range of (p x q);
+ * Args:
+ *  m: rows
+ *  n: cols
+ *  p: row-range
+ *  q: col-range
+*/
+void printM(float *A, size_t m, size_t n, size_t p, size_t q) {
+    printf("Check Matrix Look:\n");
+    for (size_t i = 0; i < p; i++) {
+        for (size_t j = 0; j < q; ++j) {
+            printf("%f, ", A[i * n + j]);
+        }
+        printf("\n");
+    }
+}
 /*
 Run a single epoch of SGD for a two-layer neural network defined by the
 weights W1 and W2 (with no bias terms):
@@ -498,8 +757,52 @@ Args:
 */
 void nn_epoch_cpp(const float *X, const unsigned char *y, float *W1, float *W2, size_t m, size_t n, size_t l, size_t k, float lr, size_t batch)
 {
-    // BEGIN YOUR CODE
+    float *Z1 = new float[batch * l]();
+    float *Z1_cache = new float[batch * l]();
+    float *Z2 = new float[batch * k]();
+    float *Y = new float[m*k]();
+    vector_to_one_hot_matrix(y, Y, m, k);
+    float *G1 = new float[batch * l]();
+    float *W1_l = new float[n * l]();
+    float *W2_l = new float[l * k]();
 
+    // BEGIN YOUR CODE
+    for(size_t start = 0; start < m-batch; start += batch){
+        size_t end = std::min(start + batch, m);
+        size_t length = end-start;
+        auto X_b = X + start*n;
+        matrix_dot(X_b, W1, Z1, length, n, l);  // l = 400, unable to directly unroll.
+        matrix_relu_cache(Z1, Z1_cache, length, l);
+        matrix_dot_unroll(Z1, W2, Z2, length, l, k); // k = 10 direcly unroll
+        matrix_softmax_normalize(Z2, length, k);
+        // printM(Z2, length, k, 10, 10);
+        auto Y_b = Y + start*k;
+        // G2 = Z2 - Y_b
+        matrix_minus(Z2, Y_b, length, k);
+        // dot(Z2 - Y, W2.T)
+        matrix_trans_dot_unroll(Z2, W2, G1, length, k, l); // k = 10 direcly unroll
+        // G1 = dot(Z2 - Y, W2.T) * (Z1 > 0)
+        matrix_mul(G1, Z1_cache, length*l);
+        // W1_l = dot(X_b.T, G1)
+        matrix_dot_trans(X_b, G1, W1_l, length, n, l); // l = 400, unable to directly unroll.
+        // W1_l = dot(X_b.T, G1) / batch * lr
+        matrix_mul_scalar(W1_l, lr/batch, n, l);
+        // W1 -= W1_l
+        matrix_minus(W1, W1_l, n, l);
+        // W2_l = dot(Z1.T, Z2 - Y) 
+        matrix_dot_trans_unroll(Z1, Z2, W2_l, length, l, k); // k = 10 direcly unroll
+        // W2_l = dot(Z1.T, Z2 - Y) / batch * lr
+        matrix_mul_scalar(W2_l, lr/batch, l, k);
+        // W2 -= W2_l
+        matrix_minus(W2, W2_l, l, k);
+    }
+    delete[] Z1;
+    delete[] Z1_cache;
+    delete[] Z2;
+    delete[] Y;
+    delete[] G1;
+    delete[] W1_l;
+    delete[] W2_l;
     // END YOUR CODE
 }
 
@@ -510,8 +813,13 @@ void train_nn(const DataSet *train_data, const DataSet *test_data, size_t num_cl
 {
     size_t size_w1 = train_data->input_dim * hidden_dim;
     size_t size_w2 = hidden_dim * num_classes;
-    float *W1 = new float[size_w1];
-    float *W2 = new float[size_w2];
+    float *W1 = new float[size_w1]();
+    float *W2 = new float[size_w2]();
+    float *Z1_train = new float[train_data->images_num*hidden_dim];
+    float *Z2_train = new float[train_data->images_num*num_classes];
+    float *Z1_test = new float[test_data->images_num*hidden_dim];
+    float *Z2_test = new float[test_data->images_num*num_classes];
+
     std::mt19937 rng;
     rng.seed(0);
     std::normal_distribution<float> dist(0.0, 1.0);
@@ -525,20 +833,35 @@ void train_nn(const DataSet *train_data, const DataSet *test_data, size_t num_cl
     }
     matrix_div_scalar(W1, sqrtf(hidden_dim), train_data->input_dim, hidden_dim);
     matrix_div_scalar(W2, sqrtf(num_classes), hidden_dim, num_classes);
-    float *train_result = new float[train_data->images_num * num_classes];
-    float *test_result = new float[test_data->images_num * num_classes];
+
     float train_loss, train_err, test_loss, test_err;
     std::cout << "| Epoch | Train Loss | Train Err | Test Loss | Test Err |" << std::endl;
     auto start_time = std::chrono::high_resolution_clock::now();
     for (size_t epoch = 0; epoch < epochs; epoch++)
     {
         // BEGIN YOUR CODE
+        nn_epoch_cpp(train_data->images_matrix, train_data->labels_array, W1, W2, \
+            train_data->images_num, train_data->input_dim, hidden_dim, num_classes, \
+            lr, batch);
+        
+        // Z2 = dot(ReLU(dot(X, W1)), W2)
+        // Z1 = dot(X, W1)
+        matrix_dot(train_data->images_matrix, W1, Z1_train, train_data->images_num,\
+            train_data->input_dim, hidden_dim);
+        matrix_dot(test_data->images_matrix, W1, Z1_test, test_data->images_num,\
+            test_data->input_dim, hidden_dim);
+        // ReLU
+        matrix_relu(Z1_train, train_data->images_num, hidden_dim);
+        matrix_relu(Z1_test, test_data->images_num, hidden_dim);
+        // Z2 = dot(Z1, W2)
+        matrix_dot_unroll(Z1_train, W2, Z2_train, train_data->images_num, hidden_dim, num_classes);
+        matrix_dot_unroll(Z1_test, W2, Z2_test, test_data->images_num, hidden_dim, num_classes);
 
         // END YOUR CODE
-        train_loss = mean_softmax_loss(train_result, train_data->labels_array, train_data->images_num, num_classes);
-        test_loss = mean_softmax_loss(test_result, test_data->labels_array, test_data->images_num, num_classes);
-        train_err = mean_err(train_result, train_data->labels_array, train_data->images_num, num_classes);
-        test_err = mean_err(test_result, test_data->labels_array, test_data->images_num, num_classes);
+        train_loss = mean_softmax_loss(Z2_train, train_data->labels_array, train_data->images_num, num_classes);
+        test_loss = mean_softmax_loss(Z2_test, test_data->labels_array, test_data->images_num, num_classes);
+        train_err = mean_err(Z2_train, train_data->labels_array, train_data->images_num, num_classes);
+        test_err = mean_err(Z2_test, test_data->labels_array, test_data->images_num, num_classes);
         std::cout << "|  " << std::setw(4) << std::right << epoch << " |    "
                   << std::fixed << std::setprecision(5) << train_loss << " |   "
                   << std::fixed << std::setprecision(5) << train_err << " |   "
@@ -553,6 +876,8 @@ void train_nn(const DataSet *train_data, const DataSet *test_data, size_t num_cl
               << " milliseconds\n";
     delete[] W1;
     delete[] W2;
-    delete[] train_result;
-    delete[] test_result;
+    delete[] Z1_train;
+    delete[] Z2_train;
+    delete[] Z1_test ;
+    delete[] Z2_test ;
 }

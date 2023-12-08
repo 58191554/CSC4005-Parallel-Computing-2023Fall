@@ -1,5 +1,6 @@
 #include "simple_ml_ext.hpp"
 
+
 int main()
 {
     DataSet* train_data = parse_mnist("./dataset/training/train-images.idx3-ubyte",
@@ -9,7 +10,6 @@ int main()
 
     std::cout << "Training softmax regression" << std::endl;
     train_softmax(train_data, test_data, 10, 10, 0.2);
-    // train_softmax(train_data, test_data, 10, 100, 0.2);
 
     delete train_data;
     delete test_data;

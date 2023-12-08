@@ -83,6 +83,11 @@ float mean_softmax_loss(const float *result,
                         size_t images_num,
                         size_t num_classes);
 
+float mean_softmax_loss_unroll(const float *result,
+                        const unsigned char *labels_array,
+                        size_t images_num,
+                        size_t num_classes);
+
 float mean_err(float *result,
                const unsigned char *labels_array,
                size_t images_num,
